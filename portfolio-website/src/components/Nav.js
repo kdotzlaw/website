@@ -2,8 +2,8 @@ import React from 'react';
 
 const Nav = () => {
   return (
-    <nav className="fixed top-0 right-0 p-4">
-      <ul className="flex flex-col space-y-4">
+    <nav className="fixed top-0 left-0 right-0 p-4 bg-white shadow-md z-50">
+      <ul className="flex justify-end space-x-4">
         <li>
           <a href="#home" className="text-white bg-blue-500 hover:bg-blue-600 px-3 py-2 rounded-full transition duration-300">
             Home
