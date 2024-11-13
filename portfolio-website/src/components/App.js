@@ -8,7 +8,7 @@ import Contact from './Contact';
 
 function App() {
   const [currentComponent, setCurrentComponent] = useState('Home');
-  
+  //switch statement to render the correct component
   function renderComponent() {
     switch (currentComponent) {
       case 'Home':
