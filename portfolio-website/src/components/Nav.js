@@ -1,12 +1,13 @@
-import React from 'react';
+import React, { useState } from 'react';
 import '../styles/Nav.css';
 
 const Nav = () => {
+    
   return (
     <nav id='nav' className='bg-gray-100 p-4 fixed h-full w-64 z-50 top-0 right-0 shadow-lg flex flex-col justify-between'>
       <div>
         <ul className="space-y-4">
-          <li id='nav-item'><a href='#home' className="block py-2 px-4 ">Home</a></li>
+          <li id='nav-item' ><a href='#home' className="block py-2 px-4 ">Home</a></li>
           <li id='nav-item'><a href='#about' className="block py-2 px-4 ">Projects</a></li>
           <li id='nav-item'><a href='#projects' className="block py-2 px-4 ">Publications</a></li>
           <li id='nav-item'><a href='#contact' className="block py-2 px-4 ">Contact</a></li>
