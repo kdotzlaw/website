@@ -2,17 +2,20 @@ import React from 'react';
 
 const Nav = () => {
   return (
-    <nav className="bg-gray-800 p-4">
-      <div className="container mx-auto flex justify-between items-center">
-        <div className="text-white font-bold text-xl">My Portfolio</div>
-        <ul className="flex space-x-4">
-          <li><a href="#" className="text-white hover:text-gray-300">Home</a></li>
-          <li><a href="#" className="text-white hover:text-gray-300">About</a></li>
-          <li><a href="#" className="text-white hover:text-gray-300">Projects</a></li>
-          <li><a href="#" className="text-white hover:text-gray-300">Contact</a></li>
+   <nav class = "bg-black p-4 fixed w-full top-0 z-50 shadow-lg">
+    <div class="container mx-auto flex items-center justify-between">
+        <div class="text-white font-bold text-2xl">
+            Katrina's Portfolio
+        </div>
+        <ul class="flex space-x-6 text-white">
+            <li><a href='#home' class="hover:text-red-500">Home</a></li>
+            <li><a href='#about' class="hover:text-red-500">About</a></li>
+            <li><a href='#projects' class="hover:text-red-500">Projects</a></li>
+            <li><a href='#contact' class="hover:text-red-500">Contact</a></li>
         </ul>
-      </div>
-    </nav>
+    </div>
+   </nav>
+   
   );
 };
 
