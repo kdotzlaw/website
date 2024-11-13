@@ -4,7 +4,7 @@ import '../styles/Home.css';
 const Home = () => {
   return (
     <div id='home-body' className="pt-16"> {/* Added padding-top to account for fixed navbar */}
-      <div id='home-header' className="bg-gray-100 py-16">
+      <div id='home-header' className=" py-16">
         <div className="container mx-auto">
           <h1 className="text-4xl font-bold text-center">Hello World</h1>
         </div>

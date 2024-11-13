@@ -3,7 +3,7 @@ import '../styles/Nav.css';
 
 const Nav = () => {
   return (
-   <nav id='nav' className='bg-white p-4 fixed w-full z-50 top-0 shadow-lg ' >
+   <nav id='nav' className='bg-gray-100 p-4 fixed w-full z-50 top-0 shadow-lg ' >
     <div className="container mx-auto flex items-center justify-between">
        
         <ul className="top-0 right-0 flex space-x-4">
