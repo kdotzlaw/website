@@ -8,10 +8,10 @@ const Nav = () => {
             Katrina's Portfolio
         </div>
         <ul className="flex space-x-6 text-white">
-            <li><a href='#home' className="hover:text-accent">Home</a></li>
-            <li><a href='#about' className="hover:text-accent">About</a></li>
-            <li><a href='#projects' className="hover:text-accent">Projects</a></li>
-            <li><a href='#contact' className="hover:text-accent">Contact</a></li>
+            <li><a href='#home' className="nav-link">Home</a></li>
+            <li><a href='#about' className="nav-link">About</a></li>
+            <li><a href='#projects' className="nav-link">Projects</a></li>
+            <li><a href='#contact' className="nav-link">Contact</a></li>
         </ul>
     </div>
    </nav>
