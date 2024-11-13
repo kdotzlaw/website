@@ -3,8 +3,8 @@ import '../styles/Home.css';
 
 const Home = () => {
   return (
-    <div id='home-body' className="pt-16"> {/* Added padding-top to account for fixed navbar */}
-      <div id='home-header' className=" py-16">
+    <div id='home-body' className="pr-64"> {/* Added padding-right to account for sidebar */}
+      <div id='home-header' className="py-16">
         <div className="container mx-auto">
           <h1 className="text-4xl font-bold text-center">Hello World</h1>
         </div>
