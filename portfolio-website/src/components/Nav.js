@@ -15,12 +15,12 @@ const Nav = () => {
         <ul className="flex space-x-4 top-0 left-0">
             <li id='nav-item'>
                 <a href='https://www.linkedin.com/in/kdotzlaw' target="_blank" rel="noopener noreferrer">
-                    <i className="fa-brands fa-linkedin"></i>
+                    <i className="fa-brands fa-linkedin text-2xl text-blue-600 hover:text-blue-800"></i>
                 </a>
             </li>
             <li id='nav-item'>
                 <a href='https://github.com/kdotzlaw' target="_blank" rel="noopener noreferrer">
-                    <i className="fa-brands fa-github"></i>
+                    <i className="fa-brands fa-github text-2xl text-gray-800 hover:text-gray-600"></i>
                 </a>
             </li>
         </ul>
