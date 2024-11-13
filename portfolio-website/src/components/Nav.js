@@ -12,7 +12,7 @@ const Nav = () => {
             <li id='nav-item' ><a href='#projects' >Projects</a></li>
             <li id='nav-item' ><a href='#contact'>Contact</a></li>
         </ul>
-        <ul className="flex space-x-4">
+        <ul className="flex space-x-4 top-0 left-0">
             <li id='nav-item'>
                 <a href='https://www.linkedin.com/in/kdotzlaw' target="_blank" rel="noopener noreferrer">
                     <i className="fa-brands fa-linkedin"></i>
