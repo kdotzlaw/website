@@ -4,9 +4,10 @@ import Nav from './Nav';
 
 function App() {
   return (
-    <div className="App bg-primary">
+    <div className="App">
       
       <Nav />
+      <body></body>
       
     </div>
   );
