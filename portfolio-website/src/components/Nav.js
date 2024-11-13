@@ -12,14 +12,16 @@ const Nav = () => {
             <li id='nav-item' ><a href='#projects' >Projects</a></li>
             <li id='nav-item' ><a href='#contact'>Contact</a></li>
         </ul>
-        <ul className="">
-            
-            <li id='nav-item' >
-                <i class="fa-brands fa-linkedin" href='https://www.linkedin.com/in/kdotzlaw' > </i>
+        <ul className="flex space-x-4">
+            <li id='nav-item'>
+                <a href='https://www.linkedin.com/in/kdotzlaw' target="_blank" rel="noopener noreferrer">
+                    <i className="fa-brands fa-linkedin"></i>
+                </a>
             </li>
-            <li id='nav-item' >
-                <i class="fa-brands fa-github" href='https://github.com/kdotzlaw' > </i>
-                
+            <li id='nav-item'>
+                <a href='https://github.com/kdotzlaw' target="_blank" rel="noopener noreferrer">
+                    <i className="fa-brands fa-github"></i>
+                </a>
             </li>
         </ul>
     </div>
