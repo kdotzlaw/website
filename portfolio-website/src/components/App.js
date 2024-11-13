@@ -1,5 +1,5 @@
 
-import './styles/App.css';
+import '../styles/App.css';
 
 function App() {
   return (
@@ -7,7 +7,7 @@ function App() {
       <header className="App-header">
         
         <p>
-          Edit <code>src/App.js</code> and save to reload.
+          app
         </p>
        
       </header>
