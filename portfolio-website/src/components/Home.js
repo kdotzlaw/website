@@ -13,13 +13,15 @@ const Home = () => {
             <h2 className=' text-4xl py-8'>Software Developer</h2>
         
             <h2 className='text-2xl'>About Me</h2>
-            <img src={profilePic} alt="Katrina Dotzlaw" className="w-64 h-64 object-cover rounded-full my-4"/>
-            <article  className='py-4 text-pretty'>
-            <p className="text-wrap">
-                I am a recent graduate of the University of Manitoba with a Bachelor's degree in Computer Science,
-                specializing in Software Engineering, Artificial Intelligence, and Databases.
-            </p>
-            </article>
+            <div className="flex items-start space-x-8">
+              <img src={profilePic} alt="Katrina Dotzlaw" className="w-64 h-64 object-cover rounded-full"/>
+              <article className='py-4 text-pretty flex-1'>
+                <p className="text-wrap">
+                  I am a recent graduate of the University of Manitoba with a Bachelor's degree in Computer Science,
+                  specializing in Software Engineering, Artificial Intelligence, and Databases.
+                </p>
+              </article>
+            </div>
             
         </div>
       </div>
