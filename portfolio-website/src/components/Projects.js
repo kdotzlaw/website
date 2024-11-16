@@ -40,12 +40,13 @@ const Projects = () => {
                             A type of recurrent neural network created with Python to recognize temporal patterns like k-step ahead forecasting. 
                             Specifically, ESNs use backpropagation to feed optimized hyperparameters back into its recurrent internal state.
                             </p>
-                            <img src=''alt='An example of an ESN'></img>
                             <p id='project-content' className='py-2 text-wrap'>
                                 Explores machine learning concepts like error calculation via MSE, backpropagation, ridge regression,
                                  sigmoid activation functions, and hyperparameter tuning.
                                 All visualization was done using matplotlib and numpy. 
                             </p>
+                            <img src='../img/esn.JPG'alt='An example of an ESN'></img>
+                            
                         </article>
                     </div>
                 </div>

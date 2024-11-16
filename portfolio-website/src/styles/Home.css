@@ -1,5 +1,12 @@
-#home-body{
+#body{
     background-color: #84A59D;
     color: white;
     position:relative;
+}
+
+#text-link{
+    color:white;
+}
+#text-link:hover{
+    color: #F5CAC3;
 }

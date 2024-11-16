@@ -5,7 +5,7 @@ import '../styles/Home.css';
 const Home = () => {
     
   return (
-    <div id='home-body' className="pr-64"> {/* Added padding-right to account for sidebar */}
+    <div id='body' className="pr-64"> {/* Added padding-right to account for sidebar */}
       <div id='home-header' className="py-16" >
         <div className="container mx-auto text-left text-pretty max-w-3xl" >
             <h1 className="text-8xl font-bold ">Katrina Dotzlaw</h1>
@@ -22,8 +22,8 @@ const Home = () => {
             
         </div>
       </div>
-      <div id='home-content' className="container mx-auto py-4 text-right max-w-3xl">
-        <div id='curr-proj-container mx-auto text-right'>
+      <div id='home-content' className="container mx-auto py-4 text-left max-w-3xl">
+        <div id='curr-proj-container mx-auto text-left'>
             <h2 className='text-2xl'>Current Projects</h2>
             <p className='py-4 text-wrap'>Projects go here</p>
         </div>
