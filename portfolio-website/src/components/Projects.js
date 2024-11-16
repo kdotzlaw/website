@@ -1,24 +1,34 @@
 
-import React from 'react';
+import React, { useState } from 'react';
 import '../styles/Home.css';
 import esnImage from '../img/esn.JPG';
+
 const Projects = () => {
+    const [frontendExpanded, setFrontendExpanded] = useState(false);
+
+    const toggleFrontend = () => {
+        setFrontendExpanded(!frontendExpanded);
+    };
     return (
         <div id='body' className="pr-64"> {/* Added padding-right to account for sidebar */}
             <div id='projects-header' className="py-16">
                 <div className="container mx-auto text-left max-w-3xl">
                     <h1 className="text-6xl font-bold ">Projects</h1>
                     <div id='frontend-dev' className='py-4'>
-                        <h2 className='py-4 font-bold'>Frontend Development</h2>
-                        <article>
-                            <a href="https://www.peacelc.com" id='text-link' >
-                                <h3>Peace Lutheran Church Website</h3>
-                            </a>
-                            <p className='py-2 text-wrap'>
-                                Built using Wordpress and custom HTML/CSS.
-                            </p>
-                        </article>
-                    
+                        <h2 className='py-4 font-bold cursor-pointer flex items-center' onClick={toggleFrontend}>
+                            Frontend Development
+                            <span className={`ml-2 transform ${frontendExpanded ? 'rotate-180' : ''} transition-transform duration-200`}>▼</span>
+                        </h2>
+                        {frontendExpanded && (
+                            <article>
+                                <a href="https://www.peacelc.com" id='text-link' >
+                                    <h3>Peace Lutheran Church Website</h3>
+                                </a>
+                                <p className='py-2 text-wrap'>
+                                    Built using Wordpress and custom HTML/CSS.
+                                </p>
+                            </article>
+                        )}
                     </div>
                     <div id='backend-dev' className='py-4'>
                     <h2 className='py-4 font-bold'>Backend Development</h2>
