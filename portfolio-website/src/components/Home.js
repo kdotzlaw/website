@@ -1,5 +1,6 @@
 import React from 'react';
 import '../styles/Home.css';
+import profilePic from '../img/kat1.jpg';
 
 
 const Home = () => {
@@ -12,7 +13,7 @@ const Home = () => {
             <h2 className=' text-4xl py-8'>Software Developer</h2>
         
             <h2 className='text-2xl'>About Me</h2>
-            <img src="" alt=""/>
+            <img src={profilePic} alt="Katrina Dotzlaw" className="w-64 h-64 object-cover rounded-full my-4"/>
             <article  className='py-4 text-pretty'>
             <p className="text-wrap">
                 I am a recent graduate of the University of Manitoba with a Bachelor's degree in Computer Science,

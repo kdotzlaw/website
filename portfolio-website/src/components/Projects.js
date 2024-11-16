@@ -1,6 +1,7 @@
 
 import React from 'react';
 import '../styles/Home.css';
+import esnImage from '../img/esn.JPG';
 const Projects = () => {
     return (
         <div id='body' className="pr-64"> {/* Added padding-right to account for sidebar */}
@@ -45,7 +46,7 @@ const Projects = () => {
                                  sigmoid activation functions, and hyperparameter tuning.
                                 All visualization was done using matplotlib and numpy. 
                             </p>
-                            <img src='../img/esn.JPG'alt='An example of an ESN'></img>
+                            <img src={esnImage} alt='An example of an ESN' className="w-full max-w-2xl my-4"/>
                             
                         </article>
                     </div>
