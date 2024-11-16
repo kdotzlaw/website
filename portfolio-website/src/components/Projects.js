@@ -46,7 +46,7 @@ const Projects = () => {
                                  sigmoid activation functions, and hyperparameter tuning.
                                 All visualization was done using matplotlib and numpy. 
                             </p>
-                            <img src={esnImage} alt='An example of an ESN' className="w-full max-w-2xl my-4"/>
+                            <img src={esnImage} alt='An example of an ESN' className="w-full max-w-4xl my-4"/>
                             
                         </article>
                     </div>
