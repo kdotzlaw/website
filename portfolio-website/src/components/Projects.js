@@ -32,6 +32,12 @@ const Projects = () => {
     const toggleStudyBuddy = () => {
         setStudyBuddyExpanded(!studyBuddyExpanded);
     };
+    const [peaceDBExpanded, setPeaceDBExpanded] = useState(true);
+    const togglePeaceDB = () => {
+        setPeaceDBExpanded(!peaceDBExpanded);
+    };
+
+
     return (
         <div id='body' className="pr-64"> {/* Added padding-right to account for sidebar */}
             <div id='projects-header' className="py-16">
@@ -116,7 +122,24 @@ const Projects = () => {
                             <span className={`ml-2 transform ${fullstackExpanded ? 'rotate-180' : ''} transition-transform duration-200`}>▼</span>
                         </h2>
                         {fullstackExpanded && (
-                            <article className='text-wrap'></article>
+                            <article className='text-wrap'>
+                                <h3 className='py-4 font-semibold cursor-pointer flex items-center' onClick={togglePeaceDB}>
+                                    Database Manager    
+                                    <span className={`ml-2 transform ${peaceDBExpanded ? 'rotate-180' : ''} transition-transform duration-200`}>▼</span>
+                                </h3>
+                            {peaceDBExpanded && (
+                                <article>
+                                    <a href='https://github.com/kdotzlaw/peace_admin' id='text-link' >
+                                    <h6 className='text-[12px]'>View the project on GitHub</h6>
+                                    </a>
+                                    <p className='text-wrap'>
+                                    A web application built for Peace Lutheran Church that allows users to interact with the database with minimal programming knowledge.
+                                    The application was built using React, Python, JavaScript, HTML/CSS, Flask, and SQL. 
+                                    </p>
+                                </article>
+                            )}
+
+                            </article>
                             )}
                     </div>
                     
@@ -132,7 +155,7 @@ const Projects = () => {
                                     <h3>Echo State Network</h3>
                                 </a>
                                 <p id='project-content' className='py-2 text-wrap'>
-                                A type of recurrent neural network created with Python to recognize temporal patterns like k-step ahead forecasting. 
+                                An ESN is a type of recurrent neural network created with Python to recognize temporal patterns like k-step ahead forecasting. 
                                 Specifically, ESNs use backpropagation to feed optimized hyperparameters back into its recurrent internal state.
                                 </p>
                                 <p id='project-content' className='py-2 text-wrap'>
