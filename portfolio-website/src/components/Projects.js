@@ -46,7 +46,7 @@ const Projects = () => {
                                  sigmoid activation functions, and hyperparameter tuning.
                                 All visualization was done using matplotlib and numpy. 
                             </p>
-                            <img src={esnImage} alt='An example of an ESN' className="w-[1000px] h-[1000px] object-cover rounded my-4 cursor-pointer hover:scale-105 transition-transform duration-300" onClick={() => window.open(esnImage, '_blank')}/>
+                            <img src={esnImage} alt='An example of an ESN' className="w-[900px] h-[600px] object-cover rounded my-4 cursor-pointer hover:scale-105 transition-transform duration-300" onClick={() => window.open(esnImage, '_blank')}/>
                             
                         </article>
                     </div>
