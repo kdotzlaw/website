@@ -10,3 +10,11 @@
 #text-link:hover{
     color: #F5CAC3;
 }
+
+#header-indv-project{
+    cursor: pointer;
+    color: white;
+}
+#header-indv-project:hover{
+    color: #F5CAC3;
+}
