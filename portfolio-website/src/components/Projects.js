@@ -5,7 +5,7 @@ const Projects = () => {
     return (
         <div id='body' className="pr-64"> {/* Added padding-right to account for sidebar */}
             <div id='projects-header' className="py-16">
-                <div className="container mx-auto text-left">
+                <div className="container mx-auto text-left max-w-3xl">
                     <h1 className="text-6xl font-bold ">Projects</h1>
                     <div id='frontend-dev' className='py-4'>
                         <h2 className='py-4 font-bold'>Frontend Development</h2>
