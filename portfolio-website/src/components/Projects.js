@@ -5,11 +5,12 @@ import '../styles/Home.css';
 
 import studyBuddyArch from '../img/StudyBuddyArch.png';
 const Projects = () => {
-    //Toggle each project section
+    //Toggle each project section - default is expanded
     const [frontendExpanded, setFrontendExpanded] = useState(true);
     const [backendExpanded, setBackendExpanded] = useState(true);
     const [dataExpanded, setDataExpanded] = useState(true);
     const [fullstackExpanded, setFullstackExpanded] = useState(true);
+
     const toggleFrontend = () => {
         setFrontendExpanded(!frontendExpanded);
     };
@@ -21,6 +22,15 @@ const Projects = () => {
     };
     const toggleFullstack = () => {
         setFullstackExpanded(!fullstackExpanded);
+    };
+    //Toggle each project in each project section - default is expanded
+    const [queryOpExpanded, setQueryOpExpanded] = useState(true);
+    const toggleQueryOp = () => {
+        setQueryOpExpanded(!queryOpExpanded);
+    };
+    const [studyBuddyExpanded, setStudyBuddyExpanded] = useState(true);
+    const toggleStudyBuddy = () => {
+        setStudyBuddyExpanded(!studyBuddyExpanded);
     };
     return (
         <div id='body' className="pr-64"> {/* Added padding-right to account for sidebar */}
@@ -44,38 +54,58 @@ const Projects = () => {
                         )}
                     </div>
                     <div id='backend-dev' className='py-4'>
-                    <h2 id='header-indv-project' className='py-4 font-bold cursor-pointer flex items-center' onClick={toggleBackend}>Backend Development
-                    <span className={`ml-2 transform ${backendExpanded ? 'rotate-180' : ''} transition-transform duration-200`}>▼</span>
+                    <h2 id='header-indv-project' className='py-4 font-bold cursor-pointer flex items-center' onClick={toggleBackend}>
+                        Backend Development
+                        <span className={`ml-2 transform ${backendExpanded ? 'rotate-180' : ''} transition-transform duration-200`}>▼</span>
                     </h2>
                     {backendExpanded && (
                     <article>
-                            <a href="https://github.com/kdotzlaw/UniversityProjects/blob/main/QueryOptimization.pdf" id='text-link' >
-                                <h3 className='py-4 font-semibold'>Query Optimization</h3>
-                            </a>
-                            <p className='text-wrap'>
-                               A research project that compared non-optimized SQLite queries to queries optimized with non-clustered B+ tree indexes, including
-                               covering indexes and partial indexes. Analyzed storage space and pages used per database entry using DB Browser for SQLite.
-                               Concluded that queries optimized with indexes reduced the amount of unused bytes on pages and that queries optimized with covering indexes
-                               had consistently faster run times. Additionally, data skewing was found to negatively impact run times of queries optimized with indexes on single
-                               columns.
-                            </p>
-                            <a href="https://github.com/kdotzlaw/StudyBuddy/blob/main/backend/db.py" id='text-link' >
-                                <h3 className='py-4 font-semibold'>StudyBuddy</h3>
-                            </a>
-                             <img src = {studyBuddyArch} alt='StudyBuddy Architecture' className="w-[900px] h-[400px] object-cover rounded my-4 cursor-pointer hover:scale-105 transition-transform duration-300" onClick={() => window.open(studyBuddyArch, '_blank')}/>
-                             <h6 className='text-[10px] text-center'>  Image by:</h6>
-                             <a href='https://github.com/andreaabellera' id='text-link' >
-                                <h6 className='text-[10px] text-center'>  Andrea Abellera</h6>
-                             </a>
-                             
-                            <p className=' py-2 text-wrap'>
-                                I worked as a database engineer and technical writer for a fullstack web application designed to help students manage their study schedules. I built
-                                the backend using MSSQL and Python, and created database integration tests using Python unittest. All database queries used prepared statements and
-                                parameterized queries to prevent SQL injection attacks. I collaborated with our Server Manager to ensure that the database successfully integrated with the Flask server.
-                                I also worked with our CI/CD lead to ensure that the backend was successfully deployed with GitHub Actions and Docker.
-                                As a technical writer, I created project documentation including a wiki, milestone reports, test plans, and meeting minutes. 
-                                I also performed load testing with Locust to ensure that the application could handle high traffic and concurrent requests.
-                            </p>
+                            <h3 className='py-4 font-semibold cursor-pointer flex items-center' onClick={toggleQueryOp}>
+                                Query Optimization    
+                                <span className={`ml-2 transform ${queryOpExpanded ? 'rotate-180' : ''} transition-transform duration-200`}>▼</span>
+                            </h3>
+                            
+                            {queryOpExpanded && (
+                                <article>
+                                    <a href='https://github.com/kdotzlaw/UniversityProjects/blob/main/QueryOptimization.pdf' id='text-link' >
+                                    <h6 className='text-[12px]'>View the project on GitHub</h6>
+                                    </a>
+                                    <p className='text-wrap'>
+                                    A research project that compared non-optimized SQLite queries to queries optimized with non-clustered B+ tree indexes, including
+                                    covering indexes and partial indexes. Analyzed storage space and pages used per database entry using DB Browser for SQLite.
+                                    Concluded that queries optimized with indexes reduced the amount of unused bytes on pages and that queries optimized with covering indexes
+                                    had consistently faster run times. Additionally, data skewing was found to negatively impact run times of queries optimized with indexes on single
+                                    columns.
+                                    </p>
+                                </article>   
+                                )}
+                            
+                            <h3 className='py-4 font-semibold cursor-pointer flex items-center' onClick={toggleStudyBuddy}>
+                                StudyBuddy
+                                <span className={`ml-2 transform ${studyBuddyExpanded ? 'rotate-180' : ''} transition-transform duration-200`}>▼</span>
+                            </h3>
+                            
+                            {studyBuddyExpanded && (
+                                <article>
+                                    <a href='https://github.com/kdotzlaw/StudyBuddy' id='text-link' >
+                                        <h6 className='text-[12px]'>View the project on GitHub</h6>
+                                    </a>
+                                    
+                                    <img src = {studyBuddyArch} alt='StudyBuddy Architecture' className="w-[900px] h-[400px] object-cover rounded my-4 cursor-pointer hover:scale-105 transition-transform duration-300" onClick={() => window.open(studyBuddyArch, '_blank')}/>
+                                    <h6 className='text-[10px] text-center'>  Image by:</h6>
+                                    <a href='https://github.com/andreaabellera' id='text-link' >
+                                        <h6 className='text-[10px] text-center'>  Andrea Abellera</h6>
+                                    </a>
+                                    <p className=' py-2 text-wrap'>
+                                        I worked as a database engineer and technical writer for a fullstack web application designed to help students manage their study schedules. I built
+                                        the backend using MSSQL and Python, and created database integration tests using Python unittest. All database queries used prepared statements and
+                                        parameterized queries to prevent SQL injection attacks. I collaborated with our Server Manager to ensure that the database successfully integrated with the Flask server.
+                                        I also worked with our CI/CD lead to ensure that the backend was successfully deployed with GitHub Actions and Docker.
+                                        As a technical writer, I created project documentation including a wiki, milestone reports, test plans, and meeting minutes. 
+                                        I also performed load testing with Locust to ensure that the application could handle high traffic and concurrent requests.
+                                    </p>
+                                </article>
+                            )}
                            
                         </article>
                     )}
