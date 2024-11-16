@@ -13,9 +13,8 @@ const Projects = () => {
                             <a href="https://www.peacelc.com" id='text-link' >
                                 <h3>Peace Lutheran Church Website</h3>
                             </a>
-                            <p className='py-2'>
-                                Built using Wordpress and custom HTML/CSS. 
-
+                            <p className='py-2 text-wrap'>
+                                Built using Wordpress and custom HTML/CSS.
                             </p>
                         </article>
                     
@@ -26,9 +25,8 @@ const Projects = () => {
                             <a href="" id='text-link' >
                                 <h3>head</h3>
                             </a>
-                            <p className='py-2'>
+                            <p className='py-2 text-wrap'>
                                 text
-
                             </p>
                         </article>
                     </div>
@@ -38,7 +36,7 @@ const Projects = () => {
                             <a href="https://github.com/kdotzlaw/UniversityProjects/blob/main/ESN-MachineLearning/ESN.ipynb" id='text-link' >
                                 <h3>Echo State Network</h3>
                             </a>
-                            <p id='project-content'className='py-2'>
+                            <p id='project-content' className='py-2 text-wrap'>
                             A type of recurrent neural network created with Python to recognize temporal patterns like k-step ahead forecasting. 
                             Specifically, ESNs use backpropagation to feed optimized hyperparameters back into its recurrent internal state.
                             </p>

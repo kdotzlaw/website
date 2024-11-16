@@ -14,13 +14,9 @@ const Home = () => {
             <h2 className='text-2xl'>About Me</h2>
             <img src="" alt=""/>
             <article  className='py-4 text-pretty'>
-            <p>
+            <p className="text-wrap">
                 I am a recent graduate of the University of Manitoba with a Bachelor's degree in Computer Science,
                 specializing in Software Engineering, Artificial Intelligence, and Databases.
-
-
-                
-                
             </p>
             </article>
             
@@ -29,7 +25,7 @@ const Home = () => {
       <div id='home-content' className="container mx-auto py-4 text-right">
         <div id='curr-proj-container mx-auto text-right'>
             <h2 className='text-2xl'>Current Projects</h2>
-            <p className='py-4'>Projects go here</p>
+            <p className='py-4 text-wrap'>Projects go here</p>
         </div>
       </div>
     </div>
