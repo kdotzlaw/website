@@ -1,13 +1,21 @@
 
 import React, { useState } from 'react';
+
+//Style Imports
 import '../styles/Home.css';
+
+//Architecture Imgs
 import esnImage from '../img/esn.JPG';
+import studyBuddyArch from '../img/StudyBuddyArch.png';
+
+//Logos
 import flaskImg from '../img/flask.png';
 import reactImg from '../img/react.png';
 import pythonImg from '../img/python.png';
 import sqlImg from '../img/sql.png';
+import locustImg from '../img/locust.png';
+import fStackImg from '../img/fStack.png';
 
-import studyBuddyArch from '../img/StudyBuddyArch.png';
 const Projects = () => {
     //Toggle each project section - default is expanded
     const [frontendExpanded, setFrontendExpanded] = useState(true);
@@ -65,6 +73,14 @@ const Projects = () => {
             <div id='projects-header' className="py-16">
                 <div className="container mx-auto text-left max-w-3xl">
                     <h1 className="text-6xl font-bold ">Projects</h1>
+                    <div id='imgs' className='flex justify-left space-x-4'>
+                        <img src={reactImg} alt='React Logo' className="w-16 h-16 object-contain rounded my-4 cursor-pointer hover:scale-105 transition-transform duration-300" onClick={() => window.open(reactImg, '_blank')}/>
+                        <img src={fStackImg} alt='Frontend Stack' className="w-16 h-16 object-contain rounded my-4 cursor-pointer hover:scale-105 transition-transform duration-300" onClick={() => window.open(fStackImg, '_blank')}/>
+                        <img src={flaskImg} alt='Flask Logo' className="w-16 h-16 object-contain rounded my-4 cursor-pointer hover:scale-105 transition-transform duration-300" onClick={() => window.open(flaskImg, '_blank')}/>
+                        <img src={sqlImg} alt='SQL Logo' className="w-16 h-16 object-contain rounded my-4 cursor-pointer hover:scale-105 transition-transform duration-300" onClick={() => window.open(sqlImg, '_blank')}/>
+                        <img src={pythonImg} alt='Python Logo' className="w-16 h-16 object-contain rounded my-4 cursor-pointer hover:scale-105 transition-transform duration-300" onClick={() => window.open(pythonImg, '_blank')}/>
+                        <img src={locustImg} alt='Locust Logo' className="w-16 h-16 object-contain rounded my-4 cursor-pointer hover:scale-105 transition-transform duration-300" onClick={() => window.open(locustImg, '_blank')}/>
+                    </div>
                     
                     <div id='frontend-dev' className='py-4'>
                         <h2 id='header-indv-project' className='py-4 font-bold cursor-pointer flex items-center' onClick={toggleFrontend}>
@@ -148,13 +164,14 @@ const Projects = () => {
                         </h2>
                         {fullstackExpanded && (
                             <article className='text-wrap'>
-                                 <img src={reactImg} alt='React Logo' className="w-16 h-16 object-contain rounded my-4 cursor-pointer hover:scale-105 transition-transform duration-300" onClick={() => window.open(reactImg, '_blank')}/>
+                                 
                                 <h3 className='py-4 font-semibold cursor-pointer flex items-center' onClick={togglePeaceDB}>
                                     Database Manager    
                                     <span className={`ml-2 transform ${peaceDBExpanded ? 'rotate-180' : ''} transition-transform duration-200`}>▼</span>
                                 </h3>
                             {peaceDBExpanded && (
                                 <article>
+                                    
                                     <a href='https://github.com/kdotzlaw/peace_admin' id='text-link' >
                                     <h6 className='text-[12px]'>View the project on GitHub</h6>
                                     </a>
@@ -162,6 +179,7 @@ const Projects = () => {
                                     A web application built for Peace Lutheran Church that allows users to interact with the database with minimal programming knowledge.
                                     The application was built using React, Python, JavaScript, HTML/CSS, Flask, and SQL. 
                                     </p>
+                                    
                                 </article>
                             )}
 

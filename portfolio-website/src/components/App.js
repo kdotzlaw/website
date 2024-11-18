@@ -5,6 +5,7 @@ import Home from './Home';
 import Projects from './Projects';
 import Publications from './Publications';
 import Contact from './Contact';
+import Edu from './Edu';
 
 function App() {
   const [currentComponent, setCurrentComponent] = useState('Home');
@@ -15,6 +16,8 @@ function App() {
         return <Home />;
       case 'Projects':
         return <Projects />;
+      case 'Edu':
+        return <Edu />;
       case 'Publications':
         return <Publications />;
       case 'Contact':
