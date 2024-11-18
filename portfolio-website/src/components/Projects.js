@@ -1,7 +1,11 @@
 
 import React, { useState } from 'react';
 import '../styles/Home.css';
-//import esnImage from '../img/esn.JPG';
+import esnImage from '../img/esn.JPG';
+import flaskImg from '../img/flask.png';
+import reactImg from '../img/react.png';
+import pythonImg from '../img/python.png';
+import sqlImg from '../img/sql.png';
 
 import studyBuddyArch from '../img/StudyBuddyArch.png';
 const Projects = () => {
@@ -36,20 +40,41 @@ const Projects = () => {
     const togglePeaceDB = () => {
         setPeaceDBExpanded(!peaceDBExpanded);
     };
-
-
+    const [esnExpanded, setEsnExpanded] = useState(true);
+    const toggleESN = () => {
+        setEsnExpanded(!esnExpanded);
+    };
+    const [pmExpanded, setPmExpanded] = useState(true);
+    const togglePM = () => {
+        setPmExpanded(!pmExpanded);
+    };
+    const [msaExpanded, setMsaExpanded] = useState(true);
+    const toggleMSA = () => {
+        setMsaExpanded(!msaExpanded);
+    };
+    const [njExpanded, setNjExpanded] = useState(true);
+    const toggleNJ = () => {
+        setNjExpanded(!njExpanded);
+    };
+    const [hmmExpanded, setHmmExpanded] = useState(true);
+    const toggleHMM = () => {
+        setHmmExpanded(!hmmExpanded);
+    };
     return (
         <div id='body' className="pr-64"> {/* Added padding-right to account for sidebar */}
             <div id='projects-header' className="py-16">
                 <div className="container mx-auto text-left max-w-3xl">
                     <h1 className="text-6xl font-bold ">Projects</h1>
+                    
                     <div id='frontend-dev' className='py-4'>
                         <h2 id='header-indv-project' className='py-4 font-bold cursor-pointer flex items-center' onClick={toggleFrontend}>
                             Frontend Development
                             <span className={`ml-2 transform ${frontendExpanded ? 'rotate-180' : ''} transition-transform duration-200`}>▼</span>
                         </h2>
                         {frontendExpanded && (
+                            
                             <article>
+                                <img src={reactImg} alt='React Logo' className="w-[250px] h-[400px] object-cover rounded my-4 cursor-pointer hover:scale-105 transition-transform duration-300" onClick={() => window.open(reactImg, '_blank')}/>
                                 <a href="https://www.peacelc.com" id='text-link' >
                                     <h3>Peace Lutheran Church Website</h3>
                                 </a>
@@ -151,19 +176,96 @@ const Projects = () => {
                     </h2>
                     {dataExpanded && (
                         <article className='text-wrap'>
-                                <a href="https://github.com/kdotzlaw/UniversityProjects/blob/main/ESN-MachineLearning/ESN.ipynb" id='text-link' >
-                                    <h3>Echo State Network</h3>
-                                </a>
-                                <p id='project-content' className='py-2 text-wrap'>
-                                An ESN is a type of recurrent neural network created with Python to recognize temporal patterns like k-step ahead forecasting. 
-                                Specifically, ESNs use backpropagation to feed optimized hyperparameters back into its recurrent internal state.
-                                </p>
-                                <p id='project-content' className='py-2 text-wrap'>
-                                    Explores machine learning concepts like error calculation via MSE, backpropagation, ridge regression,
-                                    sigmoid activation functions, and hyperparameter tuning.
-                                    All visualization was done using matplotlib and numpy. 
-                                </p>
-                                {/*<img src={esnImage} alt='An example of an ESN' className="w-[900px] h-[600px] object-cover rounded my-4 cursor-pointer hover:scale-105 transition-transform duration-300" onClick={() => window.open(esnImage, '_blank')}/>*/}
+                            <h3 className='py-4 font-semibold cursor-pointer flex items-center' onClick={toggleESN}>
+                                Echo State Network
+                                <span className={`ml-2 transform ${esnExpanded ? 'rotate-180' : ''} transition-transform duration-200`}>▼</span>
+                            </h3>
+                            {esnExpanded && (
+                                <article className='text-wrap'>
+                                      <p className='text-wrap'>
+                                        An ESN is a type of recurrent neural network created with Python to recognize temporal patterns like k-step ahead forecasting. 
+                                        Specifically, ESNs use backpropagation to feed optimized hyperparameters back into its recurrent internal state.
+                                      </p>
+                                      <img src={esnImage} alt='An example of an ESN' className="w-[900px] h-[600px] object-cover rounded my-4 cursor-pointer hover:scale-105 transition-transform duration-300" onClick={() => window.open(esnImage, '_blank')}/>
+                                      <a className='text-[12px]' href="https://github.com/kdotzlaw/UniversityProjects/blob/main/ESN-MachineLearning/ESN.ipynb" id='text-link' >
+                                        View the project on GitHub
+                                      </a>
+                                      <p className='text-wrap'>
+                                        Explores machine learning concepts like error calculation via MSE, backpropagation, ridge regression,
+                                        sigmoid activation functions, and hyperparameter tuning.
+                                        All visualization was done using matplotlib and numpy. 
+                                    </p>
+
+                                </article>
+
+                            )}
+                            <h3 className='py-4 font-semibold cursor-pointer flex items-center' onClick={togglePM}>
+                                Comparison of Pattern Matching Methods
+                                <span className={`ml-2 transform ${pmExpanded ? 'rotate-180' : ''} transition-transform duration-200`}>▼</span>
+                            </h3>
+                            {pmExpanded &&(
+                                <article>
+                                    <a className='text-[12px]' href="https://github.com/kdotzlaw/UniversityProjects/tree/main/BioInformatics/Pattern_Matching" id='text-link' >
+                                        View the project on GitHub
+                                      </a>
+                                    <p className='text-wrap'>
+                                       Compares the runtimes of a brute force approach to pattern matching and the Knuth-Morris-Pratt approach to pattern matching, both using the 
+                                       Sorangium cellulosum genome. Analysis includes identifying patterns that have significantly faster runtimes when using KMP.
+                                       Implementation was done using Python and the BioPython library. 
+                                    </p>
+                                </article>
+                            )}
+                            <h3 className='py-4 font-semibold cursor-pointer flex items-center' onClick={toggleMSA}>
+                                Multiple Sequence Alignment with ClustalW
+                                <span className={`ml-2 transform ${msaExpanded ? 'rotate-180' : ''} transition-transform duration-200`}>▼</span>
+                            </h3>
+                            {msaExpanded && (
+                                <article>
+                                    <a className='text-[12px]' href="https://github.com/kdotzlaw/UniversityProjects/tree/main/BioInformatics/Multiple_Sequence_Alignment" id='text-link' >
+                                        View the project on GitHub
+                                      </a>
+                                    <p className='text-wrap'>
+                                        Performs multiple sequence alignment using a custom implementation of ClustalW. This implementation
+                                        builds a dynamic programming table based on given sequences and fills it based on calculated sum of pairs scores. Optimal
+                                        alignments are identified by tracing back through the table.
+                                        Implementation was done using Python, numpy, and  the BioPython library.
+                                    </p>
+                                </article>
+                            )}
+                            <h3 className='py-4 font-semibold cursor-pointer flex items-center' onClick={toggleNJ}>
+                                Neighbour Joining with Distal Matrices
+                                <span className={`ml-2 transform ${njExpanded ? 'rotate-180' : ''} transition-transform duration-200`}>▼</span>
+                            </h3>
+                            {njExpanded && (
+                                <article>
+                                     <a className='text-[12px]' href="https://github.com/kdotzlaw/UniversityProjects/tree/main/BioInformatics/Neighbour_Joining" id='text-link' >
+                                        View the project on GitHub
+                                      </a>
+                                    <p>
+                                        A recursive Python implementation of neighbour joining using unions of distances to create delta matrix values, and using Fitch-Margoliash
+                                        to join neighbours in the base case.
+                                    </p>
+                                </article>
+                            )}
+                            <h3 className='py-4 font-semibold cursor-pointer flex items-center' onClick={toggleHMM}>
+                                Hidden Markov Models
+                                <span className={`ml-2 transform ${hmmExpanded ? 'rotate-180' : ''} transition-transform duration-200`}>▼</span>
+                            </h3>
+                            {hmmExpanded && (
+                                <article>
+                                <a className='text-[12px]' href="https://github.com/kdotzlaw/UniversityProjects/tree/main/BioInformatics/Hidden_Markov_Models" id='text-link' >
+                                        View the project on GitHub
+                                      </a>
+                                      <p>
+                                        A Python implementation of a Hidden Markov Model using a set of abstract states, an alphabet of output tokens, a transition probability
+                                        matrix, an emission probability matrix, and the Forward algorithm to find the total probability that the HMM produces a given output sequence.
+                                        The implementation was done using Python and the pandas library.
+                                    </p>
+                                </article>
+                            )}
+
+
+                                
                                 
                             </article>
                         )}
