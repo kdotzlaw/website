@@ -74,7 +74,7 @@ const Projects = () => {
                         {frontendExpanded && (
                             
                             <article>
-                                <img src={reactImg} alt='React Logo' className="w-[250px] h-[400px] object-cover rounded my-4 cursor-pointer hover:scale-105 transition-transform duration-300" onClick={() => window.open(reactImg, '_blank')}/>
+                                <img src={reactImg} alt='React Logo' className="w-16 h-16 object-cover rounded my-4 cursor-pointer hover:scale-105 transition-transform duration-300" onClick={() => window.open(reactImg, '_blank')}/>
                                 <a href="https://www.peacelc.com" id='text-link' >
                                     <h3>Peace Lutheran Church Website</h3>
                                 </a>
