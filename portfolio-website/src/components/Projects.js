@@ -148,7 +148,7 @@ const Projects = () => {
                         </h2>
                         {fullstackExpanded && (
                             <article className='text-wrap'>
-                                 <img src={reactImg} alt='React Logo' className="w-16 h-16 object-cover rounded my-4 cursor-pointer hover:scale-105 transition-transform duration-300" onClick={() => window.open(reactImg, '_blank')}/>
+                                 <img src={reactImg} alt='React Logo' className="w-16 h-16 object-contain rounded my-4 cursor-pointer hover:scale-105 transition-transform duration-300" onClick={() => window.open(reactImg, '_blank')}/>
                                 <h3 className='py-4 font-semibold cursor-pointer flex items-center' onClick={togglePeaceDB}>
                                     Database Manager    
                                     <span className={`ml-2 transform ${peaceDBExpanded ? 'rotate-180' : ''} transition-transform duration-200`}>▼</span>
