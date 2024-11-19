@@ -87,8 +87,8 @@ const Projects = () => {
                                 types:['all','sql','python'],
                                 images: [
                                     { src: sb, alt: 'Study Buddy', id: 'sb' },
-                                    { src: studyBuddyArch, alt: 'Data Analysis Diagram', id: 'studyBuddyArch' },
-                                    {src: sbFlow, alt: 'Study Buddy Flow Diagram', id: 'sbFlow' }
+                                    { src: studyBuddyArch, alt: 'Data Analysis Diagram', id: 'studyBuddyArch' }
+                             
                                 ],
                                 url:'https://github.com/kdotzlaw/StudyBuddy',
                                 description: `I worked as a database engineer and technical writer for a fullstack web application designed to help students manage their study schedules. I built
@@ -108,7 +108,7 @@ const Projects = () => {
                                                     key={imgIndex}
                                                     src={image.src} 
                                                     alt={image.alt} 
-                                                    className="w-1/3 h-auto max-h-48 object-contain rounded m-2 cursor-pointer hover:scale-105 transition-transform duration-300 flex-shrink-0" 
+                                                    className="w-1/2 h-auto max-h-48 object-contain rounded m-2 cursor-pointer hover:scale-105 transition-transform duration-300 flex-shrink-0" 
                                                 />
                                             ))}
                                         </div>
