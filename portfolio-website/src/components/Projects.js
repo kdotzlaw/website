@@ -205,7 +205,7 @@ const Projects = () => {
                                         An ESN is a type of recurrent neural network created with Python to recognize temporal patterns like k-step ahead forecasting. 
                                         Specifically, ESNs use backpropagation to feed optimized hyperparameters back into its recurrent internal state.
                                       </p>
-                                      <img src={esnImage} alt='An example of an ESN' className="w-[900px] h-[600px] object-cover rounded my-4 cursor-pointer hover:scale-105 transition-transform duration-300" onClick={() => window.open(esnImage, '_blank')}/>
+                                      {/*<img src={esnImage} alt='An example of an ESN' className="w-[900px] h-[600px] object-cover rounded my-4 cursor-pointer hover:scale-105 transition-transform duration-300" onClick={() => window.open(esnImage, '_blank')}/>*/}
                                       <a className='text-[12px]' href="https://github.com/kdotzlaw/UniversityProjects/blob/main/ESN-MachineLearning/ESN.ipynb" id='text-link' >
                                         View the project on GitHub
                                       </a>
