@@ -45,9 +45,9 @@ const Projects = () => {
                     <div className='py-4 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4'>
                         {(selectedProject === 'all' || selectedProject === 'fstack') && (
                             <article className='card flex flex-col justify-between bg-white shadow-lg rounded-lg p-6 h-full'>
-                                <div id='test'>
-                                    <img src={peace} alt='Peace Lutheran Church Website' id='card-img' className=  "object-contain rounded my-4 cursor-pointer hover:scale-105 transition-transform duration-300 mx-auto" onClick={() => window.open('https://peacelc.com')}/>
-                                    <p className='text-center'> A user-friendly and organization-focused website built with Wordpress and custom HTML/CSS</p>
+                                <div id='test' className='flex flex-col items-center'>
+                                    <img src={peace} alt='Peace Lutheran Church Website' id='card-img' className="w-full h-auto max-h-48 object-contain rounded my-4 cursor-pointer hover:scale-105 transition-transform duration-300" onClick={() => window.open('https://peacelc.com')}/>
+                                    <p className='text-center mt-4'> A user-friendly and organization-focused website built with Wordpress and custom HTML/CSS</p>
                                 </div>
                             </article>
                         )}
