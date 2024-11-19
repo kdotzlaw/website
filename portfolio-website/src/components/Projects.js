@@ -42,23 +42,24 @@ const Projects = () => {
                         <img src={locustImg} alt='Locust Logo' className="w-16 h-16 object-contain rounded my-4 cursor-pointer hover:scale-105 transition-transform duration-300" onClick={() => handleProjectSelect('locust')}/>
                     </div>
                     
-                    {(selectedProject === 'all' || selectedProject === 'fstack') && (
-                        <div id='fStack-dev' className='py-4 flex flex-row space-x-4'>      
-                            <article className='card flex flex-col items-center bg-white shadow-lg rounded-lg p-6 flex-1'>
-                                <img src={peace} alt='Peace Lutheran Church Website' id='card-img' className="w-16 h-16 object-contain rounded my-4 cursor-pointer hover:scale-105 transition-transform duration-300 mx-auto" onClick={() => window.open('https://peacelc.com')}/>
-                                <p className='py-4 text-center'> A user-friendly and organization-focused website built with Wordpress and custom HTML/CSS</p>
+                    <div className='py-4 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4'>
+                        {(selectedProject === 'all' || selectedProject === 'fstack') && (
+                            <article className='card flex flex-col justify-between bg-white shadow-lg rounded-lg p-6 h-full'>
+                                <div>
+                                    <img src={peace} alt='Peace Lutheran Church Website' id='card-img' className="w-16 h-16 object-contain rounded my-4 cursor-pointer hover:scale-105 transition-transform duration-300 mx-auto" onClick={() => window.open('https://peacelc.com')}/>
+                                    <p className='py-4 text-center'> A user-friendly and organization-focused website built with Wordpress and custom HTML/CSS</p>
+                                </div>
                             </article>
-                            
-                        </div>
-                    )}
-                    {(selectedProject === 'all' || selectedProject === 'sql') && (
-                        <div id='sql-dev' className='py-4 flex flex-row space-x-4'>
-                             <article className='card flex flex-col items-center bg-white shadow-lg rounded-lg p-6 flex-1'>
-                                <img src={sqlImg} alt='this website' className="w-16 h-16 object-contain rounded my-4 cursor-pointer hover:scale-105 transition-transform duration-300 mx-auto" />
-                                <p className='py-4 text-center'>This portfolio website built with React and Tailwind CSS</p>
+                        )}
+                        {(selectedProject === 'all' || selectedProject === 'sql') && (
+                            <article className='card flex flex-col justify-between bg-white shadow-lg rounded-lg p-6 h-full'>
+                                <div>
+                                    <img src={sqlImg} alt='this website' className="w-16 h-16 object-contain rounded my-4 cursor-pointer hover:scale-105 transition-transform duration-300 mx-auto" />
+                                    <p className='py-4 text-center'>This portfolio website built with React and Tailwind CSS</p>
+                                </div>
                             </article>
-                        </div>
-                    )}
+                        )}
+                    </div>
 
                     </div>
                 </div>
