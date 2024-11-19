@@ -45,7 +45,7 @@ const Projects = () => {
                         
                     </div>
                     
-                    <div className='py-4 grid grid-cols-1 w-3/4 gap-6  mx-auto text-left text-wrap'>
+                    <div className='py-4 grid grid-cols-1 w-3/4 gap-6  mx-auto text-center text-wrap'>
                         {[
                             {
                                 types: ['all', 'python'],
@@ -111,7 +111,7 @@ const Projects = () => {
                                             />
                                         ))}
                                     </div>
-                                    <div className='flex flex-col justify-between w-2/3'>
+                                    <div className='flex flex-col justify-between w-2/3 '>
                                         <p className='text-left'>{project.description}</p>
                                         <button onClick={() => project.url && window.open(project.url)} className='mt-4 bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded self-start'>
                                             View Project
