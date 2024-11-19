@@ -1,5 +1,6 @@
 body{
     font-family: 'Source Code Pro', monospace;
+    background-color: #022B3A;
 }
 #body{
     /*background-color: #84A59D;*/
@@ -11,7 +12,7 @@ body{
     */
     background-color: #022B3A;
     color: white;
-    position:relative;
+    position: relative;
 }
 
 #text-link{

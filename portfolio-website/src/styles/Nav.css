@@ -1,4 +1,4 @@
-#nav-header{
+/*#nav-header{
     color: #FB6376;
 }
 #nav-item{
@@ -12,3 +12,20 @@
 #social{
     color: #FB6376;
 }
+    */
+    #nav-header{
+        color:white;
+    }
+    #nav-item{
+        color:white;
+    }
+    #nav-item:hover{
+        color: #CEC3C1;
+    }
+    #social{
+        color:white;
+    }
+    #social:hover{
+        color: #CEC3C1;
+        
+    }
