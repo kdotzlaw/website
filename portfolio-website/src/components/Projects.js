@@ -86,9 +86,7 @@ const Projects = () => {
                             {
                                 types:['all','sql','python'],
                                 images: [
-                                    { src: sb, alt: 'Study Buddy', id: 'sb' },
-                                    { src: studyBuddyArch, alt: 'Data Analysis Diagram', id: 'studyBuddyArch' }
-                             
+                                    { src: sb, alt: 'Study Buddy', id: 'sb' }
                                 ],
                                 url:'https://github.com/kdotzlaw/StudyBuddy',
                                 description: `I worked as a database engineer and technical writer for a fullstack web application designed to help students manage their study schedules. I built
@@ -96,7 +94,8 @@ const Projects = () => {
                                         parameterized queries to prevent SQL injection attacks. I collaborated with our Server Manager to ensure that the database successfully integrated with the Flask server.
                                         I also worked with our CI/CD lead to ensure that the backend was successfully deployed with GitHub Actions and Docker.
                                         As a technical writer, I created project documentation including a wiki, milestone reports, test plans, and meeting minutes. 
-                                        I also performed load testing with Locust to ensure that the application could handle high traffic and concurrent requests.`
+                                        I also performed load testing with Locust to ensure that the application could handle high traffic and concurrent requests.`,
+                                additionalContent: <img src={studyBuddyArch} alt='Data Analysis Diagram' id='studyBuddyArch' className="mt-4" />
                             }
                         ].map((project, index) => (
                             project.types.includes(selectedProject) && (
@@ -112,7 +111,10 @@ const Projects = () => {
                                         ))}
                                     </div>
                                     <div className='flex flex-col justify-between w-2/3'>
-                                        <p className='py-6 text-left'>{project.description}</p>
+                                        <div>
+                                            <p className='py-6 text-left'>{project.description}</p>
+                                            {project.additionalContent}
+                                        </div>
                                         <div className='flex justify-center mt-4'>
                                             <button onClick={() => project.url && window.open(project.url)} className='bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded'>
                                                 View Project

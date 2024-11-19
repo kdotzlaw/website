@@ -17,6 +17,8 @@
     height: 100%;
 }
 
-#studyBuddyArch{
-    
+#studyBuddyArch {
+    display: block;
+    margin-top: 10px;
+    width: 100%;
 }
