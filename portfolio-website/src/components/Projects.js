@@ -96,7 +96,7 @@ const Projects = () => {
                     )}
 
 
-                    <div id='sql-dev' className='py-4'>
+                    {/*<div id='sql-dev' className='py-4'>
                     {sqlExpanded && (
                         <div id='sql-dev' className='flex flex-col items-center'>
                                 <article className='card flex flex-col items-center'>
@@ -291,7 +291,7 @@ const Projects = () => {
                                 
                             </article>
                         )}
-                    </div>
+                    </div>*/}
                 </div>
                 
             </div>
