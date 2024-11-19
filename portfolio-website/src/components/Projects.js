@@ -100,20 +100,20 @@ const Projects = () => {
                             }
                         ].map((project, index) => (
                             project.types.includes(selectedProject) && (
-                                <article key={index} className='card flex flex-col justify-between bg-white shadow-lg rounded-lg p-6 h-full w-full'>
-                                    <div className='flex flex-col items-center w-full'>
-                                        <div className='flex flex-wrap justify-center'>
-                                            {project.images.map((image, imgIndex) => (
-                                                <img 
-                                                    key={imgIndex}
-                                                    src={image.src} 
-                                                    alt={image.alt} 
-                                                    className="w-1/3 h-auto max-h-64 object-contain rounded m-2 cursor-pointer hover:scale-105 transition-transform duration-300" 
-                                                />
-                                            ))}
-                                        </div>
-                                        <p className='text-left mt-4 w-full'>{project.description}</p>
-                                        <button onClick={() => project.url && window.open(project.url)} className='mt-4 bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded'>
+                                <article key={index} className='card flex bg-white shadow-lg rounded-lg p-6 h-full w-full'>
+                                    <div className='flex flex-col items-center w-1/3 mr-4'>
+                                        {project.images.map((image, imgIndex) => (
+                                            <img 
+                                                key={imgIndex}
+                                                src={image.src} 
+                                                alt={image.alt} 
+                                                className="w-full h-auto max-h-64 object-contain rounded mb-2 cursor-pointer hover:scale-105 transition-transform duration-300" 
+                                            />
+                                        ))}
+                                    </div>
+                                    <div className='flex flex-col justify-between w-2/3'>
+                                        <p className='text-left'>{project.description}</p>
+                                        <button onClick={() => project.url && window.open(project.url)} className='mt-4 bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded self-start'>
                                             View Project
                                         </button>
                                     </div>
