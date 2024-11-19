@@ -23,15 +23,15 @@ import peace from '../img/peace.png';
 const Projects = () => {
     //Toggle each project section - default is expanded
     const [frontendExpanded, setFrontendExpanded] = useState(false);
-    const [backendExpanded, setBackendExpanded] = useState(true);
+    const [sqlExpanded, setSQLExpanded] = useState(true);
     const [dataExpanded, setDataExpanded] = useState(true);
     const [fullstackExpanded, setFullstackExpanded] = useState(true);
 
     const toggleFrontend = () => {
         setFrontendExpanded(!frontendExpanded);
     };
-    const toggleBackend = () => {
-        setBackendExpanded(!backendExpanded);
+    const toggleSQL = () => {
+        setSQLExpanded(!sqlExpanded);
     };
     const toggleData = () => {
         setDataExpanded(!dataExpanded);
@@ -81,28 +81,34 @@ const Projects = () => {
                         <img src={reactImg} alt='React Logo' className="w-16 h-16 object-contain rounded my-4 cursor-pointer hover:scale-105 transition-transform duration-300" onClick={() => window.open(reactImg, '_blank')}/>
                         <img src={fStackImg} alt='Frontend Stack' className="w-16 h-16 object-contain rounded my-4 cursor-pointer hover:scale-105 transition-transform duration-300" onClick={toggleFrontend}/>
                         <img src={flaskImg} alt='Flask Logo' className="w-16 h-16 object-contain rounded my-4 cursor-pointer hover:scale-105 transition-transform duration-300" onClick={() => window.open(flaskImg, '_blank')}/>
-                        <img src={sqlImg} alt='SQL Logo' className="w-16 h-16 object-contain rounded my-4 cursor-pointer hover:scale-105 transition-transform duration-300" onClick={() => window.open(sqlImg, '_blank')}/>
+                        <img src={sqlImg} alt='SQL Logo' className="w-16 h-16 object-contain rounded my-4 cursor-pointer hover:scale-105 transition-transform duration-300" onClick={toggleSQL}/>
                         <img src={pythonImg} alt='Python Logo' className="w-16 h-16 object-contain rounded my-4 cursor-pointer hover:scale-105 transition-transform duration-300" onClick={() => window.open(pythonImg, '_blank')}/>
                         <img src={locustImg} alt='Locust Logo' className="w-16 h-16 object-contain rounded my-4 cursor-pointer hover:scale-105 transition-transform duration-300" onClick={() => window.open(locustImg, '_blank')}/>
                     </div>
                     
                     {frontendExpanded && (
-                        <div id='frontend-dev' className='py-4'>
-                            <h2 id='header-indv-project' className='py-4 font-bold'>
-                                Frontend Development
-                            </h2>
+                        <div id='fStack-dev' className='py-4'>      
                             <article className='card flex flex-col items-center'>
-                                <img src={peace} alt='Peace Lutheran Church Website' id='card-img' className="w-16 h-16 object-contain rounded my-4 cursor-pointer hover:scale-105 transition-transform duration-300 mx-auto" onClick={() => window.open(peace, '_blank')}/>
-                                <p className='py-4 text-center'> A user-friendly and user-focused website built with Wordpress and custom HTML/CSS</p>
+                                <img src={peace} alt='Peace Lutheran Church Website' id='card-img' className="w-16 h-16 object-contain rounded my-4 cursor-pointer hover:scale-105 transition-transform duration-300 mx-auto" onClick={() => window.open('https://peacelc.com')}/>
+                                <p className='py-4 text-center'> A user-friendly and organization-focused website built with Wordpress and custom HTML/CSS</p>
                             </article>
                         </div>
                     )}
-                    <div id='backend-dev' className='py-4'>
-                    <h2 id='header-indv-project' className='py-4 font-bold cursor-pointer flex items-center' onClick={toggleBackend}>
-                        Backend Development
-                        <span className={`ml-2 transform ${backendExpanded ? 'rotate-180' : ''} transition-transform duration-200`}>▼</span>
-                    </h2>
-                    {backendExpanded && (
+
+
+                    <div id='sql-dev' className='py-4'>
+                    {sqlExpanded && (
+                        <div id='sql-dev' className='flex flex-col items-center'>
+                                <article className='card flex flex-col items-center'>
+                                    <img src={sqlImg} alt='SQLite Website' id='card-img' className="w-16 h-16 object-contain rounded my-4 cursor-pointer hover:scale-105 transition-transform duration-300 mx-auto" onClick={() => window.open(sqlImg, '_blank')}/>
+                                    <p className='py-4 text-center'> A user-friendly and user-focused website built with Wordpress and custom HTML/CSS</p>
+
+                                </article>
+                        </div>
+                    )}
+
+
+                        
                     <article>
                             <h3 className='py-4 font-semibold cursor-pointer flex items-center' onClick={toggleQueryOp}>
                                 Query Optimization    
@@ -152,7 +158,7 @@ const Projects = () => {
                             )}
                            
                         </article>
-                    )}
+                    
                     </div>
                     <div id='fullstack' className='py-4 '>
                         <h2 id='header-indv-project'className='py-4 font-bold cursor-pointer flex items-center' onClick={toggleFullstack}>
