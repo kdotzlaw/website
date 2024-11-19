@@ -3,18 +3,16 @@ import '../styles/Nav.css';
 
 const Nav = ({ switchComponent }) => {
   return (
-    <nav id='nav' className='bg-gray-100 p-4 fixed h-full w-64 z-50 top-0 right-0 shadow-lg flex flex-col justify-between'>
-      <div>
-        <ul className="space-y-4">
-          <li id='nav-item'><a href='#home' className="block py-2 px-4" onClick={() => switchComponent('Home')}>Home</a></li>
-          <li id='nav-item'><a href='#projects' className="block py-2 px-4" onClick={() => switchComponent('Projects')}>Projects</a></li>
-          <li id='nav-item'><a href='#courses' className="block py-2 px-4" onClick={() => switchComponent('Edu')}>Education</a></li>
-          <li id='nav-item'><a href='#publications' className="block py-2 px-4" onClick={()=>switchComponent('Publications')}>Publications</a></li>
-          <li id='nav-item'><a href='#contact' className="block py-2 px-4" onClick={()=>switchComponent('Contact')}>Contact</a></li>
+    <header id='nav' className='bg-gray-100 p-4 fixed w-full z-50 top-0 left-0 shadow-lg'>
+      <nav className='container mx-auto flex justify-between items-center'>
+        <ul className="flex space-x-6">
+          <li id='nav-item'><a href='#home' className="py-2 px-4" onClick={() => switchComponent('Home')}>Home</a></li>
+          <li id='nav-item'><a href='#projects' className="py-2 px-4" onClick={() => switchComponent('Projects')}>Projects</a></li>
+          <li id='nav-item'><a href='#courses' className="py-2 px-4" onClick={() => switchComponent('Edu')}>Education</a></li>
+          <li id='nav-item'><a href='#publications' className="py-2 px-4" onClick={() => switchComponent('Publications')}>Publications</a></li>
+          <li id='nav-item'><a href='#contact' className="py-2 px-4" onClick={() => switchComponent('Contact')}>Contact</a></li>
         </ul>
-      </div>
-      <div>
-        <ul className="flex justify-center space-x-4">
+        <ul className="flex space-x-4">
           <li id='nav-item'>
             <a href='https://www.linkedin.com/in/kdotzlaw' target="_blank" rel="noopener noreferrer">
               <i id='social' className="fa-brands fa-linkedin text-2xl text-blue-600 hover:text-blue-800"></i>
@@ -26,8 +24,8 @@ const Nav = ({ switchComponent }) => {
             </a>
           </li>
         </ul>
-      </div>
-    </nav>
+      </nav>
+    </header>
   );
 };
 
