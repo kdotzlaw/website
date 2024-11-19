@@ -21,23 +21,10 @@ import fStackImg from '../img/fStack.png';
 import peace from '../img/peace.png';
 
 const Projects = () => {
-    //Toggle each project section - default is expanded
-    const [fStackExpanded, setfStackExpanded] = useState(true);
-    const [sqlExpanded, setSQLExpanded] = useState(true);
-    const [dataExpanded, setDataExpanded] = useState(true);
-    const [fullstackExpanded, setFullstackExpanded] = useState(true);
+    const [selectedProject, setSelectedProject] = useState('all');
 
-    const toggleFStack = () => {
-        setfStackExpanded(!fStackExpanded);
-    };
-    const toggleSQL = () => {
-        setSQLExpanded(!sqlExpanded);
-    };
-    const toggleData = () => {
-        setDataExpanded(!dataExpanded);
-    };
-    const toggleFullstack = () => {
-        setFullstackExpanded(!fullstackExpanded);
+    const handleProjectSelect = (project) => {
+        setSelectedProject(project);
     };
     //Toggle each project in each project section - default is expanded
     const [queryOpExpanded, setQueryOpExpanded] = useState(true);
@@ -79,15 +66,15 @@ const Projects = () => {
                     <h1 className="text-6xl font-bold ">Projects</h1>
                     
                     <div id='imgs' className='flex justify-left space-x-4'>
-                        <img src={reactImg} alt='React Logo' className="w-16 h-16 object-contain rounded my-4 cursor-pointer hover:scale-105 transition-transform duration-300" onClick={() => window.open(reactImg, '_blank')}/>
-                        <img src={fStackImg} alt='Frontend Stack' className="w-16 h-16 object-contain rounded my-4 cursor-pointer hover:scale-105 transition-transform duration-300" onClick={toggleFStack}/>
-                        <img src={flaskImg} alt='Flask Logo' className="w-16 h-16 object-contain rounded my-4 cursor-pointer hover:scale-105 transition-transform duration-300" onClick={() => window.open(flaskImg, '_blank')}/>
-                        <img src={sqlImg} alt='SQL Logo' className="w-16 h-16 object-contain rounded my-4 cursor-pointer hover:scale-105 transition-transform duration-300" onClick={toggleSQL}/>
-                        <img src={pythonImg} alt='Python Logo' className="w-16 h-16 object-contain rounded my-4 cursor-pointer hover:scale-105 transition-transform duration-300" onClick={() => window.open(pythonImg, '_blank')}/>
-                        <img src={locustImg} alt='Locust Logo' className="w-16 h-16 object-contain rounded my-4 cursor-pointer hover:scale-105 transition-transform duration-300" onClick={() => window.open(locustImg, '_blank')}/>
+                        <img src={reactImg} alt='React Logo' className="w-16 h-16 object-contain rounded my-4 cursor-pointer hover:scale-105 transition-transform duration-300" onClick={() => handleProjectSelect('react')}/>
+                        <img src={fStackImg} alt='Frontend Stack' className="w-16 h-16 object-contain rounded my-4 cursor-pointer hover:scale-105 transition-transform duration-300" onClick={() => handleProjectSelect('fstack')}/>
+                        <img src={flaskImg} alt='Flask Logo' className="w-16 h-16 object-contain rounded my-4 cursor-pointer hover:scale-105 transition-transform duration-300" onClick={() => handleProjectSelect('flask')}/>
+                        <img src={sqlImg} alt='SQL Logo' className="w-16 h-16 object-contain rounded my-4 cursor-pointer hover:scale-105 transition-transform duration-300" onClick={() => handleProjectSelect('sql')}/>
+                        <img src={pythonImg} alt='Python Logo' className="w-16 h-16 object-contain rounded my-4 cursor-pointer hover:scale-105 transition-transform duration-300" onClick={() => handleProjectSelect('python')}/>
+                        <img src={locustImg} alt='Locust Logo' className="w-16 h-16 object-contain rounded my-4 cursor-pointer hover:scale-105 transition-transform duration-300" onClick={() => handleProjectSelect('locust')}/>
                     </div>
                     
-                    {fStackExpanded && (
+                    {(selectedProject === 'all' || selectedProject === 'fstack') && (
                         <div id='fStack-dev' className='py-4 flex flex-row space-x-4'>      
                             <article className='card flex flex-col items-center bg-white shadow-lg rounded-lg p-6 flex-1'>
                                 <img src={peace} alt='Peace Lutheran Church Website' id='card-img' className="w-16 h-16 object-contain rounded my-4 cursor-pointer hover:scale-105 transition-transform duration-300 mx-auto" onClick={() => window.open('https://peacelc.com')}/>
@@ -102,15 +89,15 @@ const Projects = () => {
                                 <p className='py-4 text-center'>This portfolio website built with React and Tailwind CSS</p>
                             </article>
                         </div>
-                    )} {/*fstack expanded*/ }
-                    {sqlExpanded &&(
+                    )}
+                    {(selectedProject === 'all' || selectedProject === 'sql') && (
                         <div id='sql-dev' className='py-4 flex flex-row space-x-4'>
                              <article className='card flex flex-col items-center bg-white shadow-lg rounded-lg p-6 flex-1'>
                                 <img src={sqlImg} alt='this website' className="w-16 h-16 object-contain rounded my-4 cursor-pointer hover:scale-105 transition-transform duration-300 mx-auto" />
                                 <p className='py-4 text-center'>This portfolio website built with React and Tailwind CSS</p>
                             </article>
                         </div>
-                    )}{/*sql expanded*/ }
+                    )}
 
                     </div>
                 </div>
