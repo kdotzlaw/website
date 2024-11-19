@@ -14,7 +14,7 @@ import flaskImg from '../img/flask.png';
 import reactImg from '../img/react.png';
 import pythonImg from '../img/python.png';
 import sqlImg from '../img/sql.png';
-import locustImg from '../img/locust.png';
+
 import fStackImg from '../img/fStack.png';
 
 //Cards
@@ -31,7 +31,7 @@ const Projects = () => {
         <div id='body' className="pt-12"> {/* Added padding-top to account for nav */}
             <div id='projects-header' className="py-16">
                 <div className="container mx-auto text-left ">
-                    <h1 className="text-6xl font-bold ">Projects</h1>
+                    <h1 className="text-6xl font-bold  cursor-pointer" onClick={()=>handleProjectSelect('all')}>Projects</h1>
                     
                     <div id='imgs' className='flex justify-left space-x-4'>
                         <img src={reactImg} alt='React Logo' className="w-16 h-16 object-contain rounded my-4 cursor-pointer hover:scale-105 transition-transform duration-300" onClick={() => handleProjectSelect('react')}/>
@@ -39,7 +39,7 @@ const Projects = () => {
                         <img src={flaskImg} alt='Flask Logo' className="w-16 h-16 object-contain rounded my-4 cursor-pointer hover:scale-105 transition-transform duration-300" onClick={() => handleProjectSelect('flask')}/>
                         <img src={sqlImg} alt='SQL Logo' className="w-16 h-16 object-contain rounded my-4 cursor-pointer hover:scale-105 transition-transform duration-300" onClick={() => handleProjectSelect('sql')}/>
                         <img src={pythonImg} alt='Python Logo' className="w-16 h-16 object-contain rounded my-4 cursor-pointer hover:scale-105 transition-transform duration-300" onClick={() => handleProjectSelect('python')}/>
-                        <img src={locustImg} alt='Locust Logo' className="w-16 h-16 object-contain rounded my-4 cursor-pointer hover:scale-105 transition-transform duration-300" onClick={() => handleProjectSelect('locust')}/>
+                        
                     </div>
                     
                     <div className='py-4 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4'>
@@ -54,10 +54,21 @@ const Projects = () => {
                         {(selectedProject === 'all' || selectedProject === 'sql') && (
                             <article className='card flex flex-col justify-between bg-white shadow-lg rounded-lg p-6 h-full'>
                                 <div>
-                                    <img src={sqlImg} alt='this website' className="w-16 h-16 object-contain rounded my-4 cursor-pointer hover:scale-105 transition-transform duration-300 mx-auto" />
-                                    <p className='py-4 text-center'>This portfolio website built with React and Tailwind CSS</p>
+                                    <img src={sqlImg} alt='Query Optimization' className="w-full h-auto max-h-48 object-contain rounded my-4 cursor-pointer hover:scale-105 transition-transform duration-300 mx-auto" />
+                                    <p className='py-4 text-center'>
+                                        A research project that compared non-optimized SQLite queries to queries optimized with non-clustered B+ tree indexes, including
+                                        covering indexes and partial indexes. 
+                                    </p>
                                 </div>
                             </article>
+                        )}
+                        {(selectedProject === 'all' || selectedProject==='python')&&(
+                            <article className='card flex flex-col justify-between bg-white shadow-lg rounded-lg p-6 h-full'>
+                            <div>
+                                <img src={sqlImg} alt='this website' className="w-full h-auto max-h-48 object-contain rounded my-4 cursor-pointer hover:scale-105 transition-transform duration-300 mx-auto" />
+                                <p className='py-4 text-center'>This portfolio website built with React and Tailwind CSS</p>
+                            </div>
+                        </article>
                         )}
                     </div>
 
