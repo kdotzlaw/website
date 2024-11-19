@@ -44,7 +44,7 @@ const Projects = () => {
                         
                     </div>
                     
-                    <div className='py-4 grid grid-cols-1 sm:grid-cols-1 md:grid-cols-1 gap-4'>
+                    <div className='py-4 grid grid-cols-1 sm:grid-cols-1 md:grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-6 max-w-7xl mx-auto'>
                         {[
                             {
                                 types: ['all', 'python'],
@@ -89,15 +89,15 @@ const Projects = () => {
                             }
                         ].map((project, index) => (
                             project.types.includes(selectedProject) && (
-                                <article key={index} className='card flex flex-col justify-between bg-white shadow-lg rounded-lg p-6 h-full'>
-                                    <div className='flex flex-col items-center'>
+                                <article key={index} className='card flex flex-col justify-between bg-white shadow-lg rounded-lg p-6 h-full w-full'>
+                                    <div className='flex flex-col items-center w-full'>
                                         <img 
                                             src={project.img} 
                                             alt={project.alt} 
                                             className="w-full h-auto max-h-48 object-contain rounded my-4 cursor-pointer hover:scale-105 transition-transform duration-300" 
                                             onClick={() => project.url && window.open(project.url)}
                                         />
-                                        <p className='text-center mt-4'>{project.description}</p>
+                                        <p className='text-center mt-4 w-full'>{project.description}</p>
                                     </div>
                                 </article>
                             )
