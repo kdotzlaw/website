@@ -22,7 +22,7 @@ import peace from '../img/peace.png';
 
 const Projects = () => {
     //Toggle each project section - default is expanded
-    const [frontendExpanded, setFrontendExpanded] = useState(true);
+    const [frontendExpanded, setFrontendExpanded] = useState(false);
     const [backendExpanded, setBackendExpanded] = useState(true);
     const [dataExpanded, setDataExpanded] = useState(true);
     const [fullstackExpanded, setFullstackExpanded] = useState(true);
@@ -79,26 +79,24 @@ const Projects = () => {
                     <h1 className="text-6xl font-bold ">Projects</h1>
                     <div id='imgs' className='flex justify-left space-x-4'>
                         <img src={reactImg} alt='React Logo' className="w-16 h-16 object-contain rounded my-4 cursor-pointer hover:scale-105 transition-transform duration-300" onClick={() => window.open(reactImg, '_blank')}/>
-                        <img src={fStackImg} alt='Frontend Stack' className="w-16 h-16 object-contain rounded my-4 cursor-pointer hover:scale-105 transition-transform duration-300" onClick={() => window.open(fStackImg, '_blank')}/>
+                        <img src={fStackImg} alt='Frontend Stack' className="w-16 h-16 object-contain rounded my-4 cursor-pointer hover:scale-105 transition-transform duration-300" onClick={toggleFrontend}/>
                         <img src={flaskImg} alt='Flask Logo' className="w-16 h-16 object-contain rounded my-4 cursor-pointer hover:scale-105 transition-transform duration-300" onClick={() => window.open(flaskImg, '_blank')}/>
                         <img src={sqlImg} alt='SQL Logo' className="w-16 h-16 object-contain rounded my-4 cursor-pointer hover:scale-105 transition-transform duration-300" onClick={() => window.open(sqlImg, '_blank')}/>
                         <img src={pythonImg} alt='Python Logo' className="w-16 h-16 object-contain rounded my-4 cursor-pointer hover:scale-105 transition-transform duration-300" onClick={() => window.open(pythonImg, '_blank')}/>
                         <img src={locustImg} alt='Locust Logo' className="w-16 h-16 object-contain rounded my-4 cursor-pointer hover:scale-105 transition-transform duration-300" onClick={() => window.open(locustImg, '_blank')}/>
                     </div>
                     
-                    <div id='frontend-dev' className='py-4'>
-                        <h2 id='header-indv-project' className='py-4 font-bold cursor-pointer flex items-center' onClick={toggleFrontend}>
-                            Frontend Development
-                            <span className={`ml-2 transform ${frontendExpanded ? 'rotate-180' : ''} transition-transform duration-200`}>▼</span>
-                        </h2>
-                        {frontendExpanded && (
-                            
+                    {frontendExpanded && (
+                        <div id='frontend-dev' className='py-4'>
+                            <h2 id='header-indv-project' className='py-4 font-bold'>
+                                Frontend Development
+                            </h2>
                             <article className='card flex flex-col items-center'>
                                 <img src={peace} alt='Peace Lutheran Church Website' id='card-img' className="w-16 h-16 object-contain rounded my-4 cursor-pointer hover:scale-105 transition-transform duration-300 mx-auto" onClick={() => window.open(peace, '_blank')}/>
                                 <p className='py-4 text-center'> A user-friendly and user-focused website built with Wordpress and custom HTML/CSS</p>
                             </article>
-                        )}
-                    </div>
+                        </div>
+                    )}
                     <div id='backend-dev' className='py-4'>
                     <h2 id='header-indv-project' className='py-4 font-bold cursor-pointer flex items-center' onClick={toggleBackend}>
                         Backend Development
