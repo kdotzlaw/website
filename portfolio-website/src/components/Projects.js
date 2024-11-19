@@ -20,7 +20,7 @@ import fStackImg from '../img/fStack.png';
 //Cards
 import peace from '../img/peace.png';
 import mlEsn from '../img/ml-nn.jpg';
-import sb from ',../img/study-buddy.png';
+import sb from '../img/study-buddy.png';
 
 const Projects = () => {
     const [selectedProject, setSelectedProject] = useState('all');
@@ -44,8 +44,15 @@ const Projects = () => {
                         
                     </div>
                     
-                    <div className='py-4 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4'>
+                    <div className='py-4 grid grid-cols-1 sm:grid-cols-1 md:grid-cols-1 gap-4'>
                         {[
+                            {
+                                types: ['all', 'python'],
+                                img: pythonImg,
+                                alt: 'Data Analysis on COVID-19 Data',
+                                url:'https://github.com/rdotzlaw/COMP4710-Group-11',
+                                description: 'A group project that analyzed COVID-19 data using Python and data mining techniques'
+                            },
                             {
                                 types: ['all', 'fstack'],
                                 img: peace,
@@ -59,7 +66,7 @@ const Projects = () => {
                                 img: sqlImg,
                                 alt: 'Query Optimization',
                                 url:'https://github.com/kdotzlaw/UniversityProjects/blob/main/QueryOptimization.pdf',
-                                description: 'A research project that compared non-optimized SQLite queries to queries optimized with non-clustered B+ tree indexes, including covering indexes and partial indexes.'
+                                description: 'A research project that compared non-optimized SQLite queries to queries optimized with B+ indexes'
                             },
                             {
                                 types: ['all', 'python'],
@@ -71,9 +78,14 @@ const Projects = () => {
                             {
                                 types:['all','sql','python'],
                                 img: sb,
-                                alt: 'Flask Website',
+                                alt: 'Study Buddy',
                                 url:'https://github.com/kdotzlaw/StudyBuddy',
-                                description:'Built a backend for a full-stack web application using SQL and Python'
+                                description: `I worked as a database engineer and technical writer for a fullstack web application designed to help students manage their study schedules. I built
+                                        the backend using MSSQL and Python, and created database integration tests using Python unittest. All database queries used prepared statements and
+                                        parameterized queries to prevent SQL injection attacks. I collaborated with our Server Manager to ensure that the database successfully integrated with the Flask server.
+                                        I also worked with our CI/CD lead to ensure that the backend was successfully deployed with GitHub Actions and Docker.
+                                        As a technical writer, I created project documentation including a wiki, milestone reports, test plans, and meeting minutes. 
+                                        I also performed load testing with Locust to ensure that the application could handle high traffic and concurrent requests.`
                             }
                         ].map((project, index) => (
                             project.types.includes(selectedProject) && (
