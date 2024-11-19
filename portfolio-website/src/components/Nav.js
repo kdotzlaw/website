@@ -3,7 +3,7 @@ import '../styles/Nav.css';
 
 const Nav = ({ switchComponent }) => {
   return (
-    <header id='nav' className='p-4 fixed w-full z-50 top-0 left-0 '>
+    <header id='nav' className='p-4 fixed w-full z-50 top-0 left-0 bg-black '>
       <nav className='container mx-auto flex justify-between items-center'>
         <ul className="flex space-x-6">
           <li id='nav-item'><a href='#home' className="py-2 px-4" onClick={() => switchComponent('Home')}>Home</a></li>
