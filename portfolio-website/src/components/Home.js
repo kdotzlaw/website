@@ -6,10 +6,10 @@ import profilePic from '../img/kat1.jpg';
 const Home = () => {
     
   return (
-    <div id='body' className="pr-64"> {/* Added padding-right to account for sidebar */}
+    <div id='body' className=''> {/* Added padding-right to account for sidebar : className="pr-64"*/}
       <div id='home-header' className="py-16" >
         <div className="container mx-auto text-left text-pretty max-w-3xl" >
-            <h1 className="text-8xl font-bold ">Katrina Dotzlaw</h1>
+            <h1 className="py-4 text-8xl font-bold ">Katrina Dotzlaw</h1>
             <h2 className=' text-4xl py-8'>Software Developer</h2>
         
             <h2 className='text-2xl'>About Me</h2>
