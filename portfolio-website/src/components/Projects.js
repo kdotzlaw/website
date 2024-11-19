@@ -111,11 +111,13 @@ const Projects = () => {
                                             />
                                         ))}
                                     </div>
-                                    <div className='flex flex-col justify-between w-2/3 '>
+                                    <div className='flex flex-col justify-between w-2/3'>
                                         <p className='text-left'>{project.description}</p>
-                                        <button onClick={() => project.url && window.open(project.url)} className='mt-4 bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded self-start'>
-                                            View Project
-                                        </button>
+                                        <div className='flex justify-center mt-4'>
+                                            <button onClick={() => project.url && window.open(project.url)} className='bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded'>
+                                                View Project
+                                            </button>
+                                        </div>
                                     </div>
                                 </article>
                             )
