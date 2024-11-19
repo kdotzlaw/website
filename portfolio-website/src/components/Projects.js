@@ -93,9 +93,9 @@ const Projects = () => {
                         </h2>
                         {frontendExpanded && (
                             
-                            <article className='card items-center'>
-                                <img src={peace} alt='Peace Lutheran Church Website' id='card-img' className="w-16 h-16 object-contain rounded my-4 cursor-pointer hover:scale-105 transition-transform duration-300" onClick={() => window.open(peace, '_blank')}/>
-                                <p className='py-4 '> A user-frendly and user-focused website built with Wordpress and custom HTML/CSS</p>
+                            <article className='card flex flex-col items-center'>
+                                <img src={peace} alt='Peace Lutheran Church Website' id='card-img' className="w-16 h-16 object-contain rounded my-4 cursor-pointer hover:scale-105 transition-transform duration-300 mx-auto" onClick={() => window.open(peace, '_blank')}/>
+                                <p className='py-4 text-center'> A user-friendly and user-focused website built with Wordpress and custom HTML/CSS</p>
                             </article>
                         )}
                     </div>
