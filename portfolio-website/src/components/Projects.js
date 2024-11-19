@@ -26,39 +26,7 @@ const Projects = () => {
     const handleProjectSelect = (project) => {
         setSelectedProject(project);
     };
-    //Toggle each project in each project section - default is expanded
-    const [queryOpExpanded, setQueryOpExpanded] = useState(true);
-    const toggleQueryOp = () => {
-        setQueryOpExpanded(!queryOpExpanded);
-    };
-    const [studyBuddyExpanded, setStudyBuddyExpanded] = useState(true);
-    const toggleStudyBuddy = () => {
-        setStudyBuddyExpanded(!studyBuddyExpanded);
-    };
-    const [peaceDBExpanded, setPeaceDBExpanded] = useState(true);
-    const togglePeaceDB = () => {
-        setPeaceDBExpanded(!peaceDBExpanded);
-    };
-    const [esnExpanded, setEsnExpanded] = useState(true);
-    const toggleESN = () => {
-        setEsnExpanded(!esnExpanded);
-    };
-    const [pmExpanded, setPmExpanded] = useState(true);
-    const togglePM = () => {
-        setPmExpanded(!pmExpanded);
-    };
-    const [msaExpanded, setMsaExpanded] = useState(true);
-    const toggleMSA = () => {
-        setMsaExpanded(!msaExpanded);
-    };
-    const [njExpanded, setNjExpanded] = useState(true);
-    const toggleNJ = () => {
-        setNjExpanded(!njExpanded);
-    };
-    const [hmmExpanded, setHmmExpanded] = useState(true);
-    const toggleHMM = () => {
-        setHmmExpanded(!hmmExpanded);
-    };
+    
     return (
         <div id='body' className="pt-12"> {/* Added padding-top to account for nav */}
             <div id='projects-header' className="py-16">
@@ -80,14 +48,7 @@ const Projects = () => {
                                 <img src={peace} alt='Peace Lutheran Church Website' id='card-img' className="w-16 h-16 object-contain rounded my-4 cursor-pointer hover:scale-105 transition-transform duration-300 mx-auto" onClick={() => window.open('https://peacelc.com')}/>
                                 <p className='py-4 text-center'> A user-friendly and organization-focused website built with Wordpress and custom HTML/CSS</p>
                             </article>
-                            <article className='card flex flex-col items-center bg-white shadow-lg rounded-lg p-6 flex-1'>
-                                <img src={locustImg} alt='this website' className="w-16 h-16 object-contain rounded my-4 cursor-pointer hover:scale-105 transition-transform duration-300 mx-auto" />
-                                <p className='py-4 text-center'>This portfolio website built with React and Tailwind CSS</p>
-                            </article>
-                            <article className='card flex flex-col items-center bg-white shadow-lg rounded-lg p-6 flex-1'>
-                                <img src={locustImg} alt='this website' className="w-16 h-16 object-contain rounded my-4 cursor-pointer hover:scale-105 transition-transform duration-300 mx-auto" />
-                                <p className='py-4 text-center'>This portfolio website built with React and Tailwind CSS</p>
-                            </article>
+                            
                         </div>
                     )}
                     {(selectedProject === 'all' || selectedProject === 'sql') && (
