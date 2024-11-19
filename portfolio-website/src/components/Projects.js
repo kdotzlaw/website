@@ -69,7 +69,7 @@ const Projects = () => {
         setHmmExpanded(!hmmExpanded);
     };
     return (
-        <div id='body' className="pr-64"> {/* Added padding-right to account for sidebar */}
+        <div id='body' className="pt-12"> {/* Added padding-top to account for nav */}
             <div id='projects-header' className="py-16">
                 <div className="container mx-auto text-left max-w-3xl">
                     <h1 className="text-6xl font-bold ">Projects</h1>
