@@ -22,13 +22,13 @@ import peace from '../img/peace.png';
 
 const Projects = () => {
     //Toggle each project section - default is expanded
-    const [frontendExpanded, setFrontendExpanded] = useState(false);
+    const [fStackExpanded, setfStackExpanded] = useState(true);
     const [sqlExpanded, setSQLExpanded] = useState(true);
     const [dataExpanded, setDataExpanded] = useState(true);
     const [fullstackExpanded, setFullstackExpanded] = useState(true);
 
-    const toggleFrontend = () => {
-        setFrontendExpanded(!frontendExpanded);
+    const toggleFStack = () => {
+        setfStackExpanded(!fStackExpanded);
     };
     const toggleSQL = () => {
         setSQLExpanded(!sqlExpanded);
@@ -77,24 +77,31 @@ const Projects = () => {
             <div id='projects-header' className="py-16">
                 <div className="container mx-auto text-left ">
                     <h1 className="text-6xl font-bold ">Projects</h1>
+                    
                     <div id='imgs' className='flex justify-left space-x-4'>
                         <img src={reactImg} alt='React Logo' className="w-16 h-16 object-contain rounded my-4 cursor-pointer hover:scale-105 transition-transform duration-300" onClick={() => window.open(reactImg, '_blank')}/>
-                        <img src={fStackImg} alt='Frontend Stack' className="w-16 h-16 object-contain rounded my-4 cursor-pointer hover:scale-105 transition-transform duration-300" onClick={toggleFrontend}/>
+                        <img src={fStackImg} alt='Frontend Stack' className="w-16 h-16 object-contain rounded my-4 cursor-pointer hover:scale-105 transition-transform duration-300" onClick={toggleFStack}/>
                         <img src={flaskImg} alt='Flask Logo' className="w-16 h-16 object-contain rounded my-4 cursor-pointer hover:scale-105 transition-transform duration-300" onClick={() => window.open(flaskImg, '_blank')}/>
                         <img src={sqlImg} alt='SQL Logo' className="w-16 h-16 object-contain rounded my-4 cursor-pointer hover:scale-105 transition-transform duration-300" onClick={toggleSQL}/>
                         <img src={pythonImg} alt='Python Logo' className="w-16 h-16 object-contain rounded my-4 cursor-pointer hover:scale-105 transition-transform duration-300" onClick={() => window.open(pythonImg, '_blank')}/>
                         <img src={locustImg} alt='Locust Logo' className="w-16 h-16 object-contain rounded my-4 cursor-pointer hover:scale-105 transition-transform duration-300" onClick={() => window.open(locustImg, '_blank')}/>
                     </div>
                     
-                    {frontendExpanded && (
+                    {fStackExpanded && (
                         <div id='fStack-dev' className='py-4'>      
                             <article className='card flex flex-col items-center'>
                                 <img src={peace} alt='Peace Lutheran Church Website' id='card-img' className="w-16 h-16 object-contain rounded my-4 cursor-pointer hover:scale-105 transition-transform duration-300 mx-auto" onClick={() => window.open('https://peacelc.com')}/>
                                 <p className='py-4 text-center'> A user-friendly and organization-focused website built with Wordpress and custom HTML/CSS</p>
                             </article>
+                            <article className='card flex flex-col items-center'>
+                                <img src={locustImg} alt='this website' />
+                            </article>
                         </div>
-                    )}
-
+                    )} {/*fstack  expanded*/ }
+                    
+                    </div>
+                </div>
+            
 
                     {/*<div id='sql-dev' className='py-4'>
                     {sqlExpanded && (
@@ -208,7 +215,7 @@ const Projects = () => {
                                         An ESN is a type of recurrent neural network created with Python to recognize temporal patterns like k-step ahead forecasting. 
                                         Specifically, ESNs use backpropagation to feed optimized hyperparameters back into its recurrent internal state.
                                       </p>
-                                      {/*<img src={esnImage} alt='An example of an ESN' className="w-[900px] h-[600px] object-cover rounded my-4 cursor-pointer hover:scale-105 transition-transform duration-300" onClick={() => window.open(esnImage, '_blank')}/>*/}
+                                      
                                       <a className='text-[12px]' href="https://github.com/kdotzlaw/UniversityProjects/blob/main/ESN-MachineLearning/ESN.ipynb" id='text-link' >
                                         View the project on GitHub
                                       </a>
@@ -294,9 +301,7 @@ const Projects = () => {
                     </div>*/}
                 </div>
                 
-            </div>
             
-        </div>
     );
 }
 
