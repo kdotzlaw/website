@@ -3,9 +3,10 @@ import React, { useState } from 'react';
 
 //Style Imports
 import '../styles/Home.css';
+import '../styles/Projects.css';
 
 //Architecture Imgs
-import esnImage from '../img/esn.JPG';
+//import esnImage from '../img/esn.JPG';
 import studyBuddyArch from '../img/StudyBuddyArch.png';
 
 //Logos
@@ -15,6 +16,9 @@ import pythonImg from '../img/python.png';
 import sqlImg from '../img/sql.png';
 import locustImg from '../img/locust.png';
 import fStackImg from '../img/fStack.png';
+
+//Cards
+import peace from '../img/peace.png';
 
 const Projects = () => {
     //Toggle each project section - default is expanded
@@ -71,7 +75,7 @@ const Projects = () => {
     return (
         <div id='body' className="pt-12"> {/* Added padding-top to account for nav */}
             <div id='projects-header' className="py-16">
-                <div className="container mx-auto text-left max-w-3xl">
+                <div className="container mx-auto text-left ">
                     <h1 className="text-6xl font-bold ">Projects</h1>
                     <div id='imgs' className='flex justify-left space-x-4'>
                         <img src={reactImg} alt='React Logo' className="w-16 h-16 object-contain rounded my-4 cursor-pointer hover:scale-105 transition-transform duration-300" onClick={() => window.open(reactImg, '_blank')}/>
@@ -89,14 +93,9 @@ const Projects = () => {
                         </h2>
                         {frontendExpanded && (
                             
-                            <article>
-                               
-                                <a href="https://www.peacelc.com" id='text-link' >
-                                    <h3>Peace Lutheran Church Website</h3>
-                                </a>
-                                <p className='py-2 text-wrap'>
-                                    Built using Wordpress and custom HTML/CSS.
-                                </p>
+                            <article className='card items-center'>
+                                <img src={peace} alt='Peace Lutheran Church Website' id='card-img' className="w-16 h-16 object-contain rounded my-4 cursor-pointer hover:scale-105 transition-transform duration-300" onClick={() => window.open(peace, '_blank')}/>
+                                <p className='py-4 '> A user-frendly and user-focused website built with Wordpress and custom HTML/CSS</p>
                             </article>
                         )}
                     </div>
