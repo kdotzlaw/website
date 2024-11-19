@@ -45,7 +45,7 @@ const Projects = () => {
                         
                     </div>
                     
-                    <div className='py-4 grid grid-cols-1 w-3/4 gap-6  mx-auto text-left'>
+                    <div className='py-4 grid grid-cols-1 w-3/4 gap-6  mx-auto text-left text-wrap'>
                         {[
                             {
                                 types: ['all', 'python'],
@@ -108,7 +108,7 @@ const Projects = () => {
                                                     key={imgIndex}
                                                     src={image.src} 
                                                     alt={image.alt} 
-                                                    className="w-1/3 h-auto max-h-48 object-contain rounded m-2 cursor-pointer hover:scale-105 transition-transform duration-300" 
+                                                    className="w-1/3 h-auto max-h-64 object-contain rounded m-2 cursor-pointer hover:scale-105 transition-transform duration-300" 
                                                 />
                                             ))}
                                         </div>
