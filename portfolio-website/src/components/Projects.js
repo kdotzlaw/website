@@ -32,10 +32,10 @@ const Projects = () => {
     return (
         <div id='body' className="pt-12"> {/* Added padding-top to account for nav */}
             <div id='projects-header' className="py-16">
-                <div className="container mx-auto text-left ">
+                <div className="container mx-auto text-center ">
                     <h1 className="text-6xl font-bold  cursor-pointer" onClick={()=>handleProjectSelect('all')}>Projects</h1>
                     
-                    <div id='imgs' className='flex justify-left space-x-4'>
+                    <div id='img-link' className='flex justify-center space-x-4'>
                         <img src={reactImg} alt='React Logo' className="w-16 h-16 object-contain rounded my-4 cursor-pointer hover:scale-105 transition-transform duration-300" onClick={() => handleProjectSelect('react')}/>
                         <img src={fStackImg} alt='Frontend Stack' className="w-16 h-16 object-contain rounded my-4 cursor-pointer hover:scale-105 transition-transform duration-300" onClick={() => handleProjectSelect('fstack')}/>
                         <img src={flaskImg} alt='Flask Logo' className="w-16 h-16 object-contain rounded my-4 cursor-pointer hover:scale-105 transition-transform duration-300" onClick={() => handleProjectSelect('flask')}/>
@@ -44,7 +44,7 @@ const Projects = () => {
                         
                     </div>
                     
-                    <div className='py-4 grid grid-cols-1 gap-6 max-w-3xl mx-auto'>
+                    <div className='py-4 grid grid-cols-1 w-3/4 gap-6  mx-auto text-left'>
                         {[
                             {
                                 types: ['all', 'python'],
@@ -95,9 +95,10 @@ const Projects = () => {
                                             src={project.img} 
                                             alt={project.alt} 
                                             className="w-full h-auto max-h-48 object-contain rounded my-4 cursor-pointer hover:scale-105 transition-transform duration-300" 
-                                            onClick={() => project.url && window.open(project.url)}
+                                            
                                         />
-                                        <p className='text-center mt-4 w-full'>{project.description}</p>
+                                        <p className='text-left mt-4 w-full'>{project.description}</p>
+                                        <button onClick={() => project.url && window.open(project.url)}> View Project </button>
                                     </div>
                                 </article>
                             )
