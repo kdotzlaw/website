@@ -21,6 +21,7 @@ import fStackImg from '../img/fStack.png';
 import peace from '../img/peace.png';
 import mlEsn from '../img/ml-nn.jpg';
 import sb from '../img/study-buddy.png';
+import sbFlow from '../img/flowdiagram.png';
 
 const Projects = () => {
     const [selectedProject, setSelectedProject] = useState('all');
@@ -50,7 +51,7 @@ const Projects = () => {
                                 types: ['all', 'python'],
                                 images: [
                                     { src: pythonImg, alt: 'Python Logo' },
-                                    { src: studyBuddyArch, alt: 'Data Analysis Diagram' }
+                                    
                                 ],
                                 url:'https://github.com/rdotzlaw/COMP4710-Group-11',
                                 description: 'A group project that analyzed COVID-19 data using Python and data mining techniques'
@@ -59,7 +60,7 @@ const Projects = () => {
                                 types: ['all', 'fstack'],
                                 images: [
                                     { src: peace, alt: 'Peace Lutheran Church Website' },
-                                    { src: fStackImg, alt: 'Frontend Stack' }
+                                   
                                 ],
                                 url: 'https://peacelc.com',
                                 description: 'A user-friendly and organization-focused website built with Wordpress and custom HTML/CSS'
@@ -77,7 +78,7 @@ const Projects = () => {
                                 types: ['all', 'python'],
                                 images: [
                                     { src: mlEsn, alt: 'Echo State Network' },
-                                    { src: pythonImg, alt: 'Python Logo' }
+                                  
                                 ],
                                 url:'https://github.com/kdotzlaw/UniversityProjects/tree/main/ESN-MachineLearning',
                                 description: ' An Echo State Network created with Python to recognize temporal patterns like k-step ahead forecasting'
@@ -85,10 +86,9 @@ const Projects = () => {
                             {
                                 types:['all','sql','python'],
                                 images: [
-                                    { src: sb, alt: 'Study Buddy' },
-                                    { src: sqlImg, alt: 'SQL Logo' },
-                                    { src: pythonImg, alt: 'Python Logo' },
-                                    { src: flaskImg, alt: 'Flask Logo' }
+                                    { src: sb, alt: 'Study Buddy', id: 'sb' },
+                                    { src: studyBuddyArch, alt: 'Data Analysis Diagram', id: 'studyBuddyArch' },
+                                    {src: sbFlow, alt: 'Study Buddy Flow Diagram', id: 'sbFlow' }
                                 ],
                                 url:'https://github.com/kdotzlaw/StudyBuddy',
                                 description: `I worked as a database engineer and technical writer for a fullstack web application designed to help students manage their study schedules. I built
