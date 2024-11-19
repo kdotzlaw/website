@@ -43,33 +43,41 @@ const Projects = () => {
                     </div>
                     
                     <div className='py-4 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4'>
-                        {(selectedProject === 'all' || selectedProject === 'fstack') && (
-                            <article className='card flex flex-col justify-between bg-white shadow-lg rounded-lg p-6 h-full'>
-                                <div id='test' className='flex flex-col items-center'>
-                                    <img src={peace} alt='Peace Lutheran Church Website' id='card-img' className="w-full h-auto max-h-48 object-contain rounded my-4 cursor-pointer hover:scale-105 transition-transform duration-300" onClick={() => window.open('https://peacelc.com')}/>
-                                    <p className='text-center mt-4'> A user-friendly and organization-focused website built with Wordpress and custom HTML/CSS</p>
-                                </div>
-                            </article>
-                        )}
-                        {(selectedProject === 'all' || selectedProject === 'sql') && (
-                            <article className='card flex flex-col justify-between bg-white shadow-lg rounded-lg p-6 h-full'>
-                                <div>
-                                    <img src={sqlImg} alt='Query Optimization' className="w-full h-auto max-h-48 object-contain rounded my-4 cursor-pointer hover:scale-105 transition-transform duration-300 mx-auto" />
-                                    <p className='py-4 text-center'>
-                                        A research project that compared non-optimized SQLite queries to queries optimized with non-clustered B+ tree indexes, including
-                                        covering indexes and partial indexes. 
-                                    </p>
-                                </div>
-                            </article>
-                        )}
-                        {(selectedProject === 'all' || selectedProject==='python')&&(
-                            <article className='card flex flex-col justify-between bg-white shadow-lg rounded-lg p-6 h-full'>
-                            <div>
-                                <img src={sqlImg} alt='this website' className="w-full h-auto max-h-48 object-contain rounded my-4 cursor-pointer hover:scale-105 transition-transform duration-300 mx-auto" />
-                                <p className='py-4 text-center'>This portfolio website built with React and Tailwind CSS</p>
-                            </div>
-                        </article>
-                        )}
+                        {[
+                            {
+                                types: ['all', 'fstack'],
+                                img: peace,
+                                alt: 'Peace Lutheran Church Website',
+                                url: 'https://peacelc.com',
+                                description: 'A user-friendly and organization-focused website built with Wordpress and custom HTML/CSS'
+                            },
+                            {
+                                types: ['all', 'sql'],
+                                img: sqlImg,
+                                alt: 'Query Optimization',
+                                description: 'A research project that compared non-optimized SQLite queries to queries optimized with non-clustered B+ tree indexes, including covering indexes and partial indexes.'
+                            },
+                            {
+                                types: ['all', 'react', 'python'],
+                                img: reactImg,
+                                alt: 'This portfolio website',
+                                description: 'This portfolio website built with React and Tailwind CSS'
+                            }
+                        ].map((project, index) => (
+                            project.types.includes(selectedProject) && (
+                                <article key={index} className='card flex flex-col justify-between bg-white shadow-lg rounded-lg p-6 h-full'>
+                                    <div className='flex flex-col items-center'>
+                                        <img 
+                                            src={project.img} 
+                                            alt={project.alt} 
+                                            className="w-full h-auto max-h-48 object-contain rounded my-4 cursor-pointer hover:scale-105 transition-transform duration-300" 
+                                            onClick={() => project.url && window.open(project.url)}
+                                        />
+                                        <p className='text-center mt-4'>{project.description}</p>
+                                    </div>
+                                </article>
+                            )
+                        ))}
                     </div>
 
                     </div>
