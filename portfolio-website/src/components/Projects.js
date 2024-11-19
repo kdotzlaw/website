@@ -102,13 +102,13 @@ const Projects = () => {
                             project.types.includes(selectedProject) && (
                                 <article key={index} className='card flex flex-col justify-between bg-white shadow-lg rounded-lg p-6 h-full w-full'>
                                     <div className='flex flex-col items-center w-full'>
-                                        <div className='flex flex-wrap justify-center'>
+                                        <div className='flex flex-nowrap justify-center overflow-x-auto'>
                                             {project.images.map((image, imgIndex) => (
                                                 <img 
                                                     key={imgIndex}
                                                     src={image.src} 
                                                     alt={image.alt} 
-                                                    className="w-1/2 h-auto max-h-48 object-contain rounded m-2 cursor-pointer hover:scale-105 transition-transform duration-300" 
+                                                    className="w-1/3 h-auto max-h-48 object-contain rounded m-2 cursor-pointer hover:scale-105 transition-transform duration-300 flex-shrink-0" 
                                                 />
                                             ))}
                                         </div>
