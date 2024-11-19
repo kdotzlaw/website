@@ -88,7 +88,7 @@ const Projects = () => {
                     </div>
                     
                     {fStackExpanded && (
-                        <div id='fStack-dev' className='py-4 grid grid-cols-1 md:grid-cols-2 gap-4'>      
+                        <div id='fStack-dev' className='py-4 grid grid-cols-1 md:grid-cols-2 '>      
                             <article className='card flex flex-col items-center bg-white shadow-lg rounded-lg p-6'>
                                 <img src={peace} alt='Peace Lutheran Church Website' id='card-img' className="w-16 h-16 object-contain rounded my-4 cursor-pointer hover:scale-105 transition-transform duration-300 mx-auto" onClick={() => window.open('https://peacelc.com')}/>
                                 <p className='py-4 text-center'> A user-friendly and organization-focused website built with Wordpress and custom HTML/CSS</p>
