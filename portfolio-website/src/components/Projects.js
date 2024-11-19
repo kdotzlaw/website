@@ -19,6 +19,7 @@ import fStackImg from '../img/fStack.png';
 
 //Cards
 import peace from '../img/peace.png';
+import mlEsn from '../img/mlEsn.jpg';
 
 const Projects = () => {
     const [selectedProject, setSelectedProject] = useState('all');
@@ -51,6 +52,7 @@ const Projects = () => {
                                 url: 'https://peacelc.com',
                                 description: 'A user-friendly and organization-focused website built with Wordpress and custom HTML/CSS'
                             },
+                           
                             {
                                 types: ['all', 'sql'],
                                 img: sqlImg,
@@ -58,10 +60,10 @@ const Projects = () => {
                                 description: 'A research project that compared non-optimized SQLite queries to queries optimized with non-clustered B+ tree indexes, including covering indexes and partial indexes.'
                             },
                             {
-                                types: ['all', 'react', 'python'],
-                                img: reactImg,
-                                alt: 'This portfolio website',
-                                description: 'This portfolio website built with React and Tailwind CSS'
+                                types: ['all', 'python'],
+                                img: mlEsn,
+                                alt: 'Echo State Network',
+                                description: ' An Echo State Network created with Python to recognize temporal patterns like k-step ahead forecasting'
                             }
                         ].map((project, index) => (
                             project.types.includes(selectedProject) && (
