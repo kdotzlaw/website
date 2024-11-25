@@ -172,6 +172,11 @@ const Projects = () => {
                                                 className="w-full h-auto max-h-64 object-contain rounded mb-2 cursor-pointer hover:scale-105 transition-transform duration-300" 
                                             />
                                         ))}
+                                        <div className='mt-4'>
+                                            <button onClick={() => project.url && window.open(project.url)} className='bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded'>
+                                                View Project
+                                            </button>
+                                        </div>
                                     </div>
                                     <div className='flex flex-col justify-between w-2/3'>
                                         <div>
@@ -188,11 +193,6 @@ const Projects = () => {
                                                         ))}
                                                     </ul>
                                                 )}
-                                        </div>
-                                        <div className='flex justify-center mt-4'>
-                                            <button onClick={() => project.url && window.open(project.url)} className='bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded'>
-                                                View Project
-                                            </button>
                                         </div>
                                     </div>
                                 </article>
