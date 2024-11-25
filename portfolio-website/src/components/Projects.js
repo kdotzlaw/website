@@ -49,15 +49,24 @@ const Projects = () => {
                         {[
                             {
                                 types: ['all', 'python'],
+                                header:'Analyzing Covid-19 Data to Predict Long Covid-19 Cases',
                                 images: [
                                     { src: pythonImg, alt: 'Python Logo' },
                                     
                                 ],
                                 url:'https://github.com/rdotzlaw/COMP4710-Group-11',
-                                description: 'A group project that analyzed COVID-19 data using Python and data mining techniques'
+                                description: 'A group project that analyzed COVID-19 data using Python and data mining techniques',
+                                sub: `This is a subheader`,
+                                sub_content:'COntent',
+                                footer:'Results',
+                                result:[
+                                    'test1',
+                                    'test2'
+                                ]
                             },
                             {
                                 types:['all', 'python'],
+                                header:'',
                                 images: [
                                     { src: pythonImg, alt: 'Python Logo' },
                                     
@@ -67,6 +76,7 @@ const Projects = () => {
                             },
                             {
                                 types:['all', 'bio','python'],
+                                header:'',
                                 images: [
                                     {src:bioImg, alt: 'BioInformatics Logo'},
                                     
@@ -76,6 +86,7 @@ const Projects = () => {
                             },
                             {
                                 types:['all', 'bio','python'],
+                                header:'',
                                 images: [
                                     { src: bioImg, alt: 'BioInformatics Logo' },
                                     
@@ -85,6 +96,7 @@ const Projects = () => {
                             },
                             {
                                 types:['all', 'bio','python'],
+                                header:'',
                                 images: [
                                     { src: bioImg, alt: 'BioInformatics Logo' },
                                     
@@ -94,6 +106,7 @@ const Projects = () => {
                             },
                             {
                                 types:['all', 'bio','python'],
+                                header:'',
                                 images: [
                                     {src:bioImg, alt: 'BioInformatics Logo'},
                                     
@@ -105,6 +118,7 @@ const Projects = () => {
                               
                             {
                                 types: ['all', 'sql'],
+                                header:'',
                                 images: [
                                     { src: sqlImg, alt: 'SQL Logo' }
                                 ],
@@ -113,6 +127,7 @@ const Projects = () => {
                             },
                             {
                                 types: ['all', 'python'],
+                                header:'',
                                 images: [
                                     { src: mlEsn, alt: 'Echo State Network' },
                                   
@@ -122,6 +137,7 @@ const Projects = () => {
                             },
                             {
                                 types:['all','sql','python'],
+                                header:'',
                                 images: [
                                     { src: sb, alt: 'Study Buddy', id: 'sb' }
                                 ],
@@ -136,6 +152,7 @@ const Projects = () => {
                             },
                             {
                                 types: ['all', 'fstack'],
+                                header:'',
                                 images: [
                                     { src: peace, alt: 'Peace Lutheran Church Website' },
                                    
@@ -158,8 +175,17 @@ const Projects = () => {
                                     </div>
                                     <div className='flex flex-col justify-between w-2/3'>
                                         <div>
-                                            <p className='py-6 text-left'>{project.description}</p>
+                                            <h1 className='py-6 text-left font-bold'>{project.header}</h1>
+                                            <p className='py-2 text-left'>{project.description}</p>
                                             {project.additionalContent}
+                                            <h2 className='py-2 text-left font-semibold'>{project.sub}</h2>
+                                            <p className='py-2 text-left'>{project.sub_content}</p>
+                                            <h2 className='py-2 text-left font-semibold'>{project.footer}</h2>
+                                                <ul>
+                                                    {project.result.map((res, index) => (
+                                                        <li key={index}>{res}</li>
+                                                    ))}
+                                                </ul>
                                         </div>
                                         <div className='flex justify-center mt-4'>
                                             <button onClick={() => project.url && window.open(project.url)} className='bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded'>
