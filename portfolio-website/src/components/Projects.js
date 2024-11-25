@@ -77,6 +77,16 @@ const Projects = () => {
                                 ]
                             },
                             {
+                                types: ['all', 'python'],
+                                header:'',
+                                images: [
+                                    { src: mlEsn, alt: 'Echo State Network' },
+                                  
+                                ],
+                                url:'https://github.com/kdotzlaw/UniversityProjects/tree/main/ESN-MachineLearning',
+                                description: ' An Echo State Network created with Python to recognize temporal patterns like k-step ahead forecasting'
+                            },
+                            {
                                 types:['all', 'python'],
                                 header:'Distributed Blockchain',
                                 images: [
@@ -114,23 +124,39 @@ const Projects = () => {
                             },
                             {
                                 types:['all', 'bio','python'],
-                                header:'',
+                                header:'A Custom Implementation of ClustalW ' ,
                                 images: [
                                     { src: bioImg, alt: 'BioInformatics Logo' },
                                     
                                 ],
                                 url:'https://github.com/kdotzlaw/UniversityProjects/tree/main/BioInformatics/Multiple_Sequence_Alignment',
-                                description: `MSA.`
+                                description:
+                                 `
+                                    A custom implementation of ClustalW that uses a dynamic programming table to align multiple sequences based on their sum of pairs scores. 
+                                    This implementation identifies a single optimal alignment by tracing back through the dynamic programming table.
+                                `
+
                             },
                             {
                                 types:['all', 'bio','python'],
-                                header:'',
+                                header:'Neighbour Joining with Python',
                                 images: [
                                     { src: bioImg, alt: 'BioInformatics Logo' },
                                     
                                 ],
                                 url:'https://github.com/kdotzlaw/UniversityProjects/tree/main/BioInformatics/Neighbour_Joining',
-                                description: `NJ.`
+                                description: 
+                                    `
+                                        An implementation of the Neighbour Joining algorithm that uses distances between sequences and recursion (or the Fitch-Margoliash algorithm in the base case) to determine the optimal paths used to build thetree.
+                                    `,
+                                footer:'Process',
+                                result:[
+                                   'Preprocess a distal matrix to get a list of taxa and their distances as a key-value pair: {(taxa1, taxa2): distance}',
+                                   'Create a UTable using unions of the distance for each taxon',
+                                   'Create a delta matrix using UTable values, distances for each taxa pair, and the number of taxa',
+                                   'Recursively perform Neighbour Joining by pulling away taxa pairs with minimum distances and forming a cherry with their parent',
+                                   'Returns the optimal paths that would be used to build the tree'
+                                ]
                             },
                             {
                                 types:['all', 'bio','python'],
@@ -170,18 +196,25 @@ const Projects = () => {
                                     { src: sqlImg, alt: 'SQL Logo' }
                                 ],
                                 url:'https://github.com/kdotzlaw/UniversityProjects/blob/main/QueryOptimization.pdf',
-                                description: 'A research project that compared non-optimized SQLite queries to queries optimized with B+ indexes'
+                                description: 'A research project that compared non-optimized SQLite queries to queries optimized with B+ indexes on a dataset of 18 columns and >29,000,000 rows',
+                                sub: `Analysis`,
+                                sub_content:
+                                `
+                                  Using a dataset of parking violations from the Department of Finance, we created a SQLite database which had 12,862,344 pages, with each page being 4096 bytes.
+                                  We performed a preliminary investigation to determine how SQLite would create indexes for a given query.
+                                  We then compared the performance of the non-optimized query to queries optimized with non-clustered B+ tree indexes.
+                                  Additionally, we compared the usage of pages and bytes for the optimized query and the non-optimized query.
+                                `,
+                                footer:'Results',
+                                result:[
+                                    `Non-clustered B+ tree indexes significantly improved runtimes`,
+                                    `In most cases, indexes on multiple columns performed significantly better than indexes on a single column`,
+                                    `There is a higher percentage of unused bytes for unoptimized queries than for optimized queries`,
+                                    `No overflow pages are used for queries optimized with  B+ tree indexes`
+                    
+                                ]
                             },
-                            {
-                                types: ['all', 'python'],
-                                header:'',
-                                images: [
-                                    { src: mlEsn, alt: 'Echo State Network' },
-                                  
-                                ],
-                                url:'https://github.com/kdotzlaw/UniversityProjects/tree/main/ESN-MachineLearning',
-                                description: ' An Echo State Network created with Python to recognize temporal patterns like k-step ahead forecasting'
-                            },
+                            
                             {
                                 types:['all','sql','python'],
                                 header:'',
