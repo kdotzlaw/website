@@ -68,7 +68,7 @@ const Projects = () => {
                             {
                                 types:['all', 'bio','python'],
                                 images: [
-                                    { },
+                                    {src:bioImg, alt: 'BioInformatics Logo'},
                                     
                                 ],
                                 url:'https://github.com/kdotzlaw/UniversityProjects/tree/main/BioInformatics/Hidden_Markov_Models',
@@ -77,7 +77,7 @@ const Projects = () => {
                             {
                                 types:['all', 'bio','python'],
                                 images: [
-                                    { },
+                                    { src: bioImg, alt: 'BioInformatics Logo' },
                                     
                                 ],
                                 url:'https://github.com/kdotzlaw/UniversityProjects/tree/main/BioInformatics/Multiple_Sequence_Alignment',
@@ -86,7 +86,7 @@ const Projects = () => {
                             {
                                 types:['all', 'bio','python'],
                                 images: [
-                                    { },
+                                    { src: bioImg, alt: 'BioInformatics Logo' },
                                     
                                 ],
                                 url:'https://github.com/kdotzlaw/UniversityProjects/tree/main/BioInformatics/Neighbour_Joining',
@@ -95,7 +95,7 @@ const Projects = () => {
                             {
                                 types:['all', 'bio','python'],
                                 images: [
-                                    { },
+                                    {src:bioImg, alt: 'BioInformatics Logo'},
                                     
                                 ],
                                 url:'https://github.com/kdotzlaw/UniversityProjects/tree/main/BioInformatics/Pattern_Matching',
