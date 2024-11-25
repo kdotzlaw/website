@@ -56,33 +56,61 @@ const Projects = () => {
                                 ],
                                 url:'https://github.com/rdotzlaw/COMP4710-Group-11',
                                 description: 'A group project that analyzed COVID-19 data using Python and data mining techniques',
-                                sub: `This is a subheader`,
-                                sub_content:'COntent',
+                                sub: `Analysis`,
+                                sub_content:
+                                `
+                                    Our group used the Apriori algorithm to mine association rules from demographic data and identify rules that have a minimum confidence of 0.3.
+                                    We then preformed demographic-symptom clustering using symptom frequencies and chi-square tests to determine differences between groups.
+                                    Using the Boruta algorithm and descriptive analysis, we identified the most important features for prediction. 
+                                    We created and trained three models, a decision tree model, a random forest model created by Sudre, and a custom random forest model, to predict whether a person has a long covid-19 case.
+                                 `,
                                 footer:'Results',
                                 result:[
-                                    'test1',
-                                    'test2'
+                                    'Demographic analysis showed that individuals who are assigned female at birth, female identifying individuals, white individuals, and individuals who have had at least one vaccination are developing Long Covid-19',
+                                    'Identified high confidence association rules that indicate that individuals assigned female at birth develop Long Covid-19',
+                                    'Symptom clustering determined that cough, headache and fatigue were the most prevalent symptoms for individuals developing Long Covid-19',
+                                    'Descriptive analysis and feature selection indicated that symptom severity was a strong distinguisher',
+                                    'Our decision tree had an AUC of 0.706',
+                                    'Our custom random forest model had an AUC of 0.721',
+                                    'Sudre\'s random forest model had an AUC of 0.76'
+                                   
                                 ]
                             },
                             {
                                 types:['all', 'python'],
-                                header:'',
+                                header:'Distributed Blockchain',
                                 images: [
                                     { src: pythonImg, alt: 'Python Logo' },
                                     
                                 ],
                                 url:'https://github.com/kdotzlaw/UniversityProjects/tree/main/Blockchain',
-                                description: `A distributed computing  project that connected to an external network and communicated with other peers to perform tasks such as sending and receiving messages, and storing data on the blockchain.`
+                                description: 
+                                `A distributed computing  project that connected to an external network and communicated with other peers to perform tasks such as sending and receiving messages, and determining 
+                                the validity and size of the network blockchain.
+                                `
                             },
                             {
                                 types:['all', 'bio','python'],
-                                header:'',
+                                header:'Hidden Markov Models',
                                 images: [
                                     {src:bioImg, alt: 'BioInformatics Logo'},
                                     
                                 ],
                                 url:'https://github.com/kdotzlaw/UniversityProjects/tree/main/BioInformatics/Hidden_Markov_Models',
-                                description: `HMM.`
+                                description: 
+                                    `
+                                        A stochastic model that has the Markov property, which means that the probability of going to the next state depends only on the current state, and has hidden states. 
+                                    `,
+                                sub: `Process`,
+                                sub_content:
+                                    `
+                                        Using a set of abstract states, an alphabet of output tokens, a tansition probability matrix, and an emission probability matrix,
+                                         the HMM calculates the total probability that the given sequence is generated by the model using an implementation of the Forward algorithm and the creation of dynamic programming tables.
+                                    `,
+                                footer:'',
+                                result:[
+                                   
+                                ]
                             },
                             {
                                 types:['all', 'bio','python'],
@@ -106,13 +134,32 @@ const Projects = () => {
                             },
                             {
                                 types:['all', 'bio','python'],
-                                header:'',
+                                header:'Comparing Brute Force and Knuth-Morris-Pratt Pattern Matching Algorithms on the Sorangium Cellulosum Genome',
                                 images: [
                                     {src:bioImg, alt: 'BioInformatics Logo'},
                                     
                                 ],
                                 url:'https://github.com/kdotzlaw/UniversityProjects/tree/main/BioInformatics/Pattern_Matching',
-                                description: `Pattern Matching`
+                                description:
+                                 `
+                                    An individual project that compared the performance of the brute force and Knuth-Morris-Pratt pattern matching algorithms on the Sorangium Cellulosum genome using Python and BioPython.
+                                    In addition to comparing the algorithms, I identified a pattern that runs significantly faster with KMP and found a pattern that codes for amino acids.
+                                `,
+                                sub: `Process`,
+                                sub_content:
+                                `
+                                    The Brute Force implementation compares the given sequence to a given pattern at all  possible starting positions and returns both the total number of matches and the time taken.
+                                    The KMP implementation uses a dynamic programming table and pointers for the indexes of the sequence and pattern. 
+                                    When the characters at both pointer positions match, both pointers move forward. Otherwise, the pattern pointer is
+                                    reset to the last value in the table.
+                                `,
+                                footer:'Results',
+                                result:[
+                                    `In the worst case, KMP can match the pattern in O(n) time (as KMP never rechecks previously matched characters), whereas the brute force algorithm can match the pattern in O(n^2) time
+                                    (if there is a mismatch in the last spot of the pattern).`,
+                                   'The pattern  CCCC runs significantly faster with the Knuth-Morris-Pratt algorithm (20.45s vs 30.11s), likely because the genome has a 71% GC content and the pattern is highly repetitive.',
+                                   'The pattern AACGTT returns an even 400 matches, unique from other patterns tested, indicating that the pattern is a coding sequence for a pair of amino acids.'
+                                ]
                         
                             },
                               
