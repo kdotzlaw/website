@@ -14,7 +14,7 @@ import flaskImg from '../img/flask.png';
 import reactImg from '../img/react.png';
 import pythonImg from '../img/python.png';
 import sqlImg from '../img/sql.png';
-
+import bioImg from '../img/bio.png';
 import fStackImg from '../img/fStack.png';
 
 //Cards
@@ -42,7 +42,7 @@ const Projects = () => {
                         <img src={flaskImg} alt='Flask Logo' className="w-16 h-16 object-contain rounded my-4 cursor-pointer hover:scale-105 transition-transform duration-300" onClick={() => handleProjectSelect('flask')}/>
                         <img src={sqlImg} alt='SQL Logo' className="w-16 h-16 object-contain rounded my-4 cursor-pointer hover:scale-105 transition-transform duration-300" onClick={() => handleProjectSelect('sql')}/>
                         <img src={pythonImg} alt='Python Logo' className="w-16 h-16 object-contain rounded my-4 cursor-pointer hover:scale-105 transition-transform duration-300" onClick={() => handleProjectSelect('python')}/>
-                        
+                        <img src={bioImg} alt='BioInformatics Logo' className="w-16 h-16 object-contain rounded my-4 cursor-pointer hover:scale-105 transition-transform duration-300" onClick={() => handleProjectSelect('bio')}/>
                     </div>
                     
                     <div className='py-4 grid grid-cols-1 w-3/4 gap-6  mx-auto text-center text-wrap'>
@@ -57,13 +57,16 @@ const Projects = () => {
                                 description: 'A group project that analyzed COVID-19 data using Python and data mining techniques'
                             },
                             {
-                                types: ['all', 'fstack'],
+                                types:['all', 'python'],
                                 images: [
-                                    { src: peace, alt: 'Peace Lutheran Church Website' },
-                                   
+                                    { src: pythonImg, alt: 'Python Logo' },
+                                    
                                 ],
-                                url: 'https://peacelc.com',
-                                description: 'A user-friendly and organization-focused website built with Wordpress and custom HTML/CSS'
+                                url:'https://github.com/kdotzlaw/UniversityProjects/tree/main/Blockchain',
+                                description: `A distributed computing  project that connected to an external network and communicated with other peers to perform tasks such as sending and receiving messages, and storing data on the blockchain.`
+                            },
+                            {
+
                             },
                            
                             {
@@ -96,6 +99,15 @@ const Projects = () => {
                                         As a technical writer, I created project documentation including a wiki, milestone reports, test plans, and meeting minutes. 
                                         I also performed load testing with Locust to ensure that the application could handle high traffic and concurrent requests.`,
                                 additionalContent: <img src={studyBuddyArch} alt='Data Analysis Diagram' id='studyBuddyArch' className="mt-4" />
+                            },
+                            {
+                                types: ['all', 'fstack'],
+                                images: [
+                                    { src: peace, alt: 'Peace Lutheran Church Website' },
+                                   
+                                ],
+                                url: 'https://peacelc.com',
+                                description: 'A user-friendly and organization-focused website built with Wordpress and custom HTML/CSS'
                             }
                         ].map((project, index) => (
                             project.types.includes(selectedProject) && (
