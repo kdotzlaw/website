@@ -66,9 +66,43 @@ const Projects = () => {
                                 description: `A distributed computing  project that connected to an external network and communicated with other peers to perform tasks such as sending and receiving messages, and storing data on the blockchain.`
                             },
                             {
-
+                                types:['all', 'bio','python'],
+                                images: [
+                                    { },
+                                    
+                                ],
+                                url:'https://github.com/kdotzlaw/UniversityProjects/tree/main/BioInformatics/Hidden_Markov_Models',
+                                description: `HMM.`
                             },
-                           
+                            {
+                                types:['all', 'bio','python'],
+                                images: [
+                                    { },
+                                    
+                                ],
+                                url:'https://github.com/kdotzlaw/UniversityProjects/tree/main/BioInformatics/Multiple_Sequence_Alignment',
+                                description: `MSA.`
+                            },
+                            {
+                                types:['all', 'bio','python'],
+                                images: [
+                                    { },
+                                    
+                                ],
+                                url:'https://github.com/kdotzlaw/UniversityProjects/tree/main/BioInformatics/Neighbour_Joining',
+                                description: `NJ.`
+                            },
+                            {
+                                types:['all', 'bio','python'],
+                                images: [
+                                    { },
+                                    
+                                ],
+                                url:'https://github.com/kdotzlaw/UniversityProjects/tree/main/BioInformatics/Pattern_Matching',
+                                description: `Pattern Matching`
+                        
+                            },
+                              
                             {
                                 types: ['all', 'sql'],
                                 images: [
