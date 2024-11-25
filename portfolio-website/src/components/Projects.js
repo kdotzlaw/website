@@ -181,13 +181,13 @@ const Projects = () => {
                                             <h2 className='py-2 text-left font-semibold'>{project.sub}</h2>
                                             <p className='py-2 text-left'>{project.sub_content}</p>
                                             <h2 className='py-2 text-left font-semibold'>{project.footer}</h2>
-                                            {project.result && project.result.length > 0 && (
-                                                <ul className="list-disc list-inside">
-                                                    {project.result.map((res, index) => (
-                                                        <li key={index} className="text-left">{res}</li>
-                                                    ))}
-                                                </ul>
-                                            )}
+                                                {project.result && project.result.length > 0 && (
+                                                    <ul className="list-disc list-inside">
+                                                        {project.result.map((res, index) => (
+                                                            <li key={index} className="text-left">{res}</li>
+                                                        ))}
+                                                    </ul>
+                                                )}
                                         </div>
                                         <div className='flex justify-center mt-4'>
                                             <button onClick={() => project.url && window.open(project.url)} className='bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded'>
