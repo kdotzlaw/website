@@ -6,6 +6,7 @@ import Projects from './Projects';
 import Publications from './Publications';
 import Contact from './Contact';
 import Edu from './Edu';
+import Skills from './Skills';
 
 function App() {
   const [currentComponent, setCurrentComponent] = useState('Home');
@@ -22,6 +23,8 @@ function App() {
         return <Publications />;
       case 'Contact':
         return <Contact />;
+      case 'Skills':
+        return <Skills />;
       default:
         return <Home />;
     }
