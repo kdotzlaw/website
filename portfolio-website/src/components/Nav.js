@@ -10,6 +10,7 @@ const Nav = ({ switchComponent }) => {
           <li id='nav-item'><a href='#projects' className="py-2 px-4" onClick={() => switchComponent('Projects')}>Projects</a></li>
           <li id='nav-item'><a href='#courses' className="py-2 px-4" onClick={() => switchComponent('Edu')}>Education</a></li>
           <li id='nav-item'><a href='#publications' className="py-2 px-4" onClick={() => switchComponent('Publications')}>Publications</a></li>
+          <li id='nav-item'><a href='#skills' className="py-2 px-4" onClick={() => switchComponent('Skills')}>Skills</a></li>
           <li id='nav-item'><a href='#contact' className="py-2 px-4" onClick={() => switchComponent('Contact')}>Contact</a></li>
         </ul>
         <ul className="flex space-x-4">
