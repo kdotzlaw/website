@@ -21,6 +21,8 @@ function App() {
         return <Edu />;
       case 'Publications':
         return <Publications />;
+      case 'Blog':
+        return <Blog />;
       case 'Contact':
         return <Contact />;
       case 'Skills':
