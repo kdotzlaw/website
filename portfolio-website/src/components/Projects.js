@@ -96,17 +96,24 @@ const Projects = () => {
                                  `,
                                 footer:'Results',
                                 result:[
-                                    { type: 'text', content: `2Sine 1-step ahead forecasting had a MSE of 0.142 and 2Sine 2-step ahead forecasting had a MSE of 1.24` },
+                                    { type: 'text', content: `2Sine Timeseries` },
                                     { 
                                         type: 'image-group', 
                                         images: [
-                                            { src: sine1, alt: '2Sine 1-step ahead forecasting', descriptor: 'Graph showing the 2Sine 1-step ahead forecasting results' },
-                                            { src: sine2, alt: '2Sine 2-step ahead forecasting', descriptor: 'Graph showing the 2Sine 2-step ahead forecasting results' }
+                                            { src: sine1, alt: '2Sine 1-step ahead forecasting', descriptor: '1-step ahead forecasting with a MSE of 0.142' },
+                                            { src: sine2, alt: '2Sine 2-step ahead forecasting', descriptor: '2-step ahead forecasting with a MSE of 1.24' }
                                         ]
                                     },
-                                    { type: 'text', content: `Lorenz 1-step ahead forecasting had a MSE of 7.63 and Lorenz 2-step ahead forecasting had a MSE of 111.61` },
-                                    { type: 'image', src: lorenz1, alt: 'Lorenz 1-step ahead forecasting', descriptor: 'Graph showing the Lorenz 1-step ahead forecasting results' },
-                                    { type: 'image', src: lorenz2, alt: 'Lorenz 2-step ahead forecasting', descriptor: 'Graph showing the Lorenz 2-step ahead forecasting results' }
+                                    { type: 'text', content: `Lorenz Timeseries ` },
+                                    {
+                                        type:'image-group',
+                                        images: [
+                                            { src: lorenz1, alt: 'Lorenz 1-step ahead forecasting', descriptor: '1-step ahead forecasting with a MSE of 7.63' },
+                                            { src: lorenz2, alt: 'Lorenz 2-step ahead forecasting', descriptor: '2-step ahead forecasting with a MSE of 111.61' }
+                                        ]
+                                        
+                                    }
+                                  
                                 ]
                             },
                             {
