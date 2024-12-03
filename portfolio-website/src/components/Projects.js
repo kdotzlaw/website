@@ -97,8 +97,13 @@ const Projects = () => {
                                 footer:'Results',
                                 result:[
                                     { type: 'text', content: `2Sine 1-step ahead forecasting had a MSE of 0.142 and 2Sine 2-step ahead forecasting had a MSE of 1.24` },
-                                    { type: 'image', src: sine1, alt: '2Sine 1-step ahead forecasting', descriptor: 'Graph showing the 2Sine 1-step ahead forecasting results' },
-                                    { type: 'image', src: sine2, alt: '2Sine 2-step ahead forecasting', descriptor: 'Graph showing the 2Sine 2-step ahead forecasting results' },
+                                    { 
+                                        type: 'image-group', 
+                                        images: [
+                                            { src: sine1, alt: '2Sine 1-step ahead forecasting', descriptor: 'Graph showing the 2Sine 1-step ahead forecasting results' },
+                                            { src: sine2, alt: '2Sine 2-step ahead forecasting', descriptor: 'Graph showing the 2Sine 2-step ahead forecasting results' }
+                                        ]
+                                    },
                                     { type: 'text', content: `Lorenz 1-step ahead forecasting had a MSE of 7.63 and Lorenz 2-step ahead forecasting had a MSE of 111.61` },
                                     { type: 'image', src: lorenz1, alt: 'Lorenz 1-step ahead forecasting', descriptor: 'Graph showing the Lorenz 1-step ahead forecasting results' },
                                     { type: 'image', src: lorenz2, alt: 'Lorenz 2-step ahead forecasting', descriptor: 'Graph showing the Lorenz 2-step ahead forecasting results' }
@@ -286,16 +291,29 @@ const Projects = () => {
                                             <h2 className='py-2 text-left font-semibold'>{project.footer}</h2>
                                                 {project.result && project.result.length > 0 && (
                                                     <div className="space-y-4">
-                                                        {project.result.map((res, index) => (
-                                                            res.type === 'text' ? (
-                                                                <p key={index} className="text-left">{res.content}</p>
-                                                            ) : (
-                                                                <div key={index} className="flex flex-col items-center">
-                                                                    <img src={res.src} alt={res.alt} className="w-full h-auto object-contain rounded" />
-                                                                    {res.descriptor && <p className="mt-2 text-sm text-gray-600">{res.descriptor}</p>}
-                                                                </div>
-                                                            )
-                                                        ))}
+                                                        {project.result.map((res, index) => {
+                                                            if (res.type === 'text') {
+                                                                return <p key={index} className="text-left">{res.content}</p>;
+                                                            } else if (res.type === 'image-group') {
+                                                                return (
+                                                                    <div key={index} className="flex flex-row space-x-4">
+                                                                        {res.images.map((img, imgIndex) => (
+                                                                            <div key={imgIndex} className="flex flex-col items-center w-1/2">
+                                                                                <img src={img.src} alt={img.alt} className="w-full h-auto object-contain rounded" />
+                                                                                {img.descriptor && <p className="mt-2 text-sm text-gray-600">{img.descriptor}</p>}
+                                                                            </div>
+                                                                        ))}
+                                                                    </div>
+                                                                );
+                                                            } else {
+                                                                return (
+                                                                    <div key={index} className="flex flex-col items-center">
+                                                                        <img src={res.src} alt={res.alt} className="w-full h-auto object-contain rounded" />
+                                                                        {res.descriptor && <p className="mt-2 text-sm text-gray-600">{res.descriptor}</p>}
+                                                                    </div>
+                                                                );
+                                                            }
+                                                        })}
                                                     </div>
                                                 )}
                                         </div>
