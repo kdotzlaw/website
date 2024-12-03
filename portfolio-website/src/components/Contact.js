@@ -22,7 +22,7 @@ const Contact = () => {
     };
 
     return (
-        <div id='contact-body' className="pt-12 px-4 sm:px-6 lg:px-8">
+        <div id='body' className="pt-12 px-4 sm:px-6 lg:px-8">
             <div id='contact-header' className="py-16">
                 <div className="container mx-auto">
                     <h1 className="text-6xl font-bold text-center">Contact</h1>
@@ -30,39 +30,39 @@ const Contact = () => {
                 </div>
             </div>
             <div id='contact-content' className="container mx-auto py-4">
-                <form onSubmit={handleSubmit} className="max-w-lg mx-auto">
+                <form onSubmit={handleSubmit} className="max-w-lg mx-auto card">
                     <div className="mb-4">
-                        <label htmlFor="name" className="block text-gray-700 text-sm font-bold mb-2">Name</label>
+                        <label htmlFor="name" className="block text-white-700 text-sm font-bold mb-2">Name</label>
                         <input
                             type="text"
                             id="name"
                             name="name"
                             value={formData.name}
                             onChange={handleChange}
-                            className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                            className="shadow appearance-none border rounded w-full py-2 px-3 text-white-700 leading-tight focus:outline-none focus:shadow-outline"
                             required
                         />
                     </div>
                     <div className="mb-4">
-                        <label htmlFor="email" className="block text-gray-700 text-sm font-bold mb-2">Email</label>
+                        <label htmlFor="email" className="block text-white-700 text-sm font-bold mb-2">Email</label>
                         <input
                             type="email"
                             id="email"
                             name="email"
                             value={formData.email}
                             onChange={handleChange}
-                            className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                            className="shadow appearance-none border rounded w-full py-2 px-3 text-white-700 leading-tight focus:outline-none focus:shadow-outline"
                             required
                         />
                     </div>
                     <div className="mb-6">
-                        <label htmlFor="message" className="block text-gray-700 text-sm font-bold mb-2">Message</label>
+                        <label htmlFor="message" className="block text-white-700 text-sm font-bold mb-2">Message</label>
                         <textarea
                             id="message"
                             name="message"
                             value={formData.message}
                             onChange={handleChange}
-                            className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline h-32"
+                            className="shadow appearance-none border rounded w-full py-2 px-3 text-white-700 leading-tight focus:outline-none focus:shadow-outline h-32"
                             required
                         ></textarea>
                     </div>

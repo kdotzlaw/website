@@ -18,7 +18,7 @@ const Home = () => {
               <article className='py-4 text-pretty flex-1'>
                 <p className="text-wrap">
                   I am a recent graduate of the University of Manitoba with a Bachelor's degree in Computer Science,
-                  specializing in Software Engineering, Artificial Intelligence, and Databases.
+                  specializing in Software Engineering, Artificial Intelligence, and Databases. I am passionate about computer ethics, data analysis, and the intersection of technology and society.
                 </p>
               </article>
             </div>
@@ -28,7 +28,11 @@ const Home = () => {
       <div id='home-content' className="container mx-auto py-4 text-left max-w-3xl">
         <div id='curr-proj-container mx-auto text-left'>
             <h2 className='text-2xl'>Current Projects</h2>
-            <p className='py-4 text-wrap'>Projects go here</p>
+            <div className='py-4 text-wrap card'>
+                  <ul>
+                    <li>A custom React app that allows the administrator to manage the church's database and volunteer management (ongoing)</li>
+                  </ul>
+              </div>
         </div>
       </div>
     </div>
