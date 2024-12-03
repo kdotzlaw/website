@@ -211,17 +211,17 @@ const Projects = () => {
                                 `,
                                 footer:'Results',
                                 result:[
-                                    `In the worst case, KMP can match the pattern in O(n) time (as KMP never rechecks previously matched characters), whereas the brute force algorithm can match the pattern in O(n^2) time
-                                    (if there is a mismatch in the last spot of the pattern).`,
-                                   'The pattern  CCCC runs significantly faster with the Knuth-Morris-Pratt algorithm (20.45s vs 30.11s), likely because the genome has a 71% GC content and the pattern is highly repetitive.',
-                                   'The pattern AACGTT returns an even 400 matches, unique from other patterns tested, indicating that the pattern is a coding sequence for a pair of amino acids.'
+                                    {type: 'text', content: `In the worst case, KMP can match the pattern in O(n) time (as KMP never rechecks previously matched characters), whereas the brute force algorithm can match the pattern in O(n^2) time
+                                    (if there is a mismatch in the last spot of the pattern).`},
+                                   {type: 'text', content: `The pattern  CCCC runs significantly faster with the Knuth-Morris-Pratt algorithm (20.45s vs 30.11s), likely because the genome has a 71% GC content and the pattern is highly repetitive.`},
+                                   {type: 'text', content: `The pattern AACGTT returns an even 400 matches, unique from other patterns tested, indicating that the pattern is a coding sequence for a pair of amino acids.`}
                                 ]
                         
                             },
                               
                             {
                                 types: ['all', 'sql'],
-                                header:'',
+                                header:'Query Optimization',
                                 images: [
                                     { src: sqlImg, alt: 'SQL Logo' }
                                 ],
@@ -237,10 +237,10 @@ const Projects = () => {
                                 `,
                                 footer:'Results',
                                 result:[
-                                    `Non-clustered B+ tree indexes significantly improved runtimes`,
-                                    `In most cases, indexes on multiple columns performed significantly better than indexes on a single column`,
-                                    `There is a higher percentage of unused bytes for unoptimized queries than for optimized queries`,
-                                    `No overflow pages are used for queries optimized with  B+ tree indexes`
+                                    {type: 'text', content: `Non-clustered B+ tree indexes significantly improved runtimes`},
+                                    {type: 'text', content: `In most cases, indexes on multiple columns performed significantly better than indexes on a single column`},
+                                    {type: 'text', content: `There is a higher percentage of unused bytes for unoptimized queries than for optimized queries`},
+                                    {type: 'text', content: `No overflow pages are used for queries optimized with  B+ tree indexes`}
                     
                                 ]
                             },
