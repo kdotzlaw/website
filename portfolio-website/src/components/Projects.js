@@ -307,7 +307,7 @@ const Projects = () => {
                                                                         <div key={index} className="flex flex-row space-x-4">
                                                                             {res.images.map((img, imgIndex) => (
                                                                                 <div key={imgIndex} className="flex flex-col items-center w-1/2">
-                                                                                    <img src={img.src} alt={img.alt} className="w-full h-auto object-contain rounded" />
+                                                                                    <img src={img.src} alt={img.alt} className="w-full h-auto object-contain rounded hover:scale-105 transition-transform duration-300" />
                                                                                     {img.descriptor && <p className="mt-2 text-sm text-gray-600">{img.descriptor}</p>}
                                                                                 </div>
                                                                             ))}
@@ -316,7 +316,7 @@ const Projects = () => {
                                                                 } else {
                                                                     return (
                                                                         <div key={index} className="flex flex-col items-center">
-                                                                            <img src={res.src} alt={res.alt} className="w-full h-auto object-contain rounded" />
+                                                                            <img src={res.src} alt={res.alt} className="w-full h-auto object-contain rounded hover:scale-105 transition-transform duration-300" />
                                                                             {res.descriptor && <p className="mt-2 text-sm text-gray-600">{res.descriptor}</p>}
                                                                         </div>
                                                                     );
