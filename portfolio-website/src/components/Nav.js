@@ -1,6 +1,9 @@
 import React from 'react';
 import '../styles/Nav.css';
-
+/*
+<li id='nav-item'><a href='#courses' className="py-2 px-4" onClick={() => switchComponent('Edu')}>Skills</a></li>
+<li id='nav-item'><a href='#publications' className="py-2 px-4" onClick={() => switchComponent('Publications')}>Publications</a></li>
+*/
 const Nav = ({ switchComponent }) => {
   return (
     <header id='nav' className='p-4 fixed w-full z-50 top-0 left-0 bg-black '>
@@ -8,9 +11,8 @@ const Nav = ({ switchComponent }) => {
         <ul className="flex space-x-6">
           <li id='nav-item'><a href='#home' className="py-2 px-4" onClick={() => switchComponent('Home')}>Home</a></li>
           <li id='nav-item'><a href='#projects' className="py-2 px-4" onClick={() => switchComponent('Projects')}>Projects</a></li>
-          <li id='nav-item'><a href='#courses' className="py-2 px-4" onClick={() => switchComponent('Edu')}>Education</a></li>
-          <li id='nav-item'><a href='#publications' className="py-2 px-4" onClick={() => switchComponent('Publications')}>Publications</a></li>
-          <li id='nav-item'><a href='#skills' className="py-2 px-4" onClick={() => switchComponent('Skills')}>Skills</a></li>
+          
+          <li id='nav-item'><a href='#blog' className="py-2 px-4" onClick={() => switchComponent('Blog')}>Blog</a></li>
           <li id='nav-item'><a href='#contact' className="py-2 px-4" onClick={() => switchComponent('Contact')}>Contact</a></li>
         </ul>
         <ul className="flex space-x-4">
