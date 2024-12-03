@@ -96,10 +96,12 @@ const Projects = () => {
                                  `,
                                 footer:'Results',
                                 result:[
-                                    `2Sine 1-step ahead forcasting had an MSE of 0.142 and 2Sine 2-step ahead forcasting had an MSE of 1.24`,
-
-                                   
-                                   
+                                    { type: 'text', content: `2Sine 1-step ahead forecasting had an MSE of 0.142 and 2Sine 2-step ahead forecasting had an MSE of 1.24` },
+                                    { type: 'image', src: sine1, alt: '2Sine 1-step ahead forecasting' },
+                                    { type: 'image', src: sine2, alt: '2Sine 2-step ahead forecasting' },
+                                    { type: 'text', content: `Lorenz 1-step ahead forecasting had an MSE of 0.0012 and Lorenz 2-step ahead forecasting had an MSE of 0.0023` },
+                                    { type: 'image', src: lorenz1, alt: 'Lorenz 1-step ahead forecasting' },
+                                    { type: 'image', src: lorenz2, alt: 'Lorenz 2-step ahead forecasting' }
                                 ]
                             },
                             {
@@ -283,11 +285,15 @@ const Projects = () => {
                                             <p className='py-2 text-left'>{project.sub_content}</p>
                                             <h2 className='py-2 text-left font-semibold'>{project.footer}</h2>
                                                 {project.result && project.result.length > 0 && (
-                                                    <ul className="list-disc list-inside">
+                                                    <div className="space-y-4">
                                                         {project.result.map((res, index) => (
-                                                            <li key={index} className="text-left">{res}</li>
+                                                            res.type === 'text' ? (
+                                                                <p key={index} className="text-left">{res.content}</p>
+                                                            ) : (
+                                                                <img key={index} src={res.src} alt={res.alt} className="w-full h-auto object-contain rounded" />
+                                                            )
                                                         ))}
-                                                    </ul>
+                                                    </div>
                                                 )}
                                         </div>
                                     </div>
