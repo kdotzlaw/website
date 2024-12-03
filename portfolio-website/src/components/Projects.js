@@ -69,13 +69,13 @@ const Projects = () => {
                                  `,
                                 footer:'Results',
                                 result:[
-                                    'Demographic analysis showed that individuals who are assigned female at birth, female identifying individuals, white individuals, and individuals who have had at least one vaccination are developing Long Covid-19',
-                                    'Identified high confidence association rules that indicate that individuals assigned female at birth develop Long Covid-19',
-                                    'Symptom clustering determined that cough, headache and fatigue were the most prevalent symptoms for individuals developing Long Covid-19',
-                                    'Descriptive analysis and feature selection indicated that symptom severity was a strong distinguisher',
-                                    'Our decision tree had an AUC of 0.706',
-                                    'Our custom random forest model had an AUC of 0.721',
-                                    'Sudre\'s random forest model had an AUC of 0.76'
+                                    {type: 'text', content: 'Demographic analysis showed that individuals who are assigned female at birth, female identifying individuals, white individuals, and individuals who have had at least one vaccination are developing Long Covid-19'},
+                                    {type: 'text', content: 'Identified high confidence association rules that indicate that individuals assigned female at birth develop Long Covid-19'},
+                                    {type: 'text', content: 'Symptom clustering determined that cough, headache and fatigue were the most prevalent symptoms for individuals developing Long Covid-19'},
+                                    {type: 'text', content: 'Descriptive analysis and feature selection indicated that symptom severity was a strong distinguisher'},
+                                    {type: 'text', content: 'Our decision tree had an AUC of 0.706'},
+                                    {type: 'text', content: 'Our custom random forest model had an AUC of 0.721'},
+                                    {type: 'text', content: 'Sudre\'s random forest model had an AUC of 0.76'}
                                    
                                 ]
                             },
@@ -262,13 +262,46 @@ const Projects = () => {
                             },
                             {
                                 types: ['all', 'fstack'],
-                                header:'',
+                                header:'peacelc.com',
                                 images: [
                                     { src: peace, alt: 'Peace Lutheran Church Website' },
                                    
                                 ],
                                 url: 'https://peacelc.com',
-                                description: 'A user-friendly and organization-focused website built with Wordpress and custom HTML/CSS'
+                                description: 'A user-friendly and organization-focused website built with Wordpress and custom HTML/CSS',
+                                footer:'Key Contributions',
+                                result: [
+                                    {type:'text', content:'An archive of Church Messages that is searchable by keywords and is linked to a recent Message display on the home page'}, 
+                                    {type:'text', content:'An event management system that dynamically updates when events are added or when events have passed '},   
+                                    {type:'text', content:'Custom CSS to personalize the site to match Church branding'},
+                                    {type:'text', content:'Client support including creating technical documentation for client site management, debugging technical issues, and site migration between hosting services'},
+
+                                    { type: 'image-group', images: [
+                                       
+                                        
+                                    ]}
+                                ]
+                            },
+                            {
+                                types: ['all', 'react','flask','python'],
+                                header:'Peace Lutheran Church Database Administrator',
+                                images: [
+                                    { src: peace, alt: 'Peace Lutheran Church Website' },
+                                   
+                                ],
+                                
+                                description: 'A custom React app that allows the administrator to manage the church\'s database and volunteer management (ongoing)',
+                                footer:'Key Features',
+                                result: [
+                                    {type:'text', content:'A custom SQL database that stores volunteer and volunteer job information'},
+                                    {type:'text', content:'Custom database queries created using prepared statements to prevent SQL injection attacks'},
+                                    {type:'text', content:'Custom Flask endpoints for data retrieval and manipulation'},
+                                    {type:'text', content:'A user-friendly and responsive interface that allows the administrator to manage the church\'s database with little-to-no technical knowledge'},
+                                    
+                                    { type: 'image-group', images: [
+                                        
+                                    ]}
+                                ]
                             }
                         ].map((project, index) => (
                             project.types.includes(selectedProject) && (
