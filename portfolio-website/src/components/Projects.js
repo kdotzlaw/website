@@ -97,11 +97,11 @@ const Projects = () => {
                                 footer:'Results',
                                 result:[
                                     { type: 'text', content: `2Sine 1-step ahead forecasting had a MSE of 0.142 and 2Sine 2-step ahead forecasting had a MSE of 1.24` },
-                                    { type: 'image', src: sine1, alt: '2Sine 1-step ahead forecasting' },
-                                    { type: 'image', src: sine2, alt: '2Sine 2-step ahead forecasting' },
+                                    { type: 'image', src: sine1, alt: '2Sine 1-step ahead forecasting', descriptor: 'Graph showing the 2Sine 1-step ahead forecasting results' },
+                                    { type: 'image', src: sine2, alt: '2Sine 2-step ahead forecasting', descriptor: 'Graph showing the 2Sine 2-step ahead forecasting results' },
                                     { type: 'text', content: `Lorenz 1-step ahead forecasting had a MSE of 7.63 and Lorenz 2-step ahead forecasting had a MSE of 111.61` },
-                                    { type: 'image', src: lorenz1, alt: 'Lorenz 1-step ahead forecasting' },
-                                    { type: 'image', src: lorenz2, alt: 'Lorenz 2-step ahead forecasting' }
+                                    { type: 'image', src: lorenz1, alt: 'Lorenz 1-step ahead forecasting', descriptor: 'Graph showing the Lorenz 1-step ahead forecasting results' },
+                                    { type: 'image', src: lorenz2, alt: 'Lorenz 2-step ahead forecasting', descriptor: 'Graph showing the Lorenz 2-step ahead forecasting results' }
                                 ]
                             },
                             {
@@ -290,7 +290,10 @@ const Projects = () => {
                                                             res.type === 'text' ? (
                                                                 <p key={index} className="text-left">{res.content}</p>
                                                             ) : (
-                                                                <img key={index} src={res.src} alt={res.alt} className="w-full h-auto object-contain rounded" />
+                                                                <div key={index} className="flex flex-col items-center">
+                                                                    <img src={res.src} alt={res.alt} className="w-full h-auto object-contain rounded" />
+                                                                    {res.descriptor && <p className="mt-2 text-sm text-gray-600">{res.descriptor}</p>}
+                                                                </div>
                                                             )
                                                         ))}
                                                     </div>
