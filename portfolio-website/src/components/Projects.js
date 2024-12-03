@@ -298,29 +298,31 @@ const Projects = () => {
                                             <h2 className='py-2 text-left font-semibold'>{project.footer}</h2>
                                                 {project.result && project.result.length > 0 && (
                                                     <div className="space-y-4">
-                                                        {project.result.map((res, index) => {
-                                                            if (res.type === 'text') {
-                                                                return <p key={index} className="text-left">{res.content}</p>;
-                                                            } else if (res.type === 'image-group') {
-                                                                return (
-                                                                    <div key={index} className="flex flex-row space-x-4">
-                                                                        {res.images.map((img, imgIndex) => (
-                                                                            <div key={imgIndex} className="flex flex-col items-center w-1/2">
-                                                                                <img src={img.src} alt={img.alt} className="w-full h-auto object-contain rounded" />
-                                                                                {img.descriptor && <p className="mt-2 text-sm text-gray-600">{img.descriptor}</p>}
-                                                                            </div>
-                                                                        ))}
-                                                                    </div>
-                                                                );
-                                                            } else {
-                                                                return (
-                                                                    <div key={index} className="flex flex-col items-center">
-                                                                        <img src={res.src} alt={res.alt} className="w-full h-auto object-contain rounded" />
-                                                                        {res.descriptor && <p className="mt-2 text-sm text-gray-600">{res.descriptor}</p>}
-                                                                    </div>
-                                                                );
-                                                            }
-                                                        })}
+                                                        <ul className="list-disc list-inside">
+                                                            {project.result.map((res, index) => {
+                                                                if (res.type === 'text') {
+                                                                    return <li key={index} className="text-left">{res.content}</li>;
+                                                                } else if (res.type === 'image-group') {
+                                                                    return (
+                                                                        <div key={index} className="flex flex-row space-x-4">
+                                                                            {res.images.map((img, imgIndex) => (
+                                                                                <div key={imgIndex} className="flex flex-col items-center w-1/2">
+                                                                                    <img src={img.src} alt={img.alt} className="w-full h-auto object-contain rounded" />
+                                                                                    {img.descriptor && <p className="mt-2 text-sm text-gray-600">{img.descriptor}</p>}
+                                                                                </div>
+                                                                            ))}
+                                                                        </div>
+                                                                    );
+                                                                } else {
+                                                                    return (
+                                                                        <div key={index} className="flex flex-col items-center">
+                                                                            <img src={res.src} alt={res.alt} className="w-full h-auto object-contain rounded" />
+                                                                            {res.descriptor && <p className="mt-2 text-sm text-gray-600">{res.descriptor}</p>}
+                                                                        </div>
+                                                                    );
+                                                                }
+                                                            })}
+                                                        </ul>
                                                     </div>
                                                 )}
                                         </div>
