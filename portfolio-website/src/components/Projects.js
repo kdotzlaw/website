@@ -181,11 +181,11 @@ const Projects = () => {
                                     `,
                                 footer:'Process',
                                 result:[
-                                   'Preprocess a distal matrix to get a list of taxa and their distances as a key-value pair: {(taxa1, taxa2): distance}',
-                                   'Create a UTable using unions of the distance for each taxon',
-                                   'Create a delta matrix using UTable values, distances for each taxa pair, and the number of taxa',
-                                   'Recursively perform Neighbour Joining by pulling away taxa pairs with minimum distances and forming a cherry with their parent',
-                                   'Returns the optimal paths that would be used to build the tree'
+                                   { type: 'text', content: 'Preprocess a distal matrix to get a list of taxa and their distances as a key-value pair: {(taxa1, taxa2): distance}' },
+                                   { type: 'text', content: 'Create a UTable using unions of the distance for each taxon' },
+                                   { type: 'text', content: 'Create a delta matrix using UTable values, distances for each taxa pair, and the number of taxa' },
+                                   { type: 'text', content: 'Recursively perform Neighbour Joining by pulling away taxa pairs with minimum distances and forming a cherry with their parent' },
+                                   { type: 'text', content: 'Returns the optimal paths that would be used to build the tree' }
                                 ]
                             },
                             {
