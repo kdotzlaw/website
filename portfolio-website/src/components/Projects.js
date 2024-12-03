@@ -8,7 +8,10 @@ import '../styles/Projects.css';
 //Architecture Imgs
 //import esnImage from '../img/esn.JPG';
 import studyBuddyArch from '../img/StudyBuddyArch.png';
-
+import sine1 from '../img/2sine-1step.png';
+import sine2 from '../img/2sine-2step.png';
+import lorenz1 from '../img/lorenz-1step.png';
+import lorenz2 from '../img/lorenz-2step.png';
 //Logos
 import flaskImg from '../img/flask.png';
 import reactImg from '../img/react.png';
@@ -45,7 +48,7 @@ const Projects = () => {
                         <img src={bioImg} alt='BioInformatics Logo' className="w-16 h-16 object-contain rounded my-4 cursor-pointer hover:scale-105 transition-transform duration-300" onClick={() => handleProjectSelect('bio')}/>
                     </div>
                     
-                    <div className='py-4 grid grid-cols-1 w-3/4 gap-6  mx-auto text-center text-wrap'>
+                    <div className='py-4 grid grid-cols-1 w-3/4 gap-6  mx-auto text-center text-wrap' id='projects-content'>
                         {[
                             {
                                 types: ['all', 'python'],
@@ -78,13 +81,26 @@ const Projects = () => {
                             },
                             {
                                 types: ['all', 'python'],
-                                header:'',
+                                header:'Echo State Network',
                                 images: [
                                     { src: mlEsn, alt: 'Echo State Network' },
                                   
                                 ],
                                 url:'https://github.com/kdotzlaw/UniversityProjects/tree/main/ESN-MachineLearning',
-                                description: ' An Echo State Network created with Python to recognize temporal patterns like k-step ahead forecasting'
+                                description: 'A custom Python implementation of an Echo State Network used to recognize temporal patterns like k-step ahead forecasting in 2 different datasets',
+                                sub: `Process`,
+                                sub_content:
+                                `
+                                    Used batch training and a sigmoid to train the ESN on the two datasets. Cross-validation was sed to optimize hyperparameters and model error was calculated 
+                                    using mean-square error (MSE). K-step ahead forecasting is used in both validation and testing stages to evaluate hyperparameters (k=1) and calculate model predictions (k>1)
+                                 `,
+                                footer:'Results',
+                                result:[
+                                    `2Sine 1-step ahead forcasting had an MSE of 0.142 and 2Sine 2-step ahead forcasting had an MSE of 1.24`,
+
+                                   
+                                   
+                                ]
                             },
                             {
                                 types:['all', 'python'],
