@@ -258,7 +258,7 @@ const Projects = () => {
                                         I also worked with our CI/CD lead to ensure that the backend was successfully deployed with GitHub Actions and Docker.
                                         As a technical writer, I created project documentation including a wiki, milestone reports, test plans, and meeting minutes. 
                                         I also performed load testing with Locust to ensure that the application could handle high traffic and concurrent requests.`,
-                                additionalContent: <img src={studyBuddyArch} alt='Data Analysis Diagram' id='studyBuddyArch' className="mt-4" />
+                                additionalContent: <img src={studyBuddyArch} alt='Data Analysis Diagram' id='studyBuddyArch' className="mt-4 hover:scale-105 transition-transform duration-300" />
                             },
                             {
                                 types: ['all', 'fstack'],
