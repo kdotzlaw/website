@@ -39,12 +39,19 @@ const Home = () => {
           </div>
         </div>
       </div>
-      <div id='home-content' className="container mx-auto py-4 text-left max-w-3xl px-4">
-        <div id='curr-proj-container' className="mx-auto text-left card">
-          <h2 className='text-3xl mb-4'>Current Projects</h2>
-          <div className='py-4 text-wrap bg-teal bg-opacity-10 rounded-lg p-6'>
-            <ul className="list-disc list-inside">
-              <li>A custom React app that allows the administrator to manage the church's database and volunteer management (ongoing)</li>
+      <div id='home-content' className="container mx-auto py-8 text-left max-w-3xl px-4">
+        <div id='curr-proj-container' className="mx-auto text-left bg-gunmetal shadow-lg rounded-lg overflow-hidden">
+          <h2 className='text-3xl mb-4 bg-teal bg-opacity-20 p-4 font-bold'>Current Projects</h2>
+          <div className='py-6 px-4 text-wrap'>
+            <ul className="list-none">
+              <li className="flex items-start mb-4">
+                <span className="inline-flex items-center justify-center w-6 h-6 mr-2 bg-teal bg-opacity-20 rounded-md">
+                  <svg className="w-4 h-4 text-teal-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7"></path>
+                  </svg>
+                </span>
+                <span>A custom React app that allows the administrator to manage the church's database and volunteer management (ongoing)</span>
+              </li>
             </ul>
           </div>
         </div>
