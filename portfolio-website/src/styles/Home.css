@@ -1,28 +1,15 @@
-body{
+body {
     font-family: 'Source Code Pro', monospace;
-    background-color: #022B3A;
-}
-#body{
-    /*background-color: #84A59D;*/
-    /*
-        Van Dyke: #483D3F
-        Purple Maroon: #5D2A42
-        Teal: #1F7A8C
-        Gun Metal: #022B3A
-    */
-    background-color: #022B3A;
-    color: white;
-    position: relative;
 }
 
-#text-link{
-    color:white;
+#text-link {
+    color: white;
 }
-#text-link:hover{
+
+#text-link:hover {
     color: #FCB1A6;
 }
 
-#header-indv-project{
+#header-indv-project {
     cursor: pointer;
-    color: white;
 }
