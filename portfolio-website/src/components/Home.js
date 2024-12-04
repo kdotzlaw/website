@@ -22,9 +22,9 @@ const Home = () => {
                 </article>
               </div>
             </div>
-            <div className='mx-auto text-left bg-gunmetal shadow-lg rounded-lg overflow-hidden card'>
-              <article className='py- text-pretty flex-1 '>
-                <h2 className="text-3xl mb-4"> Skills & Technologies</h2>
+            <div className='mx-auto text-left bg-gunmetal shadow-lg rounded-lg overflow-hidden card mt-8'>
+              <article className='py-4 text-pretty flex-1'>
+                <h2 className="text-3xl mb-4 px-4"> Skills & Technologies</h2>
                 <p className="text-wrap">
                     <ul className="space-y-3 text-sm md:text-base" id='skills'>
                     <li className="flex items-start"><span className="inline-flex items-center justify-center w-6 h-6 mr-2 bg-teal bg-opacity-20 rounded-md"><svg className="w-4 h-4 text-teal-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7"></path></svg></span><span><strong className="font-semibold">Web Development: </strong>React, JavaScript, HTML, CSS, TailwindCSS, Bootstrap</span></li>
