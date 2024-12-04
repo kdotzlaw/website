@@ -26,7 +26,7 @@ const Home = () => {
               <h2 className="text-3xl mb-4"> Skills & Technologies</h2>
               <p className="text-wrap">
                   <ul className="space-y-2 text-sm md:text-base" id='skills'>
-                   <li className="flex items-start"><span className="inline-block w-4 h-4 mr-2 mt-1 bg-teal rounded-full"></span><span><strong className="font-semibold">Web Development: </strong>React, JavaScript, HTML, CSS, TailwindCSS, Bootstrap</span></li>
+                   <li className="flex items-start"><span className="inline-block w-4 h-4 mr-2 mt-1 bg-white rounded-full"></span><span><strong className="font-semibold">Web Development: </strong>React, JavaScript, HTML, CSS, TailwindCSS, Bootstrap</span></li>
                    <li className="flex items-start"><span className="inline-block w-4 h-4 mr-2 mt-1 bg-teal rounded-full"></span><span><strong className="font-semibold">Databases: </strong>MSSQL, MySQL, SQL Server, SQLite</span></li>
                    <li className="flex items-start"><span className="inline-block w-4 h-4 mr-2 mt-1 bg-teal rounded-full"></span><span><strong className="font-semibold">Software Development: </strong>Python, Java, C#, C++, JavaScript, SDLC, OOP, Agile, Technical Documentation</span></li>
                    <li className="flex items-start"><span className="inline-block w-4 h-4 mr-2 mt-1 bg-teal rounded-full"></span><span><strong className="font-semibold">API & Server-side Development: </strong>Flask, Node.js</span></li>
