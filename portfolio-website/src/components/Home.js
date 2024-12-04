@@ -12,7 +12,7 @@ const Home = () => {
           <div className="py-4 text-pretty flex-1 bg-teal bg-opacity-10 rounded-lg p-6">
             <div className="flex flex-col md:flex-row items-center md:items-start space-y-6 md:space-y-0 md:space-x-8">
               <img src={profilePic} alt="Katrina Dotzlaw" className="w-64 h-64 object-cover rounded-full"/>
-              <div className="flex-1">
+              <div className="flex-1 card">
                 <h2 className='text-3xl mb-4'>About Me</h2>
                 <article className='text-pretty'>
                   <p className="text-wrap">
@@ -22,17 +22,26 @@ const Home = () => {
                 </article>
               </div>
             </div>
-            <article className='py-6 text-pretty flex-1'>
-              <h2 className="text-3xl mb-4">Skills</h2>
+            <article className='py- text-pretty flex-1 card'>
+              <h2 className="text-3xl mb-4"> Skills & Technologies</h2>
               <p className="text-wrap">
-                {/* Add your skills here */}
+                  <ul className="list-disc list-inside text-pretty text-wrap" id='skills'>
+                   <li><strong>Web Development: </strong>React, JavaScript, HTML, CSS, TailwindCSS, Bootstrap</li>
+                   <li><strong>Databases:</strong> MSSQL, MySQL, SQL Server, SQLite</li>
+                   <li><strong>Software Development:</strong>Python, Java, C#, C++, JavaScript,  SDLC, OOP, Agile, Technical Documentation</li>
+                   <li><strong>API & Server-side Development: </strong>Flask, Node.js</li>
+                   <li><strong>Machine Learning:</strong> Neural Networks, Decision Trees, Random Forests</li>
+                   <li><strong>Data Analysis & Bioinformatics</strong> Python, Biopython, Matplotlib, Numpy,  Data Mining & Rule Association</li>
+                   <li><strong>Tools:</strong> Git, GitHub, VS Code, PyCharm, Jupyter Notebook, SQL Server Management Studio, MySQL Workbench</li>
+                  </ul>
+                  
               </p>
             </article>
           </div>
         </div>
       </div>
       <div id='home-content' className="container mx-auto py-4 text-left max-w-3xl px-4">
-        <div id='curr-proj-container' className="mx-auto text-left">
+        <div id='curr-proj-container' className="mx-auto text-left card">
           <h2 className='text-3xl mb-4'>Current Projects</h2>
           <div className='py-4 text-wrap bg-teal bg-opacity-10 rounded-lg p-6'>
             <ul className="list-disc list-inside">
