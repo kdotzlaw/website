@@ -4,7 +4,7 @@ import profilePic from '../img/kat1.jpg';
 
 const Home = () => {
   return (
-    <div id='body' className='pt-12 bg-gunmetal text-white'> {/* Added padding-top to account for header navigation */}
+    <div id='body' className='pt-12 bg-gunmetal text-white '> {/* Added padding-top to account for header navigation */}
       <div id='home-header' className="py-16">
         <div className="container mx-auto text-left text-pretty max-w-3xl px-4">
           <h1 className="py-4 text-6xl md:text-8xl font-bold">Katrina Dotzlaw</h1>
