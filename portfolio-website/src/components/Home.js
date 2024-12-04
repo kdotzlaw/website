@@ -25,16 +25,15 @@ const Home = () => {
             <article className='py- text-pretty flex-1 card'>
               <h2 className="text-3xl mb-4"> Skills & Technologies</h2>
               <p className="text-wrap">
-                  <ul className="list-disc list-inside text-pretty text-wrap" id='skills'>
-                   <li><strong>Web Development: </strong>React, JavaScript, HTML, CSS, TailwindCSS, Bootstrap</li>
-                   <li><strong>Databases:</strong> MSSQL, MySQL, SQL Server, SQLite</li>
-                   <li><strong>Software Development:</strong>Python, Java, C#, C++, JavaScript,  SDLC, OOP, Agile, Technical Documentation</li>
-                   <li><strong>API & Server-side Development: </strong>Flask, Node.js</li>
-                   <li><strong>Machine Learning:</strong> Neural Networks, Decision Trees, Random Forests</li>
-                   <li><strong>Data Analysis & Bioinformatics</strong> Python, Biopython, Matplotlib, Numpy,  Data Mining & Rule Association</li>
-                   <li><strong>Tools:</strong> Git, GitHub, VS Code, PyCharm, Jupyter Notebook, SQL Server Management Studio, MySQL Workbench</li>
+                  <ul className="space-y-2 text-sm md:text-base" id='skills'>
+                   <li className="flex items-start"><span className="inline-block w-4 h-4 mr-2 mt-1 bg-teal rounded-full"></span><span><strong className="font-semibold">Web Development: </strong>React, JavaScript, HTML, CSS, TailwindCSS, Bootstrap</span></li>
+                   <li className="flex items-start"><span className="inline-block w-4 h-4 mr-2 mt-1 bg-teal rounded-full"></span><span><strong className="font-semibold">Databases: </strong>MSSQL, MySQL, SQL Server, SQLite</span></li>
+                   <li className="flex items-start"><span className="inline-block w-4 h-4 mr-2 mt-1 bg-teal rounded-full"></span><span><strong className="font-semibold">Software Development: </strong>Python, Java, C#, C++, JavaScript, SDLC, OOP, Agile, Technical Documentation</span></li>
+                   <li className="flex items-start"><span className="inline-block w-4 h-4 mr-2 mt-1 bg-teal rounded-full"></span><span><strong className="font-semibold">API & Server-side Development: </strong>Flask, Node.js</span></li>
+                   <li className="flex items-start"><span className="inline-block w-4 h-4 mr-2 mt-1 bg-teal rounded-full"></span><span><strong className="font-semibold">Machine Learning: </strong>Neural Networks, Decision Trees, Random Forests</span></li>
+                   <li className="flex items-start"><span className="inline-block w-4 h-4 mr-2 mt-1 bg-teal rounded-full"></span><span><strong className="font-semibold">Data Analysis & Bioinformatics: </strong>Python, Biopython, Matplotlib, Numpy, Data Mining & Rule Association</span></li>
+                   <li className="flex items-start"><span className="inline-block w-4 h-4 mr-2 mt-1 bg-teal rounded-full"></span><span><strong className="font-semibold">Tools: </strong>Git, GitHub, VS Code, PyCharm, Jupyter Notebook, SQL Server Management Studio, MySQL Workbench</span></li>
                   </ul>
-                  
               </p>
             </article>
           </div>
