@@ -6,11 +6,11 @@ const Home = () => {
   return (
     <div id='body' className='pt-12 bg-gunmetal text-white '> {/* Added padding-top to account for header navigation */}
       <div id='home-header' className="py-16">
-        <div className="container mx-auto text-center text-pretty max-w-3xl px-4">
+        <div className="container mx-auto text-center text-pretty max-w-3xl px-4 ">
           <h1 className="py-4 text-6xl md:text-8xl font-bold">Katrina Dotzlaw</h1>
           <h2 className='text-3xl md:text-4xl py-8'>Software Developer</h2>
-          <div className="py-4 text-pretty flex-1 bg-teal bg-opacity-10 rounded-lg p-6">
-            <div className="flex flex-col md:flex-row md:items-start space-y-6 md:space-y-0 md:space-x-8 text-left bg-gunmetal shadow-lg rounded-lg overflow-hidden card">
+          <div className="py-4 text-pretty flex-1 bg-teal bg-opacity-10 rounded-lg p-6 ">
+            <div className="flex flex-col md:flex-row md:items-start space-y-6 md:space-y-0 md:space-x-8 text-left bg-gunmetal shadow-lg rounded-lg overflow-hidden card ">
               <img src={profilePic} alt="Katrina Dotzlaw" className="w-64 h-64 object-cover rounded-full"/>
               <div className="flex-1 card" id='about'>
                 <h2 className='text-3xl mb-4'>About Me</h2>
