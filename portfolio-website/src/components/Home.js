@@ -11,18 +11,27 @@ const Home = () => {
         <div className="container mx-auto text-left text-pretty max-w-3xl" >
             <h1 className="py-4 text-8xl font-bold ">Katrina Dotzlaw</h1>
             <h2 className=' text-4xl py-8'>Software Developer</h2>
-        
-            <h2 className='text-2xl'>About Me</h2>
-            <div className="flex items-start space-x-8">
+            <div className="py-4 text-pretty flex-1 card">
               <img src={profilePic} alt="Katrina Dotzlaw" className="w-64 h-64 object-cover rounded-full"/>
-              <article className='py-4 text-pretty flex-1'>
-                <p className="text-wrap">
-                  I am a recent graduate of the University of Manitoba with a Bachelor's degree in Computer Science,
-                  specializing in Software Engineering, Artificial Intelligence, and Databases. I am passionate about computer ethics, data analysis, and the intersection of technology and society.
-                </p>
-              </article>
+              <div className="flex items-start space-x-8">
+                <h2 className='text-3xl'>About Me</h2>
+                  <article className='py-4 text-pretty flex-1'>
+                      <p className="text-wrap">
+                        I am a recent graduate of the University of Manitoba with a Bachelor's degree in Computer Science,
+                        specializing in Software Engineering, Artificial Intelligence, and Databases. 
+                      </p>
+                  
+                  </article>
+                
+              </div>
+              <article className='py-4 text-pretty flex-1 '>
+                  <h2 className="text-3xl">Skills</h2>
+                    <p className="text-wrap">
+
+                  </p>
+                </article>
             </div>
-            
+           
         </div>
       </div>
       <div id='home-content' className="container mx-auto py-4 text-left max-w-3xl">
