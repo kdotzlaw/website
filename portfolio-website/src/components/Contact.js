@@ -39,7 +39,7 @@ const Contact = () => {
                             name="name"
                             value={formData.name}
                             onChange={handleChange}
-                            className="shadow appearance-none border rounded w-full py-2 px-3 text-black-700 leading-tight focus:outline-none focus:shadow-outline"
+                            className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-300 bg-gray-700 leading-tight focus:outline-none focus:shadow-outline"
                             required
                         />
                     </div>
@@ -62,7 +62,7 @@ const Contact = () => {
                             name="message"
                             value={formData.message}
                             onChange={handleChange}
-                            className="shadow appearance-none border rounded w-full py-2 px-3 text-black-700 leading-tight focus:outline-none focus:shadow-outline h-32"
+                            className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-300 bg-gray-700 leading-tight focus:outline-none focus:shadow-outline h-32"
                             required
                         ></textarea>
                     </div>
