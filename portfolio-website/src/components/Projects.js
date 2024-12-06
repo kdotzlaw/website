@@ -34,7 +34,7 @@ const Projects = () => {
     };
     
     return (
-        <div id='body' className="pt-12"> {/* Added padding-top to account for nav */}
+        <div id='body' className="pt-12 bg-gunmetal text-white "> {/* Added padding-top to account for nav */}
             <div id='projects-header' className="py-16">
                 <div className="container mx-auto text-center ">
                     <h1 className="text-6xl font-bold  cursor-pointer" onClick={()=>handleProjectSelect('all')}>Projects</h1>

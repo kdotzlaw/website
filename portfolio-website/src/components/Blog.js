@@ -3,7 +3,7 @@ import '../styles/Blog.css';
 
 const Blog = () => {
     return (
-        <div id='body' className="pt-12 px-4 sm:px-6 lg:px-8">
+        <div id='body' className="pt-12 bg-gunmetal text-white  px-4 sm:px-6 lg:px-8">
             <div id='blog-header' className="py-16">
                 <div className="container mx-auto">
                     <h1 className="text-6xl font-bold text-center">Blog</h1>

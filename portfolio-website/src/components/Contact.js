@@ -12,13 +12,32 @@ const Contact = () => {
         setFormData({ ...formData, [e.target.name]: e.target.value });
     };
 
-    const handleSubmit = (e) => {
+    const handleSubmit = async (e) => {
         e.preventDefault();
-        // Here you would typically send the form data to a backend service
-        // For now, we'll just simulate sending an email
-        console.log('Sending email to katrina@dotzlaw.com with:', formData);
-        setFormStatus('Message sent successfully!');
-        setFormData({ name: '', email: '', message: '' });
+        console.log('handling submit');
+        try{
+            const resp = await fetch({
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify({
+                    to: `katrina@dotzlaw.com`,
+                    subject: `Message from ${formData.name}`,
+                    text: `From: ${formData.name}\n\n${formData.message}`
+
+                })
+            });
+            if (resp.ok) {
+                setFormStatus('Message sent successfully!');
+                setFormData({name: '', email: '', message: ''});
+            } else {
+                setFormStatus('Error sending message');
+            }
+        }catch (error){
+            console.log(error);
+        }
+     
     };
 
     return (
@@ -39,7 +58,7 @@ const Contact = () => {
                             name="name"
                             value={formData.name}
                             onChange={handleChange}
-                            className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-300 bg-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                            className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 bg-white-700 leading-tight focus:outline-none focus:shadow-outline"
                             required
                         />
                     </div>
@@ -51,7 +70,7 @@ const Contact = () => {
                             name="email"
                             value={formData.email}
                             onChange={handleChange}
-                            className="shadow appearance-none border rounded w-full py-2 px-3 text-black-700 leading-tight focus:outline-none focus:shadow-outline"
+                            className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 bg-white-700 leading-tight focus:outline-none focus:shadow-outline"
                             required
                         />
                     </div>
@@ -62,7 +81,7 @@ const Contact = () => {
                             name="message"
                             value={formData.message}
                             onChange={handleChange}
-                            className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-300 bg-gray-700 leading-tight focus:outline-none focus:shadow-outline h-32"
+                            className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 bg-white-700 leading-tight focus:outline-none focus:shadow-outline h-32"
                             required
                         ></textarea>
                     </div>
