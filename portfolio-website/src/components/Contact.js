@@ -22,7 +22,7 @@ const Contact = () => {
     };
 
     return (
-        <div id='body' className="pt-12 px-4 sm:px-6 lg:px-8">
+        <div id='body' className="pt-12 bg-gunmetal text-white  px-4 sm:px-6 lg:px-8">
             <div id='contact-header' className="py-16">
                 <div className="container mx-auto">
                     <h1 className="text-6xl font-bold text-center">Contact</h1>
@@ -39,7 +39,7 @@ const Contact = () => {
                             name="name"
                             value={formData.name}
                             onChange={handleChange}
-                            className="shadow appearance-none border rounded w-full py-2 px-3 text-white-700 leading-tight focus:outline-none focus:shadow-outline"
+                            className="shadow appearance-none border rounded w-full py-2 px-3 text-black-700 leading-tight focus:outline-none focus:shadow-outline"
                             required
                         />
                     </div>
@@ -51,7 +51,7 @@ const Contact = () => {
                             name="email"
                             value={formData.email}
                             onChange={handleChange}
-                            className="shadow appearance-none border rounded w-full py-2 px-3 text-white-700 leading-tight focus:outline-none focus:shadow-outline"
+                            className="shadow appearance-none border rounded w-full py-2 px-3 text-black-700 leading-tight focus:outline-none focus:shadow-outline"
                             required
                         />
                     </div>
@@ -62,7 +62,7 @@ const Contact = () => {
                             name="message"
                             value={formData.message}
                             onChange={handleChange}
-                            className="shadow appearance-none border rounded w-full py-2 px-3 text-white-700 leading-tight focus:outline-none focus:shadow-outline h-32"
+                            className="shadow appearance-none border rounded w-full py-2 px-3 text-black-700 leading-tight focus:outline-none focus:shadow-outline h-32"
                             required
                         ></textarea>
                     </div>
