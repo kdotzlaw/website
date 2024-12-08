@@ -60,7 +60,7 @@ const Projects = () => {
                                     
                                 ],
                                 url:'https://github.com/rdotzlaw/COMP4710-Group-11',
-                                description: 'A group project that analyzed COVID-19 data using Python and data mining techniques',
+                                description: 'A group project that analyzed COVID-19 data using Python and data mining techniques. Resulted in 3 publications in IEEE.',
                                 sub: `Analysis`,
                                 sub_content:
                                 `
