@@ -14,10 +14,7 @@ case 'Edu':
       case 'Publications':
         return <Publications />;
 */
-function App() {
-  const [currentComponent, setCurrentComponent] = useState('Home');
-  //switch statement to render the correct component
-  function renderComponent() {
+/*function renderComponent() {
     switch (currentComponent) {
       case 'Home':
         return <Home />;
@@ -45,5 +42,26 @@ function App() {
     </div>
   );
 }
-
+*/
+function App() {
+  //const [currentComponent, setCurrentComponent] = useState('Home');
+  //switch statement to render the correct component
+  return(
+    <div className="App">
+      <Nav />
+      <section id='home'>
+        <Home />
+      </section>
+      <section id='projects'>
+        <Projects />
+      </section>
+      <section id='blog'>
+        <Blog />
+      </section>
+      <section id='contact'>
+        <Contact />
+      </section>
+    </div>
+  );
+}
 export default App;
