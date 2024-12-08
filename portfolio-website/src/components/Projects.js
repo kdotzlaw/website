@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { ChevronLeft, ChevronRight} from 'lucide-react';
-
+//style imports
+import '../styles/Projects.css';
 //Image imports
 /*import esnImage from '../img/esn.JPG';
 import studyBuddyArch from '../img/StudyBuddyArch.png';
@@ -74,11 +75,18 @@ const Projects = () => {
 
     //go to next slide
     const nextSlide = () => {
-        setCurrIndex(currIndex + 1);
+        // carousel is cyclic, so if the next index is greater than the length of the array, set it to 0
+        const projectsInCategory = getProjectsInCategory(selectedCategory);
+        setCurrIndex((prevIndex)=>
+            prevIndex >= projectsInCategory.length - 1 ? 0 : prevIndex + 1
+            );
     }
     //go to previous slide
     const prevSlide = () => {
-        setCurrIndex(currIndex - 1);
+        const projectsInCategory = getProjectsInCategory(selectedCategory);
+        setCurrIndex((prevIndex)=>
+            prevIndex <= 0 ? projectsInCategory.length - 1 : prevIndex - 1
+            );
     }
 
 
@@ -92,8 +100,10 @@ const Projects = () => {
                     <div id='project-tiles' className='grid grid-cols-2 md:grid-cols-4 gap-6 p-6'>
                         {categories.map((category, index)=>(
                             <div key={category.id} onClick={()=>{
-                                setSelectedCategory(category.id, index);
-                                setCurrIndex(index);
+                                setSelectedCategory(prevCategory => prevCategory === category.id ? null : category.id);
+                                setCurrIndex(0);
+                                /*setSelectedCategory(category.id);
+                                setCurrIndex(0);*/
                             }}
                             className={`p-6 rounded-lg cursor-pointer transition-all duration-300 transform hover:scale-105 ${selectedCategory === category.id ? 'bg-teal bg-opacity-20' : 'bg-white bg-opacity-10'  }`
                                 }
