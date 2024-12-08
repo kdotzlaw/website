@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { chevronLeft, chevronRight} from 'lucide-react';
+import { ChevronLeft, ChevronRight} from 'lucide-react';
 
 //Image imports
 /*import esnImage from '../img/esn.JPG';
@@ -89,7 +89,7 @@ const Projects = () => {
                 <div className="container mx-auto text-center ">
                     <h1 className='text-6xl font-bold mb-12'>Projects</h1>
                     {/*Project Category Tiles*/}
-                    <div id='prokect-tiles' className='grid grid-cols-2 md:grid-cols-4 gap-6 p-6'>
+                    <div id='project-tiles' className='grid grid-cols-2 md:grid-cols-4 gap-6 p-6'>
                         {categories.map((category, index)=>(
                             <div key={category.id} onClick={()=>{
                                 setSelectedCategory(category.id, index);
@@ -111,7 +111,7 @@ const Projects = () => {
                     {selectedCategory && (
                         <div className='mt-12 relative'>
                             <div className='flex items-center justify-center gap-4'>
-                                <button onClick={prevSlide} className='p-2 rounded-full bg-teal bg-opacity-20 hover:bg-opacity-30'><chevronLeft className="w-6 h-6" /></button>
+                                <button onClick={prevSlide} className='p-2 rounded-full bg-teal bg-opacity-20 hover:bg-opacity-30'><ChevronLeft className="w-6 h-6" /></button>
                                 <div className="w-full max-w-4xl bg-white bg-opacity-5 rounded-lg p-6">
                                     {getProjectsInCategory(selectedCategory)[currIndex] && (
                                             <div className='flex flex-col md:flex-row gap-8'>
@@ -161,7 +161,7 @@ const Projects = () => {
                                             </div>
                                     ) }
                                 </div> {/*End Carousel Content*/}
-                                <button onClick={nextSlide} className='p-2 rounded-full bg-teal bg-opacity-20 hover:bg-opacity-30'><chevronRight className="w-6 h-6" /></button>
+                                <button onClick={nextSlide} className='p-2 rounded-full bg-teal bg-opacity-20 hover:bg-opacity-30'><ChevronRight className="w-6 h-6" /></button>
                             </div> 
                         </div>
                     )}
