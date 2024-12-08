@@ -3,13 +3,13 @@ import { ChevronLeft, ChevronRight} from 'lucide-react';
 //style imports
 import '../styles/Projects.css';
 //Image imports
-/*import esnImage from '../img/esn.JPG';
+import esnImage from '../img/esn.JPG';
 import studyBuddyArch from '../img/StudyBuddyArch.png';
 import sine1 from '../img/2sine-1step.png';
 import sine2 from '../img/2sine-2step.png';
 import lorenz1 from '../img/lorenz-1step.png';
 import lorenz2 from '../img/lorenz-2step.png';
-*/
+
 //Logos
 import flaskImg from '../img/flask.png';
 import reactImg from '../img/react.png';
