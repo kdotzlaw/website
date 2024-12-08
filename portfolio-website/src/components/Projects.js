@@ -19,6 +19,7 @@ import pythonImg from '../img/python.png';
 import sqlImg from '../img/sql.png';
 import bioImg from '../img/bio.png';
 import fStackImg from '../img/fStack.png';
+import cyber from '../img/cyber.png';
 
 //Cards
 import peace from '../img/peace.png';
@@ -46,6 +47,7 @@ const Projects = () => {
                         <img src={sqlImg} alt='SQL Logo' className="w-16 h-16 object-contain rounded my-4 cursor-pointer hover:scale-105 transition-transform duration-300" onClick={() => handleProjectSelect('sql')}/>
                         <img src={pythonImg} alt='Python Logo' className="w-16 h-16 object-contain rounded my-4 cursor-pointer hover:scale-105 transition-transform duration-300" onClick={() => handleProjectSelect('python')}/>
                         <img src={bioImg} alt='BioInformatics Logo' className="w-16 h-16 object-contain rounded my-4 cursor-pointer hover:scale-105 transition-transform duration-300" onClick={() => handleProjectSelect('bio')}/>
+                        <img src={cyber} alt='Cyber Security Logo' className="w-16 h-16 object-contain rounded my-4 cursor-pointer hover:scale-105 transition-transform duration-300" onClick={() => handleProjectSelect('cyber')}/>
                     </div>
                     
                     <div className='py-4 grid grid-cols-1 w-3/4 gap-6  mx-auto text-center text-wrap' id='projects-content'>
@@ -301,6 +303,26 @@ const Projects = () => {
                                     { type: 'image-group', images: [
                                         
                                     ]}
+                                ]
+                            },
+                            {
+                                types: ['all', 'cyber'],
+                                header:'Computer Security',
+                                url:'https://github.com/kdotzlaw/UniversityProjects/tree/main/ComputerSecurity',
+                                images: [
+                                    { src: cyber, alt: 'Cyber Security Logo' },
+                                   
+                                ],
+                                description: 'A collection of various Computer Security labs and assignment reports',
+                                footer:'Assignments include: ',
+                                result: [
+                                    {type:'text', content:'A comparison of encryption and decryption using CBC, ECB, and RSA algorithms'},
+                                    {type:'text', content:'An experiment to determine the impact of address randomization on buffer overflow attacks'},
+                                    {type:'text', content:'A demonstration of environment variable manipulation on a Linux system and SUID programs'},
+                                    {type:'text', content:'SQL injection attacks on a website using SELECT, UPDATE, and appending a query'},
+                                    {type:'text', content:'A demonstration of a SYN flooding attack and SYN cookie countermeasure using docker containers on a Linux system'},
+                                    
+                                    
                                 ]
                             }
                         ].map((project, index) => (
