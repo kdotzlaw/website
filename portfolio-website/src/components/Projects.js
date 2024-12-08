@@ -141,19 +141,23 @@ const Projects = () => {
                                                         <div className='md-4'>
                                                             <h3 className='text-xl font-semibold mb-2'>{getProjectsInCategory(selectedCategory)[currIndex].footer}</h3>
                                                             <ul className='list-disc list-inside'>
-                                                                {getProjectsInCategory(selectedCategory)[currIndex].result?.map((item, index) => {
-                                                                    item.type === 'text' && <li key={index} className="text-left">{item.content}</li>
-                                                                    {item.type === 'image-group' && (
-                                                                        <div key={index} className="flex flex-row space-x-4">
+                                                                {getProjectsInCategory(selectedCategory[currIndex].result?.map((item, index)=>(
+                                                                    item.type === 'text' ? <li key={index} className='text-wrap'>{item.content}</li> : item.type === 'image-group' ? (
+                                                                        <div key={index} className='flex flex-row space-x-4'>
                                                                             {item.images.map((img, imgIndex) => (
-                                                                                <div key={imgIndex} className="flex flex-col items-center w-1/2">
-                                                                                    <img src={img.src} alt={img.alt} className="w-full h-auto object-contain rounded hover:scale-105 transition-transform duration-300" />
-                                                                                    {img.descriptor && <p className="mt-2 text-sm text-gray-600">{img.descriptor}</p>}
+                                                                                <div key={imgIndex} className='flex flex-col items-center w-1/2'>
+                                                                                    <img src={img.src} alt={img.alt} className='w-full h-auto object-contain rounded hover:scale-105 transition-transform duration-300' />
+                                                                                    {img.descriptor && <p className='mt-2 text-sm text-gray-600'>{img.descriptor}</p>}
                                                                                 </div>
                                                                             ))}
                                                                         </div>
-                                                                    )}  
-                                                                })}
+                                                                    ) : (
+                                                                        <div key={index} className='flex flex-col items-center'>
+                                                                            <img src={item.src} alt={item.alt} className='w-full h-auto object-contain rounded hover:scale-105 transition-transform duration-300' />
+                                                                            {item.descriptor && <p className='mt-2 text-sm text-gray-600'>{item.descriptor}</p>}
+                                                                        </div>
+                                                                    )
+                                                                )))}
                                                             </ul>
                                                         </div>
                                                     )}
