@@ -5,8 +5,8 @@ import profilePic from '../img/kat1.jpg';
 const Home = () => {
   return (
     <div id='body' className='pt-12 bg-gunmetal text-white '> {/* Added padding-top to account for header navigation */}
-      <div id='home-header' className="py-16">
-        <div className="container mx-auto text-center text-pretty max-w-3xl px-4">
+      <div id='home-header' className="py-16 ">
+        <div className="container mx-auto text-center text-pretty max-w-3xl px-4 card">
           <h1 className="py-4 text-6xl md:text-4xl font-bold">Katrina Dotzlaw</h1>
           <h2 className='text-3xl md:text-3xl py-4'>Software Developer</h2>
           <div className="py-4 text-pretty flex-1 bg-teal bg-opacity-10 rounded-lg p-6">

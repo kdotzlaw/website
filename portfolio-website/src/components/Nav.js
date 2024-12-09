@@ -42,8 +42,7 @@ const Nav = () => {
           <li id='nav-item'><a href='#blog' className="py-2 px-4">Blog</a></li>
           <li id='nav-item'><a href='#contact' className="py-2 px-4">Contact</a></li>
         </ul>
-      </nav>
-      {/*Social Links*/}
+          {/*Social Links*/}
       <ul className="flex space-x-4">
           <li id='nav-item'>
             <a href='https://www.linkedin.com/in/kdotzlaw' target="_blank" rel="noopener noreferrer">
@@ -56,6 +55,8 @@ const Nav = () => {
             </a>
           </li>
         </ul>
+      </nav>
+    
     </header>
   );
 };

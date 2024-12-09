@@ -1,29 +1,53 @@
-.card{
-    /*shadows*/
+/*.card{
+   
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
     transition: 0.3s;
     background-color: black;
    
     padding: 10px;
+
 }
 
 .card:hover{
-    box-shadow: 0 8px 16px 0 black
-}
+   box-shadow: 0 8px 16px 0 black
 
+}
 #card-img{
    
     width: 50%;
     height: 100%;
 }
-
-#studyBuddyArch {
-    display: block;
-    margin-top: 10px;
-    width: 100%;
-
+*/
+.project-card{
+    background: linear-gradient(135 deg, rgba(255, 255, 255, 0.05) 0%,
+    rgba(255, 255, 255, 0.02) 100%
+        );
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    transition: all 0.3s ease;
 }
-#studyBuddyArch:hover{
-    transition: 0.3s;
+
+.project-card:hover{
+    transform: translateY(-4px);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
 }
 
+.category-tile {
+    transition: all 0.3s ease;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.category-tile:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+    border-color: rgba(255, 255, 255, 0.2);
+}
+
+.carousel-button {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(5px);
+    transition: all 0.2s ease;
+}
+
+.carousel-button:hover {
+    background: rgba(255, 255, 255, 0.2);
+}
