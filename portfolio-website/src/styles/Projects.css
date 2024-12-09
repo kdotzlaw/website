@@ -19,17 +19,21 @@
 }
 */
 .project-card{
-    background: linear-gradient(135 deg, rgba(255, 255, 255, 0.05) 0%,
+    /*background: linear-gradient(135 deg, rgba(255, 255, 255, 0.05) 0%,
     rgba(255, 255, 255, 0.02) 100%
-        );
+        );*/
+    background-color: rgba(255, 255, 255, 0.05);
     backdrop-filter: blur(10px);
     border: 1px solid rgba(255, 255, 255, 0.1);
-    transition: all 0.3s ease;
+    transition: all 0.3s ease box-shadow 0.3s ease; 
 }
 
 .project-card:hover{
-    transform: translateY(-4px);
+   /* transform: translateY(-4px);
     box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
+    */
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
 }
 
 .category-tile {

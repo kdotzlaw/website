@@ -32,7 +32,7 @@ const Projects = () => {
         {id: 'react', name: 'React', icons:reactImg},
         {id: 'python', name: 'Python', icons:pythonImg},
         {id: 'sql', name: 'SQL', icons:sqlImg},
-        {id: 'bio', name: 'Bioinformatics', icons:bioImg},
+        {id: 'bio', name: 'Bio informatics', icons:bioImg},
         {id: 'cyber', name: 'Cyber Security', icons:cyber},
         {id: 'flask', name: 'Flask', icons:flaskImg},
         {id: 'fstack', name: 'Frontend Stack', icons:fStackImg},
@@ -345,18 +345,20 @@ const Projects = () => {
      return(
         <div id = 'projects' className='pt-12 bg-gunmetal text-white min-h-screen'>
             <div className='py-16'>
-                <div className="container mx-auto text-center ">
+                <div className="container mx-auto text-center text-pretty max-w-3xl px-4">
                     <h1 className='text-6xl font-bold mb-12'>Projects</h1>
                     {/*Project Category Tiles*/}
                     <div id='project-tiles' className='grid grid-cols-2 md:grid-cols-4 gap-6 p-6 project-card'>
-                        {categories.map((category, index)=>(
+                        {categories.map((category)=>(
                             <div key={category.id} onClick={()=>{
                                 setSelectedCategory(prevCategory => prevCategory === category.id ? null : category.id);
                                 setCurrIndex(0);
                                 /*setSelectedCategory(category.id);
                                 setCurrIndex(0);*/
                             }}
-                            className={`p-6 rounded-lg cursor-pointer transition-all duration-300 transform hover:scale-105 ${selectedCategory === category.id ? 'bg-teal bg-opacity-20' : 'bg-white bg-opacity-10'  } category-tile`
+                            className={`p-6 rounded-lg cursor-pointer flex flex-col items-center justify-center h-40 
+                                transition-all duration-300 transform hover:scale-105 
+                                ${selectedCategory === category.id ? 'bg-teal bg-opacity-20' : 'bg-white bg-opacity-10'  } category-tile`
                                 }
                             >
                                 <img 
@@ -364,7 +366,7 @@ const Projects = () => {
                                     alt = {category.name}
                                     className="w-16 h-16 mx-auto mb-4 object-contain"
                                 />
-                             <h3 className="text-xl font-semibold">{category.name}</h3>
+                             <h3 className="text-0.5xl font-semibold text-center break-words w-full">{category.name}</h3>
                         </div>
                         ))}
                     </div> {/*End Project Tiles*/}
