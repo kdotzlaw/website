@@ -1,5 +1,7 @@
 import React, { useState } from 'react';
 import { ChevronLeft, ChevronRight} from 'lucide-react';
+//component imports
+import ProjectCarousel from './Carousel';
 //style imports
 import '../styles/Projects.css';
 //Image imports
@@ -366,7 +368,8 @@ const Projects = () => {
                         </div>
                         ))}
                     </div> {/*End Project Tiles*/}
-                    {/*Project Carousel*/}
+                    <ProjectCarousel project={getProjectsInCategory(selectedCategory)[currIndex]} />
+                    {/*Project Carousel
                     {selectedCategory && (
                         <div className='mt-12 relative'>
                             <div className='flex items-center justify-center gap-4'>
@@ -423,11 +426,11 @@ const Projects = () => {
                                                 </div>
                                             </div>
                                     ) }
-                                </div> {/*End Carousel Content*/}
+                                </div> {/*End Carousel Content
                                 <button onClick={nextSlide} className='p-2 rounded-full bg-teal bg-opacity-20 hover:bg-opacity-30 carousel-button'><ChevronRight className="w-6 h-6" /></button>
                             </div> 
                         </div>
-                    )}
+                    )}*/}
                 </div>
             </div>
         </div>
