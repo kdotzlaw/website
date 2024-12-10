@@ -43,7 +43,7 @@ const Home = () => {
           </div>
         </div>
       </div>
-      <div id='home-content' className="container mx-auto py-8 text-left max-w-3xl px-4">
+      {/*<div id='home-content' className="container mx-auto py-8 text-left max-w-3xl px-4">
         <div id='curr-proj-container' className="text-left bg-gunmetal shadow-lg rounded-lg overflow-hidden card">
           <h2 className='text-3xl mb-4 bg-teal bg-opacity-20 p-4 font-bold'>Current Projects</h2>
           <div className='py-6 px-4 text-wrap'>
@@ -59,7 +59,7 @@ const Home = () => {
             </ul>
           </div>
         </div>
-      </div>
+      </div>*/}
     </div>
   );
 }

@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { ChevronLeft, ChevronRight} from 'lucide-react';
 //component imports
 import ProjectCarousel from './Carousel';
+
 //style imports
 import '../styles/Projects.css';
 //Image imports
@@ -49,7 +50,8 @@ const Projects = () => {
                 
             ],
             url:'https://github.com/rdotzlaw/COMP4710-Group-11',
-            description: 'A group project that analyzed COVID-19 data using Python and data mining techniques. Resulted in 3 publications in IEEE.',
+            detail_url:'',
+            description: 'A group project that analyzed COVID-19 data using Python and data mining techniques.',
             sub: `Analysis`,
             sub_content:
             `
@@ -68,6 +70,14 @@ const Projects = () => {
                 {type: 'text', content: 'Our custom random forest model had an AUC of 0.721'},
                 {type: 'text', content: 'Sudre\'s random forest model had an AUC of 0.76'}
                
+            ],
+            summary:[
+                {type: 'text', content: '3 publications in IEEE alongside Professor Leung'},
+                {type: 'text', content: 'High confidence rules indicating that individuals assigned female at birth develop Long Covid-19'},
+                {type: 'text', content: 'Cough, headache, and fatigue were the most prevalent symptoms for individuals developing Long Covid-19'},
+                {type: 'text', content: 'Decision tree AUC was 0.706'},
+                {type: 'text', content: 'Custom Random forest AUC was 0.721'},
+                {type: 'text', content: 'Sudre\'s random forest AUC was 0.76'}
             ]
         },
         {
@@ -348,7 +358,7 @@ const Projects = () => {
                 <div className="container mx-auto text-center text-pretty max-w-3xl px-4">
                     <h1 className='text-6xl font-bold mb-12'>Projects</h1>
                     {/*Project Category Tiles*/}
-                    <div id='project-tiles' className='grid grid-cols-2 md:grid-cols-4 gap-6 p-6 project-card'>
+                    <div id='project-tiles' className='grid grid-cols-2 md:grid-cols-4 gap-6 p-6 '>
                         {categories.map((category)=>(
                             <div key={category.id} onClick={()=>{
                                 setSelectedCategory(prevCategory => prevCategory === category.id ? null : category.id);
@@ -356,9 +366,10 @@ const Projects = () => {
                                 /*setSelectedCategory(category.id);
                                 setCurrIndex(0);*/
                             }}
+                            //TODO: Tile background should match background of project carousel
                             className={`p-6 rounded-lg cursor-pointer flex flex-col items-center justify-center h-40 
                                 transition-all duration-300 transform hover:scale-105 
-                                ${selectedCategory === category.id ? 'bg-teal bg-opacity-20' : 'bg-white bg-opacity-10'  } category-tile`
+                                ${selectedCategory === category.id ? 'bg-teal bg-opacity-20' : 'bg-white bg-opacity-10'  } `
                                 }
                             >
                                 <img 
@@ -370,7 +381,14 @@ const Projects = () => {
                         </div>
                         ))}
                     </div> {/*End Project Tiles*/}
-                    <ProjectCarousel project={getProjectsInCategory(selectedCategory)[currIndex]} />
+                    <div className='flex items-center justify-center gap-4'> {/*//TODO: Buttons should only be visible when there is a project selected*/}
+                        <button onClick={prevSlide} className='p-2 rounded-full bg-teal bg-opacity-20 hover:bg-opacity-30 carousel-button'><ChevronLeft className="w-6 h-6" /></button>
+                            <ProjectCarousel project={getProjectsInCategory(selectedCategory)[currIndex]} />
+                       
+
+                        <button onClick={nextSlide} className='p-2 rounded-full bg-teal bg-opacity-20 hover:bg-opacity-30 carousel-button'><ChevronRight className="w-6 h-6" /></button>
+                    </div>
+                    
                     {/*Project Carousel
                     {selectedCategory && (
                         <div className='mt-12 relative'>
