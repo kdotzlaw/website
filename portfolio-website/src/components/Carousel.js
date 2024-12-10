@@ -22,8 +22,8 @@ const ProjectCarousel = ({ project }) => {
                 </div>
                 {project.url && (
                     <button 
-                    onClick={() => window.open(project.url)} 
-                    className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded w-full mt-auto"
+                        onClick={() => window.location.href = `/project/${project.detail_url}`}
+                        className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded w-full mt-auto"
                     >
                     View Project
                     </button>
@@ -35,10 +35,15 @@ const ProjectCarousel = ({ project }) => {
                 {project.footer && (
                     <div className='mb-4'>
                         <h3 className='text-xl font-semibold mb-2'>{project.footer}</h3>
-                        <ul className='list-disc list-inside'>
+                        <ul className='space-y-4'>
                             {project.summary?.map((item, index) => (
-                            <li key={index} className='mb-2'>
-                                {item.content}
+                            <li key={index} className='flex items-start'>
+                                <span className="inline-flex items-center justify-center w-6 h-6 mr-2 bg-teal bg-opacity-20 rounded-md">
+                                    <svg className="w-4 h-4 text-teal-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7" />
+                                    </svg>
+                                </span>
+                                <span>{item.content}</span>
                             </li>
                             ))}
                         </ul>
