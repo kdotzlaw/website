@@ -72,9 +72,9 @@ const Home = () => {
                   I am a recent graduate of the University of Manitoba with a Bachelor's degree in Computer Science, specializing in Software Engineering, Artificial Intelligence, and Databases.
               </p>
                {/*About Me */}
-            <div className="py-16 bg-gunmetal text-white">
-              <h3>About Me</h3>
-              <p className='text-center'>
+            <div className="py-8 px-6 bg-opacity-10 bg-teal w-full max-w-4xl mx-auto">
+              <h3 className='text-2xl font-semibold mb-4 text-teal-300'>About Me</h3>
+              <p className='text-gray-200 leading-relaxed'>
                 
                 I am a recent graduate of the University of Manitoba with a Bachelor's degree in Computer Science, specializing in Software Engineering, Artificial Intelligence, and Databases.
                 
@@ -95,8 +95,8 @@ const Home = () => {
            
 
             {/*Category Tiles*/}
-              <section className=' min-h-screen bg-black text-white pb-5 ' data-aos='fade-up' data-aos-duration='1000'> 
-                <article className='pt-5 pb-5' id='projects'>
+              <section className=' min-h-screen bg-black text-white pt-12 ' data-aos='fade-up' data-aos-duration='1000'> 
+                <article className='min-h-screen pt-5 pb-5' id='projects'>
                   <Projects />
                 </article>
               </section>
