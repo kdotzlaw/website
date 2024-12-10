@@ -34,7 +34,7 @@ const Nav = ({ switchComponent }) => {
 */
 const Nav = () => {
   return (
-    <header id='nav' className='p-4 fixed w-full z-50 top-0 left-0 bg-black '>
+    <header id='nav' className='p-4 fixed w-full z-50 top-0 left-0 bg-gunmetal '>
       <nav className='container mx-auto flex justify-between items-center'>
       <ul className="flex space-x-6">
           <li id='nav-item'><a href='#home' className="py-2 px-4">Home</a></li>

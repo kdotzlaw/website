@@ -1,7 +1,13 @@
-import React from 'react';
+import React, { useState } from 'react';
+
+
+
 
 
 const ProjectCarousel = ({ project }) => {
+   
+    const [projectDetail, setProjectDetail] = useState(null);
+   
     if (!project) {
         return null;
       }
@@ -20,15 +26,39 @@ const ProjectCarousel = ({ project }) => {
                     />
                     ))}
                 </div>
-                {project.url && (
+               
                     <button 
-                        onClick={() => window.location.href = `/project/${project.detail_url}`}
-                        className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded w-full mt-auto"
+                        onClick={() => setProjectDetail(project)}
+                        className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded "
                     >
-                    View Project
+                        View Project Details
                     </button>
-                )}
+                    {/* Project Detail View*/}
+                    {projectDetail && (
+                        <div className='project-detail'>
+                                {project.sub && (
+                                        <>
+                                        <h3 className="text-xl font-semibold mb-2">{project.sub}</h3>
+                                        <p className="mb-4">{project.sub_content}</p>
+                                        </>
+                                    )}
+                                    {project.footer && (
+                                        <div className='mb-4'>
+                                        <h3 className='text-xl font-semibold mb-2'>{project.footer}</h3>
+                                        <ul className='list-disc list-inside'>
+                                            {project.result?.map((item, index) => (
+                                            <li key={index} className='mb-2'>
+                                                {item.content}
+                                            </li>
+                                            ))}
+                                        </ul>
+                                        </div>
+                                    )}
+                        </div>
+                    )}
+              
                 </div>
+                
                 <div className='md:w-2/3 overflow-y-auto'>
                 <h2 className='text-2xl font-bold mb-4'>{project.header}</h2>
                 <p className='mb-4'>{project.description}</p>

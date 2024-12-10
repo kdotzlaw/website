@@ -1,7 +1,8 @@
 import React, { useState } from 'react';
 import { ChevronLeft, ChevronRight} from 'lucide-react';
 //component imports
-import ProjectCarousel from './Carousel';
+import  ProjectCarousel from './Carousel';
+
 
 //style imports
 import '../styles/Projects.css';
@@ -356,7 +357,7 @@ const Projects = () => {
         <div id = 'projects' className='pt-12 bg-gunmetal text-white min-h-screen'>
             <div className='py-16'>
                 <div className="container mx-auto text-center text-pretty max-w-3xl px-4">
-                    <h1 className='text-6xl font-bold mb-12'>Projects</h1>
+                    <h1 className='text-6xl font-bold mb-12'>Skills & Technologies</h1>
                     {/*Project Category Tiles*/}
                     <div id='project-tiles' className='grid grid-cols-2 md:grid-cols-4 gap-6 p-6 '>
                         {categories.map((category)=>(

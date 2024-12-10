@@ -1,10 +1,11 @@
-import React from 'react';
+/*import React from 'react';
+
 import '../styles/Home.css';
 import profilePic from '../img/kat1.jpg';
 
 const Home = () => {
   return (
-    <div id='body' className='pt-12 bg-gunmetal text-white '> {/* Added padding-top to account for header navigation */}
+   
       <div id='home-header' className="py-16 ">
         <div className="container mx-auto text-center text-pretty max-w-3xl px-4 card">
           <h1 className="py-4 text-6xl md:text-4xl font-bold">Katrina Dotzlaw</h1>
@@ -43,25 +44,73 @@ const Home = () => {
           </div>
         </div>
       </div>
-      {/*<div id='home-content' className="container mx-auto py-8 text-left max-w-3xl px-4">
-        <div id='curr-proj-container' className="text-left bg-gunmetal shadow-lg rounded-lg overflow-hidden card">
-          <h2 className='text-3xl mb-4 bg-teal bg-opacity-20 p-4 font-bold'>Current Projects</h2>
-          <div className='py-6 px-4 text-wrap'>
-            <ul className="list-none">
-              <li className="flex items-start mb-4">
-                <span className="inline-flex items-center justify-center w-6 h-6 mr-2 bg-teal bg-opacity-20 rounded-md">
-                  <svg className="w-4 h-4 text-teal-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7"></path>
-                  </svg>
-                </span>
-                <span>A custom React app that allows the administrator to manage the church's database and volunteer management (ongoing)</span>
-              </li>
-            </ul>
-          </div>
-        </div>
-      </div>*/}
+   
     </div>
   );
 }
 
 export default Home;
+*/
+
+import React from 'react';
+import '../styles/Home.css';
+import Projects from '../components/Projects';
+
+
+const Home = () => {
+  return (
+    <div className="min-h-screen bg-gunmetal text-white py-48"> {/* Added padding-top to account for header navigation */}
+     
+        <div className='container mx-auto w-3/4'>
+          {/*Home Header*/}
+          <div className=' flex flex-col items-center justify-center  ' id='home'>
+            <div className=" h-screen text-center w-full " id='home-header'>
+              <h3 className="text-5xl md:text-4xl font-bold mb-4 bg-white text-transparent bg-clip-text">Katrina Dotzlaw</h3>
+              {/*Tagline/Brief Description*/}
+              <h1 className="text-3xl md:text-2xl font-medium mb-6 text-gray-200">Software Developer</h1>
+              <p className="text-lg md:text-base text-gray-300 max-w-2xl mx-auto leading-relaxed">
+                  I am a recent graduate of the University of Manitoba with a Bachelor's degree in Computer Science, specializing in Software Engineering, Artificial Intelligence, and Databases.
+              </p>
+               {/*About Me */}
+            <div className="py-16 bg-gunmetal text-white">
+              <h3>About Me</h3>
+              <p className='text-center'>
+                
+                I am a recent graduate of the University of Manitoba with a Bachelor's degree in Computer Science, specializing in Software Engineering, Artificial Intelligence, and Databases.
+                
+                </p>
+            </div>
+            </div>{/*End Home Header*/}
+            {/*Links to contact and projects??
+            <div className='btn-group row d-flex align-items-center justify-content-center flex-row pb-4 gy-4'>
+              <div className='col-12 col-md-6 col-lg-3 d-flex align-items-center justify-content-center'> 
+                <a href='#' className='btn btn-outline-primary'>Contact</a>
+              </div>
+              <div className='col-12 col-md-6 col-lg-3 d-flex align-items-center justify-content-center'>
+                <a href='#' className='btn btn-outline-primary'>Projects</a>
+              </div>
+              
+            </div>
+            */}
+           
+
+            {/*Category Tiles*/}
+              <section className=' min-h-screen bg-black text-white pb-5 ' data-aos='fade-up' data-aos-duration='1000'> 
+                <article className='pt-5 pb-5' id='projects'>
+                  <Projects />
+                </article>
+              </section>
+              <section className='min-h-screen bg-gunmetal text-white pb-5'>
+                <article id='project-detail'>
+
+                </article>
+              </section>
+          
+          
+          </div>
+        </div>
+
+    </div>
+  )};
+
+  export default Home;

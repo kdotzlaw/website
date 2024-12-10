@@ -52,15 +52,7 @@ function App() {
       <section id='home'>
         <Home />
       </section>
-      <section id='projects'>
-        <Projects />
-      </section>
-      <section id='blog'>
-        <Blog />
-      </section>
-      <section id='contact'>
-        <Contact />
-      </section>
+     
     </div>
   );
 }

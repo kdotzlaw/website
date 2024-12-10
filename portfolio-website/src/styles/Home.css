@@ -1,4 +1,9 @@
-body {
+
+
+
+
+
+/*body {
     font-family: 'Source Code Pro', monospace;
     
     
@@ -22,7 +27,7 @@ body {
     transition: 0.3s;
     background-color: black;
    
-    padding: 10px;*/
+    padding: 10px;
     background-color: rgba(255, 255, 255, 0.05);
     backdrop-filter: blur(10px);
     border: 1px solid rgba(255, 255, 255, 0.1);
@@ -30,7 +35,7 @@ body {
 }
 
 .card:hover{
-    /* box-shadow: 0 8px 16px 0 black*/
+    /* box-shadow: 0 8px 16px 0 black
  
      transform: translateY(-2px);
      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
@@ -44,3 +49,4 @@ body {
 #skills li:hover{
     background-color: rgba(255, 255, 255, 0.05);
 }
+*/
