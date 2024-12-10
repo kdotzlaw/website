@@ -1,9 +1,5 @@
 import React, { useState } from 'react';
 
-
-
-
-
 const ProjectCarousel = ({ project }) => {
    
     const [projectDetail, setProjectDetail] = useState(null);
@@ -12,8 +8,8 @@ const ProjectCarousel = ({ project }) => {
         return null;
       }
     return (
-        <div className='mt-8 card'>
-            <div className='flex flex-col md:flex-row gap-8 h-[600px] overflow-y-auto'>
+        <div className='mt-8 '>
+            <div className='flex flex-col md:flex-row gap-8 '>
                 <div className='md:w-1/3 flex flex-col'>
                 <div className="flex-1 flex flex-col items-center justify-start">
                     {/*Map  Images if there are any*/}
