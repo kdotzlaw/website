@@ -17,8 +17,22 @@ import lorenz2 from '../img/lorenz-2step.png';
 import peace from '../img/peace.png';
 import esnImage from '../img/esn.JPG';
 
+
+
+ //list of kvps
+ export const categories = [
+    {id: 'react', name: 'React', icons:reactImg},
+    {id: 'python', name: 'Python', icons:pythonImg},
+    {id: 'sql', name: 'SQL', icons:sqlImg},
+    {id: 'bio', name: 'BioInformatics', icons:bioImg},
+    {id: 'cyber', name: 'Cyber Security', icons:cyber},
+    {id: 'flask', name: 'Flask', icons:flaskImg},
+    {id: 'fstack', name: 'Frontend Stack', icons:fStackImg},
+    {id:'machine-learning', name: 'Machine Learning', icons:esnImage},
+    
+];
 //Project list
-const Projects = [
+export const projects = [
     {
         id:1,
         types: [ 'python'],
@@ -315,4 +329,3 @@ const Projects = [
     }
 
 ]; //end of project list
-export default Projects;

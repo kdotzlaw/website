@@ -10,6 +10,7 @@ import Contact from './Contact';
 import Blog from './Blog';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import ProjectDetail from './Project-Detail';
+import { projects } from './Projects';
 /*    <section id='blog'><Blog /></section>
                     <section id='contact'><Contact /></section>*/
 function App() {
@@ -25,7 +26,7 @@ function App() {
                     <section id='home'><Home /></section>
                   </>
                 } />
-                <Route path="/projects/:projectId" element={<ProjectDetail projects={Projects} />} />
+                <Route path="/projects/:projectId" element={<ProjectDetail projects={projects} />} />
             </Routes>
         </div>
     </BrowserRouter>

@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { useParams } from 'react-router-dom';
+import { categories, projects }  from './Projects';
 
 //A seperate page with project details added dynamically based on id
 const ProjectDetail = ({projects}) => {

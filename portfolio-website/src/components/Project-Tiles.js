@@ -3,46 +3,24 @@ import { ChevronLeft, ChevronRight} from 'lucide-react';
 //component imports
 import  ProjectCarousel from './Project-Carousel';
 //Project is a list of projects
-import Projects from './Projects';
+import { categories, projects } from './Projects';
 
 //style imports
 import '../styles/Projects.css';
 
-//Image imports
-import esnImage from '../img/esn.JPG';
-
-//Logos
-import flaskImg from '../img/flask.png';
-import reactImg from '../img/react.png';
-import pythonImg from '../img/python.png';
-import sqlImg from '../img/sql.png';
-import bioImg from '../img/bio.png';
-import fStackImg from '../img/fStack.png';
-import cyber from '../img/cyber.png';
 
 
 //Project category tiles, when clicked, the projects in that category will be displayed via carousel
 const Project_Tiles = () => {
     const [selectedCategory, setSelectedCategory] = useState(null);
     const [currIndex, setCurrIndex] = useState(0);
-    //list of kvps
-    const categories = [
-        {id: 'react', name: 'React', icons:reactImg},
-        {id: 'python', name: 'Python', icons:pythonImg},
-        {id: 'sql', name: 'SQL', icons:sqlImg},
-        {id: 'bio', name: 'BioInformatics', icons:bioImg},
-        {id: 'cyber', name: 'Cyber Security', icons:cyber},
-        {id: 'flask', name: 'Flask', icons:flaskImg},
-        {id: 'fstack', name: 'Frontend Stack', icons:fStackImg},
-        {id:'machine-learning', name: 'Machine Learning', icons:esnImage},
-        
-    ];
+   
     
 
 
     //get projects in the selected category
     const getProjectsInCategory = (category) => {
-        return Projects.filter(project => project.types.includes (category));
+        return projects.filter(project => project.types.includes (category));
     }
 
     //go to next slide
