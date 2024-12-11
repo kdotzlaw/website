@@ -15,17 +15,17 @@ const ProjectCarousel = ({ project }) => {
         <div className='pt-12 bg-gunmetal text-white'>
             <div className='w-full max-w-4xl mx-auto bg-opacity-5 bg-white rounded-lg p-6 min-h-[600px] flex flex-col md:flex-row gap-8 '>
                 <div className='md:w-1/3 flex flex-col justify-between h-full'>
-                    <div className="flex-1 flex flex-col items-center justify-start gap-4">
-                        {/*Map  Images if there are any*/}
-                        {project.images?.map((image, index) => (
-                        <img 
-                            key={index}
-                            src={image.src} 
-                            alt={image.alt} 
-                            className="w-full max-h-48 object-contain rounded "
-                        />
-                        ))}
-                    </div>
+                <div className="flex-1 flex flex-col items-center justify-start gap-4">
+                    {/*Map  Images if there are any*/}
+                    {project.images?.map((image, index) => (
+                    <img 
+                        key={index}
+                        src={image.src} 
+                        alt={image.alt} 
+                        className="w-full max-h-48 object-contain rounded "
+                    />
+                    ))}
+                </div>
                
                     <button 
                         onClick={() => setProjectDetail(project)}

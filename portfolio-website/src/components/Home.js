@@ -95,12 +95,12 @@ const Home = () => {
            
 
             {/*Category Tiles*/}
-              <section className=' min-h-screen bg-black text-white pt-12 ' data-aos='fade-up' data-aos-duration='1000'> 
-                <article className='min-h-screen pt-5 pb-5' id='projects'>
+              <section className='  bg-black text-white ' data-aos='fade-up' data-aos-duration='1000'> 
+                <article className=' pt-5 pb-5' id='projects'>
                   <Projects />
                 </article>
               </section>
-              <section className='min-h-screen bg-gunmetal text-white pb-5'>
+              <section className='bg-gunmetal text-white'>
                 <article id='project-detail'>
 
                 </article>

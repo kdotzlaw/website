@@ -73,7 +73,7 @@ const Projects = () => {
                
             ],
             summary:[
-                {type: 'text', content: '3 publications in IEEE alongside Professor Leung'},
+                {type: 'text', content: '3 publications in IEEE'},
                 {type: 'text', content: 'High confidence rules indicating that individuals assigned female at birth develop Long Covid-19'},
                 {type: 'text', content: 'Cough, headache, and fatigue were the most prevalent symptoms for individuals developing Long Covid-19'},
                 {type: 'text', content: 'Decision tree AUC was 0.706'},
@@ -354,13 +354,13 @@ const Projects = () => {
 
 
      return(
-        <div id = 'projects' className='pt-12 bg-gunmetal text-white min-h-screen'>
-            <div className='container mx-auto px-4 py-16'>
-                <div className="max-w-6xl mx-auto ">
+        <div id = 'projects' className='pt-12 bg-gunmetal text-white'>
+            <div className='container mx-auto px-12 py-16'>
+                <div className="max-w-6xl mx-auto min-h-[90vh] items-center justify-center gap-8">
                     <h1 className='text-6xl font-bold mb-12 text-center'>Skills & Technologies</h1>
-                    {/*Project Category Tiles*/}
-                    <div className="min-h-[800px] w-full">
-                        <div className="w-full max-w-4xl mx-auto bg-opacity-5 bg-white rounded-lg p-6">
+                    {/*Project Category Tiles   <div className="h-[1280px] w-[1280px] mx-auto ">*/}
+                    <div className="h-[1280px] w-[1280px] mx-auto ">
+                        <div className="max-w-5xl mx-auto bg-opacity-5 bg-white rounded-lg p-6">
                             <div id='project-tiles' className='grid grid-cols-2 lg:grid-cols-4 gap-6 p-6 '>
                                 {categories.map((category)=>(
                                     <div key={category.id} onClick={()=>{
@@ -450,7 +450,7 @@ const Projects = () => {
                         </div>
                     )}*/}
             
-                <div className='flex items-center justify-center gap-4 mt-8'> 
+                <div className='flex items-center justify-center gap-4 mt-8 '> 
                     {selectedCategory && (
                         <>
                         <button onClick={prevSlide} className='p-2 rounded-full bg-teal bg-opacity-20 hover:bg-opacity-30 carousel-button'>
@@ -461,7 +461,7 @@ const Projects = () => {
                             <ChevronRight className="w-6 h-6" />
                         </button>
                         </>
-                    )}
+                )}
                         </div>
                     </div>
                 </div>
