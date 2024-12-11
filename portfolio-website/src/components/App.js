@@ -2,58 +2,34 @@ import { useState } from 'react';
 import '../styles/App.css';
 import Nav from './Nav';
 import Home from './Home';
-import Projects from './Projects';
+import Projects from './Project-Tiles';
 
 import Contact from './Contact';
 
 
 import Blog from './Blog';
-/*
-case 'Edu':
-        return <Edu />;
-      case 'Publications':
-        return <Publications />;
-*/
-/*function renderComponent() {
-    switch (currentComponent) {
-      case 'Home':
-        return <Home />;
-      case 'Projects':
-        return <Projects />;
-      
-      case 'Blog':
-        return <Blog />;
-      case 'Contact':
-        return <Contact />;
-     
-      default:
-        return <Home />;
-    }
-  }
-  const switchComponent = (componentName) => {
-    setCurrentComponent(componentName);
-  };
-
-  return (
-    <div className="App">
-      <Nav switchComponent={switchComponent} />
-      {renderComponent()}
-     
-    </div>
-  );
-}
-*/
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import ProjectDetail from './Project-Detail';
+/*    <section id='blog'><Blog /></section>
+                    <section id='contact'><Contact /></section>*/
 function App() {
-  //const [currentComponent, setCurrentComponent] = useState('Home');
-  //switch statement to render the correct component
+  //const [currentComponent, setCurrentComponent] = useState('Home');  
+  //use routes to determine pages
   return(
-    <div className="App">
-      <Nav />
-      <section id='home'>
-        <Home />
-      </section>
-     
-    </div>
+    <BrowserRouter>
+        <div className="App">
+            <Nav />
+            <Routes>
+                <Route path='/' element={
+                  <>
+                    <section id='home'><Home /></section>
+                  </>
+                } />
+                <Route path="/projects/:projectId" element={<ProjectDetail projects={Projects} />} />
+            </Routes>
+        </div>
+    </BrowserRouter>
+  
   );
 }
 export default App;

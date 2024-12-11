@@ -54,7 +54,7 @@ export default Home;
 
 import React from 'react';
 import '../styles/Home.css';
-import Projects from '../components/Projects';
+import Project_Tiles from './Project-Tiles';
 
 
 const Home = () => {
@@ -97,7 +97,7 @@ const Home = () => {
             {/*Category Tiles*/}
               <section className='  bg-black text-white ' data-aos='fade-up' data-aos-duration='1000'> 
                 <article className=' pt-5 pb-5' id='projects'>
-                  <Projects />
+                  <Project_Tiles />
                 </article>
               </section>
               <section className='bg-gunmetal text-white'>

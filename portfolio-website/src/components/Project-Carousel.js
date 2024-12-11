@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 
 
 
@@ -6,14 +7,15 @@ import React, { useState } from 'react';
 
 const ProjectCarousel = ({ project }) => {
    
-    const [projectDetail, setProjectDetail] = useState(null);
-   
-    if (!project) {
-        return null;
-      }
+   const navigate = useNavigate();
+   const handleProjectClick = () =>{
+       navigate(`/projects/${project.id}`);
+   }
+    if (!project) return null;
     return (
         <div className='pt-12 bg-gunmetal text-white'>
-            <div className='w-full max-w-4xl mx-auto bg-opacity-5 bg-white rounded-lg p-6 min-h-[600px] flex flex-col md:flex-row gap-8 '>
+            <div onClick={handleProjectClick} 
+                className='w-full max-w-4xl mx-auto bg-opacity-5 bg-white rounded-lg p-6 min-h-[600px] flex flex-col md:flex-row gap-8 '>
                 <div className='md:w-1/3 flex flex-col justify-between h-full'>
                 <div className="flex-1 flex flex-col items-center justify-start gap-4">
                     {/*Map  Images if there are any*/}
@@ -27,13 +29,8 @@ const ProjectCarousel = ({ project }) => {
                     ))}
                 </div>
                
-                    <button 
-                        onClick={() => setProjectDetail(!projectDetail)}
-                        className="w-full bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded mt-4"
-                    >
-                        {projectDetail ? 'Hide Details' : 'View Project Details'}
-                    </button>
-                    {/* Project Detail View*/}
+                    
+                    {/* Project Detail View
                     {projectDetail && (
                         <div className='project-detail'>
                                 {project.sub && (
@@ -55,7 +52,7 @@ const ProjectCarousel = ({ project }) => {
                                         </div>
                                     )}
                         </div>
-                    )}
+                    )}*/}
               
                 </div>
                 
