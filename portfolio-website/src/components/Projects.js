@@ -44,6 +44,7 @@ const Projects = () => {
     //Project list
     const Projects = [
         {
+            id:1,
             types: [ 'python'],
             header:'Analyzing Covid-19 Data to Predict Long Covid-19 Cases',
             images: [
@@ -82,6 +83,7 @@ const Projects = () => {
             ]
         },
         {
+            id:2,
             types: ['python', 'machine-learning'],
             header:'Echo State Network',
             images: [
@@ -119,6 +121,7 @@ const Projects = () => {
             ]
         },
         {
+            id:3,
             types:['python'],
             header:'Distributed Blockchain',
             images: [
@@ -132,6 +135,7 @@ const Projects = () => {
             `
         },
         {
+            id:4,
             types:[ 'bio','python'],
             header:'Hidden Markov Models',
             images: [
@@ -155,6 +159,7 @@ const Projects = () => {
             ]
         },
         {
+            id:5,
             types:[ 'bio','python'],
             header:'A Custom Implementation of ClustalW ' ,
             images: [
@@ -170,6 +175,7 @@ const Projects = () => {
 
         },
         {
+            id:6,
             types:[ 'bio','python'],
             header:'Neighbour Joining with Python',
             images: [
@@ -191,6 +197,7 @@ const Projects = () => {
             ]
         },
         {
+            id:7,
             types:[ 'bio','python'],
             header:'Comparing Brute Force and Knuth-Morris-Pratt Pattern Matching Algorithms on the Sorangium Cellulosum Genome',
             images: [
@@ -221,6 +228,7 @@ const Projects = () => {
     
         },
         {
+            id:8,
             types: ['sql'],
             header:'Query Optimization',
             images: [
@@ -246,6 +254,7 @@ const Projects = () => {
             ]
         },
         {
+            id:9,
             types:['sql','python'],
             header:'',
             images: [
@@ -265,6 +274,7 @@ const Projects = () => {
             
         },
         {
+            id:10,
             types: [ 'fstack'],
             header:'peacelc.com',
             images: [
@@ -287,6 +297,7 @@ const Projects = () => {
             ]
         },
         {
+            id:11,
             types: ['react','flask','python'],
             header:'Peace Lutheran Church Database Administrator',
             images: [
@@ -306,6 +317,7 @@ const Projects = () => {
             ]
         },
         {
+            id:12,
             types: [ 'cyber'],
             header:'Computer Security',
             url:'https://github.com/kdotzlaw/UniversityProjects/tree/main/ComputerSecurity',

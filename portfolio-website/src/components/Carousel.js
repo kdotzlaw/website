@@ -28,10 +28,10 @@ const ProjectCarousel = ({ project }) => {
                 </div>
                
                     <button 
-                        onClick={() => setProjectDetail(project)}
+                        onClick={() => setProjectDetail(!projectDetail)}
                         className="w-full bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded mt-4"
                     >
-                        View Project Details
+                        {projectDetail ? 'Hide Details' : 'View Project Details'}
                     </button>
                     {/* Project Detail View*/}
                     {projectDetail && (
