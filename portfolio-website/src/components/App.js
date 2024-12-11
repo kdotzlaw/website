@@ -1,5 +1,6 @@
 import { useState } from 'react';
-import '../styles/App.css';
+//import '../styles/App.css';
+import '../styles/main.css';
 import Nav from './Nav';
 import Home from './Home';
 import Projects from './Project-Tiles';

@@ -6,8 +6,8 @@ import  ProjectCarousel from './Project-Carousel';
 import { categories, projects } from './Projects';
 
 //style imports
-import '../styles/Projects.css';
-
+//import '../styles/Projects.css';
+import '../styles/main.css';
 
 
 //Project category tiles, when clicked, the projects in that category will be displayed via carousel
@@ -42,7 +42,7 @@ const Project_Tiles = () => {
 
 
      return(
-        <div id = 'projects' className='pt-12 px-12 bg-gunmetal text-white'>
+        <div id = 'projects' className='pt-12 px-12  text-white'>
             <div className='container mx-auto px-12 py-16'>
                 <div className="max-w-6xl mx-auto flex flex-col items-center ">
                     <h1 className='text-6xl font-bold mb-12 text-center'>Skills & Technologies</h1>
@@ -50,8 +50,8 @@ const Project_Tiles = () => {
                     <div className={`h-[1280px] w-[1280px] mx-auto flex flex-col items-center justify-start transition-all duration-300 ${
                     selectedCategory ? 'h-[2000px]' : 'h-[1280px]'
                 }`}>
-                        <div className="max-w-5xl mx-auto bg-opacity-5 bg-white rounded-lg p-6">
-                            <div id='project-tiles' className='grid grid-cols-2 lg:grid-cols-4 gap-6 p-6 '>
+                        <div className="max-w-5xl mx-auto  rounded-lg p-6">
+                            <div id='project-tiles' className='grid grid-cols-2 lg:grid-cols-4 gap-6 p-6 project-tile'>
                                 {categories.map((category)=>(
                                     <div key={category.id} onClick={()=>{
                                         setSelectedCategory(prevCategory => prevCategory === category.id ? null : category.id);
@@ -142,14 +142,14 @@ const Project_Tiles = () => {
             
                 <div className='flex items-center justify-center gap-4 mt-8  w-full'> 
                     {selectedCategory && (
-                         <div className='flex items-center justify-center gap-4 mt-8 w-full max-w-5xl'> 
-                            <button onClick={prevSlide} className='p-2 rounded-full bg-teal bg-opacity-20 hover:bg-opacity-30 carousel-button'>
+                         <div className='flex items-center justify-center gap-4 mt-8 w-full max-w-5xl '> 
+                            <button onClick={prevSlide} className='p-2 rounded-full bg-teal bg-opacity-20 hover:bg-opacity-30 carousel-button carousel-nav'>
                                 <ChevronLeft className="w-6 h-6" />
                             </button>
                             <div className='flex-1 max-w-4xl'>
                                 <ProjectCarousel project={getProjectsInCategory(selectedCategory)[currIndex]} />
                             </div>
-                            <button onClick={nextSlide} className='p-2 rounded-full bg-teal bg-opacity-20 hover:bg-opacity-30 carousel-button'>
+                            <button onClick={nextSlide} className='p-2 rounded-full bg-teal bg-opacity-20 hover:bg-opacity-30 carousel-button carousel-nav'>
                                 <ChevronRight className="w-6 h-6" />
                             </button>
                      </div>

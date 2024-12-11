@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-
+import '../styles/main.css';
 
 
 
@@ -13,7 +13,7 @@ const ProjectCarousel = ({ project }) => {
    }
     if (!project) return null;
     return (
-        <div className='pt-12 bg-gunmetal text-white'>
+        <div className='pt-12  text-white carousel-container'>
             <div onClick={handleProjectClick} 
                 className='w-full max-w-4xl mx-auto bg-opacity-5 bg-white rounded-lg p-6 min-h-[600px] flex flex-col md:flex-row gap-8 '>
                 <div className='md:w-1/3 flex flex-col justify-between h-full'>
