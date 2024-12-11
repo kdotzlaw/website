@@ -28,20 +28,7 @@ const Home = () => {
               <p className="text-lg md:text-base text-gray-300 max-w-2xl mx-auto leading-relaxed ">
                   I am a recent graduate of the University of Manitoba with a Bachelor's degree in Computer Science, specializing in Software Engineering, Artificial Intelligence, and Databases.
               </p>
-               {/*About Me */}
-            <div className="py-8 px-6  w-full max-w-4xl mx-auto home-about">
-              <h3 className='text-2xl font-semibold mb-4'>About Me</h3>
-              
-                <p className='text-gray-200 leading-relaxed'>
-                
-                I am a recent graduate of the University of Manitoba with a Bachelor's degree in Computer Science, specializing in Software Engineering, Artificial Intelligence, and Databases.
-                
-                </p>
-                <br/>
-                <p className='text-gray-200 leading-relaxed'>
-                  Wow another paragraph
-                </p>
-            </div>
+             <br/>
             <div className='btn-group row d-flex align-items-center justify-content-center flex-row pb-4 gy-4'>
               <button className='button-primary '> View my Projects </button>
               <button className='button-primary'> Contact Me </button>
