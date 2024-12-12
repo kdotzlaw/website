@@ -43,8 +43,10 @@ const Project_Tiles = () => {
 
     return(
         <div id='projects' className='min-h-screen pt-16 sm:pt-20 px-4 sm:px-8 lg:px-12 text-white'>
-            <div className='container mx-auto px-4 sm:px-8 lg:px-12'>
-                <div className="max-w-6xl mx-auto flex flex-col items-center about-projects-container">
+            {/*<div className='container mx-auto px-4 sm:px-8 lg:px-12'>
+                <div className="max-w-6xl mx-auto flex flex-col items-center about-projects-container">*/}
+                 <div className='container mx-auto w-3/4'>
+                 <div className="about-projects-container flex flex-col items-center">
                     <div className='about-section text-center '>
                          {/*Detailed About Me*/}
                         <h1 className="text-2xl md:text-2xl font-medium mb-6  home-subtitle">About Me</h1>
@@ -63,7 +65,7 @@ const Project_Tiles = () => {
                     <h3 className="text-5xl md:text-4xl font-bold mb-4  text-transparent bg-clip-text home-subtitle">Skills & Projects</h3>
                   </div>
                     {/*Project Tiles */}
-                    <div className="h-[90vh] w-[90vw] max-w-[1280px] mx-auto">
+                    <div className="h-[90vh] w-[90vw] max-w-[1280px] w-full">
                         <div className="max-w-5xl mx-auto rounded-lg p-4 sm:p-6">
                             <div id='project-tiles' className='grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-3 sm:gap-4 lg:gap-6 p-4 sm:p-6 project-tile'>
                                 {categories.map((category) => (
