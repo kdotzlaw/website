@@ -46,9 +46,10 @@ const Project_Tiles = () => {
             <div className='container mx-auto px-4 sm:px-8 lg:px-12'>
                 <div className="max-w-6xl mx-auto flex flex-col items-center">
                     <h1 className='text-4xl sm:text-5xl lg:text-6xl font-bold mb-8 sm:mb-12 text-center mt-8 sm:mt-16'>Skills & Technologies</h1>
-                    <div className={`w-full transition-all duration-300 ${
+                     {/* Fixed height container to prevent expansion : <div className={`w-full transition-all duration-300 ${
                         selectedCategory ? 'min-h-[2000px]' : 'min-h-[800px] sm:min-h-[1000px] lg:min-h-[1280px]'
-                    }`}>
+                    }`}>*/}
+                    <div className="h-[90vh] w-[90vw] max-w-[1280px] mx-auto">
                         <div className="max-w-5xl mx-auto rounded-lg p-4 sm:p-6">
                             <div id='project-tiles' className='grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-3 sm:gap-4 lg:gap-6 p-4 sm:p-6 project-tile'>
                                 {categories.map((category) => (
