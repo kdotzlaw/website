@@ -42,7 +42,7 @@ const Project_Tiles = () => {
 
 
     return(
-        <div id='projects' className='min-h-screen pt-16 sm:pt-20 px-4 sm:px-8 lg:px-12 text-white'>
+        <div id='projects' className='min-h-screen pt-16 pb-16 sm:pt-20 px-4 sm:px-8 lg:px-12 text-white flex justify-center items-start'>
             {/*<div className='container mx-auto px-4 sm:px-8 lg:px-12'>
                 <div className="max-w-6xl mx-auto flex flex-col items-center about-projects-container">*/}
                  <div className='container mx-auto w-3/4'>
@@ -68,7 +68,7 @@ const Project_Tiles = () => {
                     <div  className="flex justify-center items-center w-full">
 
                 
-                    <div className="h-[90vh] w-[90vw] max-w-[1280px] mx-auto flex flex-col items-center">
+                    <div className="min-h-[90vh] w-[90vw] max-w-[1280px] mx-auto flex flex-col items-center">
                         <div className="max-w-5xl mx-auto rounded-lg p-4 sm:p-6">
                             <div id='project-tiles' className='grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-3 sm:gap-4 lg:gap-6 p-4 sm:p-6 project-tile'>
                                 {categories.map((category) => (
