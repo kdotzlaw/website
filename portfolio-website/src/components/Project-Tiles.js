@@ -44,23 +44,25 @@ const Project_Tiles = () => {
     return(
         <div id='projects' className='min-h-screen pt-16 sm:pt-20 px-4 sm:px-8 lg:px-12 text-white'>
             <div className='container mx-auto px-4 sm:px-8 lg:px-12'>
-                <div className="max-w-6xl mx-auto flex flex-col items-center">
-                    {/*Detailed About Me*/}
-                    <h1 className="text-2xl md:text-2xl font-medium mb-6  home-subtitle">About Me</h1>
-                        <p className="text-lg md:text-base text-gray-300 max-w-2xl mx-auto leading-relaxed ">
-                            I am a skilled backend developer and data analyst specializing in Python, JavaScript, database management systems (DBMS), and various query languages.
-                            I strive to create secure, efficient, scalable, and maintainable software creating easily understood technical documentation, using test-driven development (TDD), using cyber security principles, and by following the software development life cycle (SDLC).
-                            
-                        </p>
-                        <br/>
-                        <p className="text-lg md:text-base text-gray-300 max-w-2xl mx-auto leading-relaxed ">
-                           My technical background is primarily in the areas of software engineering, artificial intelligence, and database management systems (DBMS), though I have dabbled in web development.
-                           My passion projects are in the areas of data science, machine learning, and artificial intelligence, investigating how to use these technologies to further medical research and diagnosis.
-                        </p>
-                        <br/>
+                <div className="max-w-6xl mx-auto flex flex-col items-center about-projects-container">
+                    <div className='about-section text-center '>
+                         {/*Detailed About Me*/}
+                        <h1 className="text-2xl md:text-2xl font-medium mb-6  home-subtitle">About Me</h1>
+                            <p className="text-lg md:text-base text-gray-300 max-w-2xl mx-auto leading-relaxed ">
+                                I am a skilled backend developer and data analyst specializing in Python, JavaScript, database management systems (DBMS), and various query languages.
+                                I strive to create secure, efficient, scalable, and maintainable software creating easily understood technical documentation, using test-driven development (TDD), using cyber security principles, and by following the software development life cycle (SDLC).
+                                
+                            </p>
+                            <br/>
+                            <p className="text-lg md:text-base text-gray-300 max-w-2xl mx-auto leading-relaxed ">
+                            My technical background is primarily in the areas of software engineering, artificial intelligence, and database management systems (DBMS), though I have dabbled in web development.
+                            My passion projects are in the areas of data science, machine learning, and artificial intelligence, investigating how to use these technologies to further medical research and diagnosis.
+                            </p>
+                    </div>
+                  <div className='skills-section py-6'>
                     <h3 className="text-5xl md:text-4xl font-bold mb-4  text-transparent bg-clip-text home-subtitle">Skills & Projects</h3>
+                  </div>
                     {/*Project Tiles */}
-                    
                     <div className="h-[90vh] w-[90vw] max-w-[1280px] mx-auto">
                         <div className="max-w-5xl mx-auto rounded-lg p-4 sm:p-6">
                             <div id='project-tiles' className='grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-3 sm:gap-4 lg:gap-6 p-4 sm:p-6 project-tile'>

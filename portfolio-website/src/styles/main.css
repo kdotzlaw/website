@@ -108,7 +108,37 @@
     border: 1px solid rgba(100, 116, 139, 0.5);
     transition: all 0.3s ease;
   }
+  /* About and Projects Section */
+.about-projects-container  {
+  background: linear-gradient(
+    135deg,
+    var(--bg-card) 0%,
+    rgba(113, 111, 129, 0.8) 100%
+  );
+
+  backdrop-filter: blur(10px);
+  box-shadow: 0 8px 32px 0 rgba(45, 42, 50, 0.2);
+  margin: 2rem auto;
+  padding: 2rem;
+  transition: all 0.3s ease-in-out;
+}
+
+
+
+/*.about-section {
+  max-width: 800px;
+  margin: 0 auto 3rem auto;
+  padding: 2rem;
+  background: var(--bg-card);
   
+
+}*/
+
+.skills-section {
+  text-align: center;
+  margin-bottom: 2rem;
+  color: var(--text);
+}
  /* .project-tile:hover {
     background-color: rgba(113, 111, 129, 0.8);
     border-color: rgba(185, 115, 117, 0.5);
