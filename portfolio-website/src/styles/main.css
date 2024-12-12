@@ -113,8 +113,25 @@
     background-color: rgba(113, 111, 129, 0.8);
     border-color: rgba(185, 115, 117, 0.5);
   }*/
-  
   /* Project-Carousel.js */
+.carousel-container {
+  background-color: var(--bg-card);
+  border-radius: 0.75rem;
+  padding: 1rem;
+  backdrop-filter: blur(8px);
+  width: 100%;
+  height: fit-content;
+  min-height: min-content;
+  margin: 0 auto;
+}
+
+@media (max-width: 768px) {
+  .carousel-container {
+    padding: 0.5rem;
+    height: auto;
+  }
+}
+  /* Project-Carousel.js 
   .carousel-container {
     background-color: var(--bg-card);
     border-radius: 0.75rem;
@@ -128,7 +145,7 @@
     background-color: rgba(185, 115, 117, 0.2);
     color: var(--text);
     transition: all 0.3s ease;
-  }
+  }*/
   
   /*.carousel-nav:hover {
     background-color: rgba(10, 147, 150, 0.3);
