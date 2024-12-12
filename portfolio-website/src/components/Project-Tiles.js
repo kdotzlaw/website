@@ -84,7 +84,7 @@ const Project_Tiles = () => {
                                 <div className='flex items-center justify-center gap-4 mt-8 w-full max-w-5xl'> 
                                     <button 
                                         onClick={prevSlide} 
-                                        className='p-2 rounded-full bg-teal bg-opacity-20 hover:bg-opacity-30 carousel-nav hidden sm:block'
+                                      className='p-2 rounded-full bg-teal bg-opacity-20 hover:bg-opacity-30 carousel-nav'
                                     >
                                         <ChevronLeft className="w-6 h-6" />
                                     </button>
@@ -93,7 +93,7 @@ const Project_Tiles = () => {
                                     </div>
                                     <button 
                                         onClick={nextSlide} 
-                                        className='p-2 rounded-full bg-teal bg-opacity-20 hover:bg-opacity-30 carousel-nav hidden sm:block'
+                                        className='p-2 rounded-full bg-teal bg-opacity-20 hover:bg-opacity-30 carousel-nav'
                                     >
                                         <ChevronRight className="w-6 h-6" />
                                     </button>
