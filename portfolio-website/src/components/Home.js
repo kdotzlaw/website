@@ -15,6 +15,14 @@ const Home = () => {
       once: true,
     });
   }, []);
+
+  //Smooth scrolling to Project-Tiles
+  const scrollToProjects = () => {
+    const projectsSection = document.getElementById('projects');
+    if (projectsSection) {
+      projectsSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+  };
   return (
     <div className="min-h-screen py-48 home-container"> {/* Added padding-top to account for header navigation */}
      
@@ -30,7 +38,7 @@ const Home = () => {
               </p>
              <br/>
             <div className='btn-group row d-flex align-items-center justify-content-center flex-row pb-4 gy-4'>
-              <button className='button-primary '> View my Projects </button>
+              <button className='button-primary ' onClick={scrollToProjects}> View my Projects </button>
               <button className='button-primary'> Contact Me </button>
             </div>
            
@@ -54,7 +62,7 @@ const Home = () => {
                   <Project_Tiles />
                 </article>
               </section>
-              <section className='bg-gunmetal text-white'>
+              <section className=' text-white'>
                 <article id='project-detail'>
 
                 </article>

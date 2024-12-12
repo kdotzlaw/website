@@ -45,7 +45,7 @@ const Project_Tiles = () => {
         <div id = 'projects' className='pt-12 px-12  text-white'>
             <div className='container mx-auto px-12 py-16'>
                 <div className="max-w-6xl mx-auto flex flex-col items-center ">
-                    <h1 className='text-6xl font-bold mb-12 text-center'>Skills & Technologies</h1>
+                    <h1 className='text-6xl font-bold mb-12 text-center' id='project-tile-header'>Skills & Technologies</h1>
                     {/*Project Category Tiles   <div className="h-[1280px] w-[1280px] mx-auto ">*/}
                     <div className={`h-[1280px] w-[1280px] mx-auto flex flex-col items-center justify-start transition-all duration-300 ${
                     selectedCategory ? 'h-[2000px]' : 'h-[1280px]'
