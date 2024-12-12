@@ -98,7 +98,7 @@
     padding: 2rem;
     backdrop-filter: blur(8px);
   }
-  
+
   /* Project-Tiles.js */
   .project-tile {
     background-color: var(--bg-card);

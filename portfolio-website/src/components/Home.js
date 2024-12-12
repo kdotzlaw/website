@@ -43,7 +43,7 @@ const Home = () => {
             </div>
            
             </div>{/*End Home Header*/}
-      
+            
 
             {/*Category Tiles*/}
               <section className=' text-white ' data-aos='fade-up' data-aos-duration='1000'> 
