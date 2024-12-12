@@ -68,7 +68,7 @@ const Project_Tiles = () => {
                     <div  className="flex justify-center items-center w-full">
 
                 
-                    <div className="h-[90vh] w-[90vw] max-w-[1280px] mx-auto ">
+                    <div className="h-[90vh] w-[90vw] max-w-[1280px] mx-auto flex flex-col items-center">
                         <div className="max-w-5xl mx-auto rounded-lg p-4 sm:p-6">
                             <div id='project-tiles' className='grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-3 sm:gap-4 lg:gap-6 p-4 sm:p-6 project-tile'>
                                 {categories.map((category) => (
