@@ -43,18 +43,7 @@ const Home = () => {
             </div>
            
             </div>{/*End Home Header*/}
-            {/*Links to contact and projects??
-            <div className='btn-group row d-flex align-items-center justify-content-center flex-row pb-4 gy-4'>
-              <div className='col-12 col-md-6 col-lg-3 d-flex align-items-center justify-content-center'> 
-                <a href='#' className='btn btn-outline-primary'>Contact</a>
-              </div>
-              <div className='col-12 col-md-6 col-lg-3 d-flex align-items-center justify-content-center'>
-                <a href='#' className='btn btn-outline-primary'>Projects</a>
-              </div>
-              
-            </div>
-            */}
-           
+      
 
             {/*Category Tiles*/}
               <section className=' text-white ' data-aos='fade-up' data-aos-duration='1000'> 
@@ -70,6 +59,44 @@ const Home = () => {
           
           
           </div>
+            {/*Footer with contact and socials */}
+            <footer className="py-8 mt-auto footer-container">
+                  <div className="flex flex-col md:flex-row justify-between items-center gap-6">
+                      <div className="text-center md:text-left">
+                          <h3 className="text-xl font-semibold mb-2">Contact</h3>
+                          <a href="mailto:katrina@dotzlaw.com" className="footer-social-icon">
+                              katrina@dotzlaw.com
+                          </a>
+                      </div>
+                      
+                      <div className="text-center md:text-right">
+                          <h3 className="text-xl font-semibold mb-2">Connect</h3>
+                          <div className="flex justify-center md:justify-end space-x-4">
+                              <a 
+                                  href="https://www.linkedin.com/in/kdotzlaw" 
+                                  target="_blank" 
+                                  rel="noopener noreferrer"
+                                  className="footer-social-icon"
+                              >
+                                  <i className="fa-brands fa-linkedin text-2xl" />
+                              </a>
+                              <a 
+                                  href="https://github.com/kdotzlaw" 
+                                  target="_blank" 
+                                  rel="noopener noreferrer"
+                                  className="footer-social-icon"
+                              >
+                                  <i className="fa-brands fa-github text-2xl" />
+                              </a>
+                          </div>
+                      </div>
+                  </div>
+                  
+                  <div className="text-center mt-8 text-sm footer-text-muted">
+                      © {new Date().getFullYear()} Katrina Dotzlaw. All rights reserved.
+                  </div>
+              </footer>
+       
         </div>
 
     </div>

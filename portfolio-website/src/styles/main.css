@@ -66,6 +66,20 @@
     justify-content: center;
     margin-top: 2rem;
   }
+
+  /* Footer */
+.footer-container {
+  background-color: var(--primary);
+  color: var(--text);
+}
+
+.footer-social-icon:hover {
+  color: var(--accent);
+}
+
+.footer-text-muted {
+  color: var(--text-muted);
+}
   
   /* Project-Details.js */
   .project-detail {
