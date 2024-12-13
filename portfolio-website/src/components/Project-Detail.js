@@ -12,7 +12,35 @@ const ProjectDetail = ({projects}) => {
     const handleClick = () => {
         window.open(project.url, "_blank");
       };
-
+    // function to id and render sub content types
+      const renderSubContent =(item, index) =>{
+        //if result type is text
+        if(item.type === 'text'){
+            return <p key={index} className='mb-2'>{item.content}</p>
+        }
+        //if result type is image-group
+        else if (item.type === 'image-group'){
+            return (
+                <div key={index} className='grid grid-cols-1 md:grid-cols-2 gap-4 '>
+                    {item.images.map((image, imgIndex) => (
+                        <div key={imgIndex} className='flex flex-col items-center'>
+                            <img 
+                                src={image.src} 
+                                alt={image.alt} 
+                                className='w-full h-auto rounded-lg'
+                            />
+                            {image.descriptor && (
+                                <p className='mt-2 text-sm text-center text-gray-300'>
+                                    {image.descriptor}
+                                </p>
+                            )}
+                        </div>
+                    ))}
+                </div>
+            );
+        }
+        return null;
+      };
       //function to id and render different result types
       const renderResult =(item, index) =>{
         //if result type is text
@@ -69,7 +97,7 @@ const ProjectDetail = ({projects}) => {
                         <h1 className=' text-center home-title'>{project.header}</h1>
                         <h2 className='text-left home-subtitle'>{project.sub}</h2>
                         <p className='text-left mb-4 text-lg md:text-base text-gray-300 max-w-2xl mx-auto leading-relaxed '>
-                            {project.sub_content}
+                            {project.sub_content.map((item, index) => renderSubContent(item, index))}
                         </p>
                         <h2 className='text-left home-subtitle'>{project.footer}</h2>
                         <ul className='text-center mb-4 text-lg md:text-base text-gray-300 max-w-2xl mx-auto leading-relaxed'>

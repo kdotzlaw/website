@@ -29,10 +29,10 @@ import esnImage from '../img/esn.JPG';
     {id: 'flask', name: 'API Development', icons:flaskImg},
     {id: 'fstack', name: 'Frontend Development', icons:fStackImg},
     {id:'machine-learning', name: 'Machine Learning', icons:mlnn},
-    {id:'distributed', name:'Distributed Computing', icons:cyber},
-    {id: 'Data Mining', name: 'Data Mining', icons:cyber},
-    {id:'C#', name: 'C#', icons:cyber},
-    {id:'Java', name: 'Java', icons:cyber},
+    {id:'distributed', name:'Distributed Computing', icons:cyber}, //ICON
+    {id: 'Data Mining', name: 'Data Mining', icons:cyber}, //ICON
+    {id:'C#', name: 'C#', icons:cyber}, //ICON
+    {id:'Java', name: 'Java', icons:cyber}, //ICON
 ];
 //Project list
 export const projects = [
@@ -80,17 +80,30 @@ export const projects = [
         types: ['python', 'machine-learning'],
         header:'Echo State Network',
         images: [
-            { src: esnImage, alt: 'Echo State Network' },
+            { src: mlnn, alt: 'Echo State Network' },
           
         ],
         url:'https://github.com/kdotzlaw/UniversityProjects/blob/main/ESN-MachineLearning/ESN.ipynb',
         description: 'A custom Python implementation of an Echo State Network used to recognize temporal patterns like k-step ahead forecasting in 2 different datasets',
         sub: `Process`,
-        sub_content:
-        `
-            Used batch training and a sigmoid to train the ESN on the two datasets. Cross-validation was sed to optimize hyperparameters and model error was calculated 
-            using mean-square error (MSE). K-step ahead forecasting is used in both validation and testing stages to evaluate hyperparameters (k=1) and calculate model predictions (k>1)
-         `,
+        sub_content:[
+            {
+                type: 'text',
+                content: `
+                    The ESN is a recurrent neural network that takes in a sequence of inputs and predicts the next input in the sequence. 
+                   
+                `
+            },
+            {type: 'image-group', images: [
+                { src: esnImage, alt: 'Representation of a Echo State Network', descriptor: 'An example of an ESN' },
+                
+            ]},
+            {type:'text', content:` 
+                Used batch training and a sigmoid to train the ESN on the two datasets. Cross-validation was sed to optimize hyperparameters and model error was calculated 
+                using mean-square error (MSE). K-step ahead forecasting is used in both validation and testing stages to evaluate hyperparameters (k=1) and calculate model predictions (k>1)
+            `},
+          
+        ],
         footer:'Results',
         result:[
             { type: 'text', content: `2Sine Timeseries` },
