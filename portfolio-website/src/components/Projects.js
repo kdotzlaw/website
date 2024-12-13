@@ -56,16 +56,18 @@ export const projects = [
             We created and trained three models, a decision tree model, a random forest model created by Sudre, and a custom random forest model, to predict whether a person has a long covid-19 case.
          `,
         footer:'Results',
-        result:[
-            {type: 'text', content: 'Demographic analysis showed that individuals who are assigned female at birth, female identifying individuals, white individuals, and individuals who have had at least one vaccination are developing Long Covid-19'},
-            {type: 'text', content: 'Identified high confidence association rules that indicate that individuals assigned female at birth develop Long Covid-19'},
-            {type: 'text', content: 'Symptom clustering determined that cough, headache and fatigue were the most prevalent symptoms for individuals developing Long Covid-19'},
-            {type: 'text', content: 'Descriptive analysis and feature selection indicated that symptom severity was a strong distinguisher'},
-            {type: 'text', content: 'Our decision tree had an AUC of 0.706'},
-            {type: 'text', content: 'Our custom random forest model had an AUC of 0.721'},
-            {type: 'text', content: 'Sudre\'s random forest model had an AUC of 0.76'}
-           
-        ],
+        result:
+        [{
+            type: 'list', content:[
+                {type: 'text', content: 'Demographic analysis showed that individuals who are assigned female at birth, female identifying individuals, white individuals, and individuals who have had at least one vaccination are developing Long Covid-19'},
+                {type: 'text', content: 'Identified high confidence association rules that indicate that individuals assigned female at birth develop Long Covid-19'},
+                {type: 'text', content: 'Symptom clustering determined that cough, headache and fatigue were the most prevalent symptoms for individuals developing Long Covid-19'},
+                {type: 'text', content: 'Descriptive analysis and feature selection indicated that symptom severity was a strong distinguisher'},
+                {type: 'text', content: 'Our decision tree had an AUC of 0.706'},
+                {type: 'text', content: 'Our custom random forest model had an AUC of 0.721'},
+                {type: 'text', content: 'Sudre\'s random forest model had an AUC of 0.76'}
+            ]
+       }],
         summary:[
             {type: 'text', content: '3 publications in IEEE'},
             {type: 'text', content: 'High confidence rules indicating that individuals assigned female at birth develop Long Covid-19'},
