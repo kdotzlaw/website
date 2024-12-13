@@ -82,7 +82,7 @@
 }
   
   /* Project-Details.js */
-  .project-detail {
+  #project-detail {
     background-color: var(--primary);
     color: var(--text);
     padding-top: 6rem;
@@ -90,14 +90,14 @@
     padding-right: 1.5rem;
   }
   
-  .project-detail-content {
+ /* .project-detail-content {
     max-width: 56rem;
     margin: 0 auto;
     background-color: var(--bg-card);
     border-radius: 0.75rem;
     padding: 2rem;
     backdrop-filter: blur(8px);
-  }
+  }*/
 
   /* Project-Tiles.js */
   .project-tile {
@@ -109,7 +109,7 @@
     transition: all 0.3s ease;
   }
   /* About and Projects Section */
-.about-projects-container  {
+.about-projects-container, .project-detail-container  {
   background: linear-gradient(
     135deg,
     var(--bg-card) 0%,

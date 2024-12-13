@@ -1,4 +1,4 @@
-import sb from '../img/study-buddy.png';
+ import sb from '../img/study-buddy.png';
 
 
 //Logos
@@ -41,7 +41,7 @@ export const projects = [
             { src: pythonImg, alt: 'Python Logo' },
             
         ],
-        url:'https://github.com/rdotzlaw/COMP4710-Group-11',
+        url:'https://github.com/rdotzlaw/COMP4710-Group-11/tree/final',
         detail_url:'',
         description: 'A group project that analyzed COVID-19 data using Python and data mining techniques.',
         sub: `Analysis`,
