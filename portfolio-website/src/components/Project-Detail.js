@@ -12,6 +12,55 @@ const ProjectDetail = ({projects}) => {
     const handleClick = () => {
         window.open(project.url, "_blank");
       };
+
+      //function to id and render different result types
+      const renderResult =(item, index) =>{
+        //if result type is text
+        if(item.type === 'text'){
+            return <li key={index} className='mb-2'>{item.content}</li>
+        }
+        //if result type is image-group
+        else if (item.type === 'image-group'){
+            return (
+                <li key={index} className='mb-4'>
+                    <div className='grid grid-cols-1 md:grid-cols-2 gap-4'>
+                        {item.images.map((image, imgIndex) => (
+                            <div key={imgIndex} className='flex flex-col items-center'>
+                                <img 
+                                    src={image.src} 
+                                    alt={image.alt} 
+                                    className='w-full h-auto rounded-lg'
+                                />
+                                {image.descriptor && (
+                                    <p className='mt-2 text-sm text-center text-gray-300'>
+                                        {image.descriptor}
+                                    </p>
+                                )}
+                            </div>
+                        ))}
+                    </div>
+                </li>
+            );
+        }
+        //if type is a list return list items with bullet points
+        else if(item.type==='list'){
+            return (
+                <li key={index} className='mb-4'>
+                    <ul className='list-disc list-inside pl-4 space-y-2 text-left'>
+                        {item.content.map((listItem, listIndex) => (
+                            listItem.type === 'text' && (
+                                <li key={listIndex} className='text-gray-300'>
+                                    {listItem.content}
+                                </li>
+                            )
+                        ))}
+                    </ul>
+                </li>
+            );
+        }
+        return null;
+      };
+
     return(
         <div id='project-detail' className='min-h-screen pt-16 pb-16 sm:pt-20 px-4 sm:px-8 lg:px-12 text-white flex justify-center items-start'>
               <div className='container mx-auto w-3/4'>
@@ -23,13 +72,8 @@ const ProjectDetail = ({projects}) => {
                             {project.sub_content}
                         </p>
                         <h2 className='text-left home-subtitle'>{project.footer}</h2>
-                        <ul className='list-disc list-inside text-left mb-4 text-lg md:text-base text-gray-300 max-w-2xl mx-auto leading-relaxed '>
-                            {project.result?.map((item, index) => (
-                            <li key={index} className='mb-2'>
-                                
-                                {item.content}
-                            </li>
-                            ))}
+                        <ul className='text-center mb-4 text-lg md:text-base text-gray-300 max-w-2xl mx-auto leading-relaxed'>
+                            {project.result?.map((item, index) => renderResult(item, index))}
                         </ul>
                         <button className='button-primary' 
                             onClick={handleClick}>View Project on GitHub

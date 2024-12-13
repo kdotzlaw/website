@@ -80,7 +80,7 @@ export const projects = [
             { src: esnImage, alt: 'Echo State Network' },
           
         ],
-        url:'https://github.com/kdotzlaw/UniversityProjects/tree/main/ESN-MachineLearning',
+        url:'https://github.com/kdotzlaw/UniversityProjects/blob/main/ESN-MachineLearning/ESN.ipynb',
         description: 'A custom Python implementation of an Echo State Network used to recognize temporal patterns like k-step ahead forecasting in 2 different datasets',
         sub: `Process`,
         sub_content:
@@ -91,6 +91,12 @@ export const projects = [
         footer:'Results',
         result:[
             { type: 'text', content: `2Sine Timeseries` },
+            {type: 'list', content:
+                [
+                  {type: 'text', content: ` ` },
+                  {},
+                ]
+              },
             { 
                 type: 'image-group', 
                 images: [
@@ -98,7 +104,14 @@ export const projects = [
                     { src: sine2, alt: '2Sine 2-step ahead forecasting', descriptor: '2-step ahead forecasting with a MSE of 1.24' }
                 ]
             },
+           
             { type: 'text', content: `Lorenz Timeseries ` },
+            {type: 'list', content:
+                [
+                  {type: 'text', content: ` ` },
+                  {},
+                ]
+              },
             {
                 type:'image-group',
                 images: [
@@ -107,6 +120,7 @@ export const projects = [
                 ]
                 
             }
+      
           
         ]
     },
