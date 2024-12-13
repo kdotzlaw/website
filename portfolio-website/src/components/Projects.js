@@ -15,27 +15,30 @@ import sine2 from '../img/2sine-2step.png';
 import lorenz1 from '../img/lorenz-1step.png';
 import lorenz2 from '../img/lorenz-2step.png';
 import peace from '../img/peace.png';
+import mlnn from '../img/ml-nn.jpg';
 import esnImage from '../img/esn.JPG';
-
 
 
  //list of kvps
  export const categories = [
     {id: 'react', name: 'React', icons:reactImg},
     {id: 'python', name: 'Python', icons:pythonImg},
-    {id: 'sql', name: 'SQL', icons:sqlImg},
+    {id: 'sql', name: 'Databases', icons:sqlImg},
     {id: 'bio', name: 'BioInformatics', icons:bioImg},
     {id: 'cyber', name: 'Cyber Security', icons:cyber},
-    {id: 'flask', name: 'Flask', icons:flaskImg},
-    {id: 'fstack', name: 'Frontend Stack', icons:fStackImg},
-    {id:'machine-learning', name: 'Machine Learning', icons:esnImage},
-    
+    {id: 'flask', name: 'API Development', icons:flaskImg},
+    {id: 'fstack', name: 'Frontend Development', icons:fStackImg},
+    {id:'machine-learning', name: 'Machine Learning', icons:mlnn},
+    {id:'distributed', name:'Distributed Computing', icons:cyber},
+    {id: 'Data Mining', name: 'Data Mining', icons:cyber},
+    {id:'C#', name: 'C#', icons:cyber},
+    {id:'Java', name: 'Java', icons:cyber},
 ];
 //Project list
 export const projects = [
     {
         id:1,
-        types: [ 'python'],
+        types: [ 'python, data mining'],
         header:'Analyzing Covid-19 Data to Predict Long Covid-19 Cases',
         images: [
             { src: pythonImg, alt: 'Python Logo' },
@@ -126,7 +129,7 @@ export const projects = [
     },
     {
         id:3,
-        types:['python'],
+        types:['python, distributed'],
         header:'Distributed Blockchain',
         images: [
             { src: pythonImg, alt: 'Python Logo' },
@@ -302,7 +305,7 @@ export const projects = [
     },
     {
         id:11,
-        types: ['react','flask','python'],
+        types: ['react','flask','python','sql'],
         header:'Peace Lutheran Church Database Administrator',
         images: [
             { src: peace, alt: 'Peace Lutheran Church Website' },
