@@ -21,13 +21,14 @@ const ProjectDetail = ({projects}) => {
         //if result type is image-group
         else if (item.type === 'image-group'){
             return (
-                <div key={index} className='grid grid-cols-1 md:grid-cols-2 gap-4 '>
+                <div key={index} className='flex justify-center w-full mt-4'>
+                <div className='grid grid-cols-1 md:grid-cols-2 gap-8 w-full'>
                     {item.images.map((image, imgIndex) => (
                         <div key={imgIndex} className='flex flex-col items-center'>
                             <img 
                                 src={image.src} 
                                 alt={image.alt} 
-                                className='w-full h-auto rounded-lg'
+                                className='max-w-full h-auto rounded-lg'
                             />
                             {image.descriptor && (
                                 <p className='mt-2 text-sm text-center text-gray-300'>
@@ -37,6 +38,7 @@ const ProjectDetail = ({projects}) => {
                         </div>
                     ))}
                 </div>
+            </div>
             );
         }
         return null;
@@ -50,24 +52,26 @@ const ProjectDetail = ({projects}) => {
         //if result type is image-group
         else if (item.type === 'image-group'){
             return (
-                <li key={index} className='mb-4'>
+                <div key={index} className='flex justify-start items-start w-full my-4'>
                     <div className='grid grid-cols-1 md:grid-cols-2 gap-4'>
                         {item.images.map((image, imgIndex) => (
-                            <div key={imgIndex} className='flex flex-col items-center'>
-                                <img 
-                                    src={image.src} 
-                                    alt={image.alt} 
-                                    className='w-full h-auto rounded-lg'
-                                />
+                            <div key={imgIndex} className='flex flex-col items-start'>
+                                <div className='w-full'>
+                                    <img 
+                                        src={image.src} 
+                                        alt={image.alt} 
+                                        className='w-full h-auto rounded-lg'
+                                    />
+                                </div>
                                 {image.descriptor && (
-                                    <p className='mt-2 text-sm text-center text-gray-300'>
+                                    <p className='mt-2 text-sm text-gray-300'>
                                         {image.descriptor}
                                     </p>
                                 )}
                             </div>
                         ))}
                     </div>
-                </li>
+                </div>
             );
         }
         //if type is a list return list items with bullet points
@@ -96,9 +100,12 @@ const ProjectDetail = ({projects}) => {
                     <div className='items-center flex flex-col justify-center gap-4 project-detail-content'>
                         <h1 className=' text-center home-title'>{project.header}</h1>
                         <h2 className='text-left home-subtitle'>{project.sub}</h2>
-                        <p className='text-left mb-4 text-lg md:text-base text-gray-300 max-w-2xl mx-auto leading-relaxed '>
-                            {project.sub_content.map((item, index) => renderSubContent(item, index))}
-                        </p>
+                        <div className='flex flex-col text-left mb-4 text-lg md:text-base text-gray-300 max-w-2xl w-full leading-relaxed'>
+                            {Array.isArray(project.sub_content) 
+                                ? project.sub_content.map((item, index) => renderSubContent(item, index))
+                                : <p>{project.sub_content}</p>
+                            }
+                        </div>
                         <h2 className='text-left home-subtitle'>{project.footer}</h2>
                         <ul className='text-center mb-4 text-lg md:text-base text-gray-300 max-w-2xl mx-auto leading-relaxed'>
                             {project.result?.map((item, index) => renderResult(item, index))}
