@@ -64,7 +64,7 @@ const ProjectDetail = ({projects}) => {
                                     />
                                 </div>
                                 {image.descriptor && (
-                                    <p className='mt-2 text-sm text-gray-300'>
+                                    <p className='mt-2 text-sm text-gray-300 text-center'>
                                         {image.descriptor}
                                     </p>
                                 )}
@@ -100,13 +100,13 @@ const ProjectDetail = ({projects}) => {
                     <div className='items-center flex flex-col justify-center gap-4 project-detail-content'>
                         <h1 className=' text-center home-title'>{project.header}</h1>
                         <h2 className='text-left home-subtitle'>{project.sub}</h2>
-                        <div className='flex flex-col text-left mb-4 text-lg md:text-base text-gray-300 max-w-2xl w-full leading-relaxed'>
+                        <div className='flex flex-col text-center mb-4 text-lg md:text-base text-gray-300 max-w-2xl w-full leading-relaxed'>
                             {Array.isArray(project.sub_content) 
                                 ? project.sub_content.map((item, index) => renderSubContent(item, index))
                                 : <p>{project.sub_content}</p>
                             }
                         </div>
-                        <h2 className='text-left home-subtitle'>{project.footer}</h2>
+                        <h2 className='text-center home-subtitle'>{project.footer}</h2>
                         <ul className='text-center mb-4 text-lg md:text-base text-gray-300 max-w-2xl mx-auto leading-relaxed'>
                             {project.result?.map((item, index) => renderResult(item, index))}
                         </ul>

@@ -30,7 +30,7 @@ import esnImage from '../img/esn.JPG';
     {id: 'fstack', name: 'Frontend Development', icons:fStackImg},
     {id:'machine-learning', name: 'Machine Learning', icons:mlnn},
     {id:'distributed', name:'Distributed Computing', icons:cyber}, //ICON
-    {id: 'Data Mining', name: 'Data Mining', icons:cyber}, //ICON
+    {id: 'data-mining', name: 'Data Mining', icons:cyber}, //ICON
     {id:'C#', name: 'C#', icons:cyber}, //ICON
     {id:'Java', name: 'Java', icons:cyber}, //ICON
 ];
@@ -38,7 +38,7 @@ import esnImage from '../img/esn.JPG';
 export const projects = [
     {
         id:1,
-        types: [ 'python, data mining'],
+        types: [ 'python', 'data-mining'],
         header:'Analyzing Covid-19 Data to Predict Long Covid-19 Cases',
         images: [
             { src: pythonImg, alt: 'Python Logo' },
@@ -90,9 +90,15 @@ export const projects = [
             {
                 type: 'text',
                 content: `
-                    The ESN is a recurrent neural network that takes in a sequence of inputs and predicts the next input in the sequence. 
+                    An Echo State Network is a type of recurrent neural network used to recognize temporal patterns like K-Step Ahead Forcasting. 
+                    Specifically, ESNs use backpropagation to feed optimized hyperparameters back into its recurrent internal state.
                    
                 `
+            },
+            {
+                type:'text',
+                content:`K-Step Ahead Forcasting predicts the value of the timeseries data k timesteps ahead of the current time t. 
+                   In this implementation, I use Mean-Square Error to determine prediction accuracy. K-Step Ahead Forcasting is used in both the validation stage and testing stage of model evaluation.`
             },
             {type: 'image-group', images: [
                 { src: esnImage, alt: 'Representation of a Echo State Network', descriptor: 'An example of an ESN' },
