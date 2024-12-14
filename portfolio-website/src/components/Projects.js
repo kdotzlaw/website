@@ -17,8 +17,9 @@ import lorenz2 from '../img/lorenz-2step.png';
 import peace from '../img/peace.png';
 import mlnn from '../img/ml-nn.jpg';
 import esnImage from '../img/esn.JPG';
-import { type } from '@testing-library/user-event/dist/type';
-
+import clustal1 from '../img/clustal1.JPG';
+import clustal2 from '../img/clustal2.JPG';
+import clustal3 from '../img/clustal3.JPG';
 
  //list of kvps
  export const categories = [
@@ -274,8 +275,29 @@ export const projects = [
         result:[
            {type:'text', content:
              `
-          
+                Using  the following alignment pattern  A-B, C-D, AB-CD where: 
             `},
+            {type:'list', content:[
+                {type:'text', content: 'A is the sequence GTTAT '},
+                {type:'text', content: 'B is the sequence CGTTT'},
+                {type:'text', content: 'C is the sequence GCAAT'},
+                {type:'text', content: 'D is the sequence CCGAT'},
+            ]},
+            {type:'text', content: `The optimal alignment is 
+                    -GTTAT
+                    CGTT-T
+                    -GCAAT
+                    -CCGAT
+                `},
+            {type:
+                'image-group', 
+                images: [
+                    { src: clustal1, alt: 'ClustalW A to B' , descriptor:'Aligning A with B'},
+                    { src: clustal2, alt: 'ClustalW C to D' , descriptor:'Aligning C with D'},
+                    { src: clustal3, alt: 'ClustalW AB to CD', descriptor:'Aligning AB with CD' },
+                    
+                ]
+            }
         ]
 
     },
