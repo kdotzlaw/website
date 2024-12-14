@@ -83,27 +83,24 @@ const ProjectDetail = ({projects}) => {
         else if (item.type === 'image-group'){
             if (item.images.length === 1){
                 return (
-                    <div key={index} className='flex justify-start items-start w-full my-4'>
-                        <div className='grid grid-cols-1 md:grid-cols-1 '>
-                            {item.images.map((image, imgIndex) => (
-                                <div key={imgIndex} className='flex flex-col items-start'>
-                                    <div className='w-full'>
-                                        <img 
-                                            src={image.src} 
-                                            alt={image.alt} 
-                                            className='w-full h-auto rounded-lg'
-                                        />
-                                    </div>
-                                    {image.descriptor && (
-                                        <p className='mt-2 text-sm text-gray-300 text-center'>
-                                            {image.descriptor}
-                                        </p>
-                                    )}
-                                </div>
-                            ))}
+                    <div key={index} className='w-full flex flex-col items-center justify-center my-4'>
+                        <div className='w-full flex justify-center'>
+                            <div className='max-w-2xl w-full'>
+                                <img 
+                                    src={item.images[0].src} 
+                                    alt={item.images[0].alt} 
+                                    className='w-full h-auto rounded-lg mx-auto'
+                                />
+                                {item.images[0].descriptor && (
+                                    <p className='mt-2 text-sm text-gray-300 text-center'>
+                                        {item.images[0].descriptor}
+                                    </p>
+                                )}
+                            </div>
+                        </div>
                     </div>
-                </div>
-            );}else{
+                );
+            }else{
                 return (
                     <div key={index} className='flex justify-start items-start w-full my-4'>
                         <div className='grid grid-cols-1 md:grid-cols-2 gap-4'>
