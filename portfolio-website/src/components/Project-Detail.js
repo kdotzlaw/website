@@ -70,34 +70,64 @@ const ProjectDetail = ({projects}) => {
         if(item.type === 'text'){
             return <li key={index} className='mb-2'>{item.content}</li>
         }
+        else if(item.type === 'text-header'){
+            return <h2 key={index} className='text-center text-2xl font-bold mb-4'>{item.content}</h2>
+        }
         //if result type is text-sub
         else if(item.type === 'text-sub'){
-            return <p key={index} className='mb-2 text-sm text-gray-300'>{item.content}</p>
+            return <p key={index} className='mb-2 text-sm text-bold text-gray-300'>{item.content}</p>
+        }else if(item.type === 'text-footer'){
+            return <p key={index} className='text-center text-2xl font-bold mb-4'>{item.content}</p>   
         }
         //if result type is image-group
         else if (item.type === 'image-group'){
-            return (
-                <div key={index} className='flex justify-start items-start w-full my-4'>
-                    <div className='grid grid-cols-1 md:grid-cols-2 gap-4'>
-                        {item.images.map((image, imgIndex) => (
-                            <div key={imgIndex} className='flex flex-col items-start'>
-                                <div className='w-full'>
-                                    <img 
-                                        src={image.src} 
-                                        alt={image.alt} 
-                                        className='w-full h-auto rounded-lg'
-                                    />
+            if (item.images.length === 1){
+                return (
+                    <div key={index} className='flex justify-start items-start w-full my-4'>
+                        <div className='grid grid-cols-1 md:grid-cols-1 '>
+                            {item.images.map((image, imgIndex) => (
+                                <div key={imgIndex} className='flex flex-col items-start'>
+                                    <div className='w-full'>
+                                        <img 
+                                            src={image.src} 
+                                            alt={image.alt} 
+                                            className='w-full h-auto rounded-lg'
+                                        />
+                                    </div>
+                                    {image.descriptor && (
+                                        <p className='mt-2 text-sm text-gray-300 text-center'>
+                                            {image.descriptor}
+                                        </p>
+                                    )}
                                 </div>
-                                {image.descriptor && (
-                                    <p className='mt-2 text-sm text-gray-300 text-center'>
-                                        {image.descriptor}
-                                    </p>
-                                )}
-                            </div>
-                        ))}
+                            ))}
                     </div>
                 </div>
-            );
+            );}else{
+                return (
+                    <div key={index} className='flex justify-start items-start w-full my-4'>
+                        <div className='grid grid-cols-1 md:grid-cols-2 gap-4'>
+                            {item.images.map((image, imgIndex) => (
+                                <div key={imgIndex} className='flex flex-col items-start'>
+                                    <div className='w-full'>
+                                        <img 
+                                            src={image.src} 
+                                            alt={image.alt} 
+                                            className='w-full h-auto rounded-lg'
+                                        />
+                                    </div>
+                                    {image.descriptor && (
+                                        <p className='mt-2 text-sm text-gray-300 text-center'>
+                                            {image.descriptor}
+                                        </p>
+                                    )}
+                                </div>
+                            ))}
+                        </div>
+                    </div>
+                );
+            }
+           
         }
         //if type is a list return list items with bullet points
         else if(item.type==='list'){

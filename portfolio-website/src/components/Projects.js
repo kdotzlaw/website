@@ -117,7 +117,7 @@ export const projects = [
         ],
         footer:'Results',
         result:[
-            { type: 'text', content: `2Sine Timeseries` },
+            { type: 'text-header', content: `2Sine Timeseries` },
             { type: 'text-sub', content: `Trained with 50 hidden neurons and a regularization parameter of 0.5` },
             {type: 'list', content:
                 [
@@ -137,7 +137,7 @@ export const projects = [
                 ]
             },
            
-            { type: 'text', content: `Lorenz Timeseries ` },
+            { type: 'text-header', content: `Lorenz Timeseries ` },
             { type: 'text-sub', content: `Trained with 20 hidden neurons and a regularization parameter of 0.1` },  
             {type: 'list', content:
                 [
@@ -157,7 +157,7 @@ export const projects = [
                 ]
                 
             },
-            {type:'text-sub', content: `Conclusions`},
+            {type:'text-footer', content: `Conclusions`},
             {type:'list', content:[
                 {type: 'text', content: `The Lorenz model demonstrates that increased model complexity leads to overfitting and a failure to generalize, 
                     as its data points had higher varience and its function was more complex compared to the 2Sine dataset.
