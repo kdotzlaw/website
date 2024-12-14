@@ -125,6 +125,19 @@ const ProjectDetail = ({projects}) => {
                 );
             }
            
+        }//if result type is text-pub
+        else if(item.type === 'text-pub'){
+            return (
+                <div key={index} className='mb-4'>
+                    <ul className='space-y-4'>
+                        {item.content.map((pubItem, pubIndex) => (
+                            <li key={pubIndex} className='text-sm text-gray-300 italic'>
+                                {pubItem.content}
+                            </li>
+                        ))}
+                    </ul>
+                </div>
+            );
         }
         //if type is a list return list items with bullet points
         else if(item.type==='list'){

@@ -68,8 +68,15 @@ export const projects = [
                 {type: 'text', content: 'Our decision tree had an AUC of 0.706'},
                 {type: 'text', content: 'Our custom random forest model had an AUC of 0.721'},
                 {type: 'text', content: 'Sudre\'s random forest model had an AUC of 0.76'}
-            ]
-       }],
+            ]},
+            {type: 'text-footer', content: 'Publications'},
+            {type: 'text-pub', content:[
+                {type: 'text', content:`K. I. Dotzlaw, R. E. Dotzlaw, C. K. Leung, A. G. M. Pazdor, S. A. Szturm, and D. Tan, "Data Analytics and Prediction of Long COVID Cases with Fuzzy Logic," in 2023 IEEE International Conference on Fuzzy Systems (FUZZ), 2023, DOI: 10.1109/FUZZ52849.2023.10309753.`},
+               
+                {type: 'text', content:`D. Tan, C. K. Leung, K. I. Dotzlaw, R. E. Dotzlaw, A. G. M. Pazdor, and S. A. Szturm, "A Data Science Solution for Analyzing Long COVID Cases," in 2023 IEEE 24th International Conference on Information Reuse and Integration for Data Science (IRI), 2023, pp. 227-232, DOI: 10.1109/IRI58017.2023.00046`},
+                {type: 'text', content:`K. Dotzlaw, R. Dotzlaw, C. K. Leung, A. G. M. Pazdor, S. Szturm, and D. Tan, "Mining Big Healthcare Data to Predict Long COVID Cases," in 2023 IEEE International Conference on Industrial Technology (ICIT), 2023, DOI: 10.1109/ICIT58465.2023.10143145`}
+            ]}
+        ],
         summary:[
             {type: 'text', content: '3 publications in IEEE'},
             {type: 'text', content: 'High confidence rules indicating that individuals assigned female at birth develop Long Covid-19'},
