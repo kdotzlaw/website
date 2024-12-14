@@ -36,6 +36,10 @@ const Home = () => {
               <p className="text-lg md:text-base text-gray-300 max-w-2xl mx-auto leading-relaxed ">
                   I am a recent graduate of the University of Manitoba with a Bachelor's degree in Computer Science, specializing in Software Engineering, Artificial Intelligence, and Databases.
               </p>
+              
+              <p className="text-lg md:text-base text-gray-300 max-w-2xl mx-auto leading-relaxed ">
+                  Outside of academia, I have achieved certificaticates in C#, HTML/CSS, SQL, and Python.
+              </p>
              <br/>
             <div className='btn-group row d-flex align-items-center justify-content-center flex-row pb-4 gy-4'>
               <button className='button-primary ' onClick={scrollToProjects}> View my Projects </button>
