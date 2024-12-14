@@ -48,7 +48,7 @@ const ProjectDetail = ({projects}) => {
         else if(item.type==='list'){
             return (
                 <li key={index} className='mb-4'>
-                    <ul className='list-disc list-inside pl-4 space-y-2 text-left'>
+                    <ul className='list-disc list-inside pl-4 space-y-2 text-left justify-center'>
                         {item.content.map((listItem, listIndex) => (
                             listItem.type === 'text' && (
                                 <li key={listIndex} className='text-gray-300'>
@@ -63,7 +63,7 @@ const ProjectDetail = ({projects}) => {
         return null;
       };
 
-      
+
       //function to id and render different result types
       const renderResult =(item, index) =>{
         //if result type is text
@@ -103,7 +103,7 @@ const ProjectDetail = ({projects}) => {
         else if(item.type==='list'){
             return (
                 <li key={index} className='mb-4'>
-                    <ul className='list-disc list-inside pl-4 space-y-2 text-left'>
+                    <ul className='list-disc list-inside pl-4 space-y-2 text-center'>
                         {item.content.map((listItem, listIndex) => (
                             listItem.type === 'text' && (
                                 <li key={listIndex} className='text-gray-300'>
