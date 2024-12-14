@@ -113,7 +113,7 @@ export const projects = [
                    In this implementation, I use Mean-Square Error to determine prediction accuracy. K-Step Ahead Forcasting is used in both the validation stage and testing stage of model evaluation.`
             },
             {type: 'image-group', images: [
-                { src: esnImage, alt: 'Representation of a Echo State Network', descriptor: 'An example of an ESN' }
+               
                 
             ]},
             {type:'text', content:` 
