@@ -89,6 +89,7 @@ export const projects = [
         description: 'A custom Python implementation of an Echo State Network used to recognize temporal patterns like k-step ahead forecasting in 2 different datasets',
         sub: `Process`,
         sub_content:[
+            
             {
                 type: 'text',
                 content: `
@@ -107,7 +108,7 @@ export const projects = [
                 
             ]},
             {type:'text', content:` 
-                Used batch training and a sigmoid to train the ESN on the two datasets. Cross-validation was sed to optimize hyperparameters and model error was calculated 
+                Using batch training and a sigmoid activation function, I trained the ESN on two timeseries datasets, 2Sine and Lorenz. Cross-validation was used to optimize hyperparameters and model error was calculated 
                 using mean-square error (MSE). K-step ahead forecasting is used in both validation and testing stages to evaluate hyperparameters (k=1) and calculate model predictions (k>1)
             `},
           
@@ -177,7 +178,18 @@ export const projects = [
         description: 
         `A distributed computing  project that connected to an external network and communicated with other peers to perform tasks such as sending and receiving messages, and determining 
         the validity and size of the network blockchain.
-        `
+        `,
+        sub: `Process`,
+        sub_content:[
+            {type:'text-sub', content: `Joining the Network`},
+            {type:'text', content:`testing`},
+            {type:'text-sub', content: `Consensus Process`},
+        ],
+        footer:'Results',
+        result:[
+            
+
+           ]
     },
     {
         id:4,
