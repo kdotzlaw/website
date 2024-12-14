@@ -44,9 +44,26 @@ const ProjectDetail = ({projects}) => {
                 </div>
             </div>
             );
+        }        //if type is a list return list items with bullet points
+        else if(item.type==='list'){
+            return (
+                <li key={index} className='mb-4'>
+                    <ul className='list-disc list-inside pl-4 space-y-2 text-left'>
+                        {item.content.map((listItem, listIndex) => (
+                            listItem.type === 'text' && (
+                                <li key={listIndex} className='text-gray-300'>
+                                    {listItem.content}
+                                </li>
+                            )
+                        ))}
+                    </ul>
+                </li>
+            );
         }
         return null;
       };
+
+      
       //function to id and render different result types
       const renderResult =(item, index) =>{
         //if result type is text
