@@ -45,10 +45,24 @@ const ProjectDetail = ({projects}) => {
             </div>
             );
         }        //if type is a list return list items with bullet points
-        else if(item.type==='list'){
+        else if(item.type==='list-center'){
             return (
                 <li key={index} className='mb-4'>
                     <ul className='list-disc list-inside pl-4 space-y-2 text-left justify-center'>
+                        {item.content.map((listItem, listIndex) => (
+                            listItem.type === 'text' && (
+                                <li key={listIndex} className='text-gray-300'>
+                                    {listItem.content}
+                                </li>
+                            )
+                        ))}
+                    </ul>
+                </li>
+            );
+        } else if(item.type==='list-left'){
+            return (
+                <li key={index} className='mb-4'>
+                    <ul className='list-disc list-inside pl-4 space-y-2 text-left justify-left'>
                         {item.content.map((listItem, listIndex) => (
                             listItem.type === 'text' && (
                                 <li key={listIndex} className='text-gray-300'>
@@ -140,10 +154,24 @@ const ProjectDetail = ({projects}) => {
             );
         }
         //if type is a list return list items with bullet points
-        else if(item.type==='list'){
+        else if(item.type==='list-center'){
             return (
                 <li key={index} className='mb-4'>
-                    <ul className='list-disc list-inside pl-4 space-y-2 text-center'>
+                    <ul className='list-disc list-inside pl-4 space-y-2 text-center justify-center'>
+                        {item.content.map((listItem, listIndex) => (
+                            listItem.type === 'text' && (
+                                <li key={listIndex} className='text-gray-300'>
+                                    {listItem.content}
+                                </li>
+                            )
+                        ))}
+                    </ul>
+                </li>
+            );
+        } else if(item.type==='list-left'){
+            return (
+                <li key={index} className='mb-4'>
+                    <ul className='list-disc list-inside pl-4 space-y-2 text-left justify-center'>
                         {item.content.map((listItem, listIndex) => (
                             listItem.type === 'text' && (
                                 <li key={listIndex} className='text-gray-300'>

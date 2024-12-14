@@ -60,7 +60,7 @@ export const projects = [
         footer:'Results',
         result:
         [{
-            type: 'list', content:[
+            type: 'list-left', content:[
                 {type: 'text', content: 'Demographic analysis showed that individuals who are assigned female at birth, female identifying individuals, white individuals, and individuals who have had at least one vaccination are developing Long Covid-19'},
                 {type: 'text', content: 'Identified high confidence association rules that indicate that individuals assigned female at birth develop Long Covid-19'},
                 {type: 'text', content: 'Symptom clustering determined that cough, headache and fatigue were the most prevalent symptoms for individuals developing Long Covid-19'},
@@ -126,9 +126,9 @@ export const projects = [
         result:[
             { type: 'text-header', content: `2Sine Timeseries` },
             { type: 'text-sub', content: `Trained with 50 hidden neurons and a regularization parameter of 0.5` },
-            {type: 'list', content:
+            {type: 'list-left', content:
                 [
-                    {type: 'text', content: `The optimized number of hidden layer neurons was found to be 10 ` },
+                  {type: 'text', content: `The optimized number of hidden layer neurons was found to be 10 ` },
                   {type: 'text', content: `The optimized regularization parameter was found to be 5.0` },
                   {type:'text', content:`The optimized data split (ie the split with the lowest MSE) was found to be 40/30/30 (training/validation/testing)` },
                   {type: 'text', content: `1-step ahead prediction had an MSE of 0.142, indicating that the model generalizes well` },
@@ -146,7 +146,7 @@ export const projects = [
            
             { type: 'text-header', content: `Lorenz Timeseries ` },
             { type: 'text-sub', content: `Trained with 20 hidden neurons and a regularization parameter of 0.1` },  
-            {type: 'list', content:
+            {type: 'list-left', content:
                 [
                     {type: 'text', content: `The optimized number of hidden layer neurons was found to be 10 ` },
                     {type: 'text', content: `The optimized regularization parameter was found to be 0.01` },
@@ -165,7 +165,7 @@ export const projects = [
                 
             },
             {type:'text-footer', content: `Conclusions`},
-            {type:'list', content:[
+            {type:'list-left', content:[
                 {type: 'text', content: `The Lorenz model demonstrates that increased model complexity leads to overfitting and a failure to generalize, 
                     as its data points had higher varience and its function was more complex compared to the 2Sine dataset.
                      Additionally, the complexity of the Lorenz function causes a smaller regularization parameter, causing outliers to significantly affect weight optimizations.`},
@@ -271,7 +271,7 @@ export const projects = [
         sub: `Process`,
         sub_content: [
             {type:'text', content:'Takes 2 sequences and processes each alignment, tracks progress, reports intermediate and final results. The process is as follows:'},
-            {type:'list', content:[
+            {type:'list-left', content:[
                 {type:'text', content: 'Build the dynamic programming table based on sequence lengths and initialize the first row and column'},
                 {type:'text', content: 'Fill the table by calculating the maximum score for each cell using normalized sum of pairs'},
                 {type:'text', content: 'Track alignments by tracing back through the dynamic programming table and updating a global dictionary of alignments'},
@@ -284,7 +284,7 @@ export const projects = [
              `
                 Using  the following alignment pattern  A-B, C-D, AB-CD where: 
             `},
-            {type:'list', content:[
+            {type:'list-center', content:[
                 {type:'text', content: 'A is the sequence GTTAT '},
                 {type:'text', content: 'B is the sequence CGTTT'},
                 {type:'text', content: 'C is the sequence GCAAT'},
@@ -323,7 +323,7 @@ export const projects = [
             `,
         sub: `Process`,
         sub_content: [
-            {type:'list', content:[
+            {type:'list-left', content:[
                 { type: 'text', content: 'Preprocess a distal matrix to get a list of taxa and their distances as a key-value pair: {(taxa1, taxa2): distance}' },
                 { type: 'text', content: 'Create a UTable using unions of the distance for each taxon' },
                 { type: 'text', content: 'Create a delta matrix using UTable values, distances for each taxa pair, and the number of taxa' },
@@ -390,7 +390,7 @@ export const projects = [
         `,
         footer:'Results',
         result:[
-            {type:'list', content:[
+            {type:'list-left', content:[
                 {type: 'text', content: `Non-clustered B+ tree indexes significantly improved runtimes`},
                 {type: 'text', content: `In most cases, indexes on multiple columns performed significantly better than indexes on a single column`},
                 {type: 'text', content: `There is a higher percentage of unused bytes for unoptimized queries than for optimized queries`},
