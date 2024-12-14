@@ -103,7 +103,7 @@ export const projects = [
                    In this implementation, I use Mean-Square Error to determine prediction accuracy. K-Step Ahead Forcasting is used in both the validation stage and testing stage of model evaluation.`
             },
             {type: 'image-group', images: [
-                { src: esnImage, alt: 'Representation of a Echo State Network', descriptor: 'An example of an ESN' },
+                { src: esnImage, alt: 'Representation of a Echo State Network', descriptor: 'An example of an ESN' }
                 
             ]},
             {type:'text', content:` 
@@ -115,10 +115,15 @@ export const projects = [
         footer:'Results',
         result:[
             { type: 'text', content: `2Sine Timeseries` },
+            { type: 'text-sub', content: `Trained with 50 hidden neurons and a regularization parameter of 0.5` },
             {type: 'list', content:
                 [
-                  {type: 'text', content: ` ` },
-                  {},
+                    {type: 'text', content: `The optimized number of hidden layer neurons was found to be 10 ` },
+                  {type: 'text', content: `The optimized regularization parameter was found to be 5.0` },
+                  {type:'text', content:`The optimized data split (ie the split with the lowest MSE) was found to be 40/30/30 (training/validation/testing)` },
+                  {type: 'text', content: `1-step ahead prediction had an MSE of 0.142, indicating that the model generalizes well` },
+                  {type: 'text', content: `2-step ahead prediction had an MSE of 1.24, demonstrating that error compounds overtime` },
+                  {type: 'text', content: `Predictions with k>2 had higher MSEs and were less accurate the more steps ahead` }
                 ]
               },
             { 
@@ -130,10 +135,15 @@ export const projects = [
             },
            
             { type: 'text', content: `Lorenz Timeseries ` },
+            { type: 'text-sub', content: `Trained with 20 hidden neurons and a regularization parameter of 0.1` },  
             {type: 'list', content:
                 [
-                  {type: 'text', content: ` ` },
-                  {},
+                    {type: 'text', content: `The optimized number of hidden layer neurons was found to be 10 ` },
+                    {type: 'text', content: `The optimized regularization parameter was found to be 0.01` },
+                    {type:'text', content:`The optimized data split (ie the split with the lowest MSE) was found to be 80/10/10 (training/validation/testing)` },
+                    {type: 'text', content: `1-step ahead prediction had an MSE of 7.63, likely because the dataset varies more than the 2Sine dataset, though the predictions and targets still look visually similar` },
+                    {type: 'text', content: `2-step ahead prediction had an MSE of 111.61, indicating that error compounds overtime` },
+                    {type: 'text', content: `Predictions with k>2 had higher MSEs and were less accurate the more steps ahead` }
                 ]
               },
             {
@@ -143,8 +153,15 @@ export const projects = [
                     { src: lorenz2, alt: 'Lorenz 2-step ahead forecasting', descriptor: '2-step ahead forecasting with a MSE of 111.61' }
                 ]
                 
-            }
-      
+            },
+            {type:'text-sub', content: `Conclusions`},
+            {type:'list', content:[
+                {type: 'text', content: `The Lorenz model demonstrates that increased model complexity leads to overfitting and a failure to generalize, 
+                    as its data points had higher varience and its function was more complex compared to the 2Sine dataset.
+                     Additionally, the complexity of the Lorenz function causes a smaller regularization parameter, causing outliers to significantly affect weight optimizations.`},
+                {type: 'text', content: `K-Step Ahead prediction produces less accurate results the more steps ahead you attempt to predict because error compounds overtime and predictions are fed back into the model.`}
+            ]}
+            
           
         ]
     },

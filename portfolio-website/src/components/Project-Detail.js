@@ -49,6 +49,10 @@ const ProjectDetail = ({projects}) => {
         if(item.type === 'text'){
             return <li key={index} className='mb-2'>{item.content}</li>
         }
+        //if result type is text-sub
+        else if(item.type === 'text-sub'){
+            return <li key={index} className='mb-2 text-sm text-gray-300'>{item.content}</li>
+        }
         //if result type is image-group
         else if (item.type === 'image-group'){
             return (
