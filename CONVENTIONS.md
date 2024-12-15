@@ -1,25 +1,4 @@
 #  Development Guidelines
-You are an AI assistant tasked with creating Javascript, Python, Flask, and Tailwind CSS code based on a given prompt. Your role is to strictly adhere to the guidelines and conventions provided in the CONVENTIONS.md document.
-
-When creating  code, you must follow these instructions:
-1. Carefully read and understand the entire prompt, paying close attention to all guidelines, conventions, and examples provided.
-2. Ensure that all code you produce strictly adheres to the conventions and guidelines specified in the prompt. Do not deviate from this specification or make things up.
-3. Follow all code style and structure guidelines, including those for clean code, readability, efficiency, testability, and consistency.
-4. Adhere to all JavaScript guidelines, including those for semicolons, line length, equality, parseInt, naming, functions, enums, and comments.
-5. Use the specified naming conventions, including camelCase with prefixes to indicate object types.
-6. Follow all SQL guidelines, including those for capitalization, dbo prefix, column naming, formatting, and joins.
-7. Use the provided examples as references for proper formatting and structure of your code.
-8. Include appropriate JSDoc header comments for functions, following the format shown in the example. 
-9. Use the specified curly brace formatting for control flow structures.
-10. Never insert the @properties tag in your JSDoc response. This is extremely important!
-
-When you provide your response, structure it as follows:
-1. Begin with a brief explanation of what the code does.
-2. Present the code, ensuring it's properly formatted and commented.
-3. If necessary, provide any additional explanations or notes about the code after presenting it.
-
-Write a concise explanation of what changes were made, and update the file with the new code.
-
 ## Coding Guidelines and Conventions
 This guide establishes standards for Javascript, Python, Tailwind CSS, and Flask development, ensuring consistent, maintainable, and high-quality code.
 
@@ -61,18 +40,7 @@ def functionName(parameter):
 - Use enums for improved readability
 
 ### Naming Conventions
-Prefix variables based on type:
-- `fs` - Foundsets
-- `ds` - Datasets
-- `r` - Records
-- `b` - Booleans
-- `i` - Integers
-- `n` - Numbers
-- `s` - Strings
-- `a` - Arrays
-- `d` - Dates
-- `o` - Objects
-- `_n` - Form variables
+- Camel case preferred but `var-name` acceptable
 
 ### Code Structure
 ```javascript
@@ -119,56 +87,37 @@ else {
 - Multi-word column names should be in camelCase
 
 ### SQL Example
-```javascript
+```python
 /**
  * Checks if an order uses assembly
  * 
  * @param {String} uOrderID - Order ID to check
  * @return {Boolean} True if order uses assembly
  */
-function orderUsesAssembly(uOrderID) {
-    var bEstimateUsesAssembly = false;
-    
-    if (uOrderID) {
-        var sSQL = "SELECT COUNT(S.ordrevds_id) \
-                    FROM sa_order_revision_detail_section S \
-                    INNER JOIN sa_order_revision_detail D \
-                        ON S.ordrevd_id = D.ordrevd_id \
-                    INNER JOIN sa_order_revision_header H \
-                        ON D.ordrevh_id = H.ordrevh_id \
-                    WHERE H.ordh_id = ? \
-                        AND S.ordrevds_is_assembly = 1";
-        var aArgs = [uOrderID.toString()];
-        
-        bEstimateUsesAssembly = (scopes.avDB.SQLQuery(sSQL, null, aArgs) > 0);
-    }
-    return bEstimateUsesAssembly;
-}
+
+def test(connection):
+    query = "SELECT * FROM table WHERE colName = ?"
+    connection.cursor.execute(query, value);
+
 ```
 
 ## Common Patterns
 
-### Foundset Loop
+###  Loops
 ```javascript
-function processFoundset(foundset) {
-    for (var i = 1; i <= foundset.getSize(); i++) {
-        var record = foundset.getRecord(i);
-        // Process record
+function loop(array) {
+    for (var i = 1; i <= array.length(); i++) {
+        // do something
     }
 }
 ```
 
-### Relational Traversal
-```javascript
-function processRelation(parentRecord) {
-    if (utils.hasRecords(parentRecord.relationName)) {
-        var relatedFoundset = parentRecord.relationName;
-        for (var i = 1; i <= relatedFoundset.getSize(); i++) {
-            var relatedRecord = relatedFoundset.getRecord(i);
-            // Process related record
-        }
-    }
-}
+
+```python
+def loop(array, n):
+    for i in range(1,n):
+        print(array[i])
+
 ```
 ## Testing Practices
 1. All sensitive data should be user input. No sensitive data should be hardcoded.
