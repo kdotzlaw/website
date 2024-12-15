@@ -421,12 +421,14 @@ export const projects = [
                  As per project requirements, the application can handle 1000 requests from 100 users concurrently.
                 
                 `},
+              
                 {type:'image-group', 
                     images: [
                     { src: sb_arc, alt: 'Study Buddy', id: 'sb_arc' }
                    
                     
                 ]},
+                {type:'text-sub', content:`Study Buddy Architecture`},
         ],
         footer:'Contributions',
         result:[

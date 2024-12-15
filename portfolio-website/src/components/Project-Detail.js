@@ -1,12 +1,15 @@
 import React, { useState } from 'react';
 import { useParams } from 'react-router-dom';
 import { categories, projects }  from './Projects';
+import ImageModal from './Img-Modal';
 import '../styles/main.css';
 //A seperate page with project details added dynamically based on id
 const ProjectDetail = ({projects}) => {
     //track details by project id
     const { projectId } = useParams();
     const project = projects?.find(p => p.id === parseInt(projectId));
+    const [selectedImage, setSelectedImage] = useState(null);
+
     if (!project) return <div className="pt-20 text-center text-white">Project not found</div>;
 
     const handleClick = () => {
@@ -27,7 +30,7 @@ const ProjectDetail = ({projects}) => {
         else if(item.type === 'text-sub'){
             return <p key={index} className='mb-2 text-sm text-gray-300'>{item.content}</p>
         }
-        //if result type is image-group
+       
          //if result type is image-group
          else if (item.type === 'image-group'){
             if (item.images.length === 1){
@@ -39,7 +42,7 @@ const ProjectDetail = ({projects}) => {
                                     src={item.images[0].src} 
                                     alt={item.images[0].alt} 
                                     className='w-full h-auto rounded-lg mx-auto'
-                                    
+                                    onClick={() => setSelectedImage(item.images[0])}
                                 />
                                 {item.images[0].descriptor && (
                                     <p className='mt-2 text-sm text-gray-300 text-center'>
@@ -47,6 +50,30 @@ const ProjectDetail = ({projects}) => {
                                     </p>
                                 )}
                             </div>
+                        </div>
+                    </div>
+                );
+            }else{
+                return (
+                    <div key={index} className='flex justify-start items-start w-full my-4'>
+                        <div className='grid grid-cols-1 md:grid-cols-2 gap-4'>
+                            {item.images.map((image, imgIndex) => (
+                                <div key={imgIndex} className='flex flex-col items-start'>
+                                    <div className='w-full'>
+                                        <img 
+                                            src={image.src} 
+                                            alt={image.alt} 
+                                            className='w-full h-auto rounded-lg cursor-pointer transition-transform hover:scale-105'
+                                            onClick={() => setSelectedImage(image)}
+                                        />
+                                    </div>
+                                    {image.descriptor && (
+                                        <p className='mt-2 text-sm text-gray-300 text-center'>
+                                            {image.descriptor}
+                                        </p>
+                                    )}
+                                </div>
+                            ))}
                         </div>
                     </div>
                 );
@@ -101,7 +128,8 @@ const ProjectDetail = ({projects}) => {
             return <p key={index} className='text-center text-2xl font-bold mb-4'>{item.content}</p>   
         }
         //if result type is image-group
-        else if (item.type === 'image-group'){
+         //if result type is image-group
+         else if (item.type === 'image-group'){
             if (item.images.length === 1){
                 return (
                     <div key={index} className='w-full flex flex-col items-center justify-center my-4'>
@@ -111,6 +139,7 @@ const ProjectDetail = ({projects}) => {
                                     src={item.images[0].src} 
                                     alt={item.images[0].alt} 
                                     className='w-full h-auto rounded-lg mx-auto'
+                                    onClick={() => setSelectedImage(item.images[0])}
                                 />
                                 {item.images[0].descriptor && (
                                     <p className='mt-2 text-sm text-gray-300 text-center'>
@@ -131,7 +160,8 @@ const ProjectDetail = ({projects}) => {
                                         <img 
                                             src={image.src} 
                                             alt={image.alt} 
-                                            className='w-full h-auto rounded-lg'
+                                            className='w-full h-auto rounded-lg cursor-pointer transition-transform hover:scale-105'
+                                            onClick={() => setSelectedImage(image)}
                                         />
                                     </div>
                                     {image.descriptor && (
@@ -145,8 +175,7 @@ const ProjectDetail = ({projects}) => {
                     </div>
                 );
             }
-           
-        }//if result type is text-pub
+        } 
         else if(item.type === 'text-pub'){
             return (
                 <div key={index} className='mb-4'>
@@ -194,6 +223,7 @@ const ProjectDetail = ({projects}) => {
       };
 
     return(
+        <>
         <div id='project-detail' className='min-h-screen pt-16 pb-16 sm:pt-20 px-4 sm:px-8 lg:px-12 text-white flex justify-center items-start'>
               <div className='container mx-auto w-3/4'>
                 <div className='pt-20 px-4 md:px-12  min-h-screen text-white project-detail-container'>
@@ -217,6 +247,11 @@ const ProjectDetail = ({projects}) => {
                 </div>
             </div>
         </div>
+        {selectedImage && (
+            <ImageModal image={selectedImage} onClose={() => setSelectedImage(null)} />
+        )}
+        </>  
+        
       
     );
 }
