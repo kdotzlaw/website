@@ -15,54 +15,57 @@ const ProjectDetail = ({projects}) => {
     const handleClick = () => {
         window.open(project.url, "_blank");
       };
+    
+    //function to handle the hover effect on images
+    const ImageWithHover = ({ image, onClick }) => (
+        <div className="group relative overflow-hidden rounded-lg">
+          <img 
+            src={image.src} 
+            alt={image.alt} 
+            className="w-full h-auto rounded-lg transition-all duration-300 ease-in-out transform group-hover:scale-105 group-hover:brightness-90 cursor-pointer"
+            onClick={onClick}
+          />
+          <div className="absolute inset-0 bg-opacity-0 group-hover:bg-opacity-20 transition-opacity duration-300 pointer-events-none" />
+          {image.descriptor && (
+            <p className="mt-2 text-sm text-gray-300 text-center transition-opacity duration-300 group-hover:text-white">
+              {image.descriptor}
+            </p>
+          )}
+        </div>
+      );
 
-    const renderImageGroup = (item, index) =>{
-        if (item.images.length === 1){
-            return (
-                <div key={index} className='w-full flex flex-col items-center justify-center my-4'>
-                    <div className='w-full flex justify-center'>
-                        <div className='max-w-2xl w-full'>
-                            <img 
-                                src={item.images[0].src} 
-                                alt={item.images[0].alt} 
-                                className='w-full h-auto rounded-lg mx-auto'
-                                onClick={() => setSelectedImage(item.images[0])}
-                            />
-                            {item.images[0].descriptor && (
-                                <p className='mt-2 text-sm text-gray-300 text-center'>
-                                    {item.images[0].descriptor}
-                                </p>
-                            )}
-                        </div>
-                    </div>
+    //render image group with checks for single or multiple images
+    const renderImageGroup = (item, index) => {
+        if (item.images.length === 1) {
+          return (
+            <div key={index} className="w-full flex flex-col items-center justify-center my-4">
+              <div className="w-full flex justify-center">
+                <div className="max-w-2xl w-full">
+                  <ImageWithHover 
+                    image={item.images[0]} 
+                    onClick={() => setSelectedImage(item.images[0])}
+                  />
                 </div>
-            );
-        }else{
-            return (
-                <div key={index} className='flex justify-start items-start w-full my-4'>
-                    <div className='grid grid-cols-1 md:grid-cols-2 gap-4'>
-                        {item.images.map((image, imgIndex) => (
-                            <div key={imgIndex} className='flex flex-col items-start'>
-                                <div className='w-full'>
-                                    <img 
-                                        src={image.src} 
-                                        alt={image.alt} 
-                                        className='w-full h-auto rounded-lg cursor-pointer transition-transform hover:scale-105'
-                                        onClick={() => setSelectedImage(image)}
-                                    />
-                                </div>
-                                {image.descriptor && (
-                                    <p className='mt-2 text-sm text-gray-300 text-center'>
-                                        {image.descriptor}
-                                    </p>
-                                )}
-                            </div>
-                        ))}
-                    </div>
-                </div>
-            );
+              </div>
+            </div>
+          );
         }
-    }
+    
+        return (
+          <div key={index} className="flex justify-start items-start w-full my-4">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+              {item.images.map((image, imgIndex) => (
+                <div key={imgIndex} className="flex flex-col items-start">
+                  <ImageWithHover 
+                    image={image}
+                    onClick={() => setSelectedImage(image)}
+                  />
+                </div>
+              ))}
+            </div>
+          </div>
+        );
+      };
 
     // function to id and render sub content types
       const renderSubContent =(item, index) =>{
