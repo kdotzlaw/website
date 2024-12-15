@@ -18,32 +18,39 @@ const ProjectDetail = ({projects}) => {
         if(item.type === 'text'){
             return <p key={index} className='mb-2'>{item.content}</p>
         }
+        else if(item.type === 'text-header'){
+            return <h2 key={index} className='text-center text-2xl font-bold mb-4'>{item.content}</h2>
+        }else if(item.type === 'text-footer'){
+            return <p key={index} className='text-center text-2xl font-bold mb-4'>{item.content}</p>   
+        }
         //if result type is text-sub
         else if(item.type === 'text-sub'){
             return <p key={index} className='mb-2 text-sm text-gray-300'>{item.content}</p>
         }
         //if result type is image-group
-        else if (item.type === 'image-group'){
-            return (
-                <div key={index} className='flex justify-center w-full mt-4'>
-                <div className='grid grid-cols-1 md:grid-cols-2 gap-8 w-full'>
-                    {item.images.map((image, imgIndex) => (
-                        <div key={imgIndex} className='flex flex-col items-center'>
-                            <img 
-                                src={image.src} 
-                                alt={image.alt} 
-                                className='max-w-full h-auto rounded-lg'
-                            />
-                            {image.descriptor && (
-                                <p className='mt-2 text-sm text-center text-gray-300'>
-                                    {image.descriptor}
-                                </p>
-                            )}
+         //if result type is image-group
+         else if (item.type === 'image-group'){
+            if (item.images.length === 1){
+                return (
+                    <div key={index} className='w-full flex flex-col items-center justify-center my-4'>
+                        <div className='w-full flex justify-center'>
+                            <div className='max-w-2xl w-full'>
+                                <img 
+                                    src={item.images[0].src} 
+                                    alt={item.images[0].alt} 
+                                    className='w-full h-auto rounded-lg mx-auto'
+                                    
+                                />
+                                {item.images[0].descriptor && (
+                                    <p className='mt-2 text-sm text-gray-300 text-center'>
+                                        {item.images[0].descriptor}
+                                    </p>
+                                )}
+                            </div>
                         </div>
-                    ))}
-                </div>
-            </div>
-            );
+                    </div>
+                );
+            }
         }        //if type is a list return list items with bullet points
         else if(item.type==='list-center'){
             return (

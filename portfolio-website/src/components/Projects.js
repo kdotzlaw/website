@@ -20,6 +20,7 @@ import esnImage from '../img/esn.JPG';
 import clustal1 from '../img/clustal1.JPG';
 import clustal2 from '../img/clustal2.JPG';
 import clustal3 from '../img/clustal3.JPG';
+import sb_arc from '../img/StudyBuddyArch.png'
 
  //list of kvps
  export const categories = [
@@ -33,8 +34,9 @@ import clustal3 from '../img/clustal3.JPG';
     {id:'machine-learning', name: 'Machine Learning', icons:mlnn},
     {id:'distributed', name:'Distributed Computing', icons:cyber}, //ICON
     {id: 'data-mining', name: 'Data Mining', icons:cyber}, //ICON
-    {id:'C#', name: 'C#', icons:cyber}, //ICON
+  
     {id:'Java', name: 'Java', icons:cyber}, //ICON
+    {id:'games', name: 'Python Game Development', icons:pythonImg}, //ICON
 ];
 //Project list
 export const projects = [
@@ -403,20 +405,40 @@ export const projects = [
     {
         id:9,
         types:['sql','python'],
-        header:'',
+        header:'StudyBuddy',
         images: [
             { src: sb, alt: 'Study Buddy', id: 'sb' }
         ],
         url:'https://github.com/kdotzlaw/StudyBuddy',
-        description: `I worked as a database engineer and technical writer for a fullstack web application designed to help students manage their study schedules. I built
-                the backend using MSSQL and Python, and created database integration tests using Python unittest. All database queries used prepared statements and
-                parameterized queries to prevent SQL injection attacks. I collaborated with our Server Manager to ensure that the database successfully integrated with the Flask server.
-                I also worked with our CI/CD lead to ensure that the backend was successfully deployed with GitHub Actions and Docker.
-                As a technical writer, I created project documentation including a wiki, milestone reports, test plans, and meeting minutes. 
-                I also performed load testing with Locust to ensure that the application could handle high traffic and concurrent requests.`,
-        footer:'',
+        description: `An academic companion designed to help students succeed while staying organized.`,
+        sub:`An Academic Companion`,
+        sub_content:[
+          
+            {type: 'text', content:
+                `The Study Buddy is an application that allows students to keep track of their study
+                 progress and current grades.  It has a custom database that allows the creation, removal and modification of users, classes, and tasks. 
+                 Addiitonally, the application can track the user's study time, grades, and progress.
+                 As per project requirements, the application can handle 1000 requests from 100 users concurrently.
+                
+                `},
+                {type:'image-group', 
+                    images: [
+                    { src: sb_arc, alt: 'Study Buddy', id: 'sb_arc' }
+                   
+                    
+                ]},
+        ],
+        footer:'Contributions',
         result:[
-            {type: 'text', content: 'I was responsible for the backend of the application, including database integration, prepared statements, and parameterized queries'},
+            {type:'list-left', content:[
+                {type: 'text', content: 'Developed a custom MSSQL database that stores user data, classes, and assignments'},
+                {type: 'text', content: 'Created database integration tests using Python unittest'},
+                {type: 'text', content: 'Used prepared statements and parameterized queries to prevent SQL injection attacks'},
+                {type: 'text', content: 'Collaborated with our Server Manager to ensure that the database successfully integrated with the Flask server'},
+                {type: 'text', content: 'Worked with our CI/CD lead to ensure that the backend was successfully deployed with GitHub Actions and Docker'},
+                {type: 'text', content: 'Created project documentation including a wiki, milestone reports, test plans, and meeting minutes'},
+                {type: 'text', content: 'Performed load testing with Locust to ensure that the application could handle high traffic and concurrent requests'},
+            ]},
         ]
         
     },
@@ -490,6 +512,34 @@ export const projects = [
             ]},
             
         ]
-    }
+    },{
+        id:13,
+        types: ['games'],
+        header:'Blackjack',
+        images: [
+            { src: pythonImg, alt: 'Python Logo' },
+        ],
+        url:'https://github.com/kdotzlaw/python-portfolio/blob/main/blackjack/main.py',
+        description: 'A simple console driven Blackjack game against the computer. Built with Python and focuses on fundamentals like conditionals, loops, randomization, and project planning.',
+    },
+    {
+        id:14,
+        types: ['games'],
+        header:'Tic-Tac-Toe',
+        images: [
+            { src: pythonImg, alt: 'Python Logo' },
+        ],
+        url:'https://github.com/kdotzlaw/python-portfolio/blob/main/professional-portfolio/tic-tac-toe.py',
+        description: 'Plays a game of Tic Tac Toe against the computer where the computer makes weighted choices. A python game that focuses on conditionals, loops, dictionaries, and game logic.',
+    },{
+        id:15,
+        types: ['games'],
+        header:'Snake',
+        images: [
+            { src: pythonImg, alt: 'Python Logo' },
+        ],
+        url:'https://github.com/kdotzlaw/python-portfolio/blob/main/turtle-graphics/snake/main.py',
+        description: 'A game created with Python and Turtle Graphics that explores event handling, collision detection, game mechanics, and game design.',
+    },
 
 ]; //end of project list
