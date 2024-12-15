@@ -323,7 +323,11 @@ export const projects = [
             }
         ],
         summary:[
-            
+            {type:'text', content: `The optimal alignment is: `},
+            {type:'text-break', content:`-GTTAT`},
+            {type:'text-break', content:`CGTT-T`}, 
+            {type:'text-break', content:`-GCAAT `}, 
+            {type:'text-break', content:`-CCGAT `}, 
         ],
 
     },

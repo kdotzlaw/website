@@ -139,7 +139,10 @@ const ProjectDetail = ({projects}) => {
          //if result type is image-group
          else if (item.type === 'image-group'){
           return renderImageGroup(item, index);
-        } 
+          
+        } else if(item.type === 'text-break'){
+            return <br key={index} className='text-center text-2xl font-bold mb-4'/>    
+        }
         else if(item.type === 'text-pub'){
             return (
                 <div key={index} className='mb-4'>
