@@ -21,6 +21,7 @@ import clustal1 from '../img/clustal1.JPG';
 import clustal2 from '../img/clustal2.JPG';
 import clustal3 from '../img/clustal3.JPG';
 import sb_arc from '../img/StudyBuddyArch.png'
+import { type } from '@testing-library/user-event/dist/type';
 
  //list of kvps
  export const categories = [
@@ -409,7 +410,7 @@ export const projects = [
         images: [
             { src: sb, alt: 'Study Buddy', id: 'sb' }
         ],
-        url:'https://github.com/kdotzlaw/StudyBuddy',
+        url:'https://github.com/kdotzlaw/StudyBuddy/tree/main',
         description: `An academic companion designed to help students succeed while staying organized.`,
         sub:`An Academic Companion`,
         sub_content:[
@@ -542,6 +543,70 @@ export const projects = [
         ],
         url:'https://github.com/kdotzlaw/python-portfolio/blob/main/turtle-graphics/snake/main.py',
         description: 'A game created with Python and Turtle Graphics that explores event handling, collision detection, game mechanics, and game design.',
-    },
+    },{
+        id:16,
+        types:['machine-learning'],
+        header:'2D Multiagent Systems Communication',
+        images: [
+           
+          
+        ],
+        url:'https://github.com/kdotzlaw/UniversityProjects/tree/main/Multiagent-Systems',
+        description: 'A research project that compared the performance of different communication protocols for 2D multiagent systems.',
+        sub:``,
+        sub_content:[
+            {type:'text-header', content:'Reinforcement Learning'},
+            {type:'text', content:
+                `
+                    This project defines reinforcement learning as described by Metaric (1997) and Anderson et al. (2002).
+                    Reinforcement learning is a method of allowing agents to receive feedback based on the outcomes of their actions, where rewards and punishments are determined by the environment.
+                `},
+            {type:'text-header', content:'Cognitive Communicaiton'},
+            {type:'text', content:`
+                Cognitive communication is when an agent in a system encounters one or more types of uncertainty that is addressed via communication. 
+                It is divided into two categories: myopic and non-myopic (centralized and decentralized) communication.  
+                `},
+                {type:'list-left', content:[
+                    {type: 'text', content: 
+                        `
+                        The myopic approach deals with uncertainty by finding at least one optimal solution using Becker's myopic assumptions (Becker, 2009)
+                        
+                        `},
+                    {type: 'text', content: 
+                        `
+                        The centralized approach identifies the decisions of the agents based on the overall system state. (Xuan and Lesser, 2002)
+                        
+                        `},
+                    {type: 'text', content: 
+                        `
+                        The decentralized approach requires only partial system knowledge in each agent, causing each agent to deal with communication directly (Xuan and Lesser, 2002).
+                        
+                        `},
+                ]},
+        
+            {type:'text-header', content:'Evaluation Criteria'},
+            {type:'text', content:`There are 4 criteria that were used to evaluate the effectiveness of the communication techniques. In order to determine the most effective communication technique, 
+                I assign points to each criterion so quantitatively, the higher the points, the more effective the communication technique is. A maximum of 6 points can be awarded in total.`},
+            {type:'list-left', content:[
+                    {type: 'text', content: `Choice to Communicate: 1 point if agents choose when to communicate, 0 otherwise`},
+                    {type: 'text', content: `Information Space Allotment: Low space earns 2 points, medium space earns 1 point, high space earns 0 points`},
+                    {type: 'text', content: `Value Calculations: 1 point if the policy performs a value calculation, 0 otherwise`},
+                    {type: 'text', content: `Solutions to Common Communication Problems: 2 points if the policy solves all common communication problems, 1 point if it solves one common communication problem, 0 otherwise`},
+                ]},
+        ],
+        footer:'Results',
+        result:[
+            {type:'list-left', content:[
+              {type: 'text', content: 'Reinforcement learning communication received a total of 5 points'},
+              {type: 'text', content: 'Myopic cognitive communication recceived a total of 3 points'},
+              {type: 'text', content: 'Centralized cognitive communication received a total of 2 points'},
+              {type: 'text', content: 'Decentralized cognitive communication received a total of 2 points'},
+              {type: 'text', content: 'Cognitive Communication received a maximum of 3 points from its sub-protocols'},
+              {type: 'text', content: 'Based on the evaluation criteria,  reinforcement learning communication was found to be the most effective protocol for 2D multiagent systems'},
+            ]},
+            
+        ]
+
+    }
 
 ]; //end of project list
