@@ -176,7 +176,14 @@ export const projects = [
             ]}
             
           
-        ]
+        ],
+        summary:[
+            {type: 'text', content: `2Sine 1-step ahead prediction had an MSE of 0.142`},
+            {type: 'text', content: `2Sine 2-step ahead prediction had an MSE of 1.24`},
+            {type: 'text', content: `Lorenz 1-step ahead prediction had an MSE of 7.63`},
+            {type: 'text', content: `Lorenz 2-step ahead prediction had an MSE of 111.61`},
+            {type: 'text', content: `K-Step Ahead prediction produces less accurate results the more steps ahead ybecause error compounds overtime.`}
+        ],
     },
     {
         id:3,
@@ -210,7 +217,10 @@ export const projects = [
             {type:'text', content:``},
             {type:'text', content:``},
 
-           ]
+           ],
+           summary:[
+            
+           ],
     },
     {
         id:4,
@@ -255,7 +265,10 @@ export const projects = [
              `
           
             `},
-        ]
+        ],
+        summary:[
+            
+        ],
     },
     {
         id:5,
@@ -308,7 +321,10 @@ export const projects = [
                     
                 ]
             }
-        ]
+        ],
+        summary:[
+            
+        ],
 
     },
     {
@@ -338,7 +354,10 @@ export const projects = [
         footer:'Results',
         result:[
            
-        ]
+        ],
+        summary:[
+
+        ],
     },
     {
         id:7,
@@ -371,7 +390,12 @@ export const projects = [
             (if there is a mismatch in the last spot of the pattern).`},
            {type: 'text', content: `The pattern  CCCC runs significantly faster with the Knuth-Morris-Pratt algorithm (20.45s vs 30.11s), likely because the genome has a 71% GC content and the pattern is highly repetitive.`},
            {type: 'text', content: `The pattern AACGTT returns an even 400 matches, unique from other patterns tested, indicating that the pattern is a coding sequence for a pair of amino acids.`}
-        ]
+        ],
+        summary:[
+            {type: 'text', content: `The Knuth-Morris-Pratt algorithm is significantly faster than the brute force algorithm`},
+            {type: 'text', content: `The pattern CCCC is highly repetitive and has a GC content of 71%, causing it to run significantly faster with KMP`},
+            {type: 'text', content: `Identified a pattern that codes for a pair of amino acids, AACGTT.`}
+        ],
 
     },
     {
@@ -401,7 +425,13 @@ export const projects = [
             ]},
             
 
-        ]
+        ],
+        summary:[
+            {type: 'text', content: `Non-clustered B+ tree indexes significantly improved runtimes`},
+            {type: 'text', content: `In most cases, indexes on multiple columns performed significantly better than indexes on a single column`},
+            {type: 'text', content: `There is a higher percentage of unused bytes for unoptimized queries than for optimized queries`},
+            {type: 'text', content: `No overflow pages are used for queries optimized with  B+ tree indexes`}
+        ],
     },
     {
         id:9,
@@ -442,7 +472,13 @@ export const projects = [
                 {type: 'text', content: 'Created project documentation including a wiki, milestone reports, test plans, and meeting minutes'},
                 {type: 'text', content: 'Performed load testing with Locust to ensure that the application could handle high traffic and concurrent requests'},
             ]},
-        ]
+        ],
+        summary:[
+            {type: 'text', content: 'Developed a custom and secure MSSQL database that interacts with the Flask server'},
+            {type: 'text', content: 'Created database unit and integration tests'},
+            {type: 'text', content: 'Created informative, user-friendly project documentation'},
+            {type: 'text', content: 'Application handles 1000 requests from 100 users concurrently'},
+        ],
         
     },
     {
@@ -552,7 +588,7 @@ export const projects = [
           
         ],
         url:'https://github.com/kdotzlaw/UniversityProjects/tree/main/Multiagent-Systems',
-        description: 'A research project that compared the performance of different communication protocols for 2D multiagent systems.',
+        description: 'A research project that compared the performance of different communication protocols for 2D multiagent systems by assigning points to evaluation criteria.',
         sub:``,
         sub_content:[
             {type:'text-header', content:'Reinforcement Learning'},
@@ -605,6 +641,11 @@ export const projects = [
               {type: 'text', content: 'Based on the evaluation criteria,  reinforcement learning communication was found to be the most effective protocol for 2D multiagent systems'},
             ]},
             
+        ],
+        summary:[
+            {type: 'text', content: 'Reinforcement learning earned 5 points'},
+            {type: 'text', content: 'Cognitive communication earned 3 points'},
+            {type: 'text', content: 'Based on the evaluation criteria, reinforcement learning communication was the most effective protocol for 2D multiagent systems'},
         ]
 
     }
