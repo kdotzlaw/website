@@ -15,6 +15,55 @@ const ProjectDetail = ({projects}) => {
     const handleClick = () => {
         window.open(project.url, "_blank");
       };
+
+    const renderImageGroup = (item, index) =>{
+        if (item.images.length === 1){
+            return (
+                <div key={index} className='w-full flex flex-col items-center justify-center my-4'>
+                    <div className='w-full flex justify-center'>
+                        <div className='max-w-2xl w-full'>
+                            <img 
+                                src={item.images[0].src} 
+                                alt={item.images[0].alt} 
+                                className='w-full h-auto rounded-lg mx-auto'
+                                onClick={() => setSelectedImage(item.images[0])}
+                            />
+                            {item.images[0].descriptor && (
+                                <p className='mt-2 text-sm text-gray-300 text-center'>
+                                    {item.images[0].descriptor}
+                                </p>
+                            )}
+                        </div>
+                    </div>
+                </div>
+            );
+        }else{
+            return (
+                <div key={index} className='flex justify-start items-start w-full my-4'>
+                    <div className='grid grid-cols-1 md:grid-cols-2 gap-4'>
+                        {item.images.map((image, imgIndex) => (
+                            <div key={imgIndex} className='flex flex-col items-start'>
+                                <div className='w-full'>
+                                    <img 
+                                        src={image.src} 
+                                        alt={image.alt} 
+                                        className='w-full h-auto rounded-lg cursor-pointer transition-transform hover:scale-105'
+                                        onClick={() => setSelectedImage(image)}
+                                    />
+                                </div>
+                                {image.descriptor && (
+                                    <p className='mt-2 text-sm text-gray-300 text-center'>
+                                        {image.descriptor}
+                                    </p>
+                                )}
+                            </div>
+                        ))}
+                    </div>
+                </div>
+            );
+        }
+    }
+
     // function to id and render sub content types
       const renderSubContent =(item, index) =>{
         //if result type is text
@@ -33,51 +82,7 @@ const ProjectDetail = ({projects}) => {
        
          //if result type is image-group
          else if (item.type === 'image-group'){
-            if (item.images.length === 1){
-                return (
-                    <div key={index} className='w-full flex flex-col items-center justify-center my-4'>
-                        <div className='w-full flex justify-center'>
-                            <div className='max-w-2xl w-full'>
-                                <img 
-                                    src={item.images[0].src} 
-                                    alt={item.images[0].alt} 
-                                    className='w-full h-auto rounded-lg mx-auto'
-                                    onClick={() => setSelectedImage(item.images[0])}
-                                />
-                                {item.images[0].descriptor && (
-                                    <p className='mt-2 text-sm text-gray-300 text-center'>
-                                        {item.images[0].descriptor}
-                                    </p>
-                                )}
-                            </div>
-                        </div>
-                    </div>
-                );
-            }else{
-                return (
-                    <div key={index} className='flex justify-start items-start w-full my-4'>
-                        <div className='grid grid-cols-1 md:grid-cols-2 gap-4'>
-                            {item.images.map((image, imgIndex) => (
-                                <div key={imgIndex} className='flex flex-col items-start'>
-                                    <div className='w-full'>
-                                        <img 
-                                            src={image.src} 
-                                            alt={image.alt} 
-                                            className='w-full h-auto rounded-lg cursor-pointer transition-transform hover:scale-105'
-                                            onClick={() => setSelectedImage(image)}
-                                        />
-                                    </div>
-                                    {image.descriptor && (
-                                        <p className='mt-2 text-sm text-gray-300 text-center'>
-                                            {image.descriptor}
-                                        </p>
-                                    )}
-                                </div>
-                            ))}
-                        </div>
-                    </div>
-                );
-            }
+           return renderImageGroup(item, index);
         }        //if type is a list return list items with bullet points
         else if(item.type==='list-center'){
             return (
@@ -130,51 +135,7 @@ const ProjectDetail = ({projects}) => {
         //if result type is image-group
          //if result type is image-group
          else if (item.type === 'image-group'){
-            if (item.images.length === 1){
-                return (
-                    <div key={index} className='w-full flex flex-col items-center justify-center my-4'>
-                        <div className='w-full flex justify-center'>
-                            <div className='max-w-2xl w-full'>
-                                <img 
-                                    src={item.images[0].src} 
-                                    alt={item.images[0].alt} 
-                                    className='w-full h-auto rounded-lg mx-auto'
-                                    onClick={() => setSelectedImage(item.images[0])}
-                                />
-                                {item.images[0].descriptor && (
-                                    <p className='mt-2 text-sm text-gray-300 text-center'>
-                                        {item.images[0].descriptor}
-                                    </p>
-                                )}
-                            </div>
-                        </div>
-                    </div>
-                );
-            }else{
-                return (
-                    <div key={index} className='flex justify-start items-start w-full my-4'>
-                        <div className='grid grid-cols-1 md:grid-cols-2 gap-4'>
-                            {item.images.map((image, imgIndex) => (
-                                <div key={imgIndex} className='flex flex-col items-start'>
-                                    <div className='w-full'>
-                                        <img 
-                                            src={image.src} 
-                                            alt={image.alt} 
-                                            className='w-full h-auto rounded-lg cursor-pointer transition-transform hover:scale-105'
-                                            onClick={() => setSelectedImage(image)}
-                                        />
-                                    </div>
-                                    {image.descriptor && (
-                                        <p className='mt-2 text-sm text-gray-300 text-center'>
-                                            {image.descriptor}
-                                        </p>
-                                    )}
-                                </div>
-                            ))}
-                        </div>
-                    </div>
-                );
-            }
+          return renderImageGroup(item, index);
         } 
         else if(item.type === 'text-pub'){
             return (
