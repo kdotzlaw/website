@@ -182,7 +182,7 @@
   }*/
 
   /* Nav.js */
-.nav-container {
+  .nav-container {
     position: fixed;
     width: 100%;
     top: 0;
@@ -191,7 +191,23 @@
     backdrop-filter: blur(8px);
     z-index: 50;
     border-bottom: 1px solid rgba(100, 116, 139, 0.2);
-  }
+    transition: all 0.3s ease;
+}
+
+.nav-scrolled {
+    background-color: rgba(113, 111, 129, 0.8); /* Using --secondary with opacity */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+/*.nav-container {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    background-color: var(--secondary);
+    backdrop-filter: blur(8px);
+    z-index: 50;
+    border-bottom: 1px solid rgba(100, 116, 139, 0.2);
+  }*/
   
   .nav-content {
     max-width: 1200px;

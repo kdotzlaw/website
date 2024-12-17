@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 //import '../styles/Nav.css';
 import '../styles/main.css';
 import { Link } from 'react-router-dom';
@@ -10,6 +10,7 @@ import { projects } from './Projects';
 
 const Nav = () => {
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
+  const [scrolled, setScrolled] = useState(false);
   const navigate = useNavigate();
 
   const handleProjectClick = (projectId) => {
@@ -22,9 +23,21 @@ const Nav = () => {
     setIsSidebarOpen(!isSidebarOpen);
   };
 
+  //Main Navbar scroll effect
+  useEffect(() => {
+    const handleScroll = () => {
+      setScrolled(window.scrollY > 20);
+    };
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+
   return (
     <>
-      <header id='nav' className='p-4 fixed w-full z-40 top-0 left-0 text-white nav-container'>
+     <header id='nav' 
+            className={`p-4 fixed w-full z-40 top-0 left-0 text-white nav-container transition-all duration-300 
+            ${ scrolled ? 'nav-scrolled' : ''
+        }`}>
         <nav className='container mx-auto flex justify-between items-center nav-content'>
           <ul className="flex space-x-6 nav-links">
             <li id='nav-item'><Link to='/' className="py-2 px-4 nav-link">Home</Link></li>
