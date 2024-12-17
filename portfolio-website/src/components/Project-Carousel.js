@@ -1,19 +1,41 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import '../styles/main.css';
 
 
 
 
-const ProjectCarousel = ({ project }) => {
+const ProjectCarousel = ({ project, onNextSlide }) => {
    
    const navigate = useNavigate();
    const handleProjectClick = () =>{
        navigate(`/projects/${project.id}`);
    }
+   //project auto scroll when project slide is not hovered over
+   const [autoScroll, setAutoScroll] = useState(true);
+   const handleMouseEnter = () => {
+       setAutoScroll(false);
+   }
+   const handleMouseLeave = () => {
+       setAutoScroll(true);
+   }
+   //scroll effect
+   useEffect(() => {
+    let scrollTimer;
+    if (autoScroll && onNextSlide) {
+        scrollTimer = setInterval(() => {
+            onNextSlide();
+        }, 3000);
+    }
+    return () => {
+        if(scrollTimer) clearInterval(scrollTimer);
+    };
+}, [autoScroll, onNextSlide]);
+
     if (!project) return null;
     return (
-        <div className='pt-12  text-white carousel-container'>
+        <div className='pt-12  text-white carousel-container' onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}>
+            
             {/*className='w-full max-w-4xl mx-auto bg-opacity-5 bg-white rounded-lg p-6 min-h-[600px] flex flex-col md:flex-row gap-8 '*/}
             <div onClick={handleProjectClick} className='w-full max-w-4xl mx-auto bg-opacity-5 bg-white rounded-lg p-4 sm:p-6 flex flex-col md:flex-row gap-4 sm:gap-8'>
                 {/* <div className='md:w-1/3 flex flex-col justify-between h-full'>*/}
