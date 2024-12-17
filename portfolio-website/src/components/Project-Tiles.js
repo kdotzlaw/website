@@ -108,6 +108,7 @@ const Project_Tiles = () => {
                                         <ChevronLeft className="w-6 h-6" />
                                     </button>
                                     <div className='flex-1 max-w-4xl'>
+                                        <h1>{getProjectsInCategory(selectedCategory)[currIndex].name}</h1>
                                         <ProjectCarousel project={getProjectsInCategory(selectedCategory)[currIndex]} />
                                     </div>
                                     <button 

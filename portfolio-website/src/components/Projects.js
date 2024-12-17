@@ -25,16 +25,16 @@ import { type } from '@testing-library/user-event/dist/type';
 
  //list of kvps
  export const categories = [
-    {id: 'react', name: 'React', icons:reactImg},
-    {id: 'python', name: 'Python', icons:pythonImg},
-    {id: 'sql', name: 'Databases', icons:sqlImg},
-    {id: 'bio', name: 'BioInformatics', icons:bioImg},
-    {id: 'cyber', name: 'Cyber Security', icons:cyber},
-    {id: 'flask', name: 'API Development', icons:flaskImg},
-    {id: 'fstack', name: 'Frontend Development', icons:fStackImg},
-    {id:'machine-learning', name: 'Machine Learning', icons:mlnn},
-    {id:'distributed', name:'Distributed Computing', icons:cyber}, //ICON
-    {id: 'data-mining', name: 'Data Mining', icons:cyber}, //ICON
+    {id: 'react', name: 'React', icons:reactImg, years:2},
+    {id: 'python', name: 'Python', icons:pythonImg, years:4},
+    {id: 'sql', name: 'Databases', icons:sqlImg, years: 5},
+    {id: 'bio', name: 'BioInformatics', icons:bioImg, years:1},
+    {id: 'cyber', name: 'Cyber Security', icons:cyber, years:1},
+    {id: 'flask', name: 'API Development', icons:flaskImg, years:2},
+    {id: 'fstack', name: 'Frontend Development', icons:fStackImg, years:2},
+    {id:'machine-learning', name: 'Machine Learning', icons:mlnn, years:2},
+    {id:'distributed', name:'Distributed Computing', icons:cyber, years:1}, //ICON
+    {id: 'data-mining', name: 'Data Mining', icons:cyber, years:2}, //ICON
   
     {id:'Java', name: 'Java', icons:cyber}, //ICON
     {id:'games', name: 'Python Game Development', icons:pythonImg}, //ICON
@@ -323,11 +323,7 @@ export const projects = [
             }
         ],
         summary:[
-            {type:'text', content: `The optimal alignment is: `},
-            {type:'text-break', content:`-GTTAT`},
-            {type:'text-break', content:`CGTT-T`}, 
-            {type:'text-break', content:`-GCAAT `}, 
-            {type:'text-break', content:`-CCGAT `}, 
+            {type:'text', content: `The optimal alignment is: -GTTAT CGTT-T -GCAAT -CCGAT `},
         ],
 
     },
@@ -554,7 +550,10 @@ export const projects = [
                 
             ]},
             
-        ]
+        ],
+        summary:[
+            {type:'text', content: ` `},   
+        ],
     },{
         id:13,
         types: ['games'],
@@ -564,6 +563,7 @@ export const projects = [
         ],
         url:'https://github.com/kdotzlaw/python-portfolio/blob/main/blackjack/main.py',
         description: 'A simple console driven Blackjack game against the computer. Built with Python and focuses on fundamentals like conditionals, loops, randomization, and project planning.',
+
     },
     {
         id:14,
