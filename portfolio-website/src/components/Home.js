@@ -20,6 +20,7 @@ const Home = () => {
   const scrollToProjects = () => {
     const projectsSection = document.getElementById('projects');
     if (projectsSection) {
+ 
       projectsSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
     }
   };

@@ -40,7 +40,17 @@ const Nav = () => {
         }`}>
         <nav className='container mx-auto flex justify-between items-center nav-content'>
           <ul className="flex space-x-6 nav-links">
-            <li id='nav-item'><Link to='/' className="py-2 px-4 nav-link">Home</Link></li>
+            <li id='nav-item'>
+              <Link 
+                    to='/' 
+                    className="py-2 px-4 nav-link"
+                    onClick={() => {
+                      window.scrollTo({ top: 0, behavior: 'smooth' });
+                    }}
+                  >
+                  Home
+                </Link>
+            </li>
             <li id='nav-item'>
               <a href='#projects' 
                  onClick={toggleSidebar} 
