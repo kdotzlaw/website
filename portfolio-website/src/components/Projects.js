@@ -40,19 +40,20 @@ import sb from '../img/study-buddy.png';
 
  //list of kvps
  export const categories = [
-    {id: 'react', name: 'React', icons:reactImg, years:2},
-    {id: 'python', name: 'Python', icons:pythonImg, years:4},
-    {id: 'sql', name: 'Databases', icons:sqlImg, years: 5},
-    {id: 'bio', name: 'BioInformatics', icons:bioImg, years:1},
-    {id: 'cyber', name: 'Cyber Security', icons:cyber, years:1},
-    {id: 'flask', name: 'API Development', icons:flaskImg, years:2},
-    {id: 'fstack', name: 'Frontend Development', icons:fStackImg, years:2},
-    {id:'machine-learning', name: 'Machine Learning', icons:mlnn, years:2},
-    {id:'distributed', name:'Distributed Computing', icons:cyber, years:1}, //ICON
-    {id: 'data-mining', name: 'Data Mining', icons:cyber, years:2}, //ICON
-  
-    {id:'Java', name: 'Java', icons:cyber}, //ICON
-    {id:'games', name: 'Game Development', icons:pythonImg}, //ICON
+    {id: 'react', name: 'React', icons:reactImg, years:2, blurb:`Wow i am testing out this thing and hopefully it works good`},
+    {id: 'python', name: 'Python', icons:pythonImg, years:'5+', blurb:``},
+    {id: 'sql', name: 'Databases', icons:sqlImg, years: '5+', blurb:``},
+    {id: 'bio', name: 'BioInformatics', icons:bioImg, years:1, blurb:``},
+    {id: 'cyber', name: 'Cyber Security', icons:cyber, years:1, blurb:``},
+    {id: 'flask', name: 'API Development', icons:flaskImg, years:2, blurb:``},
+    {id: 'fstack', name: 'Frontend Development', icons:fStackImg, years:2, blurb:``},
+    {id:'machine-learning', name: 'Machine Learning', icons:mlnn, years:2, blurb:``},
+    {id:'distributed', name:'Distributed Computing', icons:cyber, years:1, blurb:``}, //ICON
+    {id: 'data-mining', name: 'Data Mining', icons:cyber, years:2, blurb:``}, //ICON
+    {id:'c', name: 'C/C#/C++', icons:cyber, years:2, blurb:``}, //ICON
+    {id:'git', name:'Git', icons:cyber,years:'5+'},
+    {id:'Java', name: 'Java', icons:cyber, years:'5+', blurb:``}, //ICON
+    {id:'games', name: 'Game Development', icons:pythonImg,years:1, blurb:``}, //ICON
 ];
 //Project list
 export const projects = [

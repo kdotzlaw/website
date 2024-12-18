@@ -29,6 +29,7 @@ const CategoryModal = ({ category, projects, onClose }) => {
             <p className="text-[var(--text-muted)]">
               {category.years} {category.years === 1 ? 'year' : 'years'} of experience
             </p>
+            <p className='mb-2 text-[var(--text)]'>{category.blurb}</p>
           </div>
           
           <div className="modal-project-card p-4 rounded-lg">
