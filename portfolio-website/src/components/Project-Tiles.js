@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
-
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 //component imports
 
 //Project is a list of projects
@@ -8,6 +9,7 @@ import CategoryModal from './Category-Modal';
 //style imports
 //import '../styles/Projects.css';
 import '../styles/main.css';
+import { useEffect } from 'react';
 
 
 //Project category tiles, when clicked, the projects in that category will be displayed via carousel
@@ -15,6 +17,13 @@ const Project_Tiles = () => {
     const [selectedCategory, setSelectedCategory] = useState(null);
     const [currIndex, setCurrIndex] = useState(0);
    
+    //Animation on scroll
+    useEffect(() => {
+        AOS.init({
+          duration: 1000,
+          once: false // Allows animation to repeat
+        });
+      }, []);
     
 
 
@@ -47,7 +56,7 @@ const Project_Tiles = () => {
                 <div className="max-w-6xl mx-auto flex flex-col items-center about-projects-container">*/}
                  <div className='container mx-auto w-3/4'>
                  <div className="about-projects-container flex flex-col items-center">
-                    <div className='about-section text-center '>
+                    <div className='about-section text-center ' data-aos="fade-up">
                          {/*Detailed About Me*/}
                         <h1 className="text-2xl md:text-2xl font-medium mb-6  home-subtitle">About Me</h1>
                             <p className="text-lg md:text-base text-gray-300 max-w-2xl mx-auto leading-relaxed ">
@@ -61,11 +70,11 @@ const Project_Tiles = () => {
                             My passion projects are in the areas of data science, machine learning, and artificial intelligence, investigating how to use these technologies to further medical research and diagnosis.
                             </p>
                     </div>
-                  <div className='skills-section py-6'>
+                  <div className='skills-section py-6' data-aos="fade-up">
                     <h3 className="text-5xl md:text-4xl font-bold mb-4  text-transparent bg-clip-text home-subtitle">Skills & Projects</h3>
                   </div>
                     {/*Project Tiles */}
-                    <div  className="flex justify-center items-center w-full">
+                    <div  className="flex justify-center items-center w-full" data-aos="fade-up">
 
                 
                     <div className="min-h-[90vh] w-[90vw] max-w-[1280px] mx-auto flex flex-col items-center">
