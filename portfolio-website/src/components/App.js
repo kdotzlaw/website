@@ -4,7 +4,7 @@ import '../styles/main.css';
 import Nav from './Nav';
 import Home from './Home';
 import Projects from './Project-Tiles';
-
+import AnimatedBackground from './Animated-Background';
 import Contact from './Contact';
 
 
@@ -21,6 +21,7 @@ function App() {
     <BrowserRouter>
         <div className="App">
             <Nav />
+    
             <Routes>
                 <Route path='/' element={
                   <>

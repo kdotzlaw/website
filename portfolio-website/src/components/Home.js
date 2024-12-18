@@ -5,7 +5,7 @@ import 'aos/dist/aos.css';
 //import '../styles/Home.css';
 import '../styles/main.css';
 import Project_Tiles from './Project-Tiles';
-
+import AnimatedBackground from './Animated-Background';
 
 const Home = () => {
   //Animation
@@ -40,7 +40,7 @@ const Home = () => {
 
   return (
     <div className="min-h-screen py-48 home-container"> {/* Added padding-top to account for header navigation */}
-     
+          <AnimatedBackground />
         <div className='container mx-auto w-3/4'>
           {/*Home Header*/}
           <div className=' flex flex-col items-center justify-center  home-container' id='home'>
