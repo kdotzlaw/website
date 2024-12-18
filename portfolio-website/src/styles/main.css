@@ -71,27 +71,43 @@
   }
 
   /* Footer */
+/* Footer */
 .footer-container {
-  /*background-color: var(--primary);*/
+
+  backdrop-filter: blur(12px);
   color: var(--text);
+  padding: 2rem 1.5rem;
+  margin-top: 4rem;
+}
+
+.footer-social-icon {
+  color: var(--text);
+  transition: all 0.3s ease;
+  padding: 0.5rem;
+  border-radius: 8px;
+ 
 }
 
 .footer-social-icon:hover {
   color: var(--accent);
+  transform: translateY(-2px);
+  
 }
 
 .footer-text-muted {
   color: var(--text-muted);
+  font-size: 0.875rem;
 }
-  
-  /* Project-Details.js */
-  #project-detail {
-    /*background-color: var(--primary);*/
-    color: var(--text);
-    padding-top: 6rem;
-    padding-left: 1.5rem;
-    padding-right: 1.5rem;
+
+@media (max-width: 768px) {
+  .footer-container {
+    padding: 1.5rem 1rem;
   }
+  
+  .footer-social-icon {
+    padding: 0.375rem;
+  }
+}
   
  /* .project-detail-content {
     max-width: 56rem;
@@ -101,8 +117,60 @@
     padding: 2rem;
     backdrop-filter: blur(8px);
   }*/
+/* About and Projects Section */
+.about-projects-container, .project-detail-container {
+  background: linear-gradient(
+    135deg,
+    rgba(45, 42, 50, 0.7) 0%,
+    rgba(113, 111, 129, 0.4) 100%
+  );
+  border-radius: 24px;
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 
+    0 8px 32px rgba(0, 0, 0, 0.2),
+    0 4px 16px rgba(0, 0, 0, 0.1);
+  margin: 2rem auto;
+  padding: 2.5rem;
+  transition: all 0.3s ease-in-out;
+}
 
-  /* Project-Tiles.js */
+.about-section {
+  padding: 2rem;
+  margin-bottom: 3rem;
+  border-radius: 16px;
+  background: linear-gradient(
+    145deg,
+    rgba(45, 42, 50, 0.6) 0%,
+    rgba(113, 111, 129, 0.3) 100%
+  );
+  border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.project-tile {
+  background: linear-gradient(
+    145deg,
+    rgba(45, 42, 50, 0.8) 0%,
+    rgba(113, 111, 129, 0.5) 100%
+  );
+  padding: 1.5rem;
+  border-radius: 16px;
+  backdrop-filter: blur(8px);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  transition: all 0.3s ease;
+  box-shadow: 
+    0 10px 20px rgba(0, 0, 0, 0.15),
+    0 5px 8px rgba(0, 0, 0, 0.1);
+}
+
+.project-tile:hover {
+  transform: translateY(-2px);
+  box-shadow: 
+    0 15px 30px rgba(0, 0, 0, 0.25),
+    0 10px 12px rgba(0, 0, 0, 0.15);
+  border-color: rgba(255, 255, 255, 0.1);
+}
+  /* Project-Tiles.js 
   .project-tile {
     background: linear-gradient(
         145deg,
@@ -127,7 +195,7 @@
         0 15px 30px rgba(0, 0, 0, 0.3),
         0 10px 12px rgba(0, 0, 0, 0.2),
         0 0 0 1px rgba(255, 255, 255, 0.2) inset;
-}
+}*/
   /*.project-tile {
     background-color: var(--bg-card);
     padding: 1.5rem;
@@ -138,7 +206,7 @@
   }*/
 
 
-  /* About and Projects Section */
+  /* About and Projects Section 
 .about-projects-container, .project-detail-container  {
   background: linear-gradient(
     135deg,
@@ -152,7 +220,7 @@
   padding: 2rem;
   transition: all 0.3s ease-in-out;
 }
-
+*/
 
 
 /*.about-section {
@@ -297,34 +365,42 @@
     color: var(--accent);
   }
 
-  /* Category Modal */
+ /* Category Modal */
 .modal-overlay {
   position: fixed;
   inset: 0;
-  background-color: rgba(0, 0, 0, 0.5);
-  backdrop-filter: blur(8px);
+  background-color: rgba(0, 0, 0, 0.4);
+  backdrop-filter: blur(12px);
   z-index: 50;
 }
 
 .modal-container {
   background: linear-gradient(
     135deg,
-    var(--bg-card) 0%,
-    rgba(113, 111, 129, 0.8) 100%
+    rgba(45, 42, 50, 0.8) 0%,
+    rgba(113, 111, 129, 0.5) 100%
   );
-  backdrop-filter: blur(10px);
-  box-shadow: 0 8px 32px 0 rgba(45, 42, 50, 0.2);
+  border-radius: 24px;
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
 }
 
 .modal-project-card {
-  background-color: var(--primary);
-  border: 1px solid var(--secondary);
+  background: linear-gradient(
+    145deg,
+    rgba(45, 42, 50, 0.6) 0%,
+    rgba(113, 111, 129, 0.3) 100%
+  );
+  border-radius: 16px;
+  border: 1px solid rgba(255, 255, 255, 0.05);
   transition: all 0.3s ease;
 }
 
 .modal-project-card:hover {
-  transform: scale(1.02);
-  border-color: var(--accent);
+  transform: translateY(-2px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+  border-color: rgba(255, 255, 255, 0.1);
 }
 
 /* Animated Background */

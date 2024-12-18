@@ -80,41 +80,41 @@ const Home = () => {
           </div>
             {/*Footer with contact and socials */}
             <footer className="py-8 mt-auto footer-container">
-                  <div className="flex flex-col md:flex-row justify-between items-center gap-6">
-                      <div className="text-center md:text-left">
-                          <h3 className="text-xl font-semibold mb-2">Contact</h3>
-                          <a href="mailto:katrina@dotzlaw.com" className="footer-social-icon">
-                              katrina@dotzlaw.com
-                          </a>
-                      </div>
-                      
-                      <div className="text-center md:text-right">
-                          <h3 className="text-xl font-semibold mb-2">Connect</h3>
-                          <div className="flex justify-center md:justify-end space-x-4">
-                              <a 
-                                  href="https://www.linkedin.com/in/kdotzlaw" 
-                                  target="_blank" 
-                                  rel="noopener noreferrer"
-                                  className="footer-social-icon"
-                              >
-                                  <i className="fa-brands fa-linkedin text-2xl" />
-                              </a>
-                              <a 
-                                  href="https://github.com/kdotzlaw" 
-                                  target="_blank" 
-                                  rel="noopener noreferrer"
-                                  className="footer-social-icon"
-                              >
-                                  <i className="fa-brands fa-github text-2xl" />
-                              </a>
-                          </div>
-                      </div>
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div className="flex flex-col items-center">
+                  <h3 className="text-xl font-semibold mb-4">Contact</h3>
+                  <a href="mailto:katrina@dotzlaw.com" className="footer-social-icon">
+                    katrina@dotzlaw.com
+                  </a>
+                </div>
+                
+                <div className="flex flex-col items-center">
+                  <h3 className="text-xl font-semibold mb-4">Connect</h3>
+                  <div className="flex space-x-6">
+                    <a 
+                      href="https://www.linkedin.com/in/kdotzlaw" 
+                      target="_blank" 
+                      rel="noopener noreferrer"
+                      className="footer-social-icon"
+                    >
+                      <i className="fa-brands fa-linkedin text-2xl" />
+                    </a>
+                    <a 
+                      href="https://github.com/kdotzlaw" 
+                      target="_blank" 
+                      rel="noopener noreferrer"
+                      className="footer-social-icon"
+                    >
+                      <i className="fa-brands fa-github text-2xl" />
+                    </a>
                   </div>
-                  
-                  <div className="text-center mt-8 text-sm footer-text-muted">
-                      © {new Date().getFullYear()} Katrina Dotzlaw. All rights reserved.
-                  </div>
-              </footer>
+                </div>
+              </div>
+              
+              <div className="text-center mt-8 text-sm footer-text-muted">
+                © {new Date().getFullYear()} Katrina Dotzlaw. All rights reserved.
+              </div>
+</footer>
        
         </div>
 
