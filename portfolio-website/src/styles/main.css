@@ -293,3 +293,33 @@
   .social-icon:hover {
     color: var(--accent);
   }
+
+  /* Category Modal */
+.modal-overlay {
+  position: fixed;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(8px);
+  z-index: 50;
+}
+
+.modal-container {
+  background: linear-gradient(
+    135deg,
+    var(--bg-card) 0%,
+    rgba(113, 111, 129, 0.8) 100%
+  );
+  backdrop-filter: blur(10px);
+  box-shadow: 0 8px 32px 0 rgba(45, 42, 50, 0.2);
+}
+
+.modal-project-card {
+  background-color: var(--primary);
+  border: 1px solid var(--secondary);
+  transition: all 0.3s ease;
+}
+
+.modal-project-card:hover {
+  transform: scale(1.02);
+  border-color: var(--accent);
+}

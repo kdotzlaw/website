@@ -1,10 +1,10 @@
 import React, { useState } from 'react';
-import { ChevronLeft, ChevronRight} from 'lucide-react';
+
 //component imports
-import  ProjectCarousel from './Project-Carousel';
+
 //Project is a list of projects
 import { categories, projects } from './Projects';
-
+import CategoryModal from './Category-Modal';
 //style imports
 //import '../styles/Projects.css';
 import '../styles/main.css';
@@ -81,19 +81,28 @@ const Project_Tiles = () => {
                                             );
                                             setCurrIndex(0);
                                         }}
-                                        className={`p-3 sm:p-4 lg:p-6 rounded-lg cursor-pointer flex flex-col items-center justify-center 
+                                        className={`relative p-3 sm:p-4 lg:p-6 rounded-lg cursor-pointer
                                             transition-all duration-300 transform hover:scale-105 
                                             ${selectedCategory === category.id ? 'bg-teal bg-opacity-20' : 'bg-white bg-opacity-10'}`
                                         }
                                     >
-                                        <img 
-                                            src={category.icons}
-                                            alt={category.name}
-                                            className="w-8 h-8 sm:w-10 sm:h-10 lg:w-12 lg:h-12 mx-auto mb-2 object-contain"
-                                        />
-                                        <h3 className="text-xs sm:text-sm lg:text-base font-semibold text-center">
-                                            {category.name}
-                                        </h3>
+                                         <div className="absolute top-2 left-2">
+                                                <img 
+                                                    src={category.icons}
+                                                    alt={category.name}
+                                                    className="w-6 h-6 sm:w-8 sm:h-8 object-contain"
+                                                />
+                                            </div>
+                                            <div className="mt-8 text-center">
+                                                <h3 className="text-sm sm:text-base font-semibold mb-2">
+                                                    {category.name}
+                                                </h3>
+                                                {category.years && (
+                                                    <p className="text-xs sm:text-sm text-gray-300">
+                                                        {category.years} {category.years === 1 ? 'year' : 'years'} experience
+                                                    </p>
+                                                )}
+                                            </div>
                                     </div>
                                 ))}
                             </div>
@@ -101,27 +110,12 @@ const Project_Tiles = () => {
                     
                         {/*<div className='flex items-center justify-center gap-4 mt-8 w-full'>*/} 
                             {selectedCategory && (
-                                <div className='flex items-center justify-center gap-4 mt-8 w-full max-w-5xl'> 
-                                    <button 
-                                        onClick={prevSlide} 
-                                      className='p-2 rounded-full bg-teal bg-opacity-20 hover:bg-opacity-30 carousel-nav'
-                                    >
-                                        <ChevronLeft className="w-6 h-6" />
-                                    </button>
-                                    <div className='flex-1 max-w-4xl'>
-                                       
-                                        <ProjectCarousel
-                                             project={getProjectsInCategory(selectedCategory)[currIndex]}
-                                             onNextSlide={nextSlide}
-                                         />
-                                    </div>
-                                    <button 
-                                        onClick={nextSlide} 
-                                        className='p-2 rounded-full bg-teal bg-opacity-20 hover:bg-opacity-30 carousel-nav'
-                                    >
-                                        <ChevronRight className="w-6 h-6" />
-                                    </button>
-                                </div>
+                                 <CategoryModal 
+                                        category={selectedCategory}
+                                        projects={projects}
+                                        onClose={() => setSelectedCategory(null)}
+                               />
+                              
                             )}
                         </div>
                     </div>
