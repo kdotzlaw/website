@@ -1,5 +1,6 @@
- import sb from '../img/study-buddy.png';
 
+
+ import { type } from '@testing-library/user-event/dist/type';
 
 //Logos
 import flaskImg from '../img/flask.png';
@@ -8,20 +9,34 @@ import pythonImg from '../img/python.png';
 import sqlImg from '../img/sql.png';
 import bioImg from '../img/bio.png';
 import fStackImg from '../img/fStack.png';
+
 //Images
 import cyber from '../img/cyber.png';
+// * ESN Images
 import sine1 from '../img/2sine-1step.png';
 import sine2 from '../img/2sine-2step.png';
 import lorenz1 from '../img/lorenz-1step.png';
 import lorenz2 from '../img/lorenz-2step.png';
-import peace from '../img/peace.png';
 import mlnn from '../img/ml-nn.jpg';
 import esnImage from '../img/esn.JPG';
+// * Bio Images
 import clustal1 from '../img/clustal1.JPG';
 import clustal2 from '../img/clustal2.JPG';
 import clustal3 from '../img/clustal3.JPG';
+
+// * Com,p Sec Images
+import rsa_cbc from '../img/rsa_CBC_encrypt.JPG';
+import rsa_ecb from '../img/rsa_ECB_encrypt.JPG';
+import orig_rsa from '../img/orig_rsaImg.JPG';
+
+// * Game Images
+
+
+// * Misc Images
+import peace from '../img/peace.png';
 import sb_arc from '../img/StudyBuddyArch.png'
-import { type } from '@testing-library/user-event/dist/type';
+import sb from '../img/study-buddy.png';
+
 
  //list of kvps
  export const categories = [
@@ -37,7 +52,7 @@ import { type } from '@testing-library/user-event/dist/type';
     {id: 'data-mining', name: 'Data Mining', icons:cyber, years:2}, //ICON
   
     {id:'Java', name: 'Java', icons:cyber}, //ICON
-    {id:'games', name: 'Python Game Development', icons:pythonImg}, //ICON
+    {id:'games', name: 'Game Development', icons:pythonImg}, //ICON
 ];
 //Project list
 export const projects = [
@@ -524,38 +539,8 @@ export const projects = [
            
         ]
     },
-    {
+   {
         id:12,
-        types: [ 'cyber'],
-        header:'Computer Security',
-        url:'https://github.com/kdotzlaw/UniversityProjects/tree/main/ComputerSecurity',
-        images: [
-            { src: cyber, alt: 'Cyber Security Logo' },
-           
-        ],
-        description: 'A collection of various Computer Security labs and assignment reports',
-        sub:`Process`,
-        sub_content:[
-            {type:'text', content:'A collection of various Computer Security labs and assignment reports done in a Linux environment using Python, C, and SQL'},
-        ],
-        footer:'Assignments include: ',
-        result: [
-            {type:'list', content:[
-                {type:'text', content:'A comparison of encryption and decryption using CBC, ECB, and RSA algorithms'},
-                {type:'text', content:'An experiment to determine the impact of address randomization on buffer overflow attacks'},
-                {type:'text', content:'A demonstration of environment variable manipulation on a Linux system and SUID programs'},
-                {type:'text', content:'SQL injection attacks on a website using SELECT, UPDATE, and appending a query'},
-                {type:'text', content:'A demonstration of a SYN flooding attack and SYN cookie countermeasure using docker containers on a Linux system'},
-                
-                
-            ]},
-            
-        ],
-        summary:[
-            {type:'text', content: ` `},   
-        ],
-    },{
-        id:13,
         types: ['games'],
         header:'Blackjack',
         images: [
@@ -566,7 +551,7 @@ export const projects = [
 
     },
     {
-        id:14,
+        id:13,
         types: ['games'],
         header:'Tic-Tac-Toe',
         images: [
@@ -575,7 +560,7 @@ export const projects = [
         url:'https://github.com/kdotzlaw/python-portfolio/blob/main/professional-portfolio/tic-tac-toe.py',
         description: 'Plays a game of Tic Tac Toe against the computer where the computer makes weighted choices. A python game that focuses on conditionals, loops, dictionaries, and game logic.',
     },{
-        id:15,
+        id:14,
         types: ['games'],
         header:'Snake',
         images: [
@@ -584,7 +569,7 @@ export const projects = [
         url:'https://github.com/kdotzlaw/python-portfolio/blob/main/turtle-graphics/snake/main.py',
         description: 'A game created with Python and Turtle Graphics that explores event handling, collision detection, game mechanics, and game design.',
     },{
-        id:16,
+        id:15,
         types:['machine-learning'],
         header:'2D Multiagent Systems Communication',
         images: [
@@ -652,6 +637,121 @@ export const projects = [
             {type: 'text', content: 'Based on the evaluation criteria, reinforcement learning communication was the most effective protocol for 2D multiagent systems'},
         ]
 
+    },{
+        id:16,
+        types:['cyber'],
+        header:'Encryption & Decryption',
+        url:'https://github.com/kdotzlaw/UniversityProjects/blob/main/ComputerSecurity/rsa/rsa.pdf',
+        description: 'A comparison between CBC encryption and ECB encryption on a given image, and a demonstration of RSA encryption and decryption on given text.',
+        images:[
+
+
+
+        ],
+        sub:'',
+        sub_content:[
+           
+        ],
+       
+       footer:'',
+       result:[
+           
+        ],
+        summary:[
+            {type: 'text', content: ''},
+
+        ],
+
+    },{
+        id:17,
+        types:['cyber'],
+        header:'Buffer Overflow Exploits',
+        url:'https://github.com/kdotzlaw/UniversityProjects/blob/main/ComputerSecurity/buffer-overflow/bufferoverflow-address-randomization.pdf',
+        description: 'An experiment to determine the impact of address randomization on buffer overflow exploits, and a demonstration of a buffer overflow exploit.',
+        images:[
+
+
+
+        ],
+        sub:'',
+        sub_content:[
+           
+        ],
+        footer:'',
+       result:[
+           
+        ],
+        summary:[
+            {type: 'text', content: ''},
+
+        ],
+    },{
+        id:18,
+        types:['cyber'],
+        header:'Environment Variable Manipulation',
+        url:'https://github.com/kdotzlaw/UniversityProjects/blob/main/ComputerSecurity/env-vars/env-vars.pdf',
+        description: 'A demonstration of environment variable manipulation in Linux, including passing environment variables between processes. Additionally explores the PATH environment variable and how it affects SUID programs.',
+        images:[    
+
+        ],
+        sub:'',
+        sub_content:[
+           
+        ],
+      
+      footer:'',
+      result:[
+          
+      ],
+      summary:[
+          {type: 'text', content: ''},
+  
+      ],
+    },{
+        id:19,
+        types:['cyber','sql'],
+        header:'SQL Injection',
+        url:'https://github.com/kdotzlaw/UniversityProjects/blob/main/ComputerSecurity/SQL-injection/sql-injection.pdf',
+        description: 'Demonstrates SQL injection attacks on a website using both CMD and website user input to perform injections. SQL injections include injection via SELECT, appending a new SQL statement to user input, and injection via UPDATE.',
+        images:[
+        ],
+        sub:'',
+        sub_content:[
+           
+        ],
+     
+     footer:'',
+     result:[
+         
+     ],
+     summary:[
+         {type: 'text', content: ''},
+ 
+     ],
+    },{
+        id:20,
+        types:['cyber'],
+        header:'SYN Flooding & SYN Cookie Countermeasure',
+        url:'https://github.com/kdotzlaw/UniversityProjects/blob/main/ComputerSecurity/SYN-flooding/SYN-flooding.pdf',
+        description: 'Demonstrates a SYN flooding attack and SYN cookie countermeasure using docker containers to simulate a victim and an attacker.',
+        images:[
+
+
+
+        ],
+        sub:'',
+        sub_content:[
+           
+        ],
+       
+       footer:'',
+       result:[
+           
+        ],
+        summary:[
+            {type: 'text', content: ''},
+
+        ],
     }
 
 ]; //end of project list
