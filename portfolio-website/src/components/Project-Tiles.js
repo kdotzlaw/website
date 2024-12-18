@@ -111,7 +111,7 @@ const Project_Tiles = () => {
                         {/*<div className='flex items-center justify-center gap-4 mt-8 w-full'>*/} 
                             {selectedCategory && (
                                  <CategoryModal 
-                                        category={selectedCategory}
+                                        category={categories.find(cat => cat.id === selectedCategory)}
                                         projects={projects}
                                         onClose={() => setSelectedCategory(null)}
                                />
