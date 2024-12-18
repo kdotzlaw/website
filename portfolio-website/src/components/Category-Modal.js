@@ -1,10 +1,18 @@
 import React from 'react';
 import { X } from 'lucide-react';
 import { Link } from 'react-router-dom';
+import { useEffect } from 'react';
 
 const CategoryModal = ({ category, projects, onClose }) => {
   const categoryProjects = projects.filter(project => project.types.includes(category.id));
-  
+  //disable scrolling of page when modal is open
+  useEffect(() => {
+    document.body.style.overflow = 'hidden';
+    return () => {
+      document.body.style.overflow = 'unset';
+    };
+  }, []);
+
   return (
     <div className="modal-overlay flex items-center justify-center p-2 sm:p-4">
         <div className="modal-container w-full max-w-[95%] sm:max-w-2xl max-h-[90vh] sm:max-h-[80vh] overflow-hidden rounded-lg">

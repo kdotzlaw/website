@@ -20,10 +20,24 @@ const Home = () => {
   const scrollToProjects = () => {
     const projectsSection = document.getElementById('projects');
     if (projectsSection) {
+      const navHeight = document.getElementById('nav').offsetHeight;
+      const yOffset = -navHeight - 32;
+      const y = projectsSection.getBoundingClientRect().top + window.pageYOffset + yOffset;
+      window.scrollTo({ 
+        top: y, 
+        behavior: 'smooth' 
+      });
+      AOS.refresh(); // Refresh AOS animations
+    }
+  };
+  /*const scrollToProjects = () => {
+    const projectsSection = document.getElementById('projects');
+    if (projectsSection) {
  
       projectsSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
     }
-  };
+  };*/
+
   return (
     <div className="min-h-screen py-48 home-container"> {/* Added padding-top to account for header navigation */}
      
@@ -43,7 +57,7 @@ const Home = () => {
               </p>
              <br/>
             <div className='btn-group row d-flex align-items-center justify-content-center flex-row pb-4 gy-4'>
-              <button className='button-primary ' onClick={scrollToProjects}> View my Projects </button>
+              <button className='button-primary ' onClick={scrollToProjects}> Skills & Tech </button>
               <button className='button-primary'> Contact Me </button>
             </div>
            
