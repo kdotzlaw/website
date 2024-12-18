@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
 import { categories, projects }  from './Projects';
 import ImageModal from './Img-Modal';
@@ -7,6 +7,11 @@ import '../styles/main.css';
 const ProjectDetail = ({projects}) => {
     //track details by project id
     const { projectId } = useParams();
+    //Project detail should always be scrolled to top
+    useEffect(() => {
+        window.scrollTo(0, 0);
+      }, [projectId]);
+
     const project = projects?.find(p => p.id === parseInt(projectId));
     const [selectedImage, setSelectedImage] = useState(null);
 
@@ -15,7 +20,7 @@ const ProjectDetail = ({projects}) => {
     const handleClick = () => {
         window.open(project.url, "_blank");
       };
-    
+
     //function to handle the hover effect on images
     const ImageWithHover = ({ image, onClick }) => (
         <div className="group relative overflow-hidden rounded-lg">
