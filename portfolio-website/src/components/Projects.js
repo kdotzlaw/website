@@ -740,16 +740,22 @@ export const projects = [
 
 
         ],
-        sub:'',
+        sub:'Buffer Overflow',
         sub_content:[
-           
+           {type:'text', content:`
+            When address randomization is off, I can use gbd to create an empty bad file, create a breakpoint at bof, and run the provided shellcode. 
+            Using the breakpoint, I can determine the pointer to the current stack frame and the buffer. Using the space between the buffer and the stack frame,
+             I can determine the location of the return address.
+            I edited the provided python script to change the return address to perform a buffer overflow exploit, which will give me root access. 
+            Using the terminal, I can compile the script and make it executable. I then run the exploit and get root access.
+            `},
         ],
-        footer:'',
+        footer:'Buffer Overflow & Address Randomization',
        result:[
-           
+           {type:'text', content:`With address randomization on, it took just over 12 minutes for the buffer overflow exploit to work.`},
         ],
         summary:[
-            {type: 'text', content: ''},
+            {type: 'text', content: 'This lab compares the exploitability of a buffer overflow attack and the effectiveness of address randomization.'},
 
         ],
     },{
@@ -761,17 +767,36 @@ export const projects = [
         images:[    
 
         ],
-        sub:'',
+        sub:'Passing Environment Variables & SUID Programs',
         sub_content:[
-           
-        ],
+           {type:'text', content:`
+            In this experiment, I passed environment variables between a parent and child process and then between the child back to the parent. I then piped the output of both attempts to separate files and compared the results using diff. 
+            Since diff detects no difference between the two files, the environement variables of both processes are the same, indicating that the environment variables were passed successfully.
+            `},
+            {type:'text', content:`To change a program into a SUID program, I followed the steps below:`},
+            {type:'list-left', content:[
+                    {type:'text', content:`To change ownership to root: sudo chown root a.out`},
+                    {type:'text', content:`To make a.out a SUID program: sudo chmod 4755 a.out After ensuring 
+                        hat I wasnt in a root account, I set the environment variables PATH, LD_LIBRARY_PATH and a newly created variable TEST as specified in the lab.
+                        `},
+                    ]},
+            {type:'text', content:`Using ./a.out | grep LD_LIBRARY_PATH, I can see that the environment variable is NOT transfered to the SUID program, but TEST and PATH are.`},
+           ],
       
-      footer:'',
+      footer:'Trojans',
       result:[
+        {type:'text',content:`
+            
+            Using the provided code, suid.c, I compiled it into an object tile (goodls), set its root ownership, and made it a SUID program. 
+            Running goodls searches the correct path and runs ls.
+            To get suid.c to run a trojan, I created another file (badls) and compiled it into ls. I changed the PATH environement variable so that the home directory will be searched before the PATH variable. 
+            Since badls was compiled into ls and it has the same name as the relative path in goodls, it was run before goodls and the trojan was executed.
+            
+        `}
           
       ],
       summary:[
-          {type: 'text', content: ''},
+          {type: 'text', content: 'This lab is a demonstration of environmeent variable manipulation, creation, and passing environement variables between processes.'},
   
       ],
     },{
@@ -787,8 +812,17 @@ export const projects = [
            
         ],
      
-     footer:'',
+     footer:'Process',
      result:[
+        {type:'text', content:`This lab is a demonstration of SQL injection using a webpage form and the command line to view and change database information. SQL injection commands include:`},
+        {type:'list-left', content:[
+            {type:'text', content:`Injection via SELECT directly on a web page`},
+            {type:'text', content:`Injection via SELECT using curl on the command line`},
+            {type:'text', content:`Injection via appending a new SQL statement on a web page`},
+            {type:'text', content:`Injection via UPDATE on a web page`},
+            
+          ]
+        },
          
      ],
      summary:[
@@ -806,14 +840,29 @@ export const projects = [
 
 
         ],
-        sub:'',
+        sub:'SYN Flooding',
         sub_content:[
-           
+           {type:'text', content:`
+            On the victim container, I turned off the cookie counter measure by setting the SYN_COOKIE environment variable to 0. 
+            Then I launched the SYN-Flooding attack from the attacker container on the victim container. When checking the victim container using netstat, I can see that the queue of connections is full, 
+            and after flushing all past records of connection, I can attempt to telnet onto the victim container. Attempting to telnet results in a timeout, indicating that the SYN-Flooding attack was successful.
+        `},
         ],
        
-       footer:'',
+       footer:'SYN Cookie Countermeasure',
        result:[
-           
+           {type:'text',content:`
+            The syncookie countermeasure essentially causes connections to not be held in the queue. 
+            Instead, the victim container passes a cookie with its SYN+ACK and drops the connection from its queue. 
+            Then if the victim gets an ACK response with a cookie, it recalculates the cookie using known connection information.
+             If the newly calculated cookie matches the cookie the victim recieved with the response, 
+            the connection is ESTABLISHED. With this countermeasure in place, the queue doesn't need to store previous connection records, since connections rely on calculating and matching cookies.
+            `},
+            {type:'text', content:`
+                To turn the countermeasure back on, I set the SYN_COOKIE environment variable to 1 on the victim container. 
+                Then I ran the SYN-Flooding attack again and checked the SYN_RECV connections queue on the victim container.
+                 On my host VM, I can successfully telnet to the victim container, showing that the SYN-Cookie countermeasure was effective.
+            `},
         ],
         summary:[
             {type: 'text', content: ''},
