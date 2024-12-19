@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
 import { categories, projects }  from './Projects';
 import ImageModal from './Img-Modal';
+import AnimatedBackground from './Animated-Background';
 import '../styles/main.css';
 //A seperate page with project details added dynamically based on id
 const ProjectDetail = ({projects}) => {
@@ -196,6 +197,7 @@ const ProjectDetail = ({projects}) => {
 
     return(
         <>
+        <AnimatedBackground />
         <div id='project-detail' className='min-h-screen pt-16 pb-16 sm:pt-20 px-4 sm:px-8 lg:px-12 text-white flex justify-center items-start'>
               <div className='container mx-auto w-3/4'>
                 <div className='pt-20 px-4 md:px-12  min-h-screen text-white project-detail-container'>
