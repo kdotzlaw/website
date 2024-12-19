@@ -233,7 +233,7 @@ export const projects = [
     },
     {
         id:3,
-        types:['python, distributed'],
+        types:['python', 'distributed'],
         header:'Distributed Blockchain',
         images: [
             { src: pythonImg, alt: 'Python Logo' },
@@ -670,7 +670,7 @@ export const projects = [
 
     },{
         id:16,
-        types:['cyber'],
+        types:['cyber','c'],
         header:'Encryption & Decryption',
         url:'https://github.com/kdotzlaw/UniversityProjects/blob/main/ComputerSecurity/rsa/rsa.pdf',
         description: 'A comparison between CBC encryption and ECB encryption on a given image, and a demonstration of RSA encryption and decryption on given text.',
@@ -731,7 +731,7 @@ export const projects = [
 
     },{
         id:17,
-        types:['cyber'],
+        types:['cyber','c'],
         header:'Buffer Overflow Exploits',
         url:'https://github.com/kdotzlaw/UniversityProjects/blob/main/ComputerSecurity/buffer-overflow/bufferoverflow-address-randomization.pdf',
         description: 'An experiment to determine the impact of address randomization on buffer overflow exploits, and a demonstration of a buffer overflow exploit.',
@@ -760,7 +760,7 @@ export const projects = [
         ],
     },{
         id:18,
-        types:['cyber'],
+        types:['cyber','c'],
         header:'Environment Variable Manipulation',
         url:'https://github.com/kdotzlaw/UniversityProjects/blob/main/ComputerSecurity/env-vars/env-vars.pdf',
         description: 'A demonstration of environment variable manipulation in Linux, including passing environment variables between processes. Additionally explores the PATH environment variable and how it affects SUID programs.',
