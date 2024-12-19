@@ -40,20 +40,50 @@ import sb from '../img/study-buddy.png';
 
  //list of kvps
  export const categories = [
-    {id: 'react', name: 'React', icons:reactImg, years:2, blurb:`Wow i am testing out this thing and hopefully it works good`},
-    {id: 'python', name: 'Python', icons:pythonImg, years:'5+', blurb:``},
-    {id: 'sql', name: 'Databases', icons:sqlImg, years: '5+', blurb:``},
-    {id: 'bio', name: 'BioInformatics', icons:bioImg, years:1, blurb:``},
-    {id: 'cyber', name: 'Cyber Security', icons:cyber, years:1, blurb:``},
-    {id: 'flask', name: 'API Development', icons:flaskImg, years:2, blurb:``},
-    {id: 'fstack', name: 'Frontend Development', icons:fStackImg, years:2, blurb:``},
-    {id:'machine-learning', name: 'Machine Learning', icons:mlnn, years:2, blurb:``},
-    {id:'distributed', name:'Distributed Computing', icons:cyber, years:1, blurb:``}, //ICON
-    {id: 'data-mining', name: 'Data Mining', icons:cyber, years:2, blurb:``}, //ICON
-    {id:'c', name: 'C/C#/C++', icons:cyber, years:2, blurb:``}, //ICON
-    {id:'git', name:'Git', icons:cyber,years:'5+'},
-    {id:'Java', name: 'Java', icons:cyber, years:'5+', blurb:``}, //ICON
-    {id:'games', name: 'Game Development', icons:pythonImg,years:1, blurb:``}, //ICON
+    {id: 'react', name: 'React', icons:reactImg, years:2, blurb:`
+        Wow i am testing out this thing and hopefully it works good
+        
+        `},
+    {id: 'python', name: 'Python', icons:pythonImg, years:'5+', blurb:`
+        
+        
+        `},
+    {id: 'sql', name: 'Databases', icons:sqlImg, years: '5+', blurb:`
+        
+        `},
+    {id: 'bio', name: 'BioInformatics', icons:bioImg, years:1, blurb:`
+        
+        `},
+    {id: 'cyber', name: 'Cyber Security', icons:cyber, years:1, blurb:`
+        
+        `},
+    {id: 'flask', name: 'API Development', icons:flaskImg, years:2, blurb:`
+        
+        `},
+    {id: 'fstack', name: 'Frontend Development', icons:fStackImg, years:2, blurb:`
+        
+        `},
+    {id:'machine-learning', name: 'Machine Learning', icons:mlnn, years:2, blurb:`
+        
+        `},
+    {id:'distributed', name:'Distributed Computing', icons:cyber, years:1, blurb:`
+        
+        `}, //ICON
+    {id: 'data-mining', name: 'Data Mining', icons:cyber, years:2, blurb:`
+        
+        `}, //ICON
+    {id:'c', name: 'C/C#/C++', icons:cyber, years:2, blurb:`
+        
+        `}, //ICON
+    {id:'git', name:'Git', icons:cyber,years:'5+', blurb:`
+        
+        `},
+    {id:'Java', name: 'Java', icons:cyber, years:'5+', blurb:`
+        
+        `}, //ICON
+    {id:'games', name: 'Game Development', icons:pythonImg,years:1, blurb:`
+        
+        `}, //ICON
 ];
 //Project list
 export const projects = [
@@ -645,21 +675,57 @@ export const projects = [
         url:'https://github.com/kdotzlaw/UniversityProjects/blob/main/ComputerSecurity/rsa/rsa.pdf',
         description: 'A comparison between CBC encryption and ECB encryption on a given image, and a demonstration of RSA encryption and decryption on given text.',
         images:[
-
-
-
+           
+             
+            
         ],
-        sub:'',
+        sub:'Process',
         sub_content:[
-           
+            {type:'text-sub', content:`CBC & ECB Encryption`},
+            {type:'text', content:`
+                Using the same key,  I compared the encryption security of CBC and ECB encryption on the image below.
+                `},
+            {type:'image-group', images: [
+                { src: orig_rsa, alt: 'Original Image', id: 'orig_rsa' },
+                ]},
+                {type:'text-sub', content:`RSA Encryption & Decryption`},
+                {type:'text', content:`
+                   Using C and the BIGNUM library, I derived the private key, encrypted plaintext, and verifyed the encryption by decrypting the ciphertext using the public key. RSA private key generation is done using the following steps:
+                    `},
+            {type:'list-left', content:[
+                {type:'text', content:`Calculate n = p * q`},
+                {type:'text', content:`Calculate phin = (p-1) * (q-1) using p = hex (p-1) and q = hex (q-1)`},
+                {type:'text', content:`Calculate private key d such that ed = 1 mod phin`},
+            ]},    
+            {type:'text', content:`Encryption verification is done using the following steps:`},
+            {type:'list-left', content:[
+                {type:'text', content:`Encrypt plaintext using the public key (e,n) and res = plaintext^e mod n`},
+                {type:'text', content:`Decrypt ciphertext using the private key d and res = ciphertext^d mod n`},
+              
+            ]},
+    
         ],
-       
-       footer:'',
+       footer:'Results',
        result:[
-           
+          {type:'text-sub', content:`CBC Encryption`},
+            {type:'image-group', images: [
+                { src: rsa_cbc, alt: 'CBC Encryption', id: 'rsa_cbc' },
+            ]},
+            {type:'text', content:`In the image above, there are no clear patterns to see, only noise.`},
+            {type:'text-sub', content:`ECB Encryption`},
+            {type:'image-group', images: [
+                { src: rsa_ecb, alt: 'ECB Encryption', id: 'rsa_ecb' },
+            ]},
+            {type:'text', content:`In the image above, there are clear patterns that show the shapes of the original image and similar colours. Typically images are not suitable for ECB encryption since patterns are repeated in ECB.`},
+            {type:'text-sub', content:`Overall Results`},
+            {type:'text', content:`Compared to CBC, ECB is less secure since patterns are repeated and are clearly visible in the encrypted image.`},
+            
+            {type:'text-sub', content:`RSA Encryption & Decryption`},
+            {type:'text', content:`Using the derived private key, I successfully encrypted the plaintext, "A top secret!" and decrypted the ciphertext to obtain the original plaintext.`},
+
         ],
         summary:[
-            {type: 'text', content: ''},
+            {type: 'text', content: 'A comparison between CBC encryption and ECB encryption on a given image, and a demonstration of RSA encryption and decryption on given text.'},
 
         ],
 

@@ -86,7 +86,7 @@ const ProjectDetail = ({projects}) => {
         }
         //if result type is text-sub
         else if(item.type === 'text-sub'){
-            return <p key={index} className='mb-2 text-sm text-gray-300'>{item.content}</p>
+            return <p key={index} className='mb-2 text-sm text-sub'>{item.content}</p>
         }
        
          //if result type is image-group
@@ -137,7 +137,7 @@ const ProjectDetail = ({projects}) => {
         }
         //if result type is text-sub
         else if(item.type === 'text-sub'){
-            return <p key={index} className='mb-2 text-sm text-bold text-gray-300'>{item.content}</p>
+            return <p key={index} className='mb-2 text-sm text-bold text-sub'>{item.content}</p>
         }else if(item.type === 'text-footer'){
             return <p key={index} className='text-center text-2xl font-bold mb-4'>{item.content}</p>   
         }

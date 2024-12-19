@@ -40,6 +40,11 @@
     font-weight: 500;
     color: var(--text-muted);
   }
+
+  .text-sub{
+    font-weight: 500;
+    color: var(--text-muted);
+  }
   
   .home-about {
     margin-top: 3rem;
