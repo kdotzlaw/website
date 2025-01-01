@@ -61,7 +61,8 @@ const Project_Tiles = () => {
                         <h1 className="text-2xl md:text-2xl font-medium mb-6  home-subtitle">About Me</h1>
                             <p className="text-lg md:text-base text-gray-300 max-w-2xl mx-auto leading-relaxed ">
                                 I am a skilled backend developer and data analyst specializing in Python, JavaScript, database management systems (DBMS), and various query languages.
-                                I strive to create secure, efficient, scalable, and maintainable software creating easily understood technical documentation, using test-driven development (TDD), using cyber security principles, and by following the software development life cycle (SDLC).
+                                I strive to create secure, efficient, scalable, and maintainable software by creating easily understood technical documentation, using test-driven development (TDD), 
+                                using cyber security principles, and by following the software development life cycle (SDLC).
                                 
                             </p>
                             <br/>

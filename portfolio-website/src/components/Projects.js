@@ -41,48 +41,62 @@ import sb from '../img/study-buddy.png';
  //list of kvps
  export const categories = [
     {id: 'react', name: 'React', icons:reactImg, years:2, blurb:`
-        Wow i am testing out this thing and hopefully it works good
+        I started learning React on my own by following various tutorials and Udemy courses. I've used React for web development, and have worked on various projects including
+        a portfolio website, and a DBMS administrator dashboard (ongoing).
         
         `},
     {id: 'python', name: 'Python', icons:pythonImg, years:'5+', blurb:`
-        
+        I started learning Python on my own, earning certificates through Udemy. 
+        I've used Python for web development, creation and maintenence of DBMS, data analysis, bioinformatics, machine learning and game development.
+        The most notable projects I've worked on include a neural network for time series prediction, and a  model for predicting long covid-19 cases using data mining and machine learning, which resulted in three publications in IEEE.
         
         `},
     {id: 'sql', name: 'Databases', icons:sqlImg, years: '5+', blurb:`
+        I've been working with databases since high school and furthered my knowledge through various database courses, focusing on database security, efficiency, and persistence. 
+        I've worked with SQLite, SQL Server, MySQL, and MSSQL. 
         
         `},
     {id: 'bio', name: 'BioInformatics', icons:bioImg, years:1, blurb:`
-        
+        I took a bioinformatics course during my undergraduate degree, which focused on analyzing various biological datasets using Markov models, pattern mattching, and sequence alignment. 
+        I've worked on projects including a custom implementation of ClustalW, pattern matching on the Sorangium Cellulosum genome using the KMP algorithm, 
+        Neighbour Joining with Python to determine optimal alignments, and a custom implementation of a Hidden Markov Model.
         `},
     {id: 'cyber', name: 'Cyber Security', icons:cyber, years:1, blurb:`
-        
+        My first exposure to cyber security was through a university course. I've worked on various projects including a comparison of cryptographic algorithms and mitigating various exploits and vulnerabilities in C.
         `},
     {id: 'flask', name: 'API Development', icons:flaskImg, years:2, blurb:`
+        I have experience with Flask and have used it to create APIs for various web projects.  I've created endpoints, API documentation, and API integration tests with backend Python components.
         
         `},
     {id: 'fstack', name: 'Frontend Development', icons:fStackImg, years:2, blurb:`
-        
+        I have earned advanced certificates in HTML/CSS for web development through Udemy. I've used HTML, CSS, and JavaScript for various web projects, including a portfolio website and a DBMS administrator dashboard.
+        I also have experience using Wordpress and adding custom HTML/CSS to a Wordpress site.
         `},
     {id:'machine-learning', name: 'Machine Learning', icons:mlnn, years:2, blurb:`
-        
+         I've worked on various projects that use machine learning including a custom implementation of a neural network for time series prediction, a research project that analyzes multiagent system communication methods,
+         and a model for predicting long covid-19 cases.
         `},
     {id:'distributed', name:'Distributed Computing', icons:cyber, years:1, blurb:`
-        
+        My first exposure to distributed computing was through a university course. During this course, I used Python to join and interact with a network of peers, with the intent of synchronizing a blockchain.
         `}, //ICON
     {id: 'data-mining', name: 'Data Mining', icons:cyber, years:2, blurb:`
-        
+        My first exposure to data mining was through a university course where I worked with a group to analyze COVID-19 data using Python and data mining techniques, which resulted in three publications in IEEE alongside our professor.
         `}, //ICON
     {id:'c', name: 'C/C#/C++', icons:cyber, years:2, blurb:`
-        
+        I used C  throughout my undergraduate degree, specifically in cyber security, where I focused on mitigating exploits and encryption. 
+        I have earned beginner and intermediate certificates in C# through Udemy.
         `}, //ICON
     {id:'git', name:'Git', icons:cyber,years:'5+', blurb:`
-        
+        I used Git for the entirety of my undergraduate degree, and have been using it professionally since then.
+        I primarily use Git for version control and organization, but I have experience GitHub actions and GitHub pages to deploy and host various web-based projects.
         `},
     {id:'Java', name: 'Java', icons:cyber, years:'5+', blurb:`
-        
+        I've been working with Java for over 5 years, starting when I was in high school.
+        I've worked on a variety of projects including database interactions, game development, and OOP applications.
         `}, //ICON
-    {id:'games', name: 'Game Development', icons:pythonImg,years:1, blurb:`
-        
+    {id:'games', name: 'Game Development', icons:pythonImg,years:"1+", blurb:`
+        I've developed games in Python, Ruby, and Java, focusing on OOP and event-driven programming. Most of my games have been console-based. With Java I have developed Connect 4, where a user plays against the computer. Using Ruby,
+        I developed Clue using an OOP approach. Using Python, I've created Snake, Blackjack, and Tic-Tac-Toe.
         `}, //ICON
 ];
 //Project list
