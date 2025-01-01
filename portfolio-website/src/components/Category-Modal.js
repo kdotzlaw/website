@@ -5,17 +5,14 @@ import { useEffect } from 'react';
 
 const CategoryModal = ({ category, projects, onClose }) => {
   const categoryProjects = projects.filter(project => project.types.includes(category.id));
-  //disable scrolling of page when modal is open
-  useEffect(() => {
-    document.body.style.overflow = 'hidden';
-    return () => {
-      document.body.style.overflow = 'unset';
-    };
-  }, []);
+ 
+  const handleModalClick = (e) => {
+    e.stopPropagation();
+  };
 
   return (
     <div className="modal-overlay flex items-center justify-center p-2 sm:p-4">
-        <div className="modal-container w-full max-w-[95%] sm:max-w-2xl max-h-[90vh] sm:max-h-[80vh] overflow-hidden rounded-lg">
+        <div className="modal-container w-full max-w-[95%] sm:max-w-2xl max-h-[90vh] sm:max-h-[80vh] overflow-hidden rounded-lg" onClick={handleModalClick}>
             <div className="flex justify-between items-center p-3 sm:p-6 border-b border-[var(--secondary)]">
                 <div className="flex items-center space-x-2 sm:space-x-4">
                     <div className="p-1 sm:p-2 rounded-lg bg-[var(--primary)]">

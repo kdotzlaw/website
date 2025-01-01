@@ -9,7 +9,7 @@ import Contact from './Contact';
 
 
 import Blog from './Blog';
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import { HashRouter, Routes, Route } from 'react-router-dom';
 import ProjectDetail from './Project-Detail';
 import { projects } from './Projects';
 /*    <section id='blog'><Blog /></section>
@@ -18,7 +18,7 @@ function App() {
   //const [currentComponent, setCurrentComponent] = useState('Home');  
   //use routes to determine pages
   return(
-    <BrowserRouter>
+    <HashRouter>
         <div className="App">
             <Nav />
     
@@ -31,7 +31,7 @@ function App() {
                 <Route path="/projects/:projectId" element={<ProjectDetail projects={projects} />} />
             </Routes>
         </div>
-    </BrowserRouter>
+    </HashRouter>
   
   );
 }
