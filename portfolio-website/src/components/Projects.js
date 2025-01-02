@@ -280,17 +280,18 @@ export const projects = [
         footer:'Results',
         result:[
             {type:'list-left', content:[
-            {type:'text', content:`CONSENSUS is done every 2 minutes to ensure chain synchronization with distributed network and CONSENSUS requests can trigger the consensus process locally`},
-            {type:'text', content:`The local chain is always validated end-to-end before sending any block replies to peers and upon receiving a STATS request`},
-            {type:'text', content:`Correctly validates blocks using the following checks: 
-                1) Nonce is max 40 characters
-                2) A block must have >10 messages
-                3) Each message in a block  is max 20 characters
-                4) Each block hash must respect the defined order
-                5) Block difficulty 
-                
-                `},
+                {type:'text', content:`CONSENSUS is done every 2 minutes to ensure chain synchronization with distributed network and CONSENSUS requests can trigger the consensus process locally`},
+                {type:'text', content:`The local chain is always validated end-to-end before sending any block replies to peers and upon receiving a STATS request`},
+                {type:'text', content:`Correctly validates blocks using the following checks: `},
+              
                 ]},
+                {type:'list-number', content:[
+                    {type:'text', content:` Nonce is max 40 characters`},
+                    {type:'text', content:`A block must have >10 messages`},
+                    {type:'text', content:`Each message in a block  is max 20 characters`},
+                    {type:'text', content:` Each block hash must respect the defined order`},
+                    {type:'text', content:`Block difficulty >= 9`},
+                        ]}
            ],
            summary:[
             

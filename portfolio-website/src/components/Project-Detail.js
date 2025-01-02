@@ -107,7 +107,21 @@ const ProjectDetail = ({projects}) => {
                     </ul>
                 </div>
             );
-        } else if(item.type==='list-left'){
+        } else if(item.type==='list-number'){
+            return (
+                <div key={index} className='mb-4'>
+                    <ul className='list-decimal list-inside pl-4 space-y-2 text-left justify-center'>
+                        {item.content.map((listItem, listIndex) => (
+                            listItem.type === 'text' && (
+                                <li key={listIndex} className='text-gray-300'>
+                                    {listItem.content}
+                                </li>
+                            )
+                        ))}
+                    </ul>
+                </div>
+            );
+        }else if(item.type==='list-left'){
             return (
                 <div key={index} className='mb-4'>
                     <ul className='list-disc list-inside pl-4 space-y-2 text-left justify-left'>
@@ -190,6 +204,20 @@ const ProjectDetail = ({projects}) => {
                         ))}
                     </ul>
                 </li>
+            );
+        }else if(item.type==='list-number'){
+            return (
+                <div key={index} className='mb-4'>
+                    <ul className='list-decimal list-inside pl-10 space-y-2 text-left justify-center'>
+                        {item.content.map((listItem, listIndex) => (
+                            listItem.type === 'text' && (
+                                <li key={listIndex} className='text-gray-300'>
+                                    {listItem.content}
+                                </li>
+                            )
+                        ))}
+                    </ul>
+                </div>
             );
         }
         return null;
