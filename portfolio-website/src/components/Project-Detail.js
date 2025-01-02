@@ -95,7 +95,7 @@ const ProjectDetail = ({projects}) => {
         }        //if type is a list return list items with bullet points
         else if(item.type==='list-center'){
             return (
-                <li key={index} className='mb-4'>
+                <div key={index} className='mb-4'>
                     <ul className='list-disc list-inside pl-4 space-y-2 text-left justify-center'>
                         {item.content.map((listItem, listIndex) => (
                             listItem.type === 'text' && (
@@ -105,11 +105,11 @@ const ProjectDetail = ({projects}) => {
                             )
                         ))}
                     </ul>
-                </li>
+                </div>
             );
         } else if(item.type==='list-left'){
             return (
-                <li key={index} className='mb-4'>
+                <div key={index} className='mb-4'>
                     <ul className='list-disc list-inside pl-4 space-y-2 text-left justify-left'>
                         {item.content.map((listItem, listIndex) => (
                             listItem.type === 'text' && (
@@ -119,7 +119,7 @@ const ProjectDetail = ({projects}) => {
                             )
                         ))}
                     </ul>
-                </li>
+                </div>
             );
         }
         return null;

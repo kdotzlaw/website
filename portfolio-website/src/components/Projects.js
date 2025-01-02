@@ -261,22 +261,36 @@ export const projects = [
         sub: `Process`,
         sub_content:[
             {type:'text-sub', content: `Joining the Network`},
-            {type:'list', content:
+            {type:'list-left', content:
                 [
-                    
+                    {type:'text', content:`Send a keep-alive message to random peers`},
+                    {type:'text', content:`Send a message to a random peer with a payload of a random number`}
                 ]},
-               
             {type:'text-sub', content: `Consensus Process`},
-            {type:'list', content:
+            {type:'list-left', content:
                 [
-             
-            ]},
+                    {type:'text', content:`Request STATS from known peers and wait for STAT_REPLY`},
+                    {type:'text', content:`Identify the longest chain using max(height, hash) and comparisons, breaking ties using the max number of peers with the longest chain`},
+                    {type:'text', content:`Request blocks round-robin from all peers with the longest chain`},
+                    {type:'text', content:`Validate all blocks before adding to local chain and store blocks in a list since they are not guaranteed to be in order`},
+                    {type:'text', content:`Mined blocks that are ANNOUNCED are either added to the top of the local chain if it is built or stored in the list`},
+                ]},
+         
         ],
         footer:'Results',
         result:[
-            {type:'text', content:``},
-            {type:'text', content:``},
-
+            {type:'list-left', content:[
+            {type:'text', content:`CONSENSUS is done every 2 minutes to ensure chain synchronization with distributed network and CONSENSUS requests can trigger the consensus process locally`},
+            {type:'text', content:`The local chain is always validated end-to-end before sending any block replies to peers and upon receiving a STATS request`},
+            {type:'text', content:`Correctly validates blocks using the following checks: 
+                1) Nonce is max 40 characters
+                2) A block must have >10 messages
+                3) Each message in a block  is max 20 characters
+                4) Each block hash must respect the defined order
+                5) Block difficulty 
+                
+                `},
+                ]},
            ],
            summary:[
             
