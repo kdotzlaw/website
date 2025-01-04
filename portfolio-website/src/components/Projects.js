@@ -8,8 +8,12 @@ import reactImg from '../img/react.png';
 import pythonImg from '../img/python.png';
 import sqlImg from '../img/sql.png';
 import bioImg from '../img/bio.png';
-import fStackImg from '../img/fStack.png';
-
+import html from '../img/html5-brands-solid.svg';
+import java from '../img/java-brands-solid.svg';
+import git from '../img/github-brands-solid.svg';
+import data from '../img/square-binary-solid.svg';
+import c from '../img/code-solid.svg';
+import distrib from '../img/computer-solid.svg';
 //Images
 import cyber from '../img/cyber.png';
 // * ESN Images
@@ -36,6 +40,7 @@ import orig_rsa from '../img/orig_rsaImg.JPG';
 import peace from '../img/peace.png';
 import sb_arc from '../img/StudyBuddyArch.png'
 import sb from '../img/study-buddy.png';
+
 
 
  //list of kvps
@@ -68,7 +73,7 @@ import sb from '../img/study-buddy.png';
         I have experience with Flask and have used it to create APIs for various web projects.  I've created endpoints, API documentation, and API integration tests with backend Python components.
         
         `},
-    {id: 'fstack', name: 'Frontend Development', icons:fStackImg, years:2, blurb:`
+    {id: 'fstack', name: 'Frontend Development', icons:html, years:2, blurb:`
         I have earned advanced certificates in HTML/CSS for web development through Udemy. I've used HTML, CSS, and JavaScript for various web projects, including a portfolio website and a DBMS administrator dashboard.
         I also have experience using Wordpress and adding custom HTML/CSS to a Wordpress site.
         `},
@@ -76,21 +81,21 @@ import sb from '../img/study-buddy.png';
          I've worked on various projects that use machine learning including a custom implementation of a neural network for time series prediction, a research project that analyzes multiagent system communication methods,
          and a model for predicting long covid-19 cases.
         `},
-    {id:'distributed', name:'Distributed Computing', icons:cyber, years:1, blurb:`
+    {id:'distributed', name:'Distributed Computing', icons:distrib, years:1, blurb:`
         My first exposure to distributed computing was through a university course. During this course, I used Python to join and interact with a network of peers, with the intent of synchronizing a blockchain.
         `}, //ICON
-    {id: 'data-mining', name: 'Data Mining', icons:cyber, years:2, blurb:`
+    {id: 'data-mining', name: 'Data Mining', icons:data, years:2, blurb:`
         My first exposure to data mining was through a university course where I worked with a group to analyze COVID-19 data using Python and data mining techniques, which resulted in three publications in IEEE alongside our professor.
         `}, //ICON
-    {id:'c', name: 'C/C#/C++', icons:cyber, years:2, blurb:`
+    {id:'c', name: 'C/C#/C++', icons:c, years:2, blurb:`
         I used C  throughout my undergraduate degree, specifically in cyber security, where I focused on mitigating exploits and encryption. 
         I have earned beginner and intermediate certificates in C# through Udemy.
         `}, //ICON
-    {id:'git', name:'Git', icons:cyber,years:'5+', blurb:`
+    {id:'git', name:'Git', icons:git,years:'5+', blurb:`
         I used Git for the entirety of my undergraduate degree, and have been using it professionally since then.
         I primarily use Git for version control and organization, but I have experience GitHub actions and GitHub pages to deploy and host various web-based projects.
         `},
-    {id:'Java', name: 'Java', icons:cyber, years:'5+', blurb:`
+    {id:'Java', name: 'Java', icons:java, years:'5+', blurb:`
         I've been working with Java for over 5 years, starting when I was in high school.
         I've worked on a variety of projects including database interactions, game development, and OOP applications.
         `}, //ICON
