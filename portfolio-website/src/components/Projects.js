@@ -568,10 +568,12 @@ export const projects = [
         description: 'A user-friendly and organization-focused website built with Wordpress and custom HTML/CSS',
         footer:'Key Contributions',
         result: [
-            {type:'text', content:'An archive of Church Messages that is searchable by keywords and is linked to a recent Message display on the home page'}, 
-            {type:'text', content:'An event management system that dynamically updates when events are added or when events have passed '},   
-            {type:'text', content:'Custom CSS to personalize the site to match Church branding'},
-            {type:'text', content:'Client support including creating technical documentation for client site management, debugging technical issues, and site migration between hosting services'},
+            {type:'list-left', content:[
+                {type: 'text', content: 'An archive of Church Messages that is searchable by keywords and is linked to a recent Message display on the home page'}, 
+                {type: 'text', content: 'An event management system that dynamically updates when events are added or when events have passed '},   
+                {type: 'text', content: 'Custom CSS to personalize the site to match Church branding'},
+                {type: 'text', content: 'Client support including creating technical documentation for client site management, debugging technical issues, and site migration between hosting services'},
+            ]},
 
             { type: 'image-group', images: [
                
@@ -591,10 +593,12 @@ export const projects = [
         description: 'A custom React app that allows the administrator to manage the church\'s database and volunteer management (ongoing)',
         footer:'Key Features',
         result: [
-            {type:'text', content:'A custom SQL database that stores volunteer and volunteer job information'},
-            {type:'text', content:'Custom database queries created using prepared statements to prevent SQL injection attacks'},
-            {type:'text', content:'Custom Flask endpoints for data retrieval and manipulation'},
-            {type:'text', content:'A user-friendly and responsive interface that allows the administrator to manage the church\'s database with little-to-no technical knowledge'},
+            {type:'list-left', content:[
+                {type: 'text', content: 'A custom SQL database that stores volunteer and volunteer job information'},
+                {type: 'text', content: 'Custom database queries created using prepared statements to prevent SQL injection attacks'},
+                {type: 'text', content: 'Custom Flask endpoints for data retrieval and manipulation'},
+                {type: 'text', content: 'A user-friendly and responsive interface that allows the administrator to manage the church\'s database with little-to-no technical knowledge'},
+            ]},
             
            
         ]
@@ -608,6 +612,10 @@ export const projects = [
         ],
         url:'https://github.com/kdotzlaw/python-portfolio/blob/main/blackjack/main.py',
         description: 'A simple console driven Blackjack game against the computer. Built with Python and focuses on fundamentals like conditionals, loops, randomization, and project planning.',
+        footer:'Key Features',
+        result:[
+            {type:'text', content:'A simple console driven Blackjack game against the computer. Built with Python and focuses on fundamentals like conditionals, loops, randomization, and project planning.'},
+        ],
 
     },
     {
@@ -619,6 +627,10 @@ export const projects = [
         ],
         url:'https://github.com/kdotzlaw/python-portfolio/blob/main/professional-portfolio/tic-tac-toe.py',
         description: 'Plays a game of Tic Tac Toe against the computer where the computer makes weighted choices. A python game that focuses on conditionals, loops, dictionaries, and game logic.',
+        footer:'Key Features',
+        result:[
+            {type:'text', content:'Plays a game of Tic Tac Toe against the computer where the computer makes weighted choices. A python game that focuses on conditionals, loops, dictionaries, and game logic.'},
+        ],
     },{
         id:14,
         types: ['games'],
@@ -628,6 +640,16 @@ export const projects = [
         ],
         url:'https://github.com/kdotzlaw/python-portfolio/blob/main/turtle-graphics/snake/main.py',
         description: 'A game created with Python and Turtle Graphics that explores event handling, collision detection, game mechanics, and game design.',
+        footer:'Key Features',
+        result:[
+            {type:'text', content:'A game created with Python and Turtle Graphics that explores event handling, OOP, collision detection, game mechanics, and game design.Created an OOP snake game with the following features:'},
+            {type:'list-left', content:[
+                {type: 'text', content: 'Snake movement is determined by keyboard input'},
+                {type: 'text', content: 'Snake eats food when it is within 15 pixels of the food'},
+                {type: 'text', content: 'Snake grows in size when food is eaten and the score increases'},
+                {type: 'text', content: 'Game ends when the snake collides with the wall or itself'},
+        ]},],
+
     },{
         id:15,
         types:['machine-learning'],
