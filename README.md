@@ -1,6 +1,6 @@
 # Website
 
-Created using React.js, HTML5/CSS, and JavaScript.
+Created using React.js, HTML5/CSS, TailwindCSS, and JavaScript.
 
 ## Development Process
 
