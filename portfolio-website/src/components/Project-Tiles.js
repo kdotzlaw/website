@@ -86,7 +86,7 @@ const Project_Tiles = () => {
                             </p>*/}
                     </div>
                   <div className='skills-section py-6' data-aos="fade-up">
-                    <h3 className="text-5xl md:text-4xl font-bold mb-4  text-transparent bg-clip-text home-subtitle">Skills & Projects</h3>
+                    <h3 className="text-5xl md:text-4xl font-bold mb-4  home-subtitle">Skills & Projects</h3>
                   </div>
                     {/*Project Tiles */}
                     <div  className="flex justify-center items-center w-full" data-aos="fade-up">
