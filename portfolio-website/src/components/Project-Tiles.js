@@ -66,10 +66,24 @@ const Project_Tiles = () => {
                                 
                             </p>
                             <br/>
-                            <p className="text-lg md:text-base text-gray-300 max-w-2xl mx-auto leading-relaxed ">
+                            <p className='font-bold text-lg md:text-base text-gray-300 max-w-2xl mx-auto leading-relaxed '> 
+                                
+                                Technical Expertise:
+                                <br/> 
+                                <p className='font-normal'>Proficient in backend development using Python, Java, C++, and more, with advanced knowledge of database management systems (SQL Server, MySQL). My front-end expertise includes modern technologies like React, Flask, and JavaScript.</p>
+                                <br/>
+                                Data Analytics & Machine Learning: 
+                                <p className='font-normal'> Skilled in analyzing data with Pandas, NumPy, and Matplotlib, and building predictive models using techniques like neural networks, decision trees, and data mining algorithms.</p>
+                               <br/>
+                                Teamwork & Collaboration:
+                                <p className='font-normal'> I have led and contributed to successful university and freelance projects, including query optimization, developing web applications, and predicting Long COVID-19 cases through data mining.</p>
+
+                            </p>
+                            <br/>
+                            {/*<p className="text-lg md:text-base text-gray-300 max-w-2xl mx-auto leading-relaxed ">
                             My technical background is primarily in the areas of software engineering, artificial intelligence, and database management systems (DBMS), though I have dabbled in web development.
                             My passion projects are in the areas of data science, machine learning, and artificial intelligence, investigating how to use these technologies to further medical research and diagnosis.
-                            </p>
+                            </p>*/}
                     </div>
                   <div className='skills-section py-6' data-aos="fade-up">
                     <h3 className="text-5xl md:text-4xl font-bold mb-4  text-transparent bg-clip-text home-subtitle">Skills & Projects</h3>

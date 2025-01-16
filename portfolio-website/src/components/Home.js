@@ -49,13 +49,26 @@ const Home = () => {
               {/*Tagline/Brief Description*/}
               <h1 className="text-3xl md:text-2xl font-medium mb-6  home-subtitle">Software Developer</h1>
               <p className="text-lg md:text-base text-gray-300 max-w-2xl mx-auto leading-relaxed ">
-                  I am a recent graduate of the University of Manitoba with a Bachelor's degree in Computer Science, specializing in Software Engineering, Artificial Intelligence, and Databases.
+                  Welcome! I'm Katrina Dotzlaw, a passionate Software Developer and Data Analyst with a strong background in building innovative solutions and solving 
+                  complex problems in backend development, data analytics, and machine learning. 
+                  <br/>
+                  <br/>
+                  Based in Winnipeg, Manitoba,
+                  I specialize in crafting efficient software systems, mining insights from data, and leveraging advanced technologies to drive impactful results.
+                  <br/>
+                  <br/>
+                   With a Bachelor of Science in Computer Science from the University of Manitoba and specialized training in Artificial Intelligence, Databases, and Software Engineering, 
+                   I have honed my skills in both academic and professional environments. Whether it's developing robust APIs, optimizing large-scale databases, or predicting long-term trends using machine learning models, 
+                   I thrive on creating user-centered, data-driven solutions that address real-world challenges.
+                  <br/>
+                  <br/>
+                   Feel free to check out my GitHub Portfolio or connect with me on LinkedIn. Let's build something amazing together!
               </p>
               
-              <p className="text-lg md:text-base text-gray-300 max-w-2xl mx-auto leading-relaxed ">
+              {/*<p className="text-lg md:text-base text-gray-300 max-w-2xl mx-auto leading-relaxed ">
                   Outside of academia, I have achieved certificaticates in C#, HTML/CSS, SQL, and Python.
               </p>
-             <br/>
+             <br/>*/}
             <div className='btn-group row d-flex align-items-center justify-content-center flex-row pb-4 gy-4'>
               <button className='button-primary ' onClick={scrollToProjects}> Skills & Tech </button>
               <button className='button-primary'> Contact Me </button>
