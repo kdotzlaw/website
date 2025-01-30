@@ -18,6 +18,13 @@ const Contact = ({ onClose }) => {
 
     const handleSubmit = async (e) => {
         e.preventDefault();
+        
+        // Validate form data
+        if (!formData.from_name || !formData.reply_to || !formData.message) {
+            setFormStatus('Please fill in all fields');
+            return;
+        }
+
         setFormStatus('Sending...');
         
         try {
@@ -34,8 +41,8 @@ const Contact = ({ onClose }) => {
                 onClose();
             }, 2000);
         } catch (error) {
-            console.error('Error sending email:', error.text || error.message);
-            setFormStatus(error.text || 'Failed to send message. Please try again.');
+            console.error('Error sending email:', error);
+            setFormStatus('Failed to send message. Please try again.');
         }
     };
 
