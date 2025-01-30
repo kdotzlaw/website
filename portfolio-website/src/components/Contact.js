@@ -27,18 +27,15 @@ const Contact = ({ onClose }) => {
                 form.current
             );
 
-            if (result.text === 'OK') {
-                setFormStatus('Message sent successfully!');
-                setFormData({ from_name: '', reply_to: '', message: '' });
-                setTimeout(() => {
-                    onClose();
-                }, 2000);
-            } else {
-                setFormStatus('Error sending message');
-            }
+            console.log('EmailJS Response:', result);
+            setFormStatus('Message sent successfully!');
+            setFormData({ from_name: '', reply_to: '', message: '' });
+            setTimeout(() => {
+                onClose();
+            }, 2000);
         } catch (error) {
-            console.error('Error sending email:', error);
-            setFormStatus('Error sending message');
+            console.error('Error sending email:', error.text || error.message);
+            setFormStatus(error.text || 'Failed to send message. Please try again.');
         }
     };
 
