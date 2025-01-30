@@ -1,4 +1,5 @@
-import React, { useState } from 'react';
+import React, { useState, useRef } from 'react';
+import emailjs from '@emailjs/browser';
 import '../styles/main.css';
 const Contact = ({ onClose }) => {
     const [formData, setFormData] = useState({
@@ -12,35 +13,33 @@ const Contact = ({ onClose }) => {
         setFormData({ ...formData, [e.target.name]: e.target.value });
     };
 
+    const form = useRef();
+
     const handleSubmit = async (e) => {
         e.preventDefault();
-        console.log('handling submit');
-        try{
-            const resp = await fetch({
-                method: 'POST',
-                headers: {
-                    'Content-Type': 'application/json'
-                },
-                body: JSON.stringify({
-                    to: `katrina@dotzlaw.com`,
-                    subject: `Message from ${formData.name}`,
-                    text: `From: ${formData.name}\n\n${formData.message}`
+        setFormStatus('Sending...');
+        
+        try {
+            const result = await emailjs.sendForm(
+                'YOUR_SERVICE_ID', // Replace with your EmailJS service ID
+                'YOUR_TEMPLATE_ID', // Replace with your EmailJS template ID
+                form.current,
+                'YOUR_PUBLIC_KEY' // Replace with your EmailJS public key
+            );
 
-                })
-            });
-            if (resp.ok) {
+            if (result.text === 'OK') {
                 setFormStatus('Message sent successfully!');
-                setFormData({name: '', email: '', message: ''});
+                setFormData({ name: '', email: '', message: '' });
                 setTimeout(() => {
                     onClose();
                 }, 2000);
             } else {
                 setFormStatus('Error sending message');
             }
-        }catch (error){
-            console.log(error);
+        } catch (error) {
+            console.error('Error sending email:', error);
+            setFormStatus('Error sending message');
         }
-     
     };
 
     return (
@@ -52,7 +51,7 @@ const Contact = ({ onClose }) => {
                 </div>
             </div>
             <div id='contact-content' className="container mx-auto py-4">
-                <form onSubmit={handleSubmit} className="max-w-lg mx-auto card">
+                <form ref={form} onSubmit={handleSubmit} className="max-w-lg mx-auto card">
                     <div className="mb-4">
                         <label htmlFor="name" className="block text-white-700 text-sm font-bold mb-2">Name</label>
                         <input
