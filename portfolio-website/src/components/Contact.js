@@ -4,8 +4,8 @@ import emailConfig from '../config/emailjs.config.js';
 import '../styles/main.css';
 const Contact = ({ onClose }) => {
     const [formData, setFormData] = useState({
-        name: '',
-        email: '',
+        from_name: '',
+        reply_to: '',
         message: ''
     });
     const [formStatus, setFormStatus] = useState('');
