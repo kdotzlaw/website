@@ -67,6 +67,19 @@
     background-color: var(--secondary);
     transform: translateY(-2px);
   }
+
+  .btn-contact-submit {
+    background-color: var(--accent);
+    color: var(--text);
+    padding: 0.75rem;
+    border-radius: 0.5rem;
+    transition: all 0.3s ease;
+  }
+
+  .btn-contact-submit:hover {
+    background-color: var(--secondary);
+    transform: translateY(-2px);
+  }
   
   .btn-group {
     display: flex;
