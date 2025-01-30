@@ -104,9 +104,12 @@ const Home = () => {
               <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
                 <div className="contact flex flex-col items-center">
                   <h3 className="text-xl font-semibold mb-4">Contact</h3>
-                  <a href="mailto:katrina@dotzlaw.com" className="footer-social-icon">
-                    katrina@dotzlaw.com
-                  </a>
+                  <button 
+                    onClick={() => setIsContactOpen(true)}
+                    className="footer-social-icon hover:text-[var(--accent)] transition-colors"
+                  >
+                    Send me a message
+                  </button>
                 </div>
                 
                 <div className="flex flex-col items-center">
