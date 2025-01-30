@@ -58,7 +58,7 @@ const Nav = () => {
                 Projects
               </a>
             </li>
-            <li id='nav-item'><Link to='#blog' className="py-2 px-4 nav-link">Blog</Link></li>
+            <li id='nav-item'><Link to='/blog' className="py-2 px-4 nav-link">Blog</Link></li>
             <li id='nav-item'><Link to='/' className="py-2 px-4 nav-link">Contact</Link></li>
           </ul>
           <ul className="flex space-x-4 social-links">
