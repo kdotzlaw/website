@@ -30,7 +30,7 @@ const Contact = ({ onClose }) => {
 
             if (result.text === 'OK') {
                 setFormStatus('Message sent successfully!');
-                setFormData({ name: '', email: '', message: '' });
+                setFormData({ from_name: '', reply_to: '', message: '' });
                 setTimeout(() => {
                     onClose();
                 }, 2000);
@@ -59,7 +59,7 @@ const Contact = ({ onClose }) => {
                             type="text"
                             id="from_name"
                             name="from_name"
-                            value={formData.name}
+                            value={formData.from_name}
                             onChange={handleChange}
                             className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 bg-white-700 leading-tight focus:outline-none focus:shadow-outline"
                             required
@@ -72,7 +72,7 @@ const Contact = ({ onClose }) => {
                             type="email"
                             id="reply_to"
                             name="reply_to"
-                            value={formData.email}
+                            value={formData.reply_to}
                             onChange={handleChange}
                             className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 bg-white-700 leading-tight focus:outline-none focus:shadow-outline"
                             required
