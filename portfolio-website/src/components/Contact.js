@@ -1,5 +1,6 @@
 import React, { useState, useRef } from 'react';
 import emailjs from '@emailjs/browser';
+import emailConfig from '../config/emailjs.config';
 import '../styles/main.css';
 const Contact = ({ onClose }) => {
     const [formData, setFormData] = useState({
@@ -21,10 +22,10 @@ const Contact = ({ onClose }) => {
         
         try {
             const result = await emailjs.sendForm(
-                'YOUR_SERVICE_ID', // Replace with your EmailJS service ID
-                'YOUR_TEMPLATE_ID', // Replace with your EmailJS template ID
+                emailConfig.serviceId,
+                emailConfig.templateId,
                 form.current,
-                'YOUR_PUBLIC_KEY' // Replace with your EmailJS public key
+                emailConfig.publicKey
             );
 
             if (result.text === 'OK') {
