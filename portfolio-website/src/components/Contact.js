@@ -31,7 +31,8 @@ const Contact = ({ onClose }) => {
             const result = await emailjs.sendForm(
                 emailConfig.serviceId,
                 emailConfig.templateId,
-                form.current
+                form.current,
+                emailConfig.publicKey
             );
 
             console.log('EmailJS Response:', result);
