@@ -24,8 +24,7 @@ const Contact = ({ onClose }) => {
             const result = await emailjs.sendForm(
                 emailConfig.serviceId,
                 emailConfig.templateId,
-                form.current,
-                emailConfig.publicKey
+                form.current
             );
 
             if (result.text === 'OK') {
