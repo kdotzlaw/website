@@ -29,6 +29,7 @@ function App() {
                   </>
                 } />
                 <Route path="/projects/:projectId" element={<ProjectDetail projects={projects} />} />
+                <Route path="/blog" element={<Blog />} />
             </Routes>
         </div>
     </HashRouter>
