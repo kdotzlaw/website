@@ -1,6 +1,6 @@
 import React, { useState, useRef } from 'react';
 import emailjs from '@emailjs/browser';
-import emailConfig from '../config/emailjs.config';
+import emailConfig from '../config/emailjs.config.js';
 import '../styles/main.css';
 const Contact = ({ onClose }) => {
     const [formData, setFormData] = useState({
