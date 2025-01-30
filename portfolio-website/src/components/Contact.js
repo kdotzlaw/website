@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 
-const Contact = () => {
+const Contact = ({ onClose }) => {
     const [formData, setFormData] = useState({
         name: '',
         email: '',
@@ -31,6 +31,9 @@ const Contact = () => {
             if (resp.ok) {
                 setFormStatus('Message sent successfully!');
                 setFormData({name: '', email: '', message: ''});
+                setTimeout(() => {
+                    onClose();
+                }, 2000);
             } else {
                 setFormStatus('Error sending message');
             }
@@ -41,7 +44,7 @@ const Contact = () => {
     };
 
     return (
-        <div id='body' className="pt-12 bg-gunmetal text-white  px-4 sm:px-6 lg:px-8">
+        <div className="bg-[var(--bg-card)] text-white rounded-lg shadow-xl overflow-hidden">
             <div id='contact-header' className="py-16">
                 <div className="container mx-auto">
                     <h1 className="text-6xl font-bold text-center">Contact</h1>
