@@ -1,13 +1,16 @@
 
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 //import '../styles/Home.css';
 import '../styles/main.css';
 import Project_Tiles from './Project-Tiles';
 import AnimatedBackground from './Animated-Background';
+import Contact from './Contact';
+import { X } from 'lucide-react';
 
 const Home = () => {
+  const [isContactOpen, setIsContactOpen] = useState(false);
   //Animation
   useEffect(() => {
     AOS.init({
@@ -71,7 +74,12 @@ const Home = () => {
              <br/>*/}
             <div className='btn-group row d-flex align-items-center justify-content-center flex-row pb-4 gy-4'>
               <button className='button-primary ' onClick={scrollToProjects}> Skills & Tech </button>
-              <button className='button-primary'> Contact Me </button>
+              <button 
+                className='button-primary'
+                onClick={() => setIsContactOpen(true)}
+              > 
+                Contact Me 
+              </button>
             </div>
            
             </div>{/*End Home Header*/}
@@ -131,6 +139,20 @@ const Home = () => {
        
         </div>
 
+        {/* Contact Modal */}
+        {isContactOpen && (
+          <div className="fixed inset-0 bg-black bg-opacity-50 backdrop-blur-sm z-50 flex items-center justify-center">
+            <div className="relative w-full max-w-2xl mx-4">
+              <button 
+                onClick={() => setIsContactOpen(false)}
+                className="absolute top-4 right-4 text-white hover:text-gray-300 z-50"
+              >
+                <X className="h-6 w-6" />
+              </button>
+              <Contact onClose={() => setIsContactOpen(false)} />
+            </div>
+          </div>
+        )}
     </div>
   )};
 

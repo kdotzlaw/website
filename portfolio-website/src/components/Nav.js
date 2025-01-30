@@ -5,14 +5,11 @@ import { Link } from 'react-router-dom';
 import { useNavigate } from 'react-router-dom';
 import { Menu, X } from 'lucide-react';
 import { projects } from './Projects';
-import Contact from './Contact';
-
 
 
 const Nav = () => {
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
-  const [isContactOpen, setIsContactOpen] = useState(false);
   const navigate = useNavigate();
 
   const handleProjectClick = (projectId) => {
@@ -61,14 +58,6 @@ const Nav = () => {
               </a>
             </li>
             <li id='nav-item'><Link to='/blog' className="py-2 px-4 nav-link">Blog</Link></li>
-            <li id='nav-item'>
-              <button 
-                onClick={() => setIsContactOpen(true)} 
-                className="py-2 px-4 nav-link"
-              >
-                Contact
-              </button>
-            </li>
           </ul>
           <ul className="flex space-x-4 social-links">
             <li id='nav-item'>
@@ -135,21 +124,6 @@ const Nav = () => {
           </ul>
         </div>
       </aside>
-
-      {/* Contact Modal */}
-      {isContactOpen && (
-        <div className="fixed inset-0 bg-black bg-opacity-50 backdrop-blur-sm z-50 flex items-center justify-center">
-          <div className="relative w-full max-w-2xl mx-4">
-            <button 
-              onClick={() => setIsContactOpen(false)}
-              className="absolute top-4 right-4 text-white hover:text-gray-300 z-50"
-            >
-              <X className="h-6 w-6" />
-            </button>
-            <Contact onClose={() => setIsContactOpen(false)} />
-          </div>
-        </div>
-      )}
     </>
   );
 };
