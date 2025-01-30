@@ -54,12 +54,25 @@ const Contact = ({ onClose }) => {
             <div id='contact-content' className="container mx-auto py-4">
                 <form ref={form} onSubmit={handleSubmit} className="max-w-lg mx-auto card">
                     <div className="mb-4">
-                        <label htmlFor="name" className="block text-white-700 text-sm font-bold mb-2">Name</label>
+                        <label htmlFor="from_name" className="block text-white-700 text-sm font-bold mb-2">Name</label>
                         <input
                             type="text"
-                            id="name"
-                            name="name"
+                            id="from_name"
+                            name="from_name"
                             value={formData.name}
+                            onChange={handleChange}
+                            className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 bg-white-700 leading-tight focus:outline-none focus:shadow-outline"
+                            required
+                        />
+                    </div>
+                    
+                    <div className="mb-4">
+                        <label htmlFor="reply_to" className="block text-white-700 text-sm font-bold mb-2">Email</label>
+                        <input
+                            type="email"
+                            id="reply_to"
+                            name="reply_to"
+                            value={formData.email}
                             onChange={handleChange}
                             className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 bg-white-700 leading-tight focus:outline-none focus:shadow-outline"
                             required

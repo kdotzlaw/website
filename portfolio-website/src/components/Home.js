@@ -2,7 +2,8 @@
 import React, { useEffect, useState } from 'react';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
-//import '../styles/Home.css';
+import emailjs from '@emailjs/browser';
+import emailConfig from '../config/emailjs.config';
 import '../styles/main.css';
 import Project_Tiles from './Project-Tiles';
 import AnimatedBackground from './Animated-Background';
@@ -17,6 +18,9 @@ const Home = () => {
       duration: 1000,
       once: true,
     });
+    
+    // Initialize EmailJS
+    emailjs.init(emailConfig.publicKey);
   }, []);
 
   //Smooth scrolling to Project-Tiles
