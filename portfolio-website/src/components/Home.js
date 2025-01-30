@@ -145,7 +145,7 @@ const Home = () => {
             <div className="relative w-full max-w-2xl mx-4">
               <button 
                 onClick={() => setIsContactOpen(false)}
-                className="absolute top-4 right-4 text-white hover:text-gray-300 z-50"
+                className="btn-contact-submit absolute top-4 right-4 text-white hover:text-gray-300 z-50"
               >
                 <X className="h-6 w-6" />
               </button>
