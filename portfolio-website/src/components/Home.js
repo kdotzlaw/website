@@ -20,7 +20,9 @@ const Home = () => {
     });
     
     // Initialize EmailJS
-    emailjs.init(emailConfig.publicKey);
+    emailjs.init({
+      publicKey: process.env.REACT_APP_EMAILJS_PUBLIC_KEY,
+    });
   }, []);
 
   //Smooth scrolling to Project-Tiles

@@ -28,11 +28,17 @@ const Contact = ({ onClose }) => {
         setFormStatus('Sending...');
         
         try {
+            console.log('Sending with config:', {
+                serviceId: emailConfig.serviceId,
+                templateId: emailConfig.templateId,
+                publicKey: emailConfig.publicKey
+            });
+            
             const result = await emailjs.sendForm(
-                emailConfig.serviceId,
-                emailConfig.templateId,
+                process.env.REACT_APP_EMAILJS_SERVICE_ID,
+                process.env.REACT_APP_EMAILJS_TEMPLATE_ID,
                 form.current,
-                emailConfig.publicKey
+                process.env.REACT_APP_EMAILJS_PUBLIC_KEY
             );
 
             console.log('EmailJS Response:', result);
